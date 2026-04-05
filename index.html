@@ -287,16 +287,17 @@
     <script>
         // 历史记录数据
         const historyDates = [
-            '2026-04-05'
+            {date: '2026-04-05', label: '2026-04-05（正式版）'},
+            {date: '2026-04-05-test', label: '2026-04-05（测试版-IDC新闻）'}
         ];
 
         // 动态生成历史记录链接
         const historyList = document.getElementById('historyList');
-        historyDates.forEach(date => {
+        historyDates.forEach(item => {
             const link = document.createElement('a');
-            link.href = `history/${date}.html`;
+            link.href = `history/${item.date}.html`;
             link.className = 'history-link';
-            link.textContent = date;
+            link.textContent = item.label;
             historyList.appendChild(link);
         });
 
