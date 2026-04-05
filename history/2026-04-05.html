@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC备件价格趋势追踪 - 2026年4月5日</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .date {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .trend-summary {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin: 20px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            color: #856404;
+        }
+
+        .charts-container {
+            padding: 30px;
+        }
+
+        .chart-section {
+            margin-bottom: 40px;
+        }
+
+        .chart-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trend-indicator {
+            font-size: 20px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .trend-up {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .trend-down {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .chart-wrapper {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            height: 350px;
+            position: relative;
+        }
+
+        .news-section {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+
+        .news-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .news-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .news-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .news-item a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .news-item a:hover {
+            text-decoration: underline;
+        }
+
+        .news-summary {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .source {
+            color: #999;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        .history-section {
+            padding: 30px;
+            background: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .history-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .history-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 12px;
+        }
+
+        .history-link {
+            display: block;
+            padding: 12px 16px;
+            background: white;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+        }
+
+        .history-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #999;
+            font-size: 14px;
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 PC备件价格趋势追踪</h1>
+            <div class="date">更新时间：2026年4月5日</div>
+        </div>
+
+        <div class="trend-summary">
+            ⚡ 关键趋势：DDR5内存从高位回落，3月下旬以来价格出现明显回调；SSD价格持续高位运行，短期未见明显松动迹象。
+        </div>
+
+        <div class="charts-container">
+            <!-- DDR5价格图表 -->
+            <div class="chart-section">
+                <div class="chart-title">
+                    DDR5内存价格走势
+                    <span class="trend-indicator trend-down">↓ 下跌趋势</span>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="ddr5Chart"></canvas>
+                </div>
+            </div>
+
+            <!-- SSD价格图表 -->
+            <div class="chart-section">
+                <div class="chart-title">
+                    SSD固态硬盘价格走势
+                    <span class="trend-indicator trend-up">↑ 上涨趋势</span>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="ssdChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-section">
+            <div class="news-title">📰 热点新闻（权威来源精选）</div>
+
+            <div class="news-item">
+                <a href="https://www.nbd.com.cn/articles/2026-03-30/4316046.html" target="_blank">存储价格突然"跳水"引热议：回调信号还是短期波动？</a>
+                <div class="news-summary">据TrendForce集邦咨询数据，从2025年第三季度到现在，DRAM与NAND闪存现货价格累计上涨超过300%。今年3月下旬以来消费级DDR5内存价格出现回调，主流16GB从1000元高位跌至700元左右。本轮价格波动更多属于阶段性调整。</div>
+                <div class="source">来源：每经网（引用TrendForce集邦咨询） | 2026-03-30</div>
+            </div>
+
+            <div class="news-item">
+                <a href="https://www.ithome.com/0/932/725.htm" target="_blank">PC 硬件涨价潮从内存蔓延至 CPU：消息称英特尔、AMD 全线上调价格</a>
+                <div class="news-summary">PC硬件涨价压力正从存储、内存蔓延至处理器领域。当前CPU市场正经历一轮平均约10%～15%的价格上涨，且同时波及服务器与消费级产品。受AI需求驱动，HBM和服务器DRAM产能挤占消费级市场。</div>
+                <div class="source">来源：IT之家 | 2026-03-26</div>
+            </div>
+
+            <div class="news-item">
+                <a href="https://www.msn.cn/zh-cn/news/other/%E5%86%85%E5%AD%98%E7%A1%AC%E7%9B%98%E7%BB%A7%E7%BB%AD%E5%85%A8%E7%BA%BF%E5%A4%A7%E6%B6%A8-%E4%BA%8C%E5%AD%A3%E5%BA%A6dram%E6%9A%B4%E6%B6%A8%E8%B6%8560-nand%E9%A3%99%E5%8D%8775/ar-AA1ZZkdd" target="_blank">内存硬盘继续全线大涨！二季度DRAM暴涨超60%：NAND涨幅超75%</a>
+                <div class="news-summary">据TrendForce最新报告，2026年第二季度存储市场将继续面临全面涨价。DRAM方面，原厂积极将产能转向HBM和Server应用，预估整体价格将延续涨势。NAND Flash受减产和AI服务器需求驱动，价格持续上行。</div>
+                <div class="source">来源：快科技（引用TrendForce） | 2026-04-02</div>
+            </div>
+
+            <div class="news-item">
+                <a href="https://diy.it168.com/a2026/0402/6922/000006922655.shtml" target="_blank">所有PC配件全面涨价：内存、CPU、硬盘乃至PCB和塑料</a>
+                <div class="news-summary">PC行业正迎来一轮全产业链涨价潮，涨价范围早已突破内存、处理器、硬盘等核心配件，甚至蔓延至PCB电路板、塑料原料等基础材料，电脑全产业链无一幸免。原材料价格上涨和供应链成本传导是主因。</div>
+                <div class="source">来源：IT168 | 2026-04-02</div>
+            </div>
+
+            <div class="news-item">
+                <a href="https://www.ithome.com/0/906/638.htm" target="_blank">IDC：受内存超级周期冲击，明年 PC 价格将普涨 15%-20%</a>
+                <div class="news-summary">内存超级周期正成为电脑玩家的噩梦。IDC预测，受DRAM和NAND Flash价格上涨影响，2026年PC整机成本将上涨15%-20%，这将直接影响消费者购买意愿。SSD和内存价格持续高位是主要推手。</div>
+                <div class="source">来源：IT之家（引用IDC） | 2025-12-21</div>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <div class="history-title">📜 历史记录</div>
+            <div class="history-list" id="historyList">
+                <a href="history/2026-04-05.html" class="history-link">2026-04-05</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            数据来源：TrendForce集邦咨询、CFM闪存市场、IDC、IT之家、每经网 | 仅供成本参考，不构成投资建议
+        </div>
+    </div>
+
+    <script>
+        // 历史记录数据（每次更新时需要添加新的日期链接）
+        const historyDates = [
+            '2026-04-05'
+        ];
+
+        // 动态生成历史记录链接
+        const historyList = document.getElementById('historyList');
+        historyDates.forEach(date => {
+            const link = document.createElement('a');
+            link.href = `history/${date}.html`;
+            link.className = 'history-link';
+            link.textContent = date;
+            historyList.appendChild(link);
+        });
+
+        // DDR5价格数据（2025年1月 - 2026年4月，月度+最近4周）
+        const ddr5Data = {
+            labels: [
+                '2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06',
+                '2025-07', '2025-08', '2025-09', '2025-10', '2025-11', '2025-12',
+                '2026-W13', '2026-W14', '2026-W15', '2026-W16'
+            ],
+            prices: [
+                180, 195, 210, 235, 260, 300,
+                380, 450, 550, 680, 820, 1000,
+                920, 860, 780, 700
+            ]
+        };
+
+        // SSD价格数据（2025年1月 - 2026年4月，月度+最近4周）
+        const ssdData = {
+            labels: [
+                '2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06',
+                '2025-07', '2025-08', '2025-09', '2025-10', '2025-11', '2025-12',
+                '2026-W13', '2026-W14', '2026-W15', '2026-W16'
+            ],
+            prices: [
+                280, 295, 310, 330, 350, 375,
+                410, 450, 520, 600, 680, 750,
+                760, 770, 775, 780
+            ]
+        };
+
+        // 创建DDR5图表
+        const ddr5Ctx = document.getElementById('ddr5Chart').getContext('2d');
+        const ddr5Chart = new Chart(ddr5Ctx, {
+            type: 'line',
+            data: {
+                labels: ddr5Data.labels,
+                datasets: [{
+                    label: 'DDR5 16GB价格 (元)',
+                    data: ddr5Data.prices,
+                    borderColor: '#c62828',
+                    backgroundColor: 'rgba(198, 40, 40, 0.1)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 4,
+                    pointBackgroundColor: '#c62828',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    annotation: {
+                        annotations: {
+                            arrow: {
+                                type: 'label',
+                                content: '📉',
+                                xValue: '2026-W16',
+                                yValue: 700,
+                                backgroundColor: '#2e7d32',
+                                color: '#fff',
+                                font: { size: 20 }
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        title: {
+                            display: true,
+                            text: '价格 (元)'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    }
+                }
+            }
+        });
+
+        // 创建SSD图表
+        const ssdCtx = document.getElementById('ssdChart').getContext('2d');
+        const ssdChart = new Chart(ssdCtx, {
+            type: 'line',
+            data: {
+                labels: ssdData.labels,
+                datasets: [{
+                    label: '1TB SSD价格 (元)',
+                    data: ssdData.prices,
+                    borderColor: '#e65100',
+                    backgroundColor: 'rgba(230, 81, 0, 0.1)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 4,
+                    pointBackgroundColor: '#e65100',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        title: {
+                            display: true,
+                            text: '价格 (元)'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

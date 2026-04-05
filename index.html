@@ -151,6 +151,45 @@
             margin-top: 8px;
         }
 
+        .history-section {
+            padding: 30px;
+            background: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .history-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .history-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 12px;
+        }
+
+        .history-link {
+            display: block;
+            padding: 12px 16px;
+            background: white;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+        }
+
+        .history-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+        }
+
         .footer {
             text-align: center;
             padding: 20px;
@@ -229,12 +268,34 @@
             </div>
         </div>
 
+        <div class="history-section">
+            <div class="history-title">📜 历史记录</div>
+            <div class="history-list" id="historyList">
+                <a href="history/2026-04-05.html" class="history-link">2026-04-05</a>
+            </div>
+        </div>
+
         <div class="footer">
             数据来源：TrendForce集邦咨询、CFM闪存市场、IDC、IT之家、每经网 | 仅供成本参考，不构成投资建议
         </div>
     </div>
 
     <script>
+        // 历史记录数据（每次更新时需要添加新的日期链接）
+        const historyDates = [
+            '2026-04-05'
+        ];
+
+        // 动态生成历史记录链接
+        const historyList = document.getElementById('historyList');
+        historyDates.forEach(date => {
+            const link = document.createElement('a');
+            link.href = `history/${date}.html`;
+            link.className = 'history-link';
+            link.textContent = date;
+            historyList.appendChild(link);
+        });
+
         // DDR5价格数据（2025年1月 - 2026年4月，月度+最近4周）
         const ddr5Data = {
             labels: [
