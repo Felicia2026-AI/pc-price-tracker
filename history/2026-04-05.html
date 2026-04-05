@@ -274,32 +274,12 @@
             </div>
         </div>
 
-        <div class="history-section">
-            <div class="history-title">📜 历史记录</div>
-            <div class="history-list" id="historyList"></div>
-        </div>
-
         <div class="footer">
             数据来源：TrendForce集邦咨询、CFM闪存市场、IDC、IT之家、每经网 | 仅供成本参考，不构成投资建议
         </div>
     </div>
 
     <script>
-        // 历史记录数据
-        const historyDates = [
-            '2026-04-05'
-        ];
-
-        // 动态生成历史记录链接
-        const historyList = document.getElementById('historyList');
-        historyDates.forEach(date => {
-            const link = document.createElement('a');
-            link.href = `history/${date}.html`;
-            link.className = 'history-link';
-            link.textContent = date;
-            historyList.appendChild(link);
-        });
-
         // DDR5价格数据（2025年1月 - 2026年4月，月度+最近4周）
         const ddr5Data = {
             labels: [
