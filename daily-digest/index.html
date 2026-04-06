@@ -104,14 +104,14 @@
         </div>
 
         <div class="content">
-            <div class="card" onclick="location.href='news/latest.html'">
+            <div class="card" onclick="location.href='news/2026-04-06.html'">
                 <div class="card-icon">📊</div>
                 <div class="card-title">PC行业早报</div>
                 <div class="card-desc">PC/AIPC市场动态、零部件价格趋势、AI工具新闻、联想股价及SSC成本分析</div>
                 <div class="card-time">每日 8:00 推送</div>
             </div>
 
-            <div class="card" onclick="location.href='english/latest.html'">
+            <div class="card" onclick="location.href='english/2026-04-06.html'">
                 <div class="card-icon">📚</div>
                 <div class="card-title">每日英语学习</div>
                 <div class="card-desc">商务英语口语化练习，含英文短文+中文译文+重点词汇+理解练习</div>
@@ -123,19 +123,5 @@
             数据来源：IDC/TrendForce/Gartner/CFM/StockAnalysis | 仅供学习参考
         </div>
     </div>
-
-    <script>
-        // 自动跳转到今天的内容
-        const today = new Date().toISOString().slice(0, 10);
-        const todayPath = `news/${today}.html`;
-        // 检查今天的内容是否存在，如果存在则自动跳转
-        fetch(todayPath)
-            .then(response => {
-                if (response.ok) {
-                    location.href = todayPath;
-                }
-            })
-            .catch(() => {});
-    </script>
 </body>
 </html>
