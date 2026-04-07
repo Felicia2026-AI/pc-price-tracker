@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>每日早报 & 英语学习</title>
+    <title>Daily Digest - 每日早报 & 英文学习</title>
     <style>
         * {
             margin: 0;
@@ -15,11 +15,12 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
+            line-height: 1.6;
             min-height: 100vh;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             background: white;
             border-radius: 20px;
@@ -30,178 +31,356 @@
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 30px;
+            padding: 40px 30px;
             text-align: center;
         }
 
         .header h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
+            font-size: 42px;
+            margin-bottom: 15px;
             font-weight: 700;
+            letter-spacing: -1px;
         }
 
-        .header .date {
-            font-size: 14px;
+        .header .subtitle {
+            font-size: 18px;
             opacity: 0.9;
         }
 
+        .header .date {
+            font-size: 16px;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+
+        .nav-bar {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            text-align: center;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .nav-bar a {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #495057;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 16px;
+            border: 2px solid transparent;
+        }
+
+        .nav-bar a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .nav-bar a.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: 2px solid #667eea;
+        }
+
+        .nav-bar a.primary:hover {
+            background: white;
+            color: #667eea;
+        }
+
         .content {
-            padding: 30px;
+            padding: 40px 30px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #212529;
+            border-left: 5px solid #667eea;
+            padding-left: 20px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
         }
 
         .card {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            transition: transform 0.2s;
-            cursor: pointer;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
         }
 
         .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-color: #667eea;
         }
 
         .card-title {
             font-size: 20px;
             font-weight: 600;
-            color: #333;
+            margin-bottom: 15px;
+            color: #212529;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card .icon {
+            font-size: 24px;
+        }
+
+        .card .description {
+            font-size: 15px;
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .card .meta {
+            font-size: 13px;
+            color: #495057;
+            background: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            background: #667eea;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .feature-item .icon {
+            font-size: 32px;
+            margin-right: 20px;
+            min-width: 50px;
+        }
+
+        .feature-item .content h3 {
+            font-size: 18px;
+            font-weight: 600;
             margin-bottom: 8px;
         }
 
-        .card-desc {
-            font-size: 14px;
-            color: #666;
+        .feature-item .content p {
+            font-size: 15px;
+            opacity: 0.8;
+            line-height: 1.6;
         }
 
-        .card-time {
-            font-size: 13px;
-            color: #999;
-            margin-top: 8px;
-        }
-
-        .card-icon {
-            font-size: 32px;
-            margin-bottom: 12px;
-        }
-
-        .history-section {
-            margin-top: 30px;
-            padding-top: 30px;
-            border-top: 2px dashed #e0e0e0;
-        }
-
-        .history-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .history-grid {
+        .quick-links {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
         }
 
-        .history-item {
-            background: #fafafa;
-            padding: 15px;
-            border-radius: 8px;
-        }
-
-        .history-item-title {
-            font-size: 14px;
-            font-weight: 600;
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-
-        .history-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .history-link {
-            display: inline-block;
-            padding: 5px 10px;
-            background: white;
-            color: #666;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 12px;
-            border: 1px solid #e0e0e0;
-            transition: all 0.2s;
-        }
-
-        .history-link:hover {
-            background: #667eea;
+        .quick-link {
+            display: block;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            border-color: #667eea;
+            text-decoration: none;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .quick-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .quick-link .icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+            display: block;
         }
 
         .footer {
-            text-align: center;
-            padding: 20px;
-            color: #999;
-            font-size: 13px;
             background: #f8f9fa;
-            border-top: 1px solid #e0e0e0;
+            padding: 30px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .nav-bar a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>📰 每日早报 & 英语学习</h1>
-            <div class="date">每日推送 | 工作日 8:00 / 8:50</div>
+            <h1>📰 Daily Digest</h1>
+            <div class="subtitle">PC行业早报 & 英文学习</div>
+            <div class="date" id="currentDate"></div>
+        </div>
+
+        <div class="nav-bar">
+            <a href="news.html" class="primary">📰 早报</a>
+            <a href="english.html">📚 英文学习</a>
+            <a href="../index.html">📊 PC价格追踪</a>
         </div>
 
         <div class="content">
-            <div class="card" onclick="location.href='news/2026-04-07.html'">
-                <div class="card-icon">📊</div>
-                <div class="card-title">PC行业早报</div>
-                <div class="card-desc">PC/AIPC市场动态、零部件价格趋势、AI工具新闻、联想股价及SSC成本分析</div>
-                <div class="card-time">每日 8:00 推送</div>
+            <div class="section">
+                <div class="section-title">📱 快速导航</div>
+                <div class="quick-links">
+                    <a href="news.html" class="quick-link">
+                        <span class="icon">📰</span>
+                        今日早报
+                    </a>
+                    <a href="english.html" class="quick-link">
+                        <span class="icon">📚</span>
+                        英文学习
+                    </a>
+                    <a href="../index.html" class="quick-link">
+                        <span class="icon">📊</span>
+                        价格追踪
+                    </a>
+                </div>
             </div>
 
-            <div class="card" onclick="location.href='english/2026-04-07.html'">
-                <div class="card-icon">📚</div>
-                <div class="card-title">每日英语学习</div>
-                <div class="card-desc">商务英语口语化练习，含英文短文+中文译文+重点词汇+理解练习</div>
-                <div class="card-time">每日 8:50 推送 | 预计15分钟</div>
-            </div>
-        </div>
-
-        <!-- 历史记录 -->
-        <div class="content history-section">
-            <h3 class="history-title">📅 历史记录</h3>
-            <div class="history-grid">
-                <div class="history-item">
-                    <div class="history-item-title">📊 PC行业早报</div>
-                    <div class="history-links">
-                        <a href="news/2026-04-07.html" class="history-link">4月7日</a>
-                        <a href="news/2026-04-06.html" class="history-link">4月6日</a>
+            <div class="section">
+                <div class="section-title">📋 今日内容概览</div>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-title">
+                            <span class="icon">📈</span>
+                            价格快讯
+                        </div>
+                        <div class="description">DDR5、SSD最新价格动态，市场趋势分析</div>
+                        <div class="meta">每日更新</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">
+                            <span class="icon">🔥</span>
+                            行业动态
+                        </div>
+                        <div class="description">PC市场、AI技术、供应链最新资讯</div>
+                        <div class="meta">精选来源</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">
+                            <span class="icon">💡</span>
+                            AI工具前沿
+                        </div>
+                        <div class="description">AI产品更新、新工具推荐、应用案例</div>
+                        <div class="meta">每周汇总</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">
+                            <span class="icon">📊</span>
+                            联想动态
+                        </div>
+                        <div class="description">财报、产品发布、业务进展</div>
+                        <div class="meta">官方消息</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">
+                            <span class="icon">📖</span>
+                            商务英语
+                        </div>
+                        <div class="description">15分钟学习，提升职场英语能力</div>
+                        <div class="meta">每日练习</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">
+                            <span class="icon">📝</span>
+                            重点词汇
+                        </div>
+                        <div class="description">商务场景常用词汇，例句详解</div>
+                        <div class="meta">实战应用</div>
                     </div>
                 </div>
-                <div class="history-item">
-                    <div class="history-item-title">📚 英语学习</div>
-                    <div class="history-links">
-                        <a href="english/2026-04-07.html" class="history-link">4月7日</a>
-                        <a href="english/2026-04-06.html" class="history-link">4月6日</a>
+            </div>
+
+            <div class="section">
+                <div class="section-title">✨ 主要特点</div>
+                <div class="feature-item">
+                    <div class="icon">🕐</div>
+                    <div class="content">
+                        <h3>每日更新</h3>
+                        <p>早上8点自动更新，确保你获取最新信息</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">🎯</div>
+                    <div class="content">
+                        <h3>精准筛选</h3>
+                        <p>精选权威来源，过滤无关信息，节省阅读时间</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">📱</div>
+                    <div class="content">
+                        <h3>移动友好</h3>
+                        <p>响应式设计，手机、平板、电脑都能完美显示</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">📜</div>
+                    <div class="content">
+                        <h3>历史归档</h3>
+                        <p>所有历史内容保存，随时查阅过往信息</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="footer">
-            数据来源：IDC/TrendForce/Gartner/CFM/StockAnalysis | 仅供学习参考
+            <p>© 2026 Daily Digest - 你的PC行业与英语学习助手</p>
+            <p style="margin-top: 10px; font-size: 12px;">每日更新 | 每天早上8点 | 智能筛选 | 专注高效</p>
         </div>
     </div>
+
+    <script>
+        // 设置日期
+        const now = new Date();
+        document.getElementById('currentDate').textContent = now.toLocaleDateString('zh-CN', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            weekday: 'long'
+        });
+    </script>
 </body>
 </html>
