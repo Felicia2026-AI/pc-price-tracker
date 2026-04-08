@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC行业早报 - 2026年4月8日</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .header .date {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .header .update-time {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .content {
+            padding: 25px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .bullet-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .bullet-list li {
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 14px;
+        }
+
+        .bullet-list li::before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .bullet-list li:last-child {
+            border-bottom: none;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        .tag-trendforce { background: #e3f2fd; color: #1565c0; }
+        .tag-idc { background: #fce4ec; color: #ad1457; }
+        .tag-gartner { background: #e8f5e9; color: #2e7d32; }
+        .tag-news { background: #fff3e0; color: #e65100; }
+        .tag-warning { background: #fff9c4; color: #f57f17; }
+
+        .highlight-box {
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 12px 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 12px 0;
+            font-size: 13px;
+            color: #795548;
+        }
+
+        .highlight-box strong {
+            color: #e65100;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .price-table th {
+            background: #f5f5f5;
+            padding: 9px 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #444;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .price-table td {
+            padding: 9px 12px;
+            border-bottom: 1px solid #f0f0f0;
+            color: #555;
+        }
+
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .up { color: #d32f2f; font-weight: 600; }
+        .down { color: #2e7d32; font-weight: 600; }
+        .neutral { color: #666; }
+
+        .stock-row td:first-child { font-weight: 600; }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            padding: 8px 16px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        .back-link:hover {
+            background: #5568d3;
+        }
+
+        .history-section {
+            background: #f8f9fa;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .history-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .history-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .history-item {
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 6px;
+        }
+
+        .history-link {
+            display: inline-block;
+            padding: 5px 12px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.2s;
+        }
+
+        .history-link:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 18px;
+            color: #aaa;
+            font-size: 12px;
+            background: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 PC行业早报</h1>
+            <div class="date">2026年4月8日 星期三</div>
+            <div class="update-time">更新时间: 08:00 | 数据截至 2026-04-07</div>
+        </div>
+
+        <div class="content">
+            <a href="../index.html" class="back-link">← 返回主页</a>
+
+            <!-- PC/AIPC市场动态 -->
+            <div class="section">
+                <h2 class="section-title">🖥️ PC/AIPC市场动态</h2>
+                <ul class="bullet-list">
+                    <li>
+                        <span class="tag tag-idc">IDC</span>
+                        <strong>大幅下调2026年PC出货量预测至-11.3%</strong>，预计全年出货约2.53亿台（2025年约2.85亿台），为近十年最大跌幅；但因均价上涨，市场总价值反增至<strong>2740亿美元（+1.6%）</strong>
+                    </li>
+                    <li>
+                        <span class="tag tag-gartner">Gartner</span>
+                        分析师警示：内存成本暴涨将冲击低端PC/平板市场，<strong>2026年基础手机/PC用户退出速度将是高端市场5倍</strong>；内存价格关键窗口期在2026上半年
+                    </li>
+                    <li>
+                        <span class="tag tag-news">Tom's Hardware</span>
+                        IDC指出低价PC时代暂告终结，内存短缺预计延续至2027年，市场将进入<strong>高价新常态</strong>；地缘政治风险（中东）增加供应链不确定性
+                    </li>
+                </ul>
+                <div class="highlight-box">
+                    💡 <strong>SSC成本视角：</strong>PC出货量下调11.3%意味着整机件备件需求短期收缩，但内存/SSD价格上涨将推高高端机型备件单价。建议Q2采购锁定合约价，规避现货溢价。
+                </div>
+            </div>
+
+            <!-- 零部件价格趋势 -->
+            <div class="section">
+                <h2 class="section-title">💾 零部件价格趋势</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>品类</th>
+                            <th>Q2 2026趋势</th>
+                            <th>关键数据</th>
+                            <th>来源</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>DDR5内存颗粒</strong></td>
+                            <td class="up">↑↑ 大幅上涨</td>
+                            <td>SK海力士/三星拟涨价<strong>约40%</strong>；部分中小客户价格可能<strong>翻倍</strong></td>
+                            <td>TrendForce / 新浪科技 2/28</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PC DRAM合约价</strong></td>
+                            <td class="up">↑↑ 季增58-63%</td>
+                            <td>原厂产能转向HBM，"补涨"策略缩小各品类价差；DDR5 32GB模组从约1万新台币涨至2万</td>
+                            <td>TrendForce 3/31</td>
+                        </tr>
+                        <tr>
+                            <td><strong>NAND Flash / SSD</strong></td>
+                            <td class="up">↑↑ 季增70-75%</td>
+                            <td>企业级SSD明显缺货；Client SSD受产能排挤，买方出现库存回补需求，全产品线涨势不减</td>
+                            <td>TrendForce 3/31</td>
+                        </tr>
+                        <tr>
+                            <td><strong>LCD笔记本面板</strong></td>
+                            <td class="neutral">→ 暂稳</td>
+                            <td>2026年4月上半月面板价格报告已发布（付费），整体供需平稳；面板端尚未跟随存储涨价</td>
+                            <td>TrendForce 4/7</td>
+                        </tr>
+                        <tr>
+                            <td><strong>LCD显示器面板</strong></td>
+                            <td class="neutral">→ 暂稳</td>
+                            <td>整机需求下修压制面板需求，短期价格波动有限</td>
+                            <td>TrendForce 4/7</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="highlight-box">
+                    💡 <strong>SSC成本视角：</strong>DRAM季增58-63%、NAND季增70-75%，内存条与SSD备件成本Q2将大幅承压。LCD面板暂稳可适度缓冲整体成本。建议：①追踪Q2 DRAM合约签约动向，尽早锁量；②关注eMMC/UFS短缺，提前备货；③面板备件可维持正常库存节奏。
+                </div>
+            </div>
+
+            <!-- 联想股价 -->
+            <div class="section">
+                <h2 class="section-title">📈 联想股价</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>市场</th>
+                            <th>代码</th>
+                            <th>最新价（4/7）</th>
+                            <th>涨跌幅</th>
+                            <th>备注</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="stock-row">
+                            <td>港股</td>
+                            <td>0992.HK</td>
+                            <td><span class="neutral">HK$9.89</span></td>
+                            <td class="up">+2.06%</td>
+                            <td>当日波动 9.80-10.08</td>
+                        </tr>
+                        <tr class="stock-row">
+                            <td>美股OTC</td>
+                            <td>LNVGY</td>
+                            <td><span class="neutral">$24.89</span></td>
+                            <td class="down">-0.28%</td>
+                            <td>4/7收盘，52周区间 $12.xx-$28.xx</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="font-size: 12px; color: #aaa; margin-top: 8px;">数据来源：CNBC / StockAnalysis（延迟报价）| 仅供参考，不构成投资建议</div>
+            </div>
+
+            <!-- AI工具动态 -->
+            <div class="section">
+                <h2 class="section-title">🤖 AI工具动态</h2>
+                <ul class="bullet-list">
+                    <li>
+                        <span class="tag tag-news">阿里</span>
+                        <strong>Qwen3.6-Plus正式发布</strong>（4月2日），编程能力较上一代提升2-3倍，涌现出极强的智能体编程能力；同系列Qwen3.5曾同期连发4款端侧模型
+                    </li>
+                    <li>
+                        <span class="tag tag-news">谷歌</span>
+                        <strong>Gemma 4发布</strong>（4月5日），310亿参数打败20倍体量对手，引发开源社区热议；MoE架构持续普及
+                    </li>
+                    <li>
+                        <span class="tag tag-news">OpenAI</span>
+                        GPT-5传闻再起，OpenAI官方预告<strong>4月下旬将举行春季发布会</strong>，行业期待值拉满；48小时内四大巨头连发5款大模型
+                    </li>
+                    <li>
+                        <span class="tag tag-news">行业趋势</span>
+                        大模型三大趋势明确：<strong>MoE架构普及、端侧部署加速、多模态融合</strong>；AI工具军备竞赛持续升温，覆盖视频生成、办公助手、代码辅助等场景
+                    </li>
+                </ul>
+            </div>
+
+            <!-- SSC成本综合分析 -->
+            <div class="section">
+                <h2 class="section-title">💰 SSC成本综合分析</h2>
+                <ul class="bullet-list">
+                    <li><strong>整体压力方向：</strong>Q2备件成本将显著上行，DRAM/NAND驱动的内存条、SSD单件成本大概率上涨40-70%</li>
+                    <li><strong>需求侧缓冲：</strong>PC出货量下调11.3%，部分抵消成本上行压力；高端AIPC机型备件单价仍将持续承压</li>
+                    <li><strong>采购策略：</strong>追踪Q2合约签约窗口，优先通过LTA（长期框架协议）锁定DRAM/SSD供货；LCD面板可维持正常节奏</li>
+                    <li><strong>监控指标：</strong>eMMC/UFS短缺（供给缺口最大）、AI服务器需求传导路径、原厂HBM/Server DRAM产能占比变化</li>
+                </ul>
+            </div>
+
+            <!-- 历史早报 -->
+            <div class="history-section">
+                <h3 class="history-title">📅 历史早报</h3>
+                <ul class="history-list">
+                    <li class="history-item"><a href="2026-04-06.html" class="history-link">4月6日</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            数据来源：IDC / TrendForce / Gartner / CNBC / StockAnalysis / 新浪科技 / 腾讯云 | 仅供学习参考，不构成投资建议
+        </div>
+    </div>
+</body>
+</html>
