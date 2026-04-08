@@ -377,7 +377,7 @@
         const historyList = document.getElementById('historyList');
         historyDates.forEach(item => {
             const link = document.createElement('a');
-            link.href = `english/${item.date}.html`;
+            link.href = `../english/${item.date}.html`;
             link.className = 'history-link';
             link.textContent = item.label;
             historyList.appendChild(link);
