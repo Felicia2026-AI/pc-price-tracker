@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Digest - 英文学习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .date {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .header .update-time {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #212529;
+            border-left: 4px solid #11998e;
+            padding-left: 15px;
+        }
+
+        .text-container {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .english-text {
+            font-size: 16px;
+            color: #212529;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .chinese-translation {
+            font-size: 15px;
+            color: #6c757d;
+            line-height: 1.8;
+            border-top: 2px solid #dee2e6;
+            padding-top: 15px;
+        }
+
+        .vocabulary-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .vocab-item {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 12px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .vocab-word {
+            font-size: 18px;
+            font-weight: 700;
+            color: #11998e;
+            min-width: 150px;
+        }
+
+        .vocab-meaning {
+            font-size: 15px;
+            color: #495057;
+            flex: 1;
+        }
+
+        .vocab-example {
+            font-size: 14px;
+            color: #6c757d;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .practice-section {
+            background: #fff3cd;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+        }
+
+        .practice-item {
+            margin-bottom: 15px;
+        }
+
+        .practice-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #212529;
+        }
+
+        .practice-option {
+            display: block;
+            padding: 8px 12px;
+            margin: 5px 0;
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .practice-option:hover {
+            background: #11998e;
+            color: white;
+            border-color: #11998e;
+        }
+
+        .history-section {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+
+        .history-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #212529;
+            border-left: 4px solid #11998e;
+            padding-left: 15px;
+        }
+
+        .history-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .history-link {
+            display: block;
+            padding: 12px 16px;
+            background: white;
+            color: #495057;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid #dee2e6;
+        }
+
+        .history-link:hover {
+            background: #11998e;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(17, 153, 142, 0.3);
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .vocab-item {
+                flex-direction: column;
+            }
+
+            .vocab-word {
+                min-width: auto;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 英文学习</h1>
+            <div class="date" id="currentDate"></div>
+            <div class="update-time" id="updateTime"></div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <div class="section-title">📖 今日阅读</div>
+                <div class="text-container">
+                    <div class="english-text" id="englishText"></div>
+                    <div class="chinese-translation" id="chineseText"></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">📝 重点词汇</div>
+                <div class="vocabulary-section" id="vocabularySection"></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">✍️ 理解练习</div>
+                <div class="practice-section" id="practiceSection"></div>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <div class="history-title">📜 历史记录</div>
+            <div class="history-list" id="historyList"></div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Daily Digest - 英文学习 | 每日更新</p>
+        </div>
+    </div>
+
+    <script>
+        // 设置日期
+        const now = new Date();
+        document.getElementById('currentDate').textContent = now.toLocaleDateString('zh-CN', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            weekday: 'long'
+        });
+        document.getElementById('updateTime').textContent = `更新时间：${now.toLocaleString('zh-CN')}`;
+
+        // 今日学习内容
+        const todayContent = {
+            english: "The rapid adoption of AI tools is reshaping how supply chain teams manage costs and make decisions. In many organizations, finance and operations teams are now using AI-powered dashboards to monitor component prices in real time, flag anomalies, and generate cost variance reports automatically.\n\nFor service supply chain managers, this shift brings both opportunities and challenges. On the opportunity side, AI can process large volumes of data — such as repair records, parts consumption logs, and credit return rates — far faster than manual analysis. This enables earlier detection of cost overruns and more precise forecasting.\n\nHowever, the value of AI tools depends heavily on data quality. If the underlying data is incomplete or inconsistent, the insights generated will be unreliable. This is why data governance — ensuring clean, standardized, and timely data inputs — remains a top priority before any AI implementation.\n\nFor teams looking to get started, a practical first step is to identify one high-impact use case, such as tracking net parts cost by category, and build a simple automated report around it. Small wins early on help build confidence and demonstrate the ROI of AI investment.",
+            chinese: "AI工具的快速普及正在重塑供应链团队管理成本和决策的方式。在许多组织中，财务和运营团队现在借助AI赋能的仪表盘实时监控零部件价格、标记异常，并自动生成成本差异报告。\n\n对于服务供应链经理来说，这一转变既带来机遇，也带来挑战。机遇在于，AI能够以远超人工分析的速度处理大量数据——如维修记录、备件消耗日志和回库信用率。这有助于更早发现成本超支问题，并实现更精准的预测。\n\n然而，AI工具的价值在很大程度上取决于数据质量。如果底层数据不完整或不一致，所产生的洞察将不可靠。这也是为什么在任何AI实施之前，数据治理——确保数据的准确、标准化和及时性——仍然是首要任务。\n\n对于希望入门的团队而言，一个实际的第一步是识别一个高影响力的使用场景，例如按类别追踪净备件成本，并围绕它构建一个简单的自动化报告。早期的小胜利有助于建立信心，并展示AI投入的回报。",
+            vocabulary: [
+                {
+                    word: "cost variance report",
+                    meaning: "成本差异报告；记录实际成本与计划成本偏差的报告",
+                    example: "The system generates cost variance reports automatically each week."
+                },
+                {
+                    word: "flag anomalies",
+                    meaning: "标记异常；识别并提示不寻常的数据或情况",
+                    example: "The AI dashboard can flag anomalies in parts consumption in real time."
+                },
+                {
+                    word: "data governance",
+                    meaning: "数据治理；确保数据准确性、一致性和合规性的管理体系",
+                    example: "Strong data governance is essential before implementing AI tools."
+                },
+                {
+                    word: "net parts cost",
+                    meaning: "净备件成本；即消耗成本减去回库价值加上维修费用后的净额",
+                    example: "We track net parts cost by SOID type to identify cost drivers."
+                },
+                {
+                    word: "demonstrate ROI",
+                    meaning: "证明投资回报率；展示某项投入所带来的可量化收益",
+                    example: "Early quick wins help demonstrate the ROI of AI investment to leadership."
+                }
+            ],
+            practice: [
+                {
+                    question: "According to the passage, what is a key prerequisite before implementing AI tools?",
+                    options: [
+                        "Hiring more data analysts",
+                        "Ensuring high data quality through data governance",
+                        "Replacing all manual processes immediately",
+                        "Purchasing the most advanced AI platform"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "What does the author recommend as a practical first step for teams?",
+                    options: [
+                        "Building a full AI system from scratch",
+                        "Identifying one high-impact use case and automating a simple report",
+                        "Outsourcing all cost analysis to AI vendors",
+                        "Waiting until data quality is perfect before starting"
+                    ],
+                    answer: 1
+                }
+            ]
+        };
+
+        // 渲染学习内容
+        document.getElementById('englishText').textContent = todayContent.english;
+        document.getElementById('chineseText').textContent = todayContent.chinese;
+
+        // 渲染词汇
+        const vocabSection = document.getElementById('vocabularySection');
+        vocabSection.innerHTML = todayContent.vocabulary.map(item => `
+            <div class="vocab-item">
+                <div class="vocab-word">${item.word}</div>
+                <div class="vocab-meaning">${item.meaning}</div>
+                <div class="vocab-example">${item.example}</div>
+            </div>
+        `).join('');
+
+        // 渲染练习
+        const practiceSection = document.getElementById('practiceSection');
+        practiceSection.innerHTML = todayContent.practice.map((item, index) => `
+            <div class="practice-item">
+                <div class="practice-question">${index + 1}. ${item.question}</div>
+                ${item.options.map((opt, optIndex) => `
+                    <div class="practice-option" onclick="checkAnswer(${index}, ${optIndex}, ${item.answer})">${opt}</div>
+                `).join('')}
+                <div id="answer-${index}" style="margin-top: 10px; font-weight: bold;"></div>
+            </div>
+        `).join('');
+
+        // 检查答案
+        function checkAnswer(questionIndex, selectedOption, correctAnswer) {
+            const resultDiv = document.getElementById(`answer-${questionIndex}`);
+            if (selectedOption === correctAnswer) {
+                resultDiv.innerHTML = '<span style="color: #28a745;">✓ 正确！</span>';
+            } else {
+                resultDiv.innerHTML = '<span style="color: #dc3545;">✗ 错误，请再试试</span>';
+            }
+        }
+
+        // 历史记录数据
+        const historyDates = [
+            {date: '2026-04-08', label: '2026-04-08'},
+            {date: '2026-04-07', label: '2026-04-07'},
+            {date: '2026-04-06', label: '2026-04-06'},
+            {date: '2026-04-05', label: '2026-04-05'},
+        ];
+
+        // 动态生成历史记录链接
+        const historyList = document.getElementById('historyList');
+        historyDates.forEach(item => {
+            const link = document.createElement('a');
+            link.href = `english/${item.date}.html`;
+            link.className = 'history-link';
+            link.textContent = item.label;
+            historyList.appendChild(link);
+        });
+    </script>
+</body>
+</html>
