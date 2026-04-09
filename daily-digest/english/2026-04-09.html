@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英文学习 - 2026年4月9日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 { font-size: 32px; margin-bottom: 10px; font-weight: 700; }
+        .header .date { font-size: 16px; opacity: 0.9; }
+        .header .update-time { font-size: 14px; opacity: 0.8; margin-top: 5px; }
+        .content { padding: 30px; }
+        .section { margin-bottom: 40px; }
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #212529;
+            border-left: 4px solid #11998e;
+            padding-left: 15px;
+        }
+        .topic-label {
+            display: inline-block;
+            background: #11998e;
+            color: white;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+        .text-container {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .english-text {
+            font-size: 16px;
+            color: #212529;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+        .english-text p { margin-bottom: 14px; }
+        .chinese-translation {
+            font-size: 15px;
+            color: #6c757d;
+            line-height: 1.8;
+            border-top: 2px solid #dee2e6;
+            padding-top: 15px;
+        }
+        .chinese-translation p { margin-bottom: 12px; }
+        .vocabulary-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .vocab-item {
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .vocab-header {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+        .vocab-word { font-size: 18px; font-weight: 700; color: #11998e; }
+        .vocab-phonetic { font-size: 14px; color: #888; font-style: italic; }
+        .vocab-meaning { font-size: 15px; color: #495057; }
+        .vocab-example { font-size: 14px; color: #6c757d; margin-top: 6px; font-style: italic; border-left: 3px solid #11998e; padding-left: 10px; }
+        .practice-section {
+            background: #fff3cd;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+        }
+        .practice-intro {
+            font-size: 14px;
+            color: #664d03;
+            margin-bottom: 20px;
+            padding: 10px;
+            background: rgba(255,193,7,0.15);
+            border-radius: 6px;
+        }
+        .practice-item { margin-bottom: 22px; }
+        .practice-question { font-weight: 600; margin-bottom: 10px; color: #212529; }
+        .practice-option {
+            display: block;
+            padding: 9px 14px;
+            margin: 6px 0;
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+        .practice-option:hover { background: #11998e; color: white; border-color: #11998e; }
+        .answer-result { margin-top: 8px; font-weight: bold; font-size: 14px; }
+        .phrase-box {
+            background: #e8f5e9;
+            border: 1px solid #a5d6a7;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .phrase-box h4 { color: #2e7d32; margin-bottom: 12px; font-size: 16px; }
+        .phrase-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px dashed #c8e6c9;
+            font-size: 14px;
+        }
+        .phrase-row:last-child { border-bottom: none; }
+        .phrase-en { font-weight: 600; color: #1b5e20; min-width: 200px; }
+        .phrase-cn { color: #495057; }
+        .history-section { padding: 30px; background: #f8f9fa; }
+        .history-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #212529;
+            border-left: 4px solid #11998e;
+            padding-left: 15px;
+        }
+        .history-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        .history-link {
+            display: block;
+            padding: 12px 16px;
+            background: white;
+            color: #495057;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid #dee2e6;
+        }
+        .history-link:hover {
+            background: #11998e;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(17,153,142,0.3);
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .header h1 { font-size: 24px; }
+            .vocab-header { flex-direction: column; gap: 4px; }
+            .phrase-row { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 每日英语学习</h1>
+            <div class="date">2026年4月9日 星期四</div>
+            <div class="update-time">预计阅读时间：约15分钟</div>
+        </div>
+
+        <div class="content">
+
+            <!-- 今日阅读 -->
+            <div class="section">
+                <div class="section-title">📖 今日阅读</div>
+                <div class="topic-label">主题：供应链成本压力管理 / Managing Cost Pressure in Supply Chains</div>
+
+                <div class="text-container">
+                    <div class="english-text">
+                        <p>The global memory market in 2026 is sending mixed signals — consumer-grade DDR5 prices have dropped sharply by up to 30% since late March, while contract prices for enterprise memory remain on an upward trajectory, with Q2 forecasts pointing to a 58-63% quarter-over-quarter increase. For supply chain managers, this divergence creates both opportunities and complications.</p>
+
+                        <p>On one hand, the softening of spot prices for consumer-grade components may offer short-term procurement relief for service spare parts. On the other hand, the sustained strength of contract prices — driven by AI server demand and HBM capacity absorption — suggests that the underlying cost structure for enterprise-grade parts will remain elevated well into the second half of the year.</p>
+
+                        <p>Navigating this environment requires a clear-eyed view of your component mix. If your parts inventory skews toward consumer-grade items, there may be an opportunity to renegotiate supplier agreements or take advantage of current spot price dips. Conversely, if your exposure is primarily in enterprise-grade components, it is advisable to lock in volumes early and build buffer stock ahead of further contract price increases.</p>
+
+                        <p>Beyond the immediate pricing dynamics, this market cycle underscores a broader principle: supply chain cost management is not just about reacting to price movements. It is about building the analytical capability to anticipate structural shifts — and positioning your organization to absorb shocks before they cascade into margin erosion.</p>
+                    </div>
+
+                    <div class="chinese-translation">
+                        <p>2026年全球内存市场正在发出复杂信号——消费级DDR5现货价格自3月下旬以来已大幅下跌约30%，而企业级内存的合约价格仍在上升轨道中，Q2预测季增58-63%。对于供应链经理而言，这种分化既带来机遇，也带来了复杂性。</p>
+
+                        <p>一方面，消费级零部件现货价格的松动，可能为服务备件的短期采购提供一定的成本缓解空间。另一方面，合约价格在AI服务器需求和HBM产能吸收的驱动下持续坚挺，意味着企业级零件的底层成本结构在今年下半年仍将维持高位。</p>
+
+                        <p>在这种环境下有效应对，需要对自身零件组合有清晰的认知。如果您的库存偏向消费级产品，当前或许是重新谈判供应商协议或利用现货低价的机会。相反，若您的敞口主要集中在企业级零部件，建议提前锁定采购量，并在合约价格进一步上涨前建立缓冲库存。</p>
+
+                        <p>超越眼前的定价动态，这个市场周期还揭示了一个更深层的原则：供应链成本管理不仅仅是对价格波动的被动应对，更在于建立提前预判结构性转变的分析能力——让组织在冲击波及利润侵蚀之前，就能够提前消化和吸收。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 核心短语速记 -->
+            <div class="section">
+                <div class="section-title">⚡ 核心短语速记</div>
+                <div class="phrase-box">
+                    <h4>🗝️ 今日5组高频商务短语</h4>
+                    <div class="phrase-row">
+                        <span class="phrase-en">on an upward trajectory</span>
+                        <span class="phrase-cn">呈上升轨迹；处于上升通道</span>
+                    </div>
+                    <div class="phrase-row">
+                        <span class="phrase-en">procurement relief</span>
+                        <span class="phrase-cn">采购成本缓解；采购压力减轻</span>
+                    </div>
+                    <div class="phrase-row">
+                        <span class="phrase-en">lock in volumes early</span>
+                        <span class="phrase-cn">提前锁定采购量；早期锁量</span>
+                    </div>
+                    <div class="phrase-row">
+                        <span class="phrase-en">cascade into margin erosion</span>
+                        <span class="phrase-cn">传导至利润侵蚀；引发毛利下滑</span>
+                    </div>
+                    <div class="phrase-row">
+                        <span class="phrase-en">clear-eyed view of</span>
+                        <span class="phrase-cn">对……有清醒/理性的认知</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 重点词汇 -->
+            <div class="section">
+                <div class="section-title">📝 重点词汇</div>
+                <div class="vocabulary-section">
+
+                    <div class="vocab-item">
+                        <div class="vocab-header">
+                            <span class="vocab-word">divergence</span>
+                            <span class="vocab-phonetic">/daɪˈvɜːrdʒəns/</span>
+                        </div>
+                        <div class="vocab-meaning">（价格/趋势）分歧；背离；双轨分化</div>
+                        <div class="vocab-example">"The divergence between spot and contract prices has widened significantly this quarter."<br>本季度现货价与合约价之间的分歧显著扩大。</div>
+                    </div>
+
+                    <div class="vocab-item">
+                        <div class="vocab-header">
+                            <span class="vocab-word">renegotiate</span>
+                            <span class="vocab-phonetic">/ˌriːnɪˈɡəʊʃieɪt/</span>
+                        </div>
+                        <div class="vocab-meaning">重新谈判；重新协商（合同、协议）</div>
+                        <div class="vocab-example">"We may need to renegotiate our supplier agreement given the current market conditions."<br>鉴于当前市场形势，我们可能需要重新谈判供应商协议。</div>
+                    </div>
+
+                    <div class="vocab-item">
+                        <div class="vocab-header">
+                            <span class="vocab-word">buffer stock</span>
+                        </div>
+                        <div class="vocab-meaning">缓冲库存；安全库存（应对需求波动或涨价的预储）</div>
+                        <div class="vocab-example">"Building buffer stock before Q2 price increases is a prudent risk management move."<br>在Q2涨价前建立缓冲库存是谨慎的风险管理举措。</div>
+                    </div>
+
+                    <div class="vocab-item">
+                        <div class="vocab-header">
+                            <span class="vocab-word">structural shift</span>
+                        </div>
+                        <div class="vocab-meaning">结构性转变；行业格局层面的根本性变化</div>
+                        <div class="vocab-example">"AI-driven demand represents a structural shift in the memory market, not a temporary spike."<br>AI驱动的需求代表内存市场的结构性转变，而非短暂波峰。</div>
+                    </div>
+
+                    <div class="vocab-item">
+                        <div class="vocab-header">
+                            <span class="vocab-word">elevated</span>
+                            <span class="vocab-phonetic">/ˈelɪveɪtɪd/</span>
+                        </div>
+                        <div class="vocab-meaning">（价格/水平）偏高的；处于高位的</div>
+                        <div class="vocab-example">"Enterprise-grade component costs are expected to remain elevated through H2 2026."<br>企业级零部件成本预计在2026年下半年仍将维持高位。</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 理解练习 -->
+            <div class="section">
+                <div class="section-title">✍️ 理解练习</div>
+                <div class="practice-section">
+                    <div class="practice-intro">💡 阅读文章后作答，选择最佳答案（点击选项即可查看结果）</div>
+
+                    <div class="practice-item">
+                        <div class="practice-question">1. According to the article, what is driving contract prices for enterprise memory upward in Q2 2026?</div>
+                        <div class="practice-option" onclick="checkAnswer(0, 0, 1)">A. A sudden increase in consumer PC purchases</div>
+                        <div class="practice-option" onclick="checkAnswer(0, 1, 1)">B. AI server demand and HBM capacity absorption by major manufacturers</div>
+                        <div class="practice-option" onclick="checkAnswer(0, 2, 1)">C. New tariffs imposed on semiconductor imports</div>
+                        <div class="practice-option" onclick="checkAnswer(0, 3, 1)">D. Shortage of raw materials for NAND production</div>
+                        <div class="answer-result" id="answer-0"></div>
+                    </div>
+
+                    <div class="practice-item">
+                        <div class="practice-question">2. What does the author recommend for teams whose parts inventory is mainly enterprise-grade?</div>
+                        <div class="practice-option" onclick="checkAnswer(1, 0, 2)">A. Wait for spot prices to drop further before purchasing</div>
+                        <div class="practice-option" onclick="checkAnswer(1, 1, 2)">B. Renegotiate supplier agreements to take advantage of lower prices</div>
+                        <div class="practice-option" onclick="checkAnswer(1, 2, 2)">C. Lock in volumes early and build buffer stock ahead of further price increases</div>
+                        <div class="practice-option" onclick="checkAnswer(1, 3, 2)">D. Reduce inventory levels to minimize exposure to price volatility</div>
+                        <div class="answer-result" id="answer-1"></div>
+                    </div>
+
+                    <div class="practice-item">
+                        <div class="practice-question">3. Which word in the article is closest in meaning to "becoming worse gradually through a chain of events"?</div>
+                        <div class="practice-option" onclick="checkAnswer(2, 0, 1)">A. divergence</div>
+                        <div class="practice-option" onclick="checkAnswer(2, 1, 1)">B. cascade</div>
+                        <div class="practice-option" onclick="checkAnswer(2, 2, 1)">C. procurement</div>
+                        <div class="practice-option" onclick="checkAnswer(2, 3, 1)">D. trajectory</div>
+                        <div class="answer-result" id="answer-2"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 历史记录 -->
+        <div class="history-section">
+            <div class="history-title">📜 历史记录</div>
+            <div class="history-list">
+                <a href="../english/2026-04-09.html" class="history-link">2026-04-09</a>
+                <a href="../english/2026-04-08.html" class="history-link">2026-04-08</a>
+                <a href="../english/2026-04-07.html" class="history-link">2026-04-07</a>
+                <a href="../english/2026-04-06.html" class="history-link">2026-04-06</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Daily Digest - 英文学习 | 每日更新 | 商务英语场景：供应链成本管理</p>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer(questionIndex, selectedOption, correctAnswer) {
+            const resultDiv = document.getElementById(`answer-${questionIndex}`);
+            if (selectedOption === correctAnswer) {
+                resultDiv.innerHTML = '<span style="color: #28a745;">✓ 正确！回答准确。</span>';
+            } else {
+                resultDiv.innerHTML = `<span style="color: #dc3545;">✗ 错误。正确答案是选项 ${['A','B','C','D'][correctAnswer]}，请重新阅读相关段落。</span>`;
+            }
+        }
+    </script>
+</body>
+</html>

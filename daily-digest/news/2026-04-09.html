@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC行业早报 - 2026年4月9日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 { font-size: 32px; margin-bottom: 10px; font-weight: 700; }
+        .header .date { font-size: 16px; opacity: 0.9; }
+        .header .update-time { font-size: 14px; opacity: 0.8; margin-top: 5px; }
+        .content { padding: 30px; }
+        .section { margin-bottom: 40px; }
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #212529;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        .news-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        .news-item:hover { transform: translateX(5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .news-item h3 { font-size: 18px; margin-bottom: 10px; color: #212529; }
+        .news-item .meta { font-size: 14px; color: #6c757d; margin-bottom: 8px; }
+        .news-item .summary { font-size: 15px; color: #495057; line-height: 1.6; }
+        .news-item .tag {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #667eea;
+            color: white;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .price-item {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        .price-item .name { font-size: 15px; font-weight: 600; color: #212529; margin-bottom: 8px; }
+        .price-item .price { font-size: 26px; font-weight: 700; color: #e65100; }
+        .price-item .change { font-size: 15px; margin-left: 8px; }
+        .price-item .change.up { color: #dc3545; }
+        .price-item .change.down { color: #28a745; }
+        .price-item .note { font-size: 13px; color: #6c757d; margin-top: 6px; }
+        .alert-box {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-left: 4px solid #fd7e14;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #664d03;
+        }
+        .alert-box strong { display: block; margin-bottom: 5px; font-size: 15px; }
+        .history-section { padding: 30px; background: #f8f9fa; }
+        .history-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #212529;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        .history-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        .history-link {
+            display: block;
+            padding: 12px 16px;
+            background: white;
+            color: #495057;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid #dee2e6;
+        }
+        .history-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102,126,234,0.3);
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .header h1 { font-size: 24px; }
+            .price-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📰 PC行业早报</h1>
+            <div class="date">2026年4月9日 星期四</div>
+            <div class="update-time">更新时间：2026-04-09 08:00</div>
+        </div>
+
+        <div class="content">
+
+            <!-- 价格快讯 -->
+            <div class="section">
+                <div class="section-title">📈 价格快讯</div>
+
+                <div class="alert-box">
+                    <strong>⚠️ 本周行情提示</strong>
+                    消费级DDR5现货自3月下旬以来累计跌幅达25-30%，16G单条已降至约1200元，较峰值跌幅明显。但原厂Q2合约价仍维持58-63%涨幅预期，合约/现货双轨分化加剧，SSC备件采购需重点关注合约价走势。
+                </div>
+
+                <div class="price-grid">
+                    <div class="price-item">
+                        <div class="name">DDR5 16GB 内存（消费级现货）</div>
+                        <div class="price">¥1,200 <span class="change down">↓ ~25%</span></div>
+                        <div class="note">峰值约1,600元；华强北实探数据（4/4）</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="name">DDR5 32GB 内存（消费级现货）</div>
+                        <div class="price">¥3,050 <span class="change down">↓ ~10%</span></div>
+                        <div class="note">较前周下降约300元；金士顿华强北报价</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="name">1TB SSD（NVMe PCIe 4.0 OEM）</div>
+                        <div class="price">¥600-750</div>
+                        <div class="note">CFM 3月底报价；消费级局部松动</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="name">NAND Flash合约价（Q2预测）</div>
+                        <div class="price">+70-75%</div>
+                        <div class="note">TrendForce Q2季增预测（合约端）</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 行业动态 -->
+            <div class="section">
+                <div class="section-title">🔥 行业动态</div>
+
+                <div class="news-item">
+                    <span class="tag">存储市场</span>
+                    <h3>DDR5消费级现货急跌30%，合约价仍看涨58-63%——双轨市场结构分化</h3>
+                    <div class="meta">来源：TrendForce集邦咨询 / 新浪财经 | 2026-04-04</div>
+                    <div class="summary">
+                        2026年3月下旬至4月初，消费级DDR5内存条价格出现断崖式下跌：16GB单条从峰值1,600-1,800元跌至约1,200元（-25-30%）；32G金士顿跌至3,050元（-10%）。触发因素：谷歌发布TurboQuant内存压缩算法引发市场恐慌性抛售，叠加供给端产能回流与长鑫放量预期。但TrendForce最新Q2合约价预测仍维持DRAM季增58-63%、NAND季增70-75%，原厂坚守企业级供货，合约端与现货端价格严重分歧。对SSC备件采购成本的影响：现货跌价短期利好维修备件采购，但合约端高价将支撑原厂OEM价格，净影响需持续观察。
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <span class="tag">PC出货</span>
+                    <h3>Omdia：2025年Q4中国PC出货1150万台同比持平；2026年AI PC占比或超50%</h3>
+                    <div class="meta">来源：Omdia / 腾讯新闻 | 2026-04-02</div>
+                    <div class="summary">
+                        Omdia最新数据：2025年全年中国PC市场同比增长约6%，总出货4,210万台；2025年Q4单季1,150万台，同比基本持平，显示换机潮动力边际减弱。AI PC渗透率持续攀升——业界普遍预测2026年AI PC出货占比将突破50%（2024年Q3仅20%）。材料成本上涨（内存/NAND）是2026年PC整机涨价15-20%的核心因素之一，将对下半年消费需求产生抑制效应。
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <span class="tag">供应链</span>
+                    <h3>内存结构性分化加剧：HBM/服务器级供不应求，消费级阶段性过剩</h3>
+                    <div class="meta">来源：电子工程专辑 / 每经网 | 2026-04-08</div>
+                    <div class="summary">
+                        AI需求爆发后，三星、SK海力士、美光等原厂优先保障HBM、DDR5企业级及企业SSD产能，消费级NAND与DRAM产能相对充裕，已出现阶段性价格回调。Q1原厂服务器/企业级合约价翻倍增长，消费级涨幅明显偏小甚至现货下跌。慧荣科技总经理预计产能紧张格局持续至2028年，消费级大幅跌价空间有限。这一双速分化趋势对PC备件（SSC）成本管控有重要参考价值：服务器级零件仍处高位，消费级可适度争取价格优势。
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI工具前沿 -->
+            <div class="section">
+                <div class="section-title">💡 AI工具前沿</div>
+
+                <div class="news-item">
+                    <span class="tag">AI大模型</span>
+                    <h3>DeepSeek悄然上线"快速模式"与"专家模式"；华为昇腾950PR支持V4推理</h3>
+                    <div class="meta">来源：新浪AI热点 / AI信息Gap | 2026-04-07~08</div>
+                    <div class="summary">
+                        4月7日晚，DeepSeek网页端无声更新，输入框新增"快速模式"和"专家模式"两档，标志着产品体验由单一模式向分层推理升级。同期曝光：DeepSeek V4底层已完成从英伟达CUDA向华为昇腾CANN框架的迁移，搭载华为昇腾950PR运行——国产算力生态替代向核心层迈出重要一步。国产大模型本周同步动态：智谱正式发布GLM-5.1（7,540亿参数），编程及数学推理能力显著增强；Anthropic Claude系列因安全测试暂未对公众开放Mythos版本。
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <span class="tag">AI生态</span>
+                    <h3>2026大模型格局：GPT-5.4 / Claude Opus 4.6 / DeepSeek V4三分天下</h3>
+                    <div class="meta">来源：ofox.ai / CSDN | 2026-04-08</div>
+                    <div class="summary">
+                        最新AI大模型排行榜显示：GPT-5.4在代码生成与多模态综合表现领先；Claude Opus 4.6在长文档推理、安全性方面最强；DeepSeek V4以极低API价格（约GPT-5的1/10）实现接近顶级的中文任务性能，成为国内企业采购AI能力的首选。Gemini 3.1 Pro多模态体验依然最佳。对于日常办公/财务分析/供应链报告场景，DeepSeek V4+国产算力组合已是性价比最优解。
+                    </div>
+                </div>
+            </div>
+
+            <!-- 联想动态 -->
+            <div class="section">
+                <div class="section-title">📊 联想动态</div>
+
+                <div class="news-item">
+                    <span class="tag">股价</span>
+                    <h3>联想集团(0992.HK) 今日开盘HK$10.04，现报HK$10.00，跌1.19%</h3>
+                    <div class="meta">来源：华盛通实时数据 | 2026-04-09 09:56</div>
+                    <div class="summary">
+                        联想港股（0992.HK）今日开盘10.04港元，当前报10.00港元，跌幅-1.19%，成交量1,363万股，总市值约1,240亿港元。今日股价回调主因：市场整体承压（全球科技股受关税不确定性拖累）。高盛本周将联想纳入亚太区买入名单，目标营收突破千亿美元，长线逻辑仍看好AI PC和非PC业务增长。近期催化剂：4月22日ThinkPad 2026新品发布会将公布X1 Carbon、X9-15p等旗舰新品。
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <span class="tag">新品发布</span>
+                    <h3>ThinkPad 2026新品暨天禧AI生态发布会定档4月22日，主题"我·即我们"</h3>
+                    <div class="meta">来源：IT之家 / ZOL中关村在线 | 2026-04-07~08</div>
+                    <div class="summary">
+                        联想ThinkPad官方确认：2026新品暨天禧AI生态发布会将于4月22日举行，宣传口号"我·即我们"，聚焦超级个体与AI生态融合创新。已上架预告机型：ThinkPad X1 Carbon 2026、X9-15p、X14等全系旗舰，均搭载天禧AI生态（DingOS）。这是联想在AIPC渗透率预计突破50%的关键节点举办的旗舰发布，亦是对高盛"千亿营收"目标的重要产品背书。SSC视角：新旗舰机型上市将带动配套备件需求，X1 Carbon/X9系列零件需求值得提前关注。
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 历史记录 -->
+        <div class="history-section">
+            <div class="history-title">📜 历史记录</div>
+            <div class="history-list">
+                <a href="../news/2026-04-09.html" class="history-link">2026-04-09</a>
+                <a href="../news/2026-04-08.html" class="history-link">2026-04-08</a>
+                <a href="../news/2026-04-07.html" class="history-link">2026-04-07</a>
+                <a href="../news/2026-04-06.html" class="history-link">2026-04-06</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>数据来源：TrendForce / CFM闪存市场 / Omdia / IT之家 / 华盛通 / 新浪财经 | 仅供参考</p>
+        </div>
+    </div>
+</body>
+</html>
