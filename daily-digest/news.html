@@ -262,18 +262,20 @@
         // 价格数据
         const priceData = {
             ddr5: {
-                name: 'DDR5 16GB 内存（渠道现货）',
-                price: 170,
-                change: 0,
-                trend: 'flat',
-                date: '2026-04-08'
+                name: 'DDR5 UDIMM 16GB 模组（全球现货均价）',
+                price: 242.50,
+                change: 4.3,
+                trend: 'up',
+                date: '2026-04-10',
+                unit: '$'
             },
             ssd: {
                 name: '1TB SSD（零售）',
                 price: 787,
-                change: 2,
+                change: 1,
                 trend: 'up',
-                date: '2026-04-08'
+                date: '2026-04-10',
+                unit: '¥'
             }
         };
 
@@ -282,12 +284,12 @@
         priceSection.innerHTML = `
             <div class="price-item">
                 <div class="name">${priceData.ddr5.name}</div>
-                <div class="price">¥${priceData.ddr5.price} <span class="change ${priceData.ddr5.trend}">${priceData.ddr5.trend === 'up' ? '↑' : '↓'} ¥${priceData.ddr5.change}</span></div>
+                <div class="price">${priceData.ddr5.unit}${priceData.ddr5.price} <span class="change ${priceData.ddr5.trend}">${priceData.ddr5.trend === 'up' ? '↑' : '↓'} ${priceData.ddr5.change}%</span></div>
                 <div class="date">数据日期：${priceData.ddr5.date}</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.ssd.name}</div>
-                <div class="price">¥${priceData.ssd.price} <span class="change ${priceData.ssd.trend}">${priceData.ssd.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ssd.change)}</span></div>
+                <div class="price">${priceData.ssd.unit}${priceData.ssd.price} <span class="change ${priceData.ssd.trend}">${priceData.ssd.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ssd.change)}</span></div>
                 <div class="date">数据日期：${priceData.ssd.date}</div>
             </div>
         `;
@@ -296,57 +298,57 @@
         const newsData = {
             industry: [
                 {
+                    tag: 'PC出货',
+                    title: 'IDC（4月9日）：2026年Q1全球PC出货6560万台，同比+2.5%；联想以25.2%份额蝉联第一',
+                    source: 'IDC / 腾讯新闻',
+                    date: '2026-04-09',
+                    summary: 'IDC最新发布2026年Q1全球PC市场初步报告：全球PC出货量6560万台，同比增长2.5%，在内存短缺、物流成本上升等多重压力下仍实现正增长。联想出货1650万台（+8.6%），增速为市场均值的3.4倍，市场份额升至25.2%；惠普1210万台（-4.9%）；戴尔1030万台（+7.7%）。IDC预警：PC整机涨价压力将在下半年抑制出货量。'
+                },
+                {
                     tag: '存储',
-                    title: 'TrendForce（4月7日）：DDR5现货$37稳守，DDR4合约/现货两端分歧持续扩大',
-                    source: 'TrendForce集邦咨询',
+                    title: '华强北内存价格"过山车"：半月跌三成，金士顿16GB DDR4跌至720元',
+                    source: '深圳商报 / 腾讯新闻',
                     date: '2026-04-08',
-                    summary: 'TrendForce最新数据显示，DDR5 16Gb现货维持$37，DDR4 16Gb颗粒现货小幅回落（-0.08%至$73）。但合约端Q2预涨58-63%预期未变，原厂持续优先供货品牌大厂，渠道满足率偏低。合约价与现货价结构性分歧是当前市场最大特征，对SSC备件采购成本影响需持续追踪。'
+                    summary: '2026年3月下旬至4月初，深圳华强北消费级内存条出现断崖式下跌：金士顿16GB DDR4从¥1,100跌至¥720（-34.5%）；三星/SK海力士4GB DDR4跌超30%。主因：渠道库存积压超60天，商家降价出货。合约端TrendForce Q2 DRAM仍预涨58-63%、NAND预涨70-75%，现货/合约双轨分化持续，对SSC备件采购成本影响不可忽视。'
                 },
                 {
-                    tag: '渠道',
-                    title: 'CFM（4月7日）：DDR5 16GB渠道本周$170持平，消费级松动但供给仍偏紧',
-                    source: 'CFM闪存市场',
-                    date: '2026-04-08',
-                    summary: 'CFM闪存市场4月7日报价：DDR5 UDIMM 16GB 5600维持$170/周持平，DDR5 32GB维持$290，DDR4 16GB维持$90。整体渠道价格本周横盘，但较3月初上涨约50%高位运行。消费级局部降价，企业级产品仍抢手，整体供给偏紧格局短期难以改变。'
-                },
-                {
-                    tag: '市场',
-                    title: '每经网：消费级内存降价，企业级仍抢手，供给结构分化加剧',
-                    source: '每经网 / CFM',
-                    date: '2026-04-08',
-                    summary: 'AI需求爆发后，原厂优先保障HBM、DDR5企业级、企业级SSD产能，消费级NAND与DRAM相对充裕，已出现局部降价。Q1原厂服务器及PC NAND/DRAM合约价翻倍增长，消费级涨幅明显偏小。这一分化趋势对PC备件成本管控有重要参考价值。'
+                    tag: 'AIPC',
+                    title: 'IDC预警：整机涨价+内存短缺，2026年Q2~Q4 PC出货量恐进一步承压',
+                    source: 'IDC / 芯智讯',
+                    date: '2026-04-09',
+                    summary: 'Q1报告发布同时，IDC发出预警：供应链稳定性是2026年PC厂商关键竞争点。原厂优先保障HBM及DDR5企业级产能，消费级供给不足推高整机成本15-20%，消费端需求下半年料受抑制。AI PC渗透率有望在年底突破50%，但价格弹性不足将制约绝对出货量增长。'
                 }
             ],
             ai: [
                 {
-                    tag: 'AI大模型',
-                    title: 'DeepSeek V4本月上线，长期记忆+多模态全面升级；GPT-5发布会预告',
-                    source: '太平洋科技 / 腾讯科技',
-                    date: '2026-04-08',
-                    summary: 'DeepSeek V4由创始人梁文锋亲自带队研发，确定4月上线，长期记忆、编程与多模态能力全面升级；OpenAI宣布4月下旬春季发布会推出GPT-5；阿里Qwen3.6-Plus（4/2发布）编程能力国产最强，100万token超长上下文；谷歌Gemma 4（4/5）以310亿参数超越千亿级对手，引爆开源社区。'
+                    tag: 'AI工具',
+                    title: '腾讯云QClaw V2发布开启多Agent协同；字节Seeduplex原生全双工语音模型上线',
+                    source: '格熊 / 腾讯云',
+                    date: '2026-04-10',
+                    summary: '今日AI早报：①腾讯云QClaw V2正式发布，支持多Agent协同，企业级AI应用落地加速；②字节跳动发布原生全双工语音模型Seeduplex，强抗干扰，适合客服/远程协作；③谷歌Gemini Notebooks打通NotebookLM个人知识库；④阿里云百炼上线"记忆库"，跨会话检索性能+50%；⑤面壁智能完成数亿元融资跻身独角兽。'
                 },
                 {
-                    tag: 'AI趋势',
-                    title: '中国大模型周调用量连续三周超越美国，AI智能体从"工具"升级为"数字伙伴"',
-                    source: '腾讯云 / 36氪',
-                    date: '2026-04-08',
-                    summary: '中国大模型周调用量已突破7.359万亿Token，连续三周超越美国，标志国产AI进入集群式超越阶段。AI智能体进化加速：从单任务执行工具升级为能自主拆解任务、调用多工具、持续优化的"数字伙伴"。联想已将AI原生操作系统DingOS部署至Think AI Tiny企业PC，支持OpenClaw一键部署。'
+                    tag: '大模型格局',
+                    title: '2026年大模型三强：GPT-5.4、Claude Opus 4.6、DeepSeek V4；腾讯云算力5月涨价5%',
+                    source: 'ofox.ai / 腾讯云',
+                    date: '2026-04-10',
+                    summary: '当前大模型三足鼎立：GPT-5.4综合性能领跑，Claude Opus 4.6安全推理最优，DeepSeek V4以约1/10的API成本实现接近顶级的中文能力。国产AI周调用量突破7.359万亿Token，连续三周超越美国。腾讯云宣布5月9日起AI算力及容器服务价格上调5%，反映AI基础设施成本持续上行。'
                 }
             ],
             lenovo: [
                 {
                     tag: '股价',
-                    title: '联想集团(0992.HK) 4/8开盘HK$1.24，+0.52%；市值约153亿美元',
-                    source: 'MarketCapWatch / 同花顺',
-                    date: '2026-04-08',
-                    summary: '联想港股（0992.HK）4月8日最新股价HK$1.24，涨幅+0.52%，交易量约1,115万股，总市值约153.42亿美元。5月21日将发布下一季度财报。FY2025/26财年为联想历史最好一年：AI PC出货253万台，市场份额42.8%历史峰值，非PC业务占营收近50%。'
+                    title: '联想集团(0992.HK) 4/10股价HK$10.11，+2.33%；IDC Q1数据提供基本面支撑',
+                    source: '新浪财经港股 / IDC',
+                    date: '2026-04-10',
+                    summary: '联想港股（0992.HK）今日股价HK$10.11，涨幅+2.33%，市盈率89.47。IDC Q1数据为其上涨提供基本面支撑：Q1出货1650万台（+8.6%），市场份额25.2%，增速为行业均值3.4倍。中国方案服务业务擎天AI交付能力4月9日誓师大会持续发力企业级。高盛维持亚太买入名单，目标营收突破千亿美元。'
                 },
                 {
                     tag: '战略',
-                    title: '联想发布ThinkPad AI PC新品预告，4月22日发布会；杨元庆：冲击5%净利率',
-                    source: '新浪财经 / 中国财富网',
-                    date: '2026-04-08',
-                    summary: 'ThinkPad AI PC新品暨天禧AI生态发布会定于4月22日举行。联想新财年战略核心：从规模扩张转向盈利质量，目标冲击5%净利率。已推出YOGA AI Mini（个人）和Think AI Tiny（企业）两款"龙虾终端"，搭载DingOS，支持AI原生操作。杨元庆个人捐2亿元回馈上海交大。'
+                    title: '联想ThinkPad 2026新品发布会4月22日；AIPC出货253万台，份额42.8%历史峰值',
+                    source: 'IT之家 / ZOL',
+                    date: '2026-04-07',
+                    summary: 'ThinkPad 2026新品暨天禧AI生态发布会定于4月22日，主题"我·即我们"，预告机型含X1 Carbon 2026、X9-15p、X14等旗舰。联想AI PC当前全球份额42.8%，为历史峰值。IDC Q1报告同期印证：AI PC渗透率有望年底破50%。杨元庆战略重心：从规模扩张转向盈利质量，目标冲击5%净利率。'
                 }
             ]
         };
@@ -370,6 +372,7 @@
 
         // 历史记录数据
         const historyDates = [
+            {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
             {date: '2026-04-08', label: '2026-04-08'},
             {date: '2026-04-07', label: '2026-04-07'},
