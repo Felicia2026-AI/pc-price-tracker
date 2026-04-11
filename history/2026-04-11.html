@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC备件价格趋势追踪 - 2026年4月10日更新</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .date {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .header .update-time {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .trend-summary {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin: 20px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            color: #856404;
+        }
+
+        .charts-container {
+            padding: 30px;
+        }
+
+        .chart-section {
+            margin-bottom: 40px;
+        }
+
+        .chart-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trend-indicator {
+            font-size: 20px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .trend-up {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .trend-down {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .chart-wrapper {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            height: 350px;
+            position: relative;
+        }
+
+        .news-section {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+
+        .news-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .news-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .news-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .news-item a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .news-item a:hover {
+            text-decoration: underline;
+        }
+
+        .news-summary {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .source {
+            color: #999;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        .history-section {
+            padding: 30px;
+            background: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .history-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .history-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 12px;
+        }
+
+        .history-link {
+            display: block;
+            padding: 12px 16px;
+            background: white;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+        }
+
+        .history-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #999;
+            font-size: 14px;
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 PC备件价格趋势追踪</h1>
+            <div class="date">更新时间：2026年4月10日 08:00</div>
+        </div>
+
+        <div class="trend-summary">
+            ⚡ 关键趋势（4月10日）：IDC Q1全球PC出货6560万台（+2.5%），联想以25.2%份额、8.6%增速蝉联第一，为市场均值3.4倍；华强北消费级内存价格加速分化，金士顿16GB DDR4跌至¥720（半月跌34%），全球DDR5 UDIMM 16GB现货均价$242.5（周+4.3%），TrendForce Q2合约价预涨58-63%，现货/合约双轨分歧持续；联想港股HK$10.11（+2.33%），IDC数据驱动基本面修复；ThinkPad 2026新品发布会4月22日倒计时12天；腾讯云QClaw V2发布，多Agent协同开启企业AI新时代。
+        </div>
+
+        <div class="charts-container">
+            <!-- DDR5价格图表 -->
+            <div class="chart-section">
+                <div class="chart-title">
+                    DDR5内存价格走势
+                    <span class="trend-indicator trend-down">↓ 消费级现货跌34% / 合约价Q2仍看涨60%+</span>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="ddr5Chart"></canvas>
+                </div>
+            </div>
+
+            <!-- SSD价格图表 -->
+            <div class="chart-section">
+                <div class="chart-title">
+                    SSD固态硬盘价格走势
+                    <span class="trend-indicator trend-up">↑ 高位僵持</span>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="ssdChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-section">
+            <div class="news-title">📰 热点新闻（权威来源精选）</div>
+
+            <div class="news-item">
+                <a href="https://caifuhao.eastmoney.com/news/20260409173728941103150" target="_blank">IDC（4月9日）：2026年Q1全球PC出货6560万台，联想以25.2%份额、增速市场3.4倍蝉联第一</a>
+                <div class="news-summary">IDC最新Q1初步报告：全球PC出货6560万台，同比+2.5%，在内存短缺、物流成本上升等多重压力下仍实现正增长。联想出货1650万台（+8.6%），市场份额25.2%（+1.4ppt），增速约市场均值3.4倍；惠普1210万台（-4.9%）；戴尔1030万台（+7.7%）；苹果620万台（+9.1%）。IDC预警：整机价格上涨将在2026年下半年抑制出货量。</div>
+                <div class="source">来源：IDC / 格隆汇·东方财富 | 2026-04-09</div>
+            </div>
+
+            <div class="news-item">
+                <a href="https://news.qq.com/rain/a/20260408A065BU00" target="_blank">华强北内存价格"大变脸"：金士顿16GB DDR4半月跌34%至720元，商家"不敢囤货"</a>
+                <div class="news-summary">深圳华强北消费级内存条价格出现断崖式下跌：金士顿16GB DDR4从¥1,100跌至¥720（-34.5%）；三星/SK海力士4GB DDR4降幅超30%。主因：渠道库存积压超60天，商家资金压力下降价出货，某商户囤货5000万浮亏1500万。然而TrendForce Q2 DRAM合约价仍预涨58-63%，合约/现货双轨分化为当前市场最大特征。</div>
+                <div class="source">来源：深圳商报 / 腾讯新闻 | 2026-04-08</div>
+            </div>
+
+            <div class="news-item">
+                <a href="https://nb.zol.com.cn/1161/11610102.html" target="_blank">联想ThinkPad 2026新品暨天禧AI生态发布会倒计时12天，4月22日举行</a>
+                <div class="news-summary">联想ThinkPad官方确认：2026新品暨天禧AI生态发布会将于4月22日举行，主题"我·即我们"。预告机型含ThinkPad X1 Carbon 2026、X9-15p、X14等旗舰，均搭载天禧AI生态（DingOS）。联想港股今日HK$10.11（+2.33%），IDC Q1数据驱动基本面修复；高盛维持亚太买入名单，目标营收突破千亿美元。</div>
+                <div class="source">来源：IT之家 / ZOL中关村在线 | 2026-04-07~10</div>
+            </div>
+
+            <div class="news-item">
+                <a href="https://www.gexiong.com/rmzx/281.html" target="_blank">腾讯云QClaw V2发布，开启多Agent协同新时代；字节Seeduplex全双工语音模型上线</a>
+                <div class="news-summary">4月10日AI早报：①腾讯云QClaw V2发布，多Agent协同支持企业级AI部署；②字节跳动Seeduplex原生全双工语音大模型上线，强抗干扰；③谷歌Gemini Notebooks打通NotebookLM个人知识库；④阿里云百炼"记忆库"跨会话检索+50%；⑤面壁智能完成数亿元融资跻身独角兽；⑥腾讯云5月9日起AI算力价格上调5%。</div>
+                <div class="source">来源：格熊 / 腾讯云 | 2026-04-10</div>
+            </div>
+
+            <div class="news-item">
+                <a href="https://caifuhao.eastmoney.com/news/20260407141236403255710" target="_blank">东方财富（4月7日）：DDR5 UDIMM 16GB模组现货均价$242.5（周+4.3%），颗粒价$37稳守</a>
+                <div class="news-summary">东方财富最新存储价格报告：DDR5 16Gb颗粒现货均价$37.00，DDR5 UDIMM 16GB模组现货均价$242.50（周涨+4.3%）；DDR4 UDIMM 16GB模组均价$150.00（+4.65%）。AI服务器存储需求为传统需求12倍以上，产能向HBM和DDR5倾斜，全球存储周转天数降至3-4周，支撑价格上行。</div>
+                <div class="source">来源：东方财富/芯片人机AI聚变能 | 2026-04-07（数据截止2026-04-03）</div>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <div class="history-title">📜 历史记录</div>
+            <div class="history-list" id="historyList"></div>
+        </div>
+
+        <div class="footer">
+            数据来源：TrendForce集邦咨询、CFM闪存市场、IDC、IT之家、每经网 | 仅供成本参考，不构成投资建议
+        </div>
+    </div>
+
+    <script>
+        // 历史记录数据
+        const historyDates = [
+            {date: '2026-04-10', label: '2026-04-10'},
+            {date: '2026-04-09', label: '2026-04-09'},
+            {date: '2026-04-08', label: '2026-04-08'},
+            {date: '2026-04-07', label: '2026-04-07'},
+            {date: '2026-04-06', label: '2026-04-06'},
+            {date: '2026-04-05', label: '2026-04-05（正式版）'},
+            {date: '2026-04-05-test', label: '2026-04-05（测试版-IDC新闻）'}
+        ];
+
+        // 动态生成历史记录链接
+        const historyList = document.getElementById('historyList');
+        historyDates.forEach(item => {
+            const link = document.createElement('a');
+            link.href = `../history/${item.date}.html`;
+            link.className = 'history-link';
+            link.textContent = item.label;
+            historyList.appendChild(link);
+        });
+
+        // DDR5价格数据（2025年1月 - 2026年4月，月度+最近6周）
+        const ddr5Data = {
+            labels: [
+                '2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06',
+                '2025-07', '2025-08', '2025-09', '2025-10', '2025-11', '2025-12',
+                '2026-W13', '2026-W14', '2026-W15', '2026-W16', '2026-W17', '2026-W18', '2026-W19', '2026-W20', '2026-W21'
+            ],
+            prices: [
+                180, 195, 210, 235, 260, 300,
+                380, 450, 550, 680, 820, 1000,
+                920, 860, 780, 700, 638, 610, 600, 580, 560
+            ]
+        };
+
+        // SSD价格数据（2025年1月 - 2026年4月，月度+最近6周）
+        const ssdData = {
+            labels: [
+                '2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06',
+                '2025-07', '2025-08', '2025-09', '2025-10', '2025-11', '2025-12',
+                '2026-W13', '2026-W14', '2026-W15', '2026-W16', '2026-W17', '2026-W18', '2026-W19', '2026-W20', '2026-W21'
+            ],
+            prices: [
+                280, 295, 310, 330, 350, 375,
+                410, 450, 520, 600, 680, 750,
+                760, 770, 775, 780, 782, 785, 787, 786, 787
+            ]
+        };
+
+        // 创建DDR5图表
+        const ddr5Ctx = document.getElementById('ddr5Chart').getContext('2d');
+        const ddr5Chart = new Chart(ddr5Ctx, {
+            type: 'line',
+            data: {
+                labels: ddr5Data.labels,
+                datasets: [{
+                    label: 'DDR5 16GB价格 (元)',
+                    data: ddr5Data.prices,
+                    borderColor: '#c62828',
+                    backgroundColor: 'rgba(198, 40, 40, 0.1)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 4,
+                    pointBackgroundColor: '#c62828',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        title: {
+                            display: true,
+                            text: '价格 (元)'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    }
+                }
+            }
+        });
+
+        // 创建SSD图表
+        const ssdCtx = document.getElementById('ssdChart').getContext('2d');
+        const ssdChart = new Chart(ssdCtx, {
+            type: 'line',
+            data: {
+                labels: ssdData.labels,
+                datasets: [{
+                    label: '1TB SSD价格 (元)',
+                    data: ssdData.prices,
+                    borderColor: '#e65100',
+                    backgroundColor: 'rgba(230, 81, 0, 0.1)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 4,
+                    pointBackgroundColor: '#e65100',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        title: {
+                            display: true,
+                            text: '价格 (元)'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
