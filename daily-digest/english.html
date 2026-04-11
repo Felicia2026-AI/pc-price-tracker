@@ -359,9 +359,9 @@
         function checkAnswer(questionIndex, selectedOption, correctAnswer) {
             const resultDiv = document.getElementById(`answer-${questionIndex}`);
             if (selectedOption === correctAnswer) {
-                resultDiv.innerHTML = '<span style="color: #28a745;">✓ 正确！</span>';
+                resultDiv.innerHTML = '<span style="color: #28a745;">✓ Correct!</span>';
             } else {
-                resultDiv.innerHTML = '<span style="color: #dc3545;">✗ 错误，请再试试</span>';
+                resultDiv.innerHTML = '<span style="color: #dc3545;">✗ Try again</span>';
             }
         }
 
