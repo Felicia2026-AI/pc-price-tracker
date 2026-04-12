@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Digest - PC行业早报</title>
+    <title>Daily Digest - PC行业早报 2026-04-11</title>
     <style>
         * {
             margin: 0;
@@ -212,8 +212,8 @@
     <div class="container">
         <div class="header">
             <h1>📰 PC行业早报</h1>
-            <div class="date" id="currentDate"></div>
-            <div class="update-time" id="updateTime"></div>
+            <div class="date">2026年4月11日 星期五</div>
+            <div class="update-time">快照存档版本</div>
         </div>
 
         <div class="content">
@@ -249,30 +249,20 @@
     </div>
 
     <script>
-        // 设置日期
-        const now = new Date();
-        document.getElementById('currentDate').textContent = now.toLocaleDateString('zh-CN', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            weekday: 'long'
-        });
-        document.getElementById('updateTime').textContent = `更新时间：${now.toLocaleString('zh-CN')}`;
-
         // 价格数据
         const priceData = {
             ddr5: {
                 name: 'DDR5 UDIMM 16GB 模组（全球现货均价）',
-                price: 242.50,
-                change: 4.3,
-                trend: 'up',
+                price: 240.00,
+                change: -1.0,
+                trend: 'down',
                 date: '2026-04-11',
                 unit: '$'
             },
             ssd: {
                 name: '1TB SSD（零售）',
-                price: 787,
-                change: 1,
+                price: 789,
+                change: 0.3,
                 trend: 'up',
                 date: '2026-04-11',
                 unit: '¥'
@@ -284,7 +274,7 @@
         priceSection.innerHTML = `
             <div class="price-item">
                 <div class="name">${priceData.ddr5.name}</div>
-                <div class="price">${priceData.ddr5.unit}${priceData.ddr5.price} <span class="change ${priceData.ddr5.trend}">${priceData.ddr5.trend === 'up' ? '↑' : '↓'} ${priceData.ddr5.change}%</span></div>
+                <div class="price">${priceData.ddr5.unit}${priceData.ddr5.price} <span class="change ${priceData.ddr5.trend}">${priceData.ddr5.trend === 'up' ? '↑' : '↓'} ${Math.abs(priceData.ddr5.change)}%</span></div>
                 <div class="date">数据日期：${priceData.ddr5.date}</div>
             </div>
             <div class="price-item">
@@ -298,57 +288,57 @@
         const newsData = {
             industry: [
                 {
-                    tag: 'PC市场',
-                    title: '全球PC市场"最后的狂欢"：上游涨价倒逼行业洗牌，中小品牌博弈求生',
-                    source: '腾讯新闻 / 每日经济新闻',
+                    tag: '存储涨价',
+                    title: '存储涨价潮凶猛：OPPO/vivo/小米相继宣布涨价，PC产业链集体承压',
+                    source: '上海证券报 / 腾讯新闻',
+                    date: '2026-04-03~11',
+                    summary: '存储芯片涨价潮凶猛，继OPPO、vivo之后，小米4月3日宣布受全球存储芯片涨价影响手机涨价。全球存储芯片等关键零部件价格持续走高，成本压力正沿消费电子产业链快速传导。上海证券报记者采访了解到，面板、镜头等零部件也在酝酿涨价，PC整机价格2026年下半年预计再涨15-20%。对SSC启示：备件采购需提前锁定合约价，关注DDR5等关键料的库存策略。'
+                },
+                {
+                    tag: '内存市场',
+                    title: '消费级DDR4半月跌34%：华强北进入理性回归期，合约价仍看涨58-63%',
+                    source: '观察者网 / 深圳商报',
+                    date: '2026-04-11',
+                    summary: '继3月中下旬消费级内存断崖式暴跌后，市场进入理性回归期。华强北数据：金士顿16GB DDR4从¥1,100跌至¥720（-34.5%），威刚等品牌跟进降价。但TrendForce Q2 DRAM合约价仍预涨58-63%，现货/合约双轨分歧持续。SSD价格变动相对较小，机械硬盘保持高位。对SSC影响：消费级备件采购成本回落，企业级/服务器存储成本仍承压，需分类管理。'
+                },
+                {
+                    tag: '零部件',
+                    title: '内存/金属/电池涨价共振：供应链打响成本"防御战"',
+                    source: '证券时报 / 新浪财经',
                     date: '2026-04-10~11',
-                    summary: '2026年存储芯片、CPU等上游元器件持续涨价（内存较年初涨331%、SSD涨56%），叠加AI转型成本压力，全球PC市场进入深度洗牌期。头部厂商（联想、惠普、戴尔）凭借供应链议价能力和AI产品布局抢占份额，中小品牌面临利润压缩与出货萎缩双重挑战。行业共识：2026年下半年出货量可能承压，但AI PC渗透率突破50%将成为新的增长引擎。'
-                },
-                {
-                    tag: '存储',
-                    title: 'SSD价格持续飙升：2TB消费级SSD高达649美元，AI内存短缺引发存储连锁涨价',
-                    source: 'aitoolly / 全球半导体观察',
-                    date: '2026-04-09~11',
-                    summary: '受AI相关内存短缺连锁反应影响，SSD存储市场剧烈波动。以WD Black SN850X 2TB为例，价格从2024年的173美元飙升至649美元（+275%）。企业级SSD涨幅更甚，NAND Flash合约价TrendForce预测Q2季增70-75%。对SSC影响：存储类备件采购成本持续攀升，需关注替代方案和合约锁价窗口。'
-                },
-                {
-                    tag: 'GPT-6',
-                    title: 'GPT-6定档4月14日发布！性能暴涨40%，原生多模态+200万Token上下文',
-                    source: '腾讯新闻 / 知乎',
-                    date: '2026-04-09~11',
-                    summary: 'OpenAI正式确认，代号"Spud（土豆）"的GPT-6将于4月14日全球同步发布。核心升级：性能较GPT-5.4提升40%，支持200万Token超长上下文窗口，原生多模态能力（文本+图像+音频+视频），被内部定义为冲刺AGI的"最后20%"。该发布将对AI应用开发、企业级AI部署产生深远影响。'
+                    summary: '2026年供应链成本压力全面升级：存储芯片、车身轻量化金属、动力电池等关键零部件价格共振上涨。主机厂面临"涨价传导消费者"或"利润承压"的两难选择。对SSC影响：备件采购需提前锁定合约价，关注内存、面板等高价值料的库存策略。'
                 }
             ],
             ai: [
                 {
-                    tag: 'AI工具',
-                    title: '2026年4月AI编程工具终极横评：Cursor 3、Claude Code、GitHub Copilot三足鼎立',
-                    source: 'CSDN AI编程频道',
-                    date: '2026-04-10~11',
-                    summary: '2026年AI编程工具已进入"自主Agent"时代。Cursor 3发布Glass界面与多Agent并行协作；Claude Code以SWE-bench 80.8%登顶编程能力榜首；GitHub Copilot依托微软生态优势保持最大用户群。三款工具在代码补全→Bug修复→自主开发全链条上的能力持续进化，开发者效率提升5-10倍。'
+                    tag: 'GPT-6',
+                    title: 'GPT-6定档4月14日倒计时3天：Symphony架构+200万Token，冲刺AGI"最后20%"',
+                    source: '多课网 / GitCode',
+                    date: '2026-04-11',
+                    summary: '4月11日AI圈最新：GPT-6代号Symphony，正式定档4月14日发布。核心参数：性能较GPT-5.4暴涨40%，支持200万Token超长上下文，原生多模态（文本+图像+音频+视频）。内部定位为冲刺AGI的"最后20%"。同时DeepSeek V4全面换装华为昇腾950PR芯片，Anthropic发布Claude Mythos Preview可自主发现数学定理。'
                 },
                 {
-                    tag: '开源模型',
-                    title: 'Google Gemma 4发布：Apache 2.0许可，四款开源模型覆盖移动端到数据中心',
-                    source: 'Google DeepMind / CSDN',
-                    date: '2026-04-08~11',
-                    summary: 'Google DeepMind发布Gemma 4系列开源模型（4月2日正式上线），共四款规格：1B（移动端）、4B、9B、27B（数据中心级）。基于Gemini 3同源技术构建，全系列原生支持多模态（文本+图像），专为多步骤规划和自主Agent工作流设计。许可从Gemma License切换为Apache 2.0，商业使用零限制，对开发者生态意义重大。'
+                    tag: 'AI编程',
+                    title: 'Claude Code领跑SWE-bench 80.8%：2026年4月AI编程工具终极横评',
+                    source: 'CSDN / 知乎',
+                    date: '2026-04-10~11',
+                    summary: '2026年AI编程工具进入"自主Agent"时代：Claude Code以SWE-bench 80.8%登顶编程能力榜首；Cursor 3发布Glass界面，支持多Agent并行协作；GitHub Copilot依托微软生态保持最大用户群。AI编程助手使开发者效率提升5-10倍。对SSC启示：AI工具可辅助备件需求预测和成本分析，如构建自动化的成本分析脚本。'
                 }
             ],
             lenovo: [
                 {
                     tag: '战略',
-                    title: '联想2026/27财年誓师大会：混合式AI战略交付年，推进向AI原生公司转型',
-                    source: '新华网',
-                    date: '2026-04-01~11',
-                    summary: '联想集团4月1日在北京举行2026/27财年誓师大会中国站，明确新财年为"混合式AI战略交付年"。核心战略：从硬件厂商向AI原生公司转型，依托天禧个人超级智能体（DingOS）打造AI PC生态，中国方案服务业务持续发力企业级。杨元庆设定未来两年营收突破千亿美元目标。'
+                    title: 'ThinkPad 2026新品发布会倒计时11天，4月22日天禧AI生态全面亮相',
+                    source: 'IT之家 / ZOL中关村在线',
+                    date: '2026-04-11',
+                    summary: '联想ThinkPad 2026新品暨天禧AI生态发布会将于4月22日在北京举行，主题"我·即我们"。预告机型含ThinkPad X1 Carbon 2026、X9-15p、X14等旗舰，均搭载天禧AI生态（DingOS）。结合4月1日誓师大会"混合式AI战略交付年"定位，ThinkPad新品将全面拥抱AI PC时代。'
                 },
                 {
-                    tag: '行业地位',
-                    title: 'IDC Q1数据夯实联想龙头地位：出货增速为行业均值3.4倍，AI PC份额42.8%历史峰值',
-                    source: 'IDC / 新浪财经',
+                    tag: '股价',
+                    title: '联想集团4月至今涨幅近12%：IDC Q1数据+AI战略双重催化',
+                    source: '格隆汇 / 雪球',
                     date: '2026-04-09~11',
-                    summary: '联想AI赋能PC行业成效显著：IDC Q1全球PC出货6560万台（+2.5%），联想以1650万台（+8.6%）、25.2%份额蝉联第一，增速为行业均值的3.4倍。AI PC出货253万台（FY2025/26），全球市场份额42.8%创历史峰值。高盛将联想纳入亚太买入名单，ThinkPad 2026新品发布会定档4月22日。'
+                    summary: '联想集团4月以来涨幅近12%，受益于外围环境回暖与风险偏好修复。IDC Q1数据显示联想出货+8.6%、份额25.2%稳居第一；天禧AI生态（DingOS）+ ThinkPad 2026新品双重催化；高盛维持亚太买入名单，目标营收突破千亿美元。4月22日发布会倒计时11天，需关注新品定价对备件供应链的影响。'
                 }
             ]
         };
@@ -370,9 +360,8 @@
         renderNews(newsData.ai, 'aiSection');
         renderNews(newsData.lenovo, 'lenovoSection');
 
-        // 历史记录数据
+        // 历史记录数据（快照文件：去掉自身日期4月11日，链接加../前缀）
         const historyDates = [
-            {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
             {date: '2026-04-08', label: '2026-04-08'},
