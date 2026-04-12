@@ -264,65 +264,59 @@
     </div>
 
     <script>
-        // 设置日期
-        const now = new Date();
-        document.getElementById('currentDate').textContent = now.toLocaleDateString('zh-CN', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            weekday: 'long'
-        });
-        document.getElementById('updateTime').textContent = `更新时间：${now.toLocaleString('zh-CN')}`;
+        // 设置日期（硬编码，禁止使用new Date()）
+        document.getElementById('currentDate').textContent = '2026年4月11日星期六';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/11 10:00:00';
 
-        // 今日学习内容 - GPT-6发布与AI产业变革
+        // 今日学习内容 - HBM市场竞争与供应链管理
         const todayContent = {
-            english: "OpenAI is set to unveil GPT-6 on April 14th, marking what CEO Sam Altman calls the final push toward Artificial General Intelligence. The model, internally codenamed 'Spud,' represents a significant leap from its predecessors with 2 million token context windows and native multimodal capabilities spanning text, images, audio, and video. In a recent interview, Altman described GPT-6 as 'the last API humanity will need to remember,' signaling a paradigm shift in how enterprises deploy AI systems. The new pricing model—shifting from token-based billing to value-based charging—could fundamentally reshape the economics of AI adoption. Industry analysts predict GPT-6 will trigger a wave of enterprise AI deployments, particularly in sectors like healthcare, finance, and autonomous systems where long-context understanding is critical. For supply chain managers, this development signals stronger demand for AI-capable hardware, potentially driving up prices for high-bandwidth memory and advanced processors well into 2027.",
-            chinese: "OpenAI将于4月14日发布GPT-6，CEO Sam Altman称这将是迈向通用人工智能的最后冲刺。该模型内部代号"Spud（土豆）"，相比前代产品实现重大飞跃：200万Token上下文窗口，支持文本、图像、音频和视频的原生多模态能力。在近期采访中，Altman将GPT-6描述为"人类最后需要记住的API"，预示着企业AI部署模式的范式转变。新型定价模式——从按Token计费转向按价值收费——可能从根本上重塑AI应用的经济学逻辑。行业分析师预测GPT-6将引发企业AI部署浪潮，尤其在医疗、金融和自动驾驶等领域，这些场景对长上下文理解有关键需求。对于供应链管理者而言，这一进展意味着AI硬件需求将更加强劲，高带宽内存和先进处理器价格可能在2027年之前持续走高。",
+            english: "The HBM4 memory race between Samsung and SK Hynix is reshaping the global AI supply chain. For the first time in years, Samsung Electronics has passed NVIDIA's Production Readiness Assessment (PRA) for its 12-layer HBM4 chips, officially entering the candidate list for NVIDIA's supply chain. Previously, SK Hynix commanded over 95% of NVIDIA's HBM orders, making it the de facto sole supplier of high-bandwidth memory for AI accelerators.\n\nSamsung's breakthrough threatens SK Hynix's dominant position. Industry analysts estimate that SK Hynix currently holds approximately 70% of NVIDIA's HBM4 order book, but this share could decline significantly if Samsung's products pass final qualification tests. The Korean chipmakers are competing intensely on two fronts: manufacturing process technology and chip-to-chip bonding techniques. SK Hynix's Advanced MR-MUF process offers superior thermal management, while Samsung is betting on its vertically integrated supply chain and proprietary fabrication capabilities.\n\nFor enterprise procurement teams in the technology sector, this competition has direct implications. When HBM suppliers compete aggressively for NVIDIA's business, downstream buyers—servers, AI PCs, data centers—may benefit from improved pricing and supply reliability. However, the transition period carries risk: early-stage supply chain instability, potential quality variations, and the need to qualify multiple suppliers simultaneously. A diversified HBM procurement strategy, combining long-term contracts with spot market flexibility, is increasingly becoming a competitive necessity rather than a luxury.",
+            chinese: "三星与SK海力士之间的HBM4内存竞赛正在重塑全球AI供应链。多年来首次，三星电子的12层HBM4芯片已通过英伟达的量产准备认证（PRA），正式进入英伟达供应链候选名单。此前，SK海力士占据英伟达HBM订单的95%以上，成为AI加速器高带宽内存的事实上的唯一供应商。\n\n三星的突破威胁着SK海力士的主导地位。行业分析师估计，SK海力士目前约占英伟达HBM4订单的70%，但如果三星产品通过最终资格认证，这一份额可能大幅下降。这两家韩国芯片制造商正在两个领域展开激烈竞争：制造工艺技术和芯片键合技术。SK海力士的Advanced MR-MUF工艺在热管理方面表现更优，而三星则押注于其垂直整合的供应链和自有制造能力。\n\n对于科技行业的企业采购团队而言，这场竞争具有直接影响。当HBM供应商为争夺英伟达业务而激烈竞争时，下游买家——服务器、AI PC、数据中心——可能从更好的定价和供应可靠性中受益。然而，过渡期也伴随着风险：供应链早期不稳定、潜在的质量差异，以及同时认证多个供应商的需求。结合长期合约与现货市场灵活性的多元化HBM采购策略，正日益成为一种竞争必需，而非奢侈品。",
             vocabulary: [
                 {
-                    word: "Artificial General Intelligence (AGI)",
-                    meaning: "通用人工智能；具备人类全部认知能力的AI，被视为AI发展的终极目标",
-                    example: "Altman called GPT-6 'the final push toward Artificial General Intelligence.'"
+                    word: "supply chain",
+                    meaning: "供应链；产品从原材料到最终交付消费者的完整流程网络",
+                    example: "Samsung's vertically integrated supply chain gives it an advantage in HBM production."
                 },
                 {
-                    word: "native multimodal capabilities",
-                    meaning: "原生多模态能力；AI模型原生支持同时处理文本、图像、音频、视频等多种数据格式",
-                    example: "GPT-6 features native multimodal capabilities spanning text, images, audio, and video."
+                    word: "qualification test",
+                    meaning: "资格认证测试；供应商产品通过采购方验证的正式评估流程",
+                    example: "Samsung's HBM4 chips must pass NVIDIA's qualification tests before mass delivery."
                 },
                 {
-                    word: "token-based billing",
-                    meaning: "按Token计费；根据AI模型处理的Token数量收费的传统模式",
-                    example: "The new model shifts from token-based billing to value-based charging."
+                    word: "order book",
+                    meaning: "订单簿；企业已确认但尚未完成的客户订单总额",
+                    example: "SK Hynix currently holds approximately 70% of NVIDIA's HBM4 order book."
                 },
                 {
-                    word: "context window",
-                    meaning: "上下文窗口；AI模型一次性能够处理的输入/输出最大Token数量",
-                    example: "GPT-6 supports 2 million token context windows, a massive increase from previous models."
+                    word: "thermal management",
+                    meaning: "热管理；在电子设备中控制温度的技术和策略",
+                    example: "Advanced MR-MUF process offers superior thermal management for stacked memory chips."
                 },
                 {
-                    word: "supply chain implications",
-                    meaning: "供应链影响；上游变化对下游采购、库存、物流等环节的连锁反应",
-                    example: "Stronger AI hardware demand could have significant supply chain implications for memory and chip markets."
+                    word: "diversified procurement",
+                    meaning: "多元化采购；从多个供应商获取相同或类似产品以分散风险的策略",
+                    example: "A diversified procurement strategy combining long-term contracts with spot market flexibility is essential."
                 }
             ],
             practice: [
                 {
-                    question: "According to the passage, what makes GPT-6 a 'paradigm shift' in AI deployment?",
+                    question: "What does Samsung's passage of NVIDIA's PRA for HBM4 chips represent?",
                     options: [
-                        "It can process more text than any previous model",
-                        "Its new pricing model shifts from token-based to value-based charging",
-                        "It is the first AI model ever created",
-                        "It requires less computing power than GPT-5"
+                        "A complete takeover of SK Hynix's market share",
+                        "Samsung's official entry into NVIDIA's HBM supply chain candidate list",
+                        "The end of competition between Samsung and SK Hynix",
+                        "NVIDIA's decision to use Samsung as its sole HBM supplier"
                     ],
                     answer: 1
                 },
                 {
-                    question: "What does 'the last API humanity will need to remember' most likely mean?",
+                    question: "According to the passage, what risk does the HBM supply chain transition period carry?",
                     options: [
-                        "GPT-6 will be the final AI model ever released",
-                        "GPT-6 will be so comprehensive that users won't need other AI services",
-                        "OpenAI will stop providing API access after GPT-6",
-                        "The API will be free for all users"
+                        "Prices will immediately decrease for all buyers",
+                        "Supply chain instability, quality variations, and the need to qualify multiple suppliers",
+                        "SK Hynix will exit the HBM market entirely",
+                        "AI acceleration technology will become obsolete"
                     ],
                     answer: 1
                 }
@@ -367,8 +361,7 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-12', label: '2026-04-12（今日）'},
-            {date: '2026-04-11', label: '2026-04-11'},
+            {date: '2026-04-11', label: '2026-04-11（今日）'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
             {date: '2026-04-08', label: '2026-04-08'},

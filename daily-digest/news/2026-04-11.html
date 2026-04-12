@@ -249,15 +249,9 @@
     </div>
 
     <script>
-        // 设置日期
-        const now = new Date();
-        document.getElementById('currentDate').textContent = now.toLocaleDateString('zh-CN', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            weekday: 'long'
-        });
-        document.getElementById('updateTime').textContent = `更新时间：${now.toLocaleString('zh-CN')}`;
+        // 设置日期（硬编码，禁止使用new Date()）
+        document.getElementById('currentDate').textContent = '2026年4月11日星期六';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/11 10:00:00';
 
         // 价格数据
         const priceData = {
@@ -372,8 +366,6 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-12', label: '2026-04-12'},
-            {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
             {date: '2026-04-08', label: '2026-04-08'},
@@ -385,7 +377,7 @@
         const historyList = document.getElementById('historyList');
         historyDates.forEach(item => {
             const link = document.createElement('a');
-            link.href = `../news/${item.date}.html`;
+            link.href = `${item.date}.html`;
             link.className = 'history-link';
             link.textContent = item.label;
             historyList.appendChild(link);
