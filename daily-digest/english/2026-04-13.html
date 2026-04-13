@@ -265,60 +265,60 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月13日星期一';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/13 10:00:00';
+        document.getElementById('currentDate').textContent = '2026年4月11日星期六';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/11 10:00:00';
 
-        // 今日学习内容 - AI PC换机潮与供应链管理
+        // 今日学习内容 - HBM市场竞争与供应链管理
         const todayContent = {
-            english: "The AI PC upgrade cycle is accelerating in 2026, creating unprecedented pressure on global supply chains. According to IDC's latest quarterly report, global PC shipments grew 12% year-over-year in Q1 2026, with AI-capable PCs now accounting for over 25% of total volume. This surge in demand is placing extraordinary strain on component suppliers, particularly in the memory and storage segments where HBM production continues to divert capacity from standard DRAM and NAND flash.\n\nFor enterprise procurement managers like those at Lenovo's SSC (Service Supply Chain), navigating this environment requires a sophisticated balancing act. On one hand, aggressive inventory buildup protects against supply shortages and price volatility; on the other hand, overstocking ties up working capital and risks obsolescence as technology evolves. The most successful supply chain leaders are adopting a hybrid approach: using long-term contracts to lock in pricing and allocation for critical components like DDR5 memory and enterprise SSDs, while maintaining flexible spot-market procurement for non-critical items.\n\nCost management in this environment goes beyond simple price negotiation. Strategic procurement now encompasses total cost of ownership (TCO) analysis, which includes not just the purchase price but also logistics costs, inventory carrying costs, quality risks, and supply chain resilience premiums. For spare parts management specifically, the shift toward AI-driven predictive maintenance is changing the calculus: instead of reactive replenishment, forward-thinking organizations are using AI tools to forecast demand patterns and optimize inventory levels dynamically. This approach can reduce spare parts inventory by 15-25% while simultaneously improving service levels—a rare case where cost reduction and quality improvement go hand in hand.",
-            chinese: "2026年AI PC换机潮加速，正在给全球供应链带来前所未有的压力。根据IDC最新季度报告，2026年Q1全球PC出货量同比增长12%，AI PC现已占总量的25%以上。需求的激增给零部件供应商带来了巨大压力，尤其是在内存和存储领域——HBM持续挤占标准DRAM和NAND闪存的产能。\n\n对于联想SSC等服务供应链的企业采购管理者而言，在这种环境下游刃有余需要一套复杂的平衡策略。一方面，积极建仓可以防范供应短缺和价格波动风险；另一方面，过度库存会占用流动资金，并面临技术迭代带来的过时风险。最成功的供应链领导者正在采用混合策略：使用长期合约锁定关键零部件（如DDR5内存和企业级SSD）的价格和配额，同时保持现货市场采购的灵活性以应对非关键物料。\n\n这种环境下的成本管理已超越简单的价格谈判。战略性采购现在涵盖了总拥有成本（TCO）分析，不仅包括采购价格，还包括物流成本、库存持有成本、质量风险和供应链韧性溢价。对于备件管理而言，向AI驱动的预测性维护转型正在改变成本计算方式：不再是被动补货，前瞻性组织正在使用AI工具预测需求模式并动态优化库存水平。这种方法可将备件库存减少15-25%，同时提高服务水平——这是成本降低与质量提升并行的罕见案例。",
+            english: "The HBM4 memory race between Samsung and SK Hynix is reshaping the global AI supply chain. For the first time in years, Samsung Electronics has passed NVIDIA's Production Readiness Assessment (PRA) for its 12-layer HBM4 chips, officially entering the candidate list for NVIDIA's supply chain. Previously, SK Hynix commanded over 95% of NVIDIA's HBM orders, making it the de facto sole supplier of high-bandwidth memory for AI accelerators.\n\nSamsung's breakthrough threatens SK Hynix's dominant position. Industry analysts estimate that SK Hynix currently holds approximately 70% of NVIDIA's HBM4 order book, but this share could decline significantly if Samsung's products pass final qualification tests. The Korean chipmakers are competing intensely on two fronts: manufacturing process technology and chip-to-chip bonding techniques. SK Hynix's Advanced MR-MUF process offers superior thermal management, while Samsung is betting on its vertically integrated supply chain and proprietary fabrication capabilities.\n\nFor enterprise procurement teams in the technology sector, this competition has direct implications. When HBM suppliers compete aggressively for NVIDIA's business, downstream buyers—servers, AI PCs, data centers—may benefit from improved pricing and supply reliability. However, the transition period carries risk: early-stage supply chain instability, potential quality variations, and the need to qualify multiple suppliers simultaneously. A diversified HBM procurement strategy, combining long-term contracts with spot market flexibility, is increasingly becoming a competitive necessity rather than a luxury.",
+            chinese: "三星与SK海力士之间的HBM4内存竞赛正在重塑全球AI供应链。多年来首次，三星电子的12层HBM4芯片已通过英伟达的量产准备认证（PRA），正式进入英伟达供应链候选名单。此前，SK海力士占据英伟达HBM订单的95%以上，成为AI加速器高带宽内存的事实上的唯一供应商。\n\n三星的突破威胁着SK海力士的主导地位。行业分析师估计，SK海力士目前约占英伟达HBM4订单的70%，但如果三星产品通过最终资格认证，这一份额可能大幅下降。这两家韩国芯片制造商正在两个领域展开激烈竞争：制造工艺技术和芯片键合技术。SK海力士的Advanced MR-MUF工艺在热管理方面表现更优，而三星则押注于其垂直整合的供应链和自有制造能力。\n\n对于科技行业的企业采购团队而言，这场竞争具有直接影响。当HBM供应商为争夺英伟达业务而激烈竞争时，下游买家——服务器、AI PC、数据中心——可能从更好的定价和供应可靠性中受益。然而，过渡期也伴随着风险：供应链早期不稳定、潜在的质量差异，以及同时认证多个供应商的需求。结合长期合约与现货市场灵活性的多元化HBM采购策略，正日益成为一种竞争必需，而非奢侈品。",
             vocabulary: [
                 {
-                    word: "upgrade cycle",
-                    meaning: "换机周期；用户从旧设备迁移到新设备的周期",
-                    example: "The AI PC upgrade cycle is accelerating in 2026, creating unprecedented pressure on supply chains."
+                    word: "supply chain",
+                    meaning: "供应链；产品从原材料到最终交付消费者的完整流程网络",
+                    example: "Samsung's vertically integrated supply chain gives it an advantage in HBM production."
                 },
                 {
-                    word: "total cost of ownership (TCO)",
-                    meaning: "总拥有成本；采购、使用、维护某项资产的全部成本总和",
-                    example: "Strategic procurement now encompasses TCO analysis, not just the purchase price."
+                    word: "qualification test",
+                    meaning: "资格认证测试；供应商产品通过采购方验证的正式评估流程",
+                    example: "Samsung's HBM4 chips must pass NVIDIA's qualification tests before mass delivery."
                 },
                 {
-                    word: "supply chain resilience",
-                    meaning: "供应链韧性；供应链应对中断和恢复的能力",
-                    example: "Companies are paying resilience premiums to ensure stable supply during market volatility."
+                    word: "order book",
+                    meaning: "订单簿；企业已确认但尚未完成的客户订单总额",
+                    example: "SK Hynix currently holds approximately 70% of NVIDIA's HBM4 order book."
                 },
                 {
-                    word: "predictive maintenance",
-                    meaning: "预测性维护；基于数据分析预测设备故障并提前维护的策略",
-                    example: "The shift toward AI-driven predictive maintenance is changing spare parts management."
+                    word: "thermal management",
+                    meaning: "热管理；在电子设备中控制温度的技术和策略",
+                    example: "Advanced MR-MUF process offers superior thermal management for stacked memory chips."
                 },
                 {
-                    word: "spot market",
-                    meaning: "现货市场；即时交割的标准化商品交易市场",
-                    example: "Maintaining flexible spot-market procurement allows quick response to demand changes."
+                    word: "diversified procurement",
+                    meaning: "多元化采购；从多个供应商获取相同或类似产品以分散风险的策略",
+                    example: "A diversified procurement strategy combining long-term contracts with spot market flexibility is essential."
                 }
             ],
             practice: [
                 {
-                    question: "According to the passage, what percentage of total PC volume do AI-capable PCs now account for?",
+                    question: "What does Samsung's passage of NVIDIA's PRA for HBM4 chips represent?",
                     options: [
-                        "Over 12%",
-                        "Over 25%",
-                        "About 15%",
-                        "Exactly 50%"
+                        "A complete takeover of SK Hynix's market share",
+                        "Samsung's official entry into NVIDIA's HBM supply chain candidate list",
+                        "The end of competition between Samsung and SK Hynix",
+                        "NVIDIA's decision to use Samsung as its sole HBM supplier"
                     ],
                     answer: 1
                 },
                 {
-                    question: "What approach are successful supply chain leaders adopting according to the passage?",
+                    question: "According to the passage, what risk does the HBM supply chain transition period carry?",
                     options: [
-                        "Aggressive overstocking to lock in all components",
-                        "Pure spot-market procurement for maximum flexibility",
-                        "A hybrid approach using long-term contracts for critical items and spot market for non-critical items",
-                        "Avoiding inventory altogether to reduce carrying costs"
+                        "Prices will immediately decrease for all buyers",
+                        "Supply chain instability, quality variations, and the need to qualify multiple suppliers",
+                        "SK Hynix will exit the HBM market entirely",
+                        "AI acceleration technology will become obsolete"
                     ],
-                    answer: 2
+                    answer: 1
                 }
             ]
         };
@@ -361,8 +361,7 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-13', label: '2026-04-13（今日）'},
-            {date: '2026-04-11', label: '2026-04-11'},
+            {date: '2026-04-11', label: '2026-04-11（今日）'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
             {date: '2026-04-08', label: '2026-04-08'},
@@ -374,7 +373,7 @@
         const historyList = document.getElementById('historyList');
         historyDates.forEach(item => {
             const link = document.createElement('a');
-            link.href = `english/${item.date}.html`;
+            link.href = `../english/${item.date}.html`;
             link.className = 'history-link';
             link.textContent = item.label;
             historyList.appendChild(link);
