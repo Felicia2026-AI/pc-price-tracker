@@ -265,70 +265,70 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月12日星期日';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/12 10:00:00';
+        document.getElementById('currentDate').textContent = '2026年4月14日星期二';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/14 10:00:00';
 
-        // 今日学习内容 - AI PC与存储涨价超级周期
+        // 今日学习内容 - 英特尔与AMD的AI PC处理器竞争
         const todayContent = {
-            english: "The global memory market is experiencing what analysts are calling a 'super-cycle' driven by insatiable AI computing demand. According to TrendForce, DRAM contract prices are projected to surge another 58-63% in Q2 2026, following a staggering 300%+ increase in DDR4 prices since September 2025. This unprecedented rally has forced supply chain managers to rethink procurement strategies, with many companies now securing early contracts to lock in prices before further increases.\n\nFor enterprise buyers, the implications are severe. A typical 1,000-unit PC fleet refresh that cost ¥500,000 in late 2024 now requires approximately ¥1.5 million—a 200% cost increase in just 18 months. Storage components have followed a similar trajectory, with enterprise SSDs now trading at 2.8x their September 2025 levels. Industry insiders suggest that this trend may persist until at least late 2026, as AI infrastructure buildout continues to absorbs available production capacity.\n\nThe competitive landscape is also shifting rapidly. Samsung and SK Hynix have both qualified as HBM4 suppliers for NVIDIA's upcoming Rubin platform, breaking SK Hynix's de facto monopoly in this segment. For component buyers, this diversification could eventually ease HBM allocation pressures, though any meaningful supply relief is unlikely before 2027. In the meantime, strategic early procurement remains the most effective risk mitigation strategy.",
-            chinese: "全球存储市场正经历由AI算力需求驱动的"超级周期"。据TrendForce预测，2026年Q2 DRAM合约价将环比再涨58-63%，此前自2025年9月以来DDR4价格已暴涨超300%。这场前所未有的涨价潮迫使供应链管理者重新审视采购策略，许多公司正通过锁定长期合约来规避进一步涨价风险。\n\n对企业采购者而言，影响十分严峻。一个典型1000台PC机群更新项目，2024年末成本约50万元，如今已需约150万元——18个月内成本上涨200%。存储组件走势类似，企业级SSD如今交易价格已达2025年9月的2.8倍。业内人士指出，这一趋势可能持续至2026年末，因为AI基础设施建设仍在持续吸收可用产能。\n\n竞争格局也在快速变化。三星和SK海力士均已通过英伟达即将推出的Rubin平台的HBM4供应商资质认证，打破了SK海力士在这一领域的准垄断地位。对组件采购者而言，这种多元化可能在未来缓解HBM供货压力，但任何有意义的供应缓解都不太可能在2027年前出现。与此同时，战略性早期采购仍是目前最有效的风险缓解策略。",
+            english: "The AI PC processor market is witnessing intense competition between Intel and AMD as both companies race to deliver next-generation chips optimized for artificial intelligence workloads. At CES 2026, Intel unveiled its Panther Lake architecture-based Core Ultra 300 series, featuring significant improvements in AI compute performance, power efficiency, and integrated NPU (Neural Processing Unit) capabilities. These processors are specifically designed to handle complex AI tasks locally, reducing reliance on cloud-based services.\n\nNot to be outdone, AMD launched its Ryzen AI 400 series, boasting up to 12 Zen 5 cores and substantially enhanced NPU performance. The new lineup includes multiple tiers: Ryzen AI 9 models for premium devices, Ryzen AI 7 for mainstream systems, and Ryzen AI 5 for entry-level AI PCs. AMD claims a 1000x improvement in AI performance over four generations, positioning its chips as compelling alternatives to Intel's offerings.\n\nFor enterprise procurement teams, this competitive dynamic presents both opportunities and challenges. On one hand, increased competition typically drives innovation and potentially moderates pricing pressures. On the other hand, the rapid pace of AI PC advancement means that devices purchased today may become obsolete faster than traditional PCs. Supply chain managers must balance the benefits of early AI PC adoption against the risks of investing in hardware that could be superseded within 12-18 months. Strategic recommendations include negotiating upgrade protection clauses in volume purchase agreements and maintaining flexibility in deployment timelines.",
+            chinese: "AI PC处理器市场正见证英特尔与AMD之间的激烈竞争，两家公司都在竞相推出针对人工智能工作负载优化的下一代芯片。在CES 2026上，英特尔发布了基于Panther Lake架构的酷睿Ultra 300系列，在AI计算性能、能效和集成NPU（神经网络处理器）能力方面均有显著提升。这些处理器专为本地处理复杂AI任务而设计，减少对云服务的依赖。\n\n不甘示弱，AMD推出了Ryzen AI 400系列， boasting最高12个Zen 5核心和大幅增强的NPU性能。新产品线包括多个层级：Ryzen AI 9型号面向高端设备，Ryzen AI 7面向主流系统，Ryzen AI 5面向入门级AI PC。AMD宣称四代产品AI性能提升1000倍，将其芯片定位为英特尔产品的有力替代品。\n\n对企业采购团队而言，这种竞争态势既带来机遇也带来挑战。一方面，竞争加剧通常会推动创新并可能缓解价格压力。另一方面，AI PC的快速进步意味着今天购买的设备可能比传统PC更快过时。供应链管理者必须权衡早期采用AI PC的益处与硬件可能在12-18个月内被取代的风险。战略建议包括在大宗采购协议中协商升级保护条款，并在部署时间表上保持灵活性。",
             vocabulary: [
                 {
-                    word: "super-cycle",
-                    meaning: "超级周期；商品或资产价格在长期上涨后经历的大幅、持续性上涨周期，通常持续数年",
-                    example: "The current memory market super-cycle is driven by unprecedented AI infrastructure buildout."
+                    word: "NPU (Neural Processing Unit)",
+                    meaning: "神经网络处理器；专为加速AI和机器学习任务设计的专用芯片",
+                    example: "Modern AI PCs feature integrated NPUs capable of handling complex neural network computations."
                 },
                 {
-                    word: "early procurement contract",
-                    meaning: "早期采购合约；在价格上涨周期中提前锁定价格的采购协议，以规避未来涨价风险",
-                    example: "Many companies are now securing early procurement contracts to lock in prices."
+                    word: "Panther Lake",
+                    meaning: "英特尔Panther Lake架构；英特尔下一代处理器架构，专为AI PC优化",
+                    example: "Intel's Panther Lake architecture delivers significant improvements in AI performance."
                 },
                 {
-                    word: "HBM (High Bandwidth Memory)",
-                    meaning: "高带宽内存；专为AI GPU设计的高性能内存类型，具有超高速数据传输能力",
-                    example: "SK Hynix has maintained its dominance in HBM supply for NVIDIA GPUs."
+                    word: "Zen 5",
+                    meaning: "AMD Zen 5架构；AMD最新的CPU核心架构，提供更高性能和能效",
+                    example: "AMD's Ryzen AI 400 series features up to 12 Zen 5 cores for maximum performance."
                 },
                 {
-                    word: "fleet refresh",
-                    meaning: "机群更新；企业批量更换或升级PC、服务器等设备群体的过程",
-                    example: "A typical fleet refresh now costs 3x more than 18 months ago due to component inflation."
+                    word: "upgrade protection clause",
+                    meaning: "升级保护条款；采购合同中允许在一定期限内以优惠条件升级设备的条款",
+                    example: "Negotiating upgrade protection clauses helps mitigate technology obsolescence risks."
                 },
                 {
-                    word: "supply allocation",
-                    meaning: "供货分配；供应商根据产能和需求对产品供货量进行分配管理的策略",
-                    example: "HBM supply allocation remains tight, forcing AI companies to compete for limited capacity."
+                    word: "deployment timeline",
+                    meaning: "部署时间表；设备或系统实施和上线的时间规划",
+                    example: "Maintaining flexibility in deployment timelines allows organizations to adapt to rapid technology changes."
                 }
             ],
             practice: [
                 {
-                    question: "According to TrendForce, what is the projected DRAM contract price increase in Q2 2026?",
+                    question: "What is the name of Intel's new processor architecture unveiled at CES 2026?",
                     options: [
-                        "10-15%",
-                        "20-30%",
-                        "58-63%",
-                        "100-120%"
+                        "Tiger Lake",
+                        "Alder Lake",
+                        "Panther Lake",
+                        "Meteor Lake"
                     ],
                     answer: 2
                 },
                 {
-                    question: "How much has the cost of a typical 1,000-unit PC fleet refresh increased compared to late 2024?",
+                    question: "How many Zen 5 cores does AMD's Ryzen AI 400 series support at maximum?",
                     options: [
-                        "50% increase",
-                        "100% increase (2x)",
-                        "200% increase (3x)",
-                        "300% increase (4x)"
+                        "8 cores",
+                        "10 cores",
+                        "12 cores",
+                        "16 cores"
                     ],
                     answer: 2
                 },
                 {
-                    question: "Which two companies have qualified as HBM4 suppliers for NVIDIA's Rubin platform?",
+                    question: "What strategic recommendation is given for managing AI PC obsolescence risks?",
                     options: [
-                        "Samsung and Micron only",
-                        "SK Hynix and Micron only",
-                        "Samsung and SK Hynix",
-                        "Samsung, SK Hynix, and Micron"
+                        "Purchase only entry-level devices",
+                        "Negotiate upgrade protection clauses in purchase agreements",
+                        "Delay all AI PC purchases until 2027",
+                        "Buy exclusively from one vendor"
                     ],
-                    answer: 2
+                    answer: 1
                 }
             ]
         };
@@ -371,12 +371,12 @@
 
         // 历史记录数据
         const historyDates = [
+            {date: '2026-04-14', label: '2026-04-14（今日）'},
+            {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
             {date: '2026-04-08', label: '2026-04-08'},
-            {date: '2026-04-07', label: '2026-04-07'},
-            {date: '2026-04-06', label: '2026-04-06'},
         ];
 
         // 动态生成历史记录链接
