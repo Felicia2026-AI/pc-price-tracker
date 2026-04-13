@@ -265,70 +265,70 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月13日星期一';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/13 10:00:00';
+        document.getElementById('currentDate').textContent = '2026年4月15日星期三';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/15 10:00:00';
 
-        // 今日学习内容 - GPT-6发布与AI超级周期
+        // 今日学习内容 - 供应商谈判策略与合同管理
         const todayContent = {
-            english: "OpenAI is set to launch GPT-6 tomorrow, April 14th, marking what CEO Sam Altman calls the 'last API humanity will ever need to remember.' The model, internally codenamed 'Spud,' represents the most expensive AI training run in history, costing over $2 billion and utilizing approximately 100,000 H100 GPUs at Texas's Stargate data center. The core architecture, named Symphony, introduces native multimodality with support for 200 million token context windows—a 100x improvement over its predecessor.\n\nIndustry analysts are projecting a massive ripple effect across the AI ecosystem. Within 48 hours of GPT-6's launch, the global AI application landscape could fundamentally restructure. Traditional cloud-based AI services may face unprecedented competition from the model's capabilities, while local AI deployment strategies—particularly AI PCs and edge devices—could see renewed interest given the model's rumored efficient inference requirements.\n\nFor enterprise technology leaders, GPT-6's arrival signals a critical inflection point. The shift from 'model competition' to 'application落地' (implementation and deployment) appears imminent. Organizations that have already built AI infrastructure foundations will be best positioned to capitalize on GPT-6's capabilities. For supply chain managers, the downstream effects are clear: AI-driven demand for high-performance computing will sustain memory and storage component price pressures throughout 2026, making early procurement contracts increasingly valuable.",
-            chinese: "OpenAI将于明日（4月14日）发布GPT-6，CEO Sam Altman称之为"人类最后需要记住的API"。该模型内部代号"Spud"（土豆），是有史以来最昂贵的AI训练项目，成本超20亿美元，动用约10万张H100 GPU在德克萨斯Stargate数据中心完成。核心架构名为Symphony，支持原生多模态和2亿Token上下文窗口——比上一代提升100倍。\n\n行业分析师预测GPT-6将引发AI生态系统的巨大涟漪效应。发布后48小时内，全球AI应用格局可能发生根本性重组。传统基于云的AI服务可能面临前所未有的竞争压力，而考虑到该模型高效的推理需求，本地AI部署策略（尤其是AI PC和边缘设备）可能重新受到关注。\n\n对于企业技术领导者而言，GPT-6的到来标志着一个关键转折点。从"模型竞争"到"应用落地"的转变似乎即将到来。已经建立AI基础设施的企业将处于利用GPT-6能力的最佳位置。对于供应链管理者而言，下游影响是明确的：AI驱动的高性能计算需求将在2026年全年维持内存和存储组件的价格压力，使早期采购合约日益增值。",
+            english: "Strategic supplier negotiation is a critical competency for supply chain cost management professionals, particularly in volatile markets characterized by component shortages and price volatility. The foundation of effective negotiation lies in thorough preparation: understanding your organization's true requirements, analyzing market conditions, researching supplier alternatives, and establishing clear walk-away positions before entering discussions. In the current DRAM and NAND market environment, where prices have experienced unprecedented volatility, negotiation leverage often shifts between buyers and suppliers depending on inventory cycles and demand forecasts.\n\nOne powerful technique is the multi-year framework agreement with price adjustment mechanisms. Rather than fixing prices for the entire contract term, sophisticated agreements incorporate quarterly or semi-annual price reviews based on objective market indices such as TrendForce contract pricing or spot market averages. This approach provides suppliers with volume certainty while protecting buyers from extreme price spikes. Additionally, these agreements should include capacity reservation clauses, ensuring that suppliers allocate specific production capacity to your organization even during supply-constrained periods.\n\nAnother essential element is the strategic use of alternative suppliers and dual-sourcing strategies. While single-sourcing may offer short-term cost advantages through volume discounts, it creates significant supply risk. For critical components like DDR5 memory modules, maintaining relationships with at least two qualified suppliers provides negotiation leverage and supply continuity insurance. When engaging in supplier discussions, presenting credible alternative options—even if not immediately exercised—strengthens your negotiating position and often yields better terms without actually switching suppliers.",
+            chinese: "战略供应商谈判是供应链成本管理专业人员的关键能力，特别是在以零部件短缺和价格波动为特征的不稳定市场中。有效谈判的基础在于充分准备：了解组织的真实需求、分析市场状况、研究替代供应商，并在进入讨论前建立明确的退出底线。在当前DRAM和NAND市场环境中，价格经历了前所未有的波动，谈判杠杆往往在买方和供应商之间转移，取决于库存周期和需求预测。\n\n一种强有力的技术是带有价格调整机制的多年框架协议。不是为整个合同期限固定价格，而是复杂的协议纳入基于客观市场指数的季度或半年度价格审查，如TrendForce合约价格或现货市场均价。这种方法为供应商提供销量确定性，同时保护买方免受极端价格飙升的影响。此外，这些协议应包括产能预留条款，确保供应商即使在供应受限期间也为您的组织分配特定生产能力。\n\n另一个关键要素是战略性地使用替代供应商和双源采购策略。虽然单一采购可能通过批量折扣提供短期成本优势，但它创造了重大供应风险。对于DDR5内存模块等关键零部件，与至少两家合格供应商保持关系可提供谈判杠杆和供应连续性保障。在与供应商讨论时，提出可信的替代方案——即使不立即执行——也能加强您的谈判地位，并经常在无需实际更换供应商的情况下获得更好的条款。",
             vocabulary: [
                 {
-                    word: "native multimodality",
-                    meaning: "原生多模态；模型原生支持文本、图像、音频、视频等多种数据类型的处理能力",
-                    example: "GPT-6 introduces native multimodality, eliminating the need for separate processing pipelines."
+                    word: "walk-away position",
+                    meaning: "退出底线/ walk-away立场；谈判中可接受的最低条件，低于此条件则终止谈判",
+                    example: "Before the negotiation, we established a clear walk-away position based on our budget constraints."
                 },
                 {
-                    word: "context window",
-                    meaning: "上下文窗口；模型一次能处理的最大Token数量，决定了单次处理的信息量",
-                    example: "GPT-6's 200 million token context window represents a 100x improvement over GPT-5."
+                    word: "framework agreement",
+                    meaning: "框架协议；规定长期合作基本条款的协议，通常包含价格调整机制和产能预留条款",
+                    example: "We signed a three-year framework agreement with quarterly price review mechanisms."
                 },
                 {
-                    word: "inference",
-                    meaning: "推理；模型在训练完成后对新数据进行预测或生成的过程",
-                    example: "The rumor suggests GPT-6 will have significantly improved inference efficiency."
+                    word: "capacity reservation clause",
+                    meaning: "产能预留条款；合同中确保供应商在供应紧张期间为买方保留特定生产能力的条款",
+                    example: "The capacity reservation clause ensured supply continuity even during the DRAM shortage."
                 },
                 {
-                    word: "application落地",
-                    meaning: "应用落地；技术从实验室或理论阶段转向实际商业应用的过程",
-                    example: "The AI industry is shifting from pure model competition to application落地."
+                    word: "dual-sourcing strategy",
+                    meaning: "双源采购策略；同时从两家或多家供应商采购同一零部件以降低供应风险的策略",
+                    example: "Implementing a dual-sourcing strategy for critical components reduced our supply risk significantly."
                 },
                 {
-                    word: "early procurement contract",
-                    meaning: "早期采购合约；在价格上涨周期中提前锁定价格的采购协议",
-                    example: "Early procurement contracts for memory components become increasingly valuable during supply shortages."
+                    word: "negotiation leverage",
+                    meaning: "谈判杠杆/谈判筹码；在谈判中获得优势地位的能力或资源",
+                    example: "Having qualified alternative suppliers gave us significant negotiation leverage during contract renewal."
                 }
             ],
             practice: [
                 {
-                    question: "According to the passage, what is GPT-6's internal codename?",
+                    question: "According to the passage, what is the foundation of effective supplier negotiation?",
                     options: [
-                        "Symphony",
-                        "Spud",
-                        "Stargate",
-                        "H100"
+                        "Aggressive bargaining tactics",
+                        "Thorough preparation including market analysis and walk-away positions",
+                        "Long-term personal relationships with suppliers",
+                        "Accepting the first offer to maintain goodwill"
                     ],
                     answer: 1
                 },
                 {
-                    question: "What does the passage suggest about GPT-6's impact on enterprise AI deployment?",
+                    question: "What type of price adjustment mechanism is recommended for multi-year framework agreements?",
                     options: [
-                        "All companies will immediately abandon cloud AI services",
-                        "Organizations with existing AI infrastructure will be better positioned to benefit",
-                        "Local AI deployment will become completely obsolete",
-                        "Only companies with GPT-6 API access can use AI"
+                        "Fixed prices for the entire contract term",
+                        "Quarterly or semi-annual reviews based on objective market indices",
+                        "Annual increases tied to inflation only",
+                        "No price adjustments allowed"
                     ],
                     answer: 1
                 },
                 {
-                    question: "What is the predicted timeline for significant AI ecosystem changes after GPT-6 launch?",
+                    question: "Why does the passage recommend dual-sourcing for critical components like DDR5 memory?",
                     options: [
-                        "Within 48 hours",
-                        "Within 6 months",
-                        "Within 1 year",
-                        "Gradually over 5 years"
+                        "It always results in lower prices",
+                        "It provides negotiation leverage and supply continuity insurance",
+                        "It simplifies inventory management",
+                        "It reduces the number of supplier relationships to manage"
                     ],
-                    answer: 0
+                    answer: 1
                 }
             ]
         };
@@ -371,12 +371,13 @@
 
         // 历史记录数据
         const historyDates = [
+            {date: '2026-04-15', label: '2026-04-15（今日）'},
+            {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-12', label: '2026-04-12'},
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
-            {date: '2026-04-08', label: '2026-04-08'},
         ];
 
         // 动态生成历史记录链接
