@@ -366,7 +366,7 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-14', label: '2026-04-14（今日）'},
+            {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
@@ -375,11 +375,11 @@
             {date: '2026-04-07', label: '2026-04-07'},
         ];
 
-        // 动态生成历史记录链接
+        // 动态生成历史记录链接（加../前缀回到父目录）
         const historyList = document.getElementById('historyList');
         historyDates.forEach(item => {
             const link = document.createElement('a');
-            link.href = `../news/${item.date}.html`;
+            link.href = `../${item.date}.html`;
             link.className = 'history-link';
             link.textContent = item.label;
             historyList.appendChild(link);

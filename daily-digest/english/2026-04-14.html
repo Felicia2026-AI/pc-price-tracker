@@ -265,70 +265,70 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月13日星期一';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/13 10:00:00';
+        document.getElementById('currentDate').textContent = '2026年4月14日星期二';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/14 10:00:00';
 
-        // 今日学习内容 - GPT-6发布与AI超级周期
+        // 今日学习内容 - 英特尔与AMD的AI PC处理器竞争
         const todayContent = {
-            english: "OpenAI is set to launch GPT-6 tomorrow, April 14th, marking what CEO Sam Altman calls the 'last API humanity will ever need to remember.' The model, internally codenamed 'Spud,' represents the most expensive AI training run in history, costing over $2 billion and utilizing approximately 100,000 H100 GPUs at Texas's Stargate data center. The core architecture, named Symphony, introduces native multimodality with support for 200 million token context windows—a 100x improvement over its predecessor.\n\nIndustry analysts are projecting a massive ripple effect across the AI ecosystem. Within 48 hours of GPT-6's launch, the global AI application landscape could fundamentally restructure. Traditional cloud-based AI services may face unprecedented competition from the model's capabilities, while local AI deployment strategies—particularly AI PCs and edge devices—could see renewed interest given the model's rumored efficient inference requirements.\n\nFor enterprise technology leaders, GPT-6's arrival signals a critical inflection point. The shift from 'model competition' to 'application落地' (implementation and deployment) appears imminent. Organizations that have already built AI infrastructure foundations will be best positioned to capitalize on GPT-6's capabilities. For supply chain managers, the downstream effects are clear: AI-driven demand for high-performance computing will sustain memory and storage component price pressures throughout 2026, making early procurement contracts increasingly valuable.",
-            chinese: "OpenAI将于明日（4月14日）发布GPT-6，CEO Sam Altman称之为"人类最后需要记住的API"。该模型内部代号"Spud"（土豆），是有史以来最昂贵的AI训练项目，成本超20亿美元，动用约10万张H100 GPU在德克萨斯Stargate数据中心完成。核心架构名为Symphony，支持原生多模态和2亿Token上下文窗口——比上一代提升100倍。\n\n行业分析师预测GPT-6将引发AI生态系统的巨大涟漪效应。发布后48小时内，全球AI应用格局可能发生根本性重组。传统基于云的AI服务可能面临前所未有的竞争压力，而考虑到该模型高效的推理需求，本地AI部署策略（尤其是AI PC和边缘设备）可能重新受到关注。\n\n对于企业技术领导者而言，GPT-6的到来标志着一个关键转折点。从"模型竞争"到"应用落地"的转变似乎即将到来。已经建立AI基础设施的企业将处于利用GPT-6能力的最佳位置。对于供应链管理者而言，下游影响是明确的：AI驱动的高性能计算需求将在2026年全年维持内存和存储组件的价格压力，使早期采购合约日益增值。",
+            english: "The AI PC processor market is witnessing intense competition between Intel and AMD as both companies race to deliver next-generation chips optimized for artificial intelligence workloads. At CES 2026, Intel unveiled its Panther Lake architecture-based Core Ultra 300 series, featuring significant improvements in AI compute performance, power efficiency, and integrated NPU (Neural Processing Unit) capabilities. These processors are specifically designed to handle complex AI tasks locally, reducing reliance on cloud-based services.\n\nNot to be outdone, AMD launched its Ryzen AI 400 series, boasting up to 12 Zen 5 cores and substantially enhanced NPU performance. The new lineup includes multiple tiers: Ryzen AI 9 models for premium devices, Ryzen AI 7 for mainstream systems, and Ryzen AI 5 for entry-level AI PCs. AMD claims a 1000x improvement in AI performance over four generations, positioning its chips as compelling alternatives to Intel's offerings.\n\nFor enterprise procurement teams, this competitive dynamic presents both opportunities and challenges. On one hand, increased competition typically drives innovation and potentially moderates pricing pressures. On the other hand, the rapid pace of AI PC advancement means that devices purchased today may become obsolete faster than traditional PCs. Supply chain managers must balance the benefits of early AI PC adoption against the risks of investing in hardware that could be superseded within 12-18 months. Strategic recommendations include negotiating upgrade protection clauses in volume purchase agreements and maintaining flexibility in deployment timelines.",
+            chinese: "AI PC处理器市场正见证英特尔与AMD之间的激烈竞争，两家公司都在竞相推出针对人工智能工作负载优化的下一代芯片。在CES 2026上，英特尔发布了基于Panther Lake架构的酷睿Ultra 300系列，在AI计算性能、能效和集成NPU（神经网络处理器）能力方面均有显著提升。这些处理器专为本地处理复杂AI任务而设计，减少对云服务的依赖。\n\n不甘示弱，AMD推出了Ryzen AI 400系列， boasting最高12个Zen 5核心和大幅增强的NPU性能。新产品线包括多个层级：Ryzen AI 9型号面向高端设备，Ryzen AI 7面向主流系统，Ryzen AI 5面向入门级AI PC。AMD宣称四代产品AI性能提升1000倍，将其芯片定位为英特尔产品的有力替代品。\n\n对企业采购团队而言，这种竞争态势既带来机遇也带来挑战。一方面，竞争加剧通常会推动创新并可能缓解价格压力。另一方面，AI PC的快速进步意味着今天购买的设备可能比传统PC更快过时。供应链管理者必须权衡早期采用AI PC的益处与硬件可能在12-18个月内被取代的风险。战略建议包括在大宗采购协议中协商升级保护条款，并在部署时间表上保持灵活性。",
             vocabulary: [
                 {
-                    word: "native multimodality",
-                    meaning: "原生多模态；模型原生支持文本、图像、音频、视频等多种数据类型的处理能力",
-                    example: "GPT-6 introduces native multimodality, eliminating the need for separate processing pipelines."
+                    word: "NPU (Neural Processing Unit)",
+                    meaning: "神经网络处理器；专为加速AI和机器学习任务设计的专用芯片",
+                    example: "Modern AI PCs feature integrated NPUs capable of handling complex neural network computations."
                 },
                 {
-                    word: "context window",
-                    meaning: "上下文窗口；模型一次能处理的最大Token数量，决定了单次处理的信息量",
-                    example: "GPT-6's 200 million token context window represents a 100x improvement over GPT-5."
+                    word: "Panther Lake",
+                    meaning: "英特尔Panther Lake架构；英特尔下一代处理器架构，专为AI PC优化",
+                    example: "Intel's Panther Lake architecture delivers significant improvements in AI performance."
                 },
                 {
-                    word: "inference",
-                    meaning: "推理；模型在训练完成后对新数据进行预测或生成的过程",
-                    example: "The rumor suggests GPT-6 will have significantly improved inference efficiency."
+                    word: "Zen 5",
+                    meaning: "AMD Zen 5架构；AMD最新的CPU核心架构，提供更高性能和能效",
+                    example: "AMD's Ryzen AI 400 series features up to 12 Zen 5 cores for maximum performance."
                 },
                 {
-                    word: "application落地",
-                    meaning: "应用落地；技术从实验室或理论阶段转向实际商业应用的过程",
-                    example: "The AI industry is shifting from pure model competition to application落地."
+                    word: "upgrade protection clause",
+                    meaning: "升级保护条款；采购合同中允许在一定期限内以优惠条件升级设备的条款",
+                    example: "Negotiating upgrade protection clauses helps mitigate technology obsolescence risks."
                 },
                 {
-                    word: "early procurement contract",
-                    meaning: "早期采购合约；在价格上涨周期中提前锁定价格的采购协议",
-                    example: "Early procurement contracts for memory components become increasingly valuable during supply shortages."
+                    word: "deployment timeline",
+                    meaning: "部署时间表；设备或系统实施和上线的时间规划",
+                    example: "Maintaining flexibility in deployment timelines allows organizations to adapt to rapid technology changes."
                 }
             ],
             practice: [
                 {
-                    question: "According to the passage, what is GPT-6's internal codename?",
+                    question: "What is the name of Intel's new processor architecture unveiled at CES 2026?",
                     options: [
-                        "Symphony",
-                        "Spud",
-                        "Stargate",
-                        "H100"
+                        "Tiger Lake",
+                        "Alder Lake",
+                        "Panther Lake",
+                        "Meteor Lake"
                     ],
-                    answer: 1
+                    answer: 2
                 },
                 {
-                    question: "What does the passage suggest about GPT-6's impact on enterprise AI deployment?",
+                    question: "How many Zen 5 cores does AMD's Ryzen AI 400 series support at maximum?",
                     options: [
-                        "All companies will immediately abandon cloud AI services",
-                        "Organizations with existing AI infrastructure will be better positioned to benefit",
-                        "Local AI deployment will become completely obsolete",
-                        "Only companies with GPT-6 API access can use AI"
+                        "8 cores",
+                        "10 cores",
+                        "12 cores",
+                        "16 cores"
                     ],
-                    answer: 1
+                    answer: 2
                 },
                 {
-                    question: "What is the predicted timeline for significant AI ecosystem changes after GPT-6 launch?",
+                    question: "What strategic recommendation is given for managing AI PC obsolescence risks?",
                     options: [
-                        "Within 48 hours",
-                        "Within 6 months",
-                        "Within 1 year",
-                        "Gradually over 5 years"
+                        "Purchase only entry-level devices",
+                        "Negotiate upgrade protection clauses in purchase agreements",
+                        "Delay all AI PC purchases until 2027",
+                        "Buy exclusively from one vendor"
                     ],
-                    answer: 0
+                    answer: 1
                 }
             ]
         };
@@ -371,7 +371,8 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-13', label: '2026-04-13（今日）'},
+            {date: '2026-04-14', label: '2026-04-14（今日）'},
+            {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
