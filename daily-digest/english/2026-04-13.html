@@ -265,60 +265,70 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月11日星期六';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/11 10:00:00';
+        document.getElementById('currentDate').textContent = '2026年4月13日星期一';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/13 10:00:00';
 
-        // 今日学习内容 - HBM市场竞争与供应链管理
+        // 今日学习内容 - GPT-6发布与AI超级周期
         const todayContent = {
-            english: "The HBM4 memory race between Samsung and SK Hynix is reshaping the global AI supply chain. For the first time in years, Samsung Electronics has passed NVIDIA's Production Readiness Assessment (PRA) for its 12-layer HBM4 chips, officially entering the candidate list for NVIDIA's supply chain. Previously, SK Hynix commanded over 95% of NVIDIA's HBM orders, making it the de facto sole supplier of high-bandwidth memory for AI accelerators.\n\nSamsung's breakthrough threatens SK Hynix's dominant position. Industry analysts estimate that SK Hynix currently holds approximately 70% of NVIDIA's HBM4 order book, but this share could decline significantly if Samsung's products pass final qualification tests. The Korean chipmakers are competing intensely on two fronts: manufacturing process technology and chip-to-chip bonding techniques. SK Hynix's Advanced MR-MUF process offers superior thermal management, while Samsung is betting on its vertically integrated supply chain and proprietary fabrication capabilities.\n\nFor enterprise procurement teams in the technology sector, this competition has direct implications. When HBM suppliers compete aggressively for NVIDIA's business, downstream buyers—servers, AI PCs, data centers—may benefit from improved pricing and supply reliability. However, the transition period carries risk: early-stage supply chain instability, potential quality variations, and the need to qualify multiple suppliers simultaneously. A diversified HBM procurement strategy, combining long-term contracts with spot market flexibility, is increasingly becoming a competitive necessity rather than a luxury.",
-            chinese: "三星与SK海力士之间的HBM4内存竞赛正在重塑全球AI供应链。多年来首次，三星电子的12层HBM4芯片已通过英伟达的量产准备认证（PRA），正式进入英伟达供应链候选名单。此前，SK海力士占据英伟达HBM订单的95%以上，成为AI加速器高带宽内存的事实上的唯一供应商。\n\n三星的突破威胁着SK海力士的主导地位。行业分析师估计，SK海力士目前约占英伟达HBM4订单的70%，但如果三星产品通过最终资格认证，这一份额可能大幅下降。这两家韩国芯片制造商正在两个领域展开激烈竞争：制造工艺技术和芯片键合技术。SK海力士的Advanced MR-MUF工艺在热管理方面表现更优，而三星则押注于其垂直整合的供应链和自有制造能力。\n\n对于科技行业的企业采购团队而言，这场竞争具有直接影响。当HBM供应商为争夺英伟达业务而激烈竞争时，下游买家——服务器、AI PC、数据中心——可能从更好的定价和供应可靠性中受益。然而，过渡期也伴随着风险：供应链早期不稳定、潜在的质量差异，以及同时认证多个供应商的需求。结合长期合约与现货市场灵活性的多元化HBM采购策略，正日益成为一种竞争必需，而非奢侈品。",
+            english: "OpenAI is set to launch GPT-6 tomorrow, April 14th, marking what CEO Sam Altman calls the 'last API humanity will ever need to remember.' The model, internally codenamed 'Spud,' represents the most expensive AI training run in history, costing over $2 billion and utilizing approximately 100,000 H100 GPUs at Texas's Stargate data center. The core architecture, named Symphony, introduces native multimodality with support for 200 million token context windows—a 100x improvement over its predecessor.\n\nIndustry analysts are projecting a massive ripple effect across the AI ecosystem. Within 48 hours of GPT-6's launch, the global AI application landscape could fundamentally restructure. Traditional cloud-based AI services may face unprecedented competition from the model's capabilities, while local AI deployment strategies—particularly AI PCs and edge devices—could see renewed interest given the model's rumored efficient inference requirements.\n\nFor enterprise technology leaders, GPT-6's arrival signals a critical inflection point. The shift from 'model competition' to 'application落地' (implementation and deployment) appears imminent. Organizations that have already built AI infrastructure foundations will be best positioned to capitalize on GPT-6's capabilities. For supply chain managers, the downstream effects are clear: AI-driven demand for high-performance computing will sustain memory and storage component price pressures throughout 2026, making early procurement contracts increasingly valuable.",
+            chinese: "OpenAI将于明日（4月14日）发布GPT-6，CEO Sam Altman称之为"人类最后需要记住的API"。该模型内部代号"Spud"（土豆），是有史以来最昂贵的AI训练项目，成本超20亿美元，动用约10万张H100 GPU在德克萨斯Stargate数据中心完成。核心架构名为Symphony，支持原生多模态和2亿Token上下文窗口——比上一代提升100倍。\n\n行业分析师预测GPT-6将引发AI生态系统的巨大涟漪效应。发布后48小时内，全球AI应用格局可能发生根本性重组。传统基于云的AI服务可能面临前所未有的竞争压力，而考虑到该模型高效的推理需求，本地AI部署策略（尤其是AI PC和边缘设备）可能重新受到关注。\n\n对于企业技术领导者而言，GPT-6的到来标志着一个关键转折点。从"模型竞争"到"应用落地"的转变似乎即将到来。已经建立AI基础设施的企业将处于利用GPT-6能力的最佳位置。对于供应链管理者而言，下游影响是明确的：AI驱动的高性能计算需求将在2026年全年维持内存和存储组件的价格压力，使早期采购合约日益增值。",
             vocabulary: [
                 {
-                    word: "supply chain",
-                    meaning: "供应链；产品从原材料到最终交付消费者的完整流程网络",
-                    example: "Samsung's vertically integrated supply chain gives it an advantage in HBM production."
+                    word: "native multimodality",
+                    meaning: "原生多模态；模型原生支持文本、图像、音频、视频等多种数据类型的处理能力",
+                    example: "GPT-6 introduces native multimodality, eliminating the need for separate processing pipelines."
                 },
                 {
-                    word: "qualification test",
-                    meaning: "资格认证测试；供应商产品通过采购方验证的正式评估流程",
-                    example: "Samsung's HBM4 chips must pass NVIDIA's qualification tests before mass delivery."
+                    word: "context window",
+                    meaning: "上下文窗口；模型一次能处理的最大Token数量，决定了单次处理的信息量",
+                    example: "GPT-6's 200 million token context window represents a 100x improvement over GPT-5."
                 },
                 {
-                    word: "order book",
-                    meaning: "订单簿；企业已确认但尚未完成的客户订单总额",
-                    example: "SK Hynix currently holds approximately 70% of NVIDIA's HBM4 order book."
+                    word: "inference",
+                    meaning: "推理；模型在训练完成后对新数据进行预测或生成的过程",
+                    example: "The rumor suggests GPT-6 will have significantly improved inference efficiency."
                 },
                 {
-                    word: "thermal management",
-                    meaning: "热管理；在电子设备中控制温度的技术和策略",
-                    example: "Advanced MR-MUF process offers superior thermal management for stacked memory chips."
+                    word: "application落地",
+                    meaning: "应用落地；技术从实验室或理论阶段转向实际商业应用的过程",
+                    example: "The AI industry is shifting from pure model competition to application落地."
                 },
                 {
-                    word: "diversified procurement",
-                    meaning: "多元化采购；从多个供应商获取相同或类似产品以分散风险的策略",
-                    example: "A diversified procurement strategy combining long-term contracts with spot market flexibility is essential."
+                    word: "early procurement contract",
+                    meaning: "早期采购合约；在价格上涨周期中提前锁定价格的采购协议",
+                    example: "Early procurement contracts for memory components become increasingly valuable during supply shortages."
                 }
             ],
             practice: [
                 {
-                    question: "What does Samsung's passage of NVIDIA's PRA for HBM4 chips represent?",
+                    question: "According to the passage, what is GPT-6's internal codename?",
                     options: [
-                        "A complete takeover of SK Hynix's market share",
-                        "Samsung's official entry into NVIDIA's HBM supply chain candidate list",
-                        "The end of competition between Samsung and SK Hynix",
-                        "NVIDIA's decision to use Samsung as its sole HBM supplier"
+                        "Symphony",
+                        "Spud",
+                        "Stargate",
+                        "H100"
                     ],
                     answer: 1
                 },
                 {
-                    question: "According to the passage, what risk does the HBM supply chain transition period carry?",
+                    question: "What does the passage suggest about GPT-6's impact on enterprise AI deployment?",
                     options: [
-                        "Prices will immediately decrease for all buyers",
-                        "Supply chain instability, quality variations, and the need to qualify multiple suppliers",
-                        "SK Hynix will exit the HBM market entirely",
-                        "AI acceleration technology will become obsolete"
+                        "All companies will immediately abandon cloud AI services",
+                        "Organizations with existing AI infrastructure will be better positioned to benefit",
+                        "Local AI deployment will become completely obsolete",
+                        "Only companies with GPT-6 API access can use AI"
                     ],
                     answer: 1
+                },
+                {
+                    question: "What is the predicted timeline for significant AI ecosystem changes after GPT-6 launch?",
+                    options: [
+                        "Within 48 hours",
+                        "Within 6 months",
+                        "Within 1 year",
+                        "Gradually over 5 years"
+                    ],
+                    answer: 0
                 }
             ]
         };
@@ -361,12 +371,11 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-11', label: '2026-04-11（今日）'},
+            {date: '2026-04-12', label: '2026-04-12'},
+            {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
             {date: '2026-04-08', label: '2026-04-08'},
-            {date: '2026-04-07', label: '2026-04-07'},
-            {date: '2026-04-06', label: '2026-04-06'},
         ];
 
         // 动态生成历史记录链接

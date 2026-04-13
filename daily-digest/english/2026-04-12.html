@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Digest - 英文学习</title>
+    <title>Daily Digest - 英文学习 2026-04-12</title>
     <style>
         * {
             margin: 0;
@@ -229,8 +229,8 @@
     <div class="container">
         <div class="header">
             <h1>📚 英文学习</h1>
-            <div class="date" id="currentDate"></div>
-            <div class="update-time" id="updateTime"></div>
+            <div class="date">2026年4月12日 星期日</div>
+            <div class="update-time">快照存档版本</div>
         </div>
 
         <div class="content">
@@ -264,61 +264,57 @@
     </div>
 
     <script>
-        // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月11日星期六';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/11 10:00:00';
-
-        // 今日学习内容 - HBM市场竞争与供应链管理
+        // 今日学习内容 - 存储芯片涨价超级周期（4月12日存档）
         const todayContent = {
-            english: "The HBM4 memory race between Samsung and SK Hynix is reshaping the global AI supply chain. For the first time in years, Samsung Electronics has passed NVIDIA's Production Readiness Assessment (PRA) for its 12-layer HBM4 chips, officially entering the candidate list for NVIDIA's supply chain. Previously, SK Hynix commanded over 95% of NVIDIA's HBM orders, making it the de facto sole supplier of high-bandwidth memory for AI accelerators.\n\nSamsung's breakthrough threatens SK Hynix's dominant position. Industry analysts estimate that SK Hynix currently holds approximately 70% of NVIDIA's HBM4 order book, but this share could decline significantly if Samsung's products pass final qualification tests. The Korean chipmakers are competing intensely on two fronts: manufacturing process technology and chip-to-chip bonding techniques. SK Hynix's Advanced MR-MUF process offers superior thermal management, while Samsung is betting on its vertically integrated supply chain and proprietary fabrication capabilities.\n\nFor enterprise procurement teams in the technology sector, this competition has direct implications. When HBM suppliers compete aggressively for NVIDIA's business, downstream buyers—servers, AI PCs, data centers—may benefit from improved pricing and supply reliability. However, the transition period carries risk: early-stage supply chain instability, potential quality variations, and the need to qualify multiple suppliers simultaneously. A diversified HBM procurement strategy, combining long-term contracts with spot market flexibility, is increasingly becoming a competitive necessity rather than a luxury.",
-            chinese: "三星与SK海力士之间的HBM4内存竞赛正在重塑全球AI供应链。多年来首次，三星电子的12层HBM4芯片已通过英伟达的量产准备认证（PRA），正式进入英伟达供应链候选名单。此前，SK海力士占据英伟达HBM订单的95%以上，成为AI加速器高带宽内存的事实上的唯一供应商。\n\n三星的突破威胁着SK海力士的主导地位。行业分析师估计，SK海力士目前约占英伟达HBM4订单的70%，但如果三星产品通过最终资格认证，这一份额可能大幅下降。这两家韩国芯片制造商正在两个领域展开激烈竞争：制造工艺技术和芯片键合技术。SK海力士的Advanced MR-MUF工艺在热管理方面表现更优，而三星则押注于其垂直整合的供应链和自有制造能力。\n\n对于科技行业的企业采购团队而言，这场竞争具有直接影响。当HBM供应商为争夺英伟达业务而激烈竞争时，下游买家——服务器、AI PC、数据中心——可能从更好的定价和供应可靠性中受益。然而，过渡期也伴随着风险：供应链早期不稳定、潜在的质量差异，以及同时认证多个供应商的需求。结合长期合约与现货市场灵活性的多元化HBM采购策略，正日益成为一种竞争必需，而非奢侈品。",
+            english: "The memory chip industry is experiencing what analysts are calling a 'supercycle' not seen since the early 2000s. According to TrendForce's latest research released on April 12, 2026, DRAM contract prices are expected to surge another 58-63% in Q2, building on gains of over 300% for DDR4 and even more dramatic increases for DDR5 since the cycle began in late September 2025.\n\nThe primary driver behind this unprecedented price appreciation is the insatiable demand for AI computing infrastructure. Major cloud providers—Amazon Web Services, Microsoft Azure, Google Cloud, and Alibaba Cloud—are racing to build out AI data centers, each requiring massive quantities of high-bandwidth memory (HBM), server DRAM, and enterprise SSDs.\n\nFor supply chain professionals managing spare parts inventories, this creates both challenges and opportunities. The challenge lies in predicting demand accurately while managing procurement costs. The opportunity lies in developing more sophisticated inventory optimization strategies that account for price volatility. Leading companies are increasingly turning to AI-powered demand forecasting tools that analyze historical patterns, market signals, and supplier capacity data to make more accurate predictions.",
+            chinese: "存储芯片行业正经历着分析师所说的自本世纪初以来从未见过的"超级周期"。根据TrendForce集邦咨询于2026年4月12日发布的最新研究，DRAM合约价预计将在第二季度再涨58-63%，延续自2025年9月末本轮周期启动以来DDR4涨幅超300%、DDR5涨幅更甚的强劲走势。\n\n这轮史无前例的价格上涨背后的主要驱动力是人工智能计算基础设施的无止境需求。大型云服务提供商——亚马逊AWS、微软Azure、谷歌云和阿里云——正在竞相建设人工智能数据中心，每个都需要大量的高带宽内存（HBM）、服务器DRAM和企业级SSD。\n\n对于管理备件库存的供应链专业人士而言，这既带来挑战也带来机遇。挑战在于准确预测需求的同时管理采购成本。机遇在于开发更复杂的库存优化策略以应对价格波动。领先企业正越来越多地转向AI驱动的需求预测工具，这些工具通过分析历史模式、市场信号和供应商产能数据来做出更准确的预测。",
             vocabulary: [
                 {
-                    word: "supply chain",
-                    meaning: "供应链；产品从原材料到最终交付消费者的完整流程网络",
-                    example: "Samsung's vertically integrated supply chain gives it an advantage in HBM production."
+                    word: "supercycle",
+                    meaning: "超级周期；指某行业经历的超长时间范围的价格上涨或需求增长期",
+                    example: "The current DRAM supercycle has driven prices up over 300% since September 2025."
                 },
                 {
-                    word: "qualification test",
-                    meaning: "资格认证测试；供应商产品通过采购方验证的正式评估流程",
-                    example: "Samsung's HBM4 chips must pass NVIDIA's qualification tests before mass delivery."
+                    word: "high-bandwidth memory (HBM)",
+                    meaning: "高带宽内存；一种专为高性能计算设计的先进内存技术",
+                    example: "AI data centers require massive quantities of HBM for GPU computing."
                 },
                 {
-                    word: "order book",
-                    meaning: "订单簿；企业已确认但尚未完成的客户订单总额",
-                    example: "SK Hynix currently holds approximately 70% of NVIDIA's HBM4 order book."
+                    word: "contract price",
+                    meaning: "合约价；供应商与客户之间长期合同约定的价格",
+                    example: "DRAM contract prices are expected to surge 58-63% in Q2."
                 },
                 {
-                    word: "thermal management",
-                    meaning: "热管理；在电子设备中控制温度的技术和策略",
-                    example: "Advanced MR-MUF process offers superior thermal management for stacked memory chips."
+                    word: "demand forecasting",
+                    meaning: "需求预测；基于历史数据和市场趋势预测未来需求的做法",
+                    example: "AI-powered demand forecasting tools can improve inventory accuracy by 30%."
                 },
                 {
-                    word: "diversified procurement",
-                    meaning: "多元化采购；从多个供应商获取相同或类似产品以分散风险的策略",
-                    example: "A diversified procurement strategy combining long-term contracts with spot market flexibility is essential."
+                    word: "inventory optimization",
+                    meaning: "库存优化；在满足服务水平的同时最小化库存成本的策略",
+                    example: "Advanced inventory optimization strategies are crucial during price volatility periods."
                 }
             ],
             practice: [
                 {
-                    question: "What does Samsung's passage of NVIDIA's PRA for HBM4 chips represent?",
+                    question: "What is driving the current DRAM price supercycle according to the passage?",
                     options: [
-                        "A complete takeover of SK Hynix's market share",
-                        "Samsung's official entry into NVIDIA's HBM supply chain candidate list",
-                        "The end of competition between Samsung and SK Hynix",
-                        "NVIDIA's decision to use Samsung as its sole HBM supplier"
+                        "Reduced supply from memory manufacturers",
+                        "Insatiable demand for AI computing infrastructure",
+                        "Government subsidies for semiconductor production",
+                        "Increased consumer demand for gaming PCs"
                     ],
                     answer: 1
                 },
                 {
-                    question: "According to the passage, what risk does the HBM supply chain transition period carry?",
+                    question: "How are leading companies responding to price volatility in spare parts inventory?",
                     options: [
-                        "Prices will immediately decrease for all buyers",
-                        "Supply chain instability, quality variations, and the need to qualify multiple suppliers",
-                        "SK Hynix will exit the HBM market entirely",
-                        "AI acceleration technology will become obsolete"
+                        "They are reducing inventory levels to cut costs",
+                        "They are switching to cheaper substitute components",
+                        "They are using AI-powered demand forecasting tools",
+                        "They are negotiating longer payment terms with suppliers"
                     ],
-                    answer: 1
+                    answer: 2
                 }
             ]
         };
@@ -359,8 +355,9 @@
             }
         }
 
-        // 历史记录数据
+        // 历史记录数据（快照文件：去掉自身日期4月12日，链接加../前缀）
         const historyDates = [
+            {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
             {date: '2026-04-08', label: '2026-04-08'},
@@ -372,7 +369,7 @@
         const historyList = document.getElementById('historyList');
         historyDates.forEach(item => {
             const link = document.createElement('a');
-            link.href = `../english/${item.date}.html`;
+            link.href = `../${item.date}.html`;
             link.className = 'history-link';
             link.textContent = item.label;
             historyList.appendChild(link);
