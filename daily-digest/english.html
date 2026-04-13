@@ -265,70 +265,70 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月13日星期一';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/13 10:00:00';
+        document.getElementById('currentDate').textContent = '2026年4月15日星期三';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/15 10:00:00';
 
-        // 今日学习内容 - 供应链成本管理中的关键指标
+        // 今日学习内容 - 供应商谈判策略与合同管理
         const todayContent = {
-            english: "Effective cost management in IT supply chain operations requires a deep understanding of several key performance indicators that directly impact the bottom line. The first critical metric is Total Cost of Ownership (TCO), which encompasses not only the initial purchase price but also hidden costs such as logistics, inventory carrying costs, quality issues, and end-of-life disposal. For spare parts inventory, TCO analysis often reveals that the purchase price represents only 40-60% of total costs, making strategic sourcing decisions essential.\n\nThe second metric gaining prominence is Days of Supply (DOS), which measures how long current inventory levels will last given average consumption rates. Optimal DOS varies by part criticality: critical service parts may warrant 60-90 days of supply while non-critical components can be maintained at 15-30 days. However, the rising trend in component prices is prompting many organizations to deliberately increase DOS for high-value items, effectively converting cash reserves into inventory as a hedge against further price escalation.\n\nThe third essential KPI is Inventory Carrying Cost Rate (ICCR), which typically ranges from 20-30% of average inventory value annually. This rate includes capital costs, storage facilities, insurance, taxes, shrinkage, and obsolescence reserves. In high-inflation environments for electronics components, the opportunity cost of capital locked in inventory becomes particularly significant. Finance teams and supply chain managers must collaborate closely to balance the trade-offs between inventory investment, price risk mitigation, and working capital efficiency. Best practices include implementing demand-driven replenishment systems, establishing supplier-managed inventory programs for stable-demand items, and conducting regular TCO-based supplier performance reviews.",
-            chinese: "IT供应链运营中的有效成本管理要求深入理解若干直接影�响底线的关键绩效指标。第一个关键指标是总拥有成本（TCO），它不仅包括初始采购价格，还包括隐性成本，如物流、库存持有成本、质量问题和生命周期末期处置成本。对于备件库存，TCO分析通常揭示采购价格仅占总成本的40-60%，这使得战略性采购决策变得至关重要。\n\n第二个日益重要的指标是供应天数（DOS），它衡量的是以当前消耗率计算，现有库存水平能够维持多长时间。最优DOS因零件关键程度而异：关键维修零件可能需要60-90天的库存，而非关键部件可维持在15-30天。然而，零部件价格上涨的趋势正促使许多组织有意识地增加高价值物品的DOS，实际上是将现金储备转化为库存，作为对冲进一步价格上涨的手段。\n\n第三个必备KPI是库存持有成本率（ICCR），通常占年平均库存价值的20-30%。该比率包括资本成本、仓储设施、保险、税费、损耗和过时准备金。在电子产品零部件高通胀环境下，锁定在库存中的资本机会成本变得尤为显著。财务团队和供应链管理者必须密切合作，在库存投资、价格风险缓解和营运资金效率之间取得平衡。最佳实践包括实施需求驱动补货系统、为稳定需求品项建立供应商管理库存计划，以及定期开展基于TCO的供应商绩效评审。",
+            english: "Strategic supplier negotiation is a critical competency for supply chain cost management professionals, particularly in volatile markets characterized by component shortages and price volatility. The foundation of effective negotiation lies in thorough preparation: understanding your organization's true requirements, analyzing market conditions, researching supplier alternatives, and establishing clear walk-away positions before entering discussions. In the current DRAM and NAND market environment, where prices have experienced unprecedented volatility, negotiation leverage often shifts between buyers and suppliers depending on inventory cycles and demand forecasts.\n\nOne powerful technique is the multi-year framework agreement with price adjustment mechanisms. Rather than fixing prices for the entire contract term, sophisticated agreements incorporate quarterly or semi-annual price reviews based on objective market indices such as TrendForce contract pricing or spot market averages. This approach provides suppliers with volume certainty while protecting buyers from extreme price spikes. Additionally, these agreements should include capacity reservation clauses, ensuring that suppliers allocate specific production capacity to your organization even during supply-constrained periods.\n\nAnother essential element is the strategic use of alternative suppliers and dual-sourcing strategies. While single-sourcing may offer short-term cost advantages through volume discounts, it creates significant supply risk. For critical components like DDR5 memory modules, maintaining relationships with at least two qualified suppliers provides negotiation leverage and supply continuity insurance. When engaging in supplier discussions, presenting credible alternative options—even if not immediately exercised—strengthens your negotiating position and often yields better terms without actually switching suppliers.",
+            chinese: "战略供应商谈判是供应链成本管理专业人员的关键能力，特别是在以零部件短缺和价格波动为特征的不稳定市场中。有效谈判的基础在于充分准备：了解组织的真实需求、分析市场状况、研究替代供应商，并在进入讨论前建立明确的退出底线。在当前DRAM和NAND市场环境中，价格经历了前所未有的波动，谈判杠杆往往在买方和供应商之间转移，取决于库存周期和需求预测。\n\n一种强有力的技术是带有价格调整机制的多年框架协议。不是为整个合同期限固定价格，而是复杂的协议纳入基于客观市场指数的季度或半年度价格审查，如TrendForce合约价格或现货市场均价。这种方法为供应商提供销量确定性，同时保护买方免受极端价格飙升的影响。此外，这些协议应包括产能预留条款，确保供应商即使在供应受限期间也为您的组织分配特定生产能力。\n\n另一个关键要素是战略性地使用替代供应商和双源采购策略。虽然单一采购可能通过批量折扣提供短期成本优势，但它创造了重大供应风险。对于DDR5内存模块等关键零部件，与至少两家合格供应商保持关系可提供谈判杠杆和供应连续性保障。在与供应商讨论时，提出可信的替代方案——即使不立即执行——也能加强您的谈判地位，并经常在无需实际更换供应商的情况下获得更好的条款。",
             vocabulary: [
                 {
-                    word: "TCO (Total Cost of Ownership)",
-                    meaning: "总拥有成本；采购物品的完整成本，包括采购价+物流+库存持有+处置等全生命周期费用",
-                    example: "TCO analysis revealed that the purchase price represented only 45% of total costs for critical spare parts."
+                    word: "walk-away position",
+                    meaning: "退出底线/ walk-away立场；谈判中可接受的最低条件，低于此条件则终止谈判",
+                    example: "Before the negotiation, we established a clear walk-away position based on our budget constraints."
                 },
                 {
-                    word: "DOS (Days of Supply)",
-                    meaning: "供应天数；当前库存以消耗率可维持的天数，衡量库存充足性的关键指标",
-                    example: "We deliberately increased DOS for high-value DRAM modules to hedge against further price increases."
+                    word: "framework agreement",
+                    meaning: "框架协议；规定长期合作基本条款的协议，通常包含价格调整机制和产能预留条款",
+                    example: "We signed a three-year framework agreement with quarterly price review mechanisms."
                 },
                 {
-                    word: "ICCR (Inventory Carrying Cost Rate)",
-                    meaning: "库存持有成本率；持有库存的年度成本占库存价值的比例，通常包含资本成本、仓储、保险、损耗等",
-                    example: "With an ICCR of 25%, holding $10 million in inventory costs $2.5 million annually."
+                    word: "capacity reservation clause",
+                    meaning: "产能预留条款；合同中确保供应商在供应紧张期间为买方保留特定生产能力的条款",
+                    example: "The capacity reservation clause ensured supply continuity even during the DRAM shortage."
                 },
                 {
-                    word: "supplier-managed inventory (SMI)",
-                    meaning: "供应商管理库存；一种库存管理模式，由供应商监控并管理买方的库存水平",
-                    example: "Implementing SMI for non-critical components freed up significant working capital."
+                    word: "dual-sourcing strategy",
+                    meaning: "双源采购策略；同时从两家或多家供应商采购同一零部件以降低供应风险的策略",
+                    example: "Implementing a dual-sourcing strategy for critical components reduced our supply risk significantly."
                 },
                 {
-                    word: "opportunity cost of capital",
-                    meaning: "资本机会成本；将资金投入某一用途而放弃其他投资所损失的潜在收益",
-                    example: "In a high-inflation environment, the opportunity cost of capital locked in slow-moving inventory becomes prohibitively high."
+                    word: "negotiation leverage",
+                    meaning: "谈判杠杆/谈判筹码；在谈判中获得优势地位的能力或资源",
+                    example: "Having qualified alternative suppliers gave us significant negotiation leverage during contract renewal."
                 }
             ],
             practice: [
                 {
-                    question: "According to the passage, what percentage of total costs does the initial purchase price typically represent for spare parts inventory?",
+                    question: "According to the passage, what is the foundation of effective supplier negotiation?",
                     options: [
-                        "15-25%",
-                        "40-60%",
-                        "70-80%",
-                        "90-95%"
+                        "Aggressive bargaining tactics",
+                        "Thorough preparation including market analysis and walk-away positions",
+                        "Long-term personal relationships with suppliers",
+                        "Accepting the first offer to maintain goodwill"
                     ],
                     answer: 1
                 },
                 {
-                    question: "What is the recommended Days of Supply (DOS) range for non-critical spare parts according to the passage?",
+                    question: "What type of price adjustment mechanism is recommended for multi-year framework agreements?",
                     options: [
-                        "5-10 days",
-                        "15-30 days",
-                        "60-90 days",
-                        "120-180 days"
+                        "Fixed prices for the entire contract term",
+                        "Quarterly or semi-annual reviews based on objective market indices",
+                        "Annual increases tied to inflation only",
+                        "No price adjustments allowed"
                     ],
                     answer: 1
                 },
                 {
-                    question: "Which of the following is listed as a best practice for balancing inventory investment and working capital efficiency?",
+                    question: "Why does the passage recommend dual-sourcing for critical components like DDR5 memory?",
                     options: [
-                        "Increase inventory levels for all parts uniformly",
-                        "Eliminate all safety stock to reduce carrying costs",
-                        "Implement demand-driven replenishment systems",
-                        "Rely exclusively on just-in-time delivery"
+                        "It always results in lower prices",
+                        "It provides negotiation leverage and supply continuity insurance",
+                        "It simplifies inventory management",
+                        "It reduces the number of supplier relationships to manage"
                     ],
-                    answer: 2
+                    answer: 1
                 }
             ]
         };
@@ -371,13 +371,13 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-14', label: '2026-04-14（今日）'},
+            {date: '2026-04-15', label: '2026-04-15（今日）'},
+            {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-12', label: '2026-04-12'},
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
-            {date: '2026-04-08', label: '2026-04-08'},
         ];
 
         // 动态生成历史记录链接
