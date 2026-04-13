@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Digest - 英文学习 2026-04-12</title>
+    <title>Daily Digest - 英文学习</title>
     <style>
         * {
             margin: 0;
@@ -229,8 +229,8 @@
     <div class="container">
         <div class="header">
             <h1>📚 英文学习</h1>
-            <div class="date">2026年4月12日 星期日</div>
-            <div class="update-time">快照存档版本</div>
+            <div class="date" id="currentDate"></div>
+            <div class="update-time" id="updateTime"></div>
         </div>
 
         <div class="content">
@@ -264,57 +264,71 @@
     </div>
 
     <script>
-        // 今日学习内容 - 存储芯片涨价超级周期（4月12日存档）
+        // 设置日期（硬编码，禁止使用new Date()）
+        document.getElementById('currentDate').textContent = '2026年4月13日星期一';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/13 10:00:00';
+
+        // 今日学习内容 - GPT-6发布与AI超级周期
         const todayContent = {
-            english: "The memory chip industry is experiencing what analysts are calling a 'supercycle' not seen since the early 2000s. According to TrendForce's latest research released on April 12, 2026, DRAM contract prices are expected to surge another 58-63% in Q2, building on gains of over 300% for DDR4 and even more dramatic increases for DDR5 since the cycle began in late September 2025.\n\nThe primary driver behind this unprecedented price appreciation is the insatiable demand for AI computing infrastructure. Major cloud providers—Amazon Web Services, Microsoft Azure, Google Cloud, and Alibaba Cloud—are racing to build out AI data centers, each requiring massive quantities of high-bandwidth memory (HBM), server DRAM, and enterprise SSDs.\n\nFor supply chain professionals managing spare parts inventories, this creates both challenges and opportunities. The challenge lies in predicting demand accurately while managing procurement costs. The opportunity lies in developing more sophisticated inventory optimization strategies that account for price volatility. Leading companies are increasingly turning to AI-powered demand forecasting tools that analyze historical patterns, market signals, and supplier capacity data to make more accurate predictions.",
-            chinese: "存储芯片行业正经历着分析师所说的自本世纪初以来从未见过的"超级周期"。根据TrendForce集邦咨询于2026年4月12日发布的最新研究，DRAM合约价预计将在第二季度再涨58-63%，延续自2025年9月末本轮周期启动以来DDR4涨幅超300%、DDR5涨幅更甚的强劲走势。\n\n这轮史无前例的价格上涨背后的主要驱动力是人工智能计算基础设施的无止境需求。大型云服务提供商——亚马逊AWS、微软Azure、谷歌云和阿里云——正在竞相建设人工智能数据中心，每个都需要大量的高带宽内存（HBM）、服务器DRAM和企业级SSD。\n\n对于管理备件库存的供应链专业人士而言，这既带来挑战也带来机遇。挑战在于准确预测需求的同时管理采购成本。机遇在于开发更复杂的库存优化策略以应对价格波动。领先企业正越来越多地转向AI驱动的需求预测工具，这些工具通过分析历史模式、市场信号和供应商产能数据来做出更准确的预测。",
+            english: "OpenAI is set to launch GPT-6 tomorrow, April 14th, marking what CEO Sam Altman calls the 'last API humanity will ever need to remember.' The model, internally codenamed 'Spud,' represents the most expensive AI training run in history, costing over $2 billion and utilizing approximately 100,000 H100 GPUs at Texas's Stargate data center. The core architecture, named Symphony, introduces native multimodality with support for 200 million token context windows—a 100x improvement over its predecessor.\n\nIndustry analysts are projecting a massive ripple effect across the AI ecosystem. Within 48 hours of GPT-6's launch, the global AI application landscape could fundamentally restructure. Traditional cloud-based AI services may face unprecedented competition from the model's capabilities, while local AI deployment strategies—particularly AI PCs and edge devices—could see renewed interest given the model's rumored efficient inference requirements.\n\nFor enterprise technology leaders, GPT-6's arrival signals a critical inflection point. The shift from 'model competition' to 'application落地' (implementation and deployment) appears imminent. Organizations that have already built AI infrastructure foundations will be best positioned to capitalize on GPT-6's capabilities. For supply chain managers, the downstream effects are clear: AI-driven demand for high-performance computing will sustain memory and storage component price pressures throughout 2026, making early procurement contracts increasingly valuable.",
+            chinese: "OpenAI将于明日（4月14日）发布GPT-6，CEO Sam Altman称之为"人类最后需要记住的API"。该模型内部代号"Spud"（土豆），是有史以来最昂贵的AI训练项目，成本超20亿美元，动用约10万张H100 GPU在德克萨斯Stargate数据中心完成。核心架构名为Symphony，支持原生多模态和2亿Token上下文窗口——比上一代提升100倍。\n\n行业分析师预测GPT-6将引发AI生态系统的巨大涟漪效应。发布后48小时内，全球AI应用格局可能发生根本性重组。传统基于云的AI服务可能面临前所未有的竞争压力，而考虑到该模型高效的推理需求，本地AI部署策略（尤其是AI PC和边缘设备）可能重新受到关注。\n\n对于企业技术领导者而言，GPT-6的到来标志着一个关键转折点。从"模型竞争"到"应用落地"的转变似乎即将到来。已经建立AI基础设施的企业将处于利用GPT-6能力的最佳位置。对于供应链管理者而言，下游影响是明确的：AI驱动的高性能计算需求将在2026年全年维持内存和存储组件的价格压力，使早期采购合约日益增值。",
             vocabulary: [
                 {
-                    word: "supercycle",
-                    meaning: "超级周期；指某行业经历的超长时间范围的价格上涨或需求增长期",
-                    example: "The current DRAM supercycle has driven prices up over 300% since September 2025."
+                    word: "native multimodality",
+                    meaning: "原生多模态；模型原生支持文本、图像、音频、视频等多种数据类型的处理能力",
+                    example: "GPT-6 introduces native multimodality, eliminating the need for separate processing pipelines."
                 },
                 {
-                    word: "high-bandwidth memory (HBM)",
-                    meaning: "高带宽内存；一种专为高性能计算设计的先进内存技术",
-                    example: "AI data centers require massive quantities of HBM for GPU computing."
+                    word: "context window",
+                    meaning: "上下文窗口；模型一次能处理的最大Token数量，决定了单次处理的信息量",
+                    example: "GPT-6's 200 million token context window represents a 100x improvement over GPT-5."
                 },
                 {
-                    word: "contract price",
-                    meaning: "合约价；供应商与客户之间长期合同约定的价格",
-                    example: "DRAM contract prices are expected to surge 58-63% in Q2."
+                    word: "inference",
+                    meaning: "推理；模型在训练完成后对新数据进行预测或生成的过程",
+                    example: "The rumor suggests GPT-6 will have significantly improved inference efficiency."
                 },
                 {
-                    word: "demand forecasting",
-                    meaning: "需求预测；基于历史数据和市场趋势预测未来需求的做法",
-                    example: "AI-powered demand forecasting tools can improve inventory accuracy by 30%."
+                    word: "application落地",
+                    meaning: "应用落地；技术从实验室或理论阶段转向实际商业应用的过程",
+                    example: "The AI industry is shifting from pure model competition to application落地."
                 },
                 {
-                    word: "inventory optimization",
-                    meaning: "库存优化；在满足服务水平的同时最小化库存成本的策略",
-                    example: "Advanced inventory optimization strategies are crucial during price volatility periods."
+                    word: "early procurement contract",
+                    meaning: "早期采购合约；在价格上涨周期中提前锁定价格的采购协议",
+                    example: "Early procurement contracts for memory components become increasingly valuable during supply shortages."
                 }
             ],
             practice: [
                 {
-                    question: "What is driving the current DRAM price supercycle according to the passage?",
+                    question: "According to the passage, what is GPT-6's internal codename?",
                     options: [
-                        "Reduced supply from memory manufacturers",
-                        "Insatiable demand for AI computing infrastructure",
-                        "Government subsidies for semiconductor production",
-                        "Increased consumer demand for gaming PCs"
+                        "Symphony",
+                        "Spud",
+                        "Stargate",
+                        "H100"
                     ],
                     answer: 1
                 },
                 {
-                    question: "How are leading companies responding to price volatility in spare parts inventory?",
+                    question: "What does the passage suggest about GPT-6's impact on enterprise AI deployment?",
                     options: [
-                        "They are reducing inventory levels to cut costs",
-                        "They are switching to cheaper substitute components",
-                        "They are using AI-powered demand forecasting tools",
-                        "They are negotiating longer payment terms with suppliers"
+                        "All companies will immediately abandon cloud AI services",
+                        "Organizations with existing AI infrastructure will be better positioned to benefit",
+                        "Local AI deployment will become completely obsolete",
+                        "Only companies with GPT-6 API access can use AI"
                     ],
-                    answer: 2
+                    answer: 1
+                },
+                {
+                    question: "What is the predicted timeline for significant AI ecosystem changes after GPT-6 launch?",
+                    options: [
+                        "Within 48 hours",
+                        "Within 6 months",
+                        "Within 1 year",
+                        "Gradually over 5 years"
+                    ],
+                    answer: 0
                 }
             ]
         };
@@ -355,21 +369,20 @@
             }
         }
 
-        // 历史记录数据（快照文件：去掉自身日期4月12日，链接加../前缀）
+        // 历史记录数据
         const historyDates = [
+            {date: '2026-04-13', label: '2026-04-13（今日）'},
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
             {date: '2026-04-08', label: '2026-04-08'},
-            {date: '2026-04-07', label: '2026-04-07'},
-            {date: '2026-04-06', label: '2026-04-06'},
         ];
 
         // 动态生成历史记录链接
         const historyList = document.getElementById('historyList');
         historyDates.forEach(item => {
             const link = document.createElement('a');
-            link.href = `../${item.date}.html`;
+            link.href = `../english/${item.date}.html`;
             link.className = 'history-link';
             link.textContent = item.label;
             historyList.appendChild(link);

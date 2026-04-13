@@ -265,70 +265,70 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月13日星期一';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/13 10:00:00';
+        document.getElementById('currentDate').textContent = '2026年4月12日星期日';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/12 10:00:00';
 
-        // 今日学习内容 - GPT-6发布与AI超级周期
+        // 今日学习内容 - AI PC与存储涨价超级周期
         const todayContent = {
-            english: "OpenAI is set to launch GPT-6 tomorrow, April 14th, marking what CEO Sam Altman calls the 'last API humanity will ever need to remember.' The model, internally codenamed 'Spud,' represents the most expensive AI training run in history, costing over $2 billion and utilizing approximately 100,000 H100 GPUs at Texas's Stargate data center. The core architecture, named Symphony, introduces native multimodality with support for 200 million token context windows—a 100x improvement over its predecessor.\n\nIndustry analysts are projecting a massive ripple effect across the AI ecosystem. Within 48 hours of GPT-6's launch, the global AI application landscape could fundamentally restructure. Traditional cloud-based AI services may face unprecedented competition from the model's capabilities, while local AI deployment strategies—particularly AI PCs and edge devices—could see renewed interest given the model's rumored efficient inference requirements.\n\nFor enterprise technology leaders, GPT-6's arrival signals a critical inflection point. The shift from 'model competition' to 'application落地' (implementation and deployment) appears imminent. Organizations that have already built AI infrastructure foundations will be best positioned to capitalize on GPT-6's capabilities. For supply chain managers, the downstream effects are clear: AI-driven demand for high-performance computing will sustain memory and storage component price pressures throughout 2026, making early procurement contracts increasingly valuable.",
-            chinese: "OpenAI将于明日（4月14日）发布GPT-6，CEO Sam Altman称之为"人类最后需要记住的API"。该模型内部代号"Spud"（土豆），是有史以来最昂贵的AI训练项目，成本超20亿美元，动用约10万张H100 GPU在德克萨斯Stargate数据中心完成。核心架构名为Symphony，支持原生多模态和2亿Token上下文窗口——比上一代提升100倍。\n\n行业分析师预测GPT-6将引发AI生态系统的巨大涟漪效应。发布后48小时内，全球AI应用格局可能发生根本性重组。传统基于云的AI服务可能面临前所未有的竞争压力，而考虑到该模型高效的推理需求，本地AI部署策略（尤其是AI PC和边缘设备）可能重新受到关注。\n\n对于企业技术领导者而言，GPT-6的到来标志着一个关键转折点。从"模型竞争"到"应用落地"的转变似乎即将到来。已经建立AI基础设施的企业将处于利用GPT-6能力的最佳位置。对于供应链管理者而言，下游影响是明确的：AI驱动的高性能计算需求将在2026年全年维持内存和存储组件的价格压力，使早期采购合约日益增值。",
+            english: "The global memory market is experiencing what analysts are calling a 'super-cycle' driven by insatiable AI computing demand. According to TrendForce, DRAM contract prices are projected to surge another 58-63% in Q2 2026, following a staggering 300%+ increase in DDR4 prices since September 2025. This unprecedented rally has forced supply chain managers to rethink procurement strategies, with many companies now securing early contracts to lock in prices before further increases.\n\nFor enterprise buyers, the implications are severe. A typical 1,000-unit PC fleet refresh that cost ¥500,000 in late 2024 now requires approximately ¥1.5 million—a 200% cost increase in just 18 months. Storage components have followed a similar trajectory, with enterprise SSDs now trading at 2.8x their September 2025 levels. Industry insiders suggest that this trend may persist until at least late 2026, as AI infrastructure buildout continues to absorbs available production capacity.\n\nThe competitive landscape is also shifting rapidly. Samsung and SK Hynix have both qualified as HBM4 suppliers for NVIDIA's upcoming Rubin platform, breaking SK Hynix's de facto monopoly in this segment. For component buyers, this diversification could eventually ease HBM allocation pressures, though any meaningful supply relief is unlikely before 2027. In the meantime, strategic early procurement remains the most effective risk mitigation strategy.",
+            chinese: "全球存储市场正经历由AI算力需求驱动的"超级周期"。据TrendForce预测，2026年Q2 DRAM合约价将环比再涨58-63%，此前自2025年9月以来DDR4价格已暴涨超300%。这场前所未有的涨价潮迫使供应链管理者重新审视采购策略，许多公司正通过锁定长期合约来规避进一步涨价风险。\n\n对企业采购者而言，影响十分严峻。一个典型1000台PC机群更新项目，2024年末成本约50万元，如今已需约150万元——18个月内成本上涨200%。存储组件走势类似，企业级SSD如今交易价格已达2025年9月的2.8倍。业内人士指出，这一趋势可能持续至2026年末，因为AI基础设施建设仍在持续吸收可用产能。\n\n竞争格局也在快速变化。三星和SK海力士均已通过英伟达即将推出的Rubin平台的HBM4供应商资质认证，打破了SK海力士在这一领域的准垄断地位。对组件采购者而言，这种多元化可能在未来缓解HBM供货压力，但任何有意义的供应缓解都不太可能在2027年前出现。与此同时，战略性早期采购仍是目前最有效的风险缓解策略。",
             vocabulary: [
                 {
-                    word: "native multimodality",
-                    meaning: "原生多模态；模型原生支持文本、图像、音频、视频等多种数据类型的处理能力",
-                    example: "GPT-6 introduces native multimodality, eliminating the need for separate processing pipelines."
-                },
-                {
-                    word: "context window",
-                    meaning: "上下文窗口；模型一次能处理的最大Token数量，决定了单次处理的信息量",
-                    example: "GPT-6's 200 million token context window represents a 100x improvement over GPT-5."
-                },
-                {
-                    word: "inference",
-                    meaning: "推理；模型在训练完成后对新数据进行预测或生成的过程",
-                    example: "The rumor suggests GPT-6 will have significantly improved inference efficiency."
-                },
-                {
-                    word: "application落地",
-                    meaning: "应用落地；技术从实验室或理论阶段转向实际商业应用的过程",
-                    example: "The AI industry is shifting from pure model competition to application落地."
+                    word: "super-cycle",
+                    meaning: "超级周期；商品或资产价格在长期上涨后经历的大幅、持续性上涨周期，通常持续数年",
+                    example: "The current memory market super-cycle is driven by unprecedented AI infrastructure buildout."
                 },
                 {
                     word: "early procurement contract",
-                    meaning: "早期采购合约；在价格上涨周期中提前锁定价格的采购协议",
-                    example: "Early procurement contracts for memory components become increasingly valuable during supply shortages."
+                    meaning: "早期采购合约；在价格上涨周期中提前锁定价格的采购协议，以规避未来涨价风险",
+                    example: "Many companies are now securing early procurement contracts to lock in prices."
+                },
+                {
+                    word: "HBM (High Bandwidth Memory)",
+                    meaning: "高带宽内存；专为AI GPU设计的高性能内存类型，具有超高速数据传输能力",
+                    example: "SK Hynix has maintained its dominance in HBM supply for NVIDIA GPUs."
+                },
+                {
+                    word: "fleet refresh",
+                    meaning: "机群更新；企业批量更换或升级PC、服务器等设备群体的过程",
+                    example: "A typical fleet refresh now costs 3x more than 18 months ago due to component inflation."
+                },
+                {
+                    word: "supply allocation",
+                    meaning: "供货分配；供应商根据产能和需求对产品供货量进行分配管理的策略",
+                    example: "HBM supply allocation remains tight, forcing AI companies to compete for limited capacity."
                 }
             ],
             practice: [
                 {
-                    question: "According to the passage, what is GPT-6's internal codename?",
+                    question: "According to TrendForce, what is the projected DRAM contract price increase in Q2 2026?",
                     options: [
-                        "Symphony",
-                        "Spud",
-                        "Stargate",
-                        "H100"
+                        "10-15%",
+                        "20-30%",
+                        "58-63%",
+                        "100-120%"
                     ],
-                    answer: 1
+                    answer: 2
                 },
                 {
-                    question: "What does the passage suggest about GPT-6's impact on enterprise AI deployment?",
+                    question: "How much has the cost of a typical 1,000-unit PC fleet refresh increased compared to late 2024?",
                     options: [
-                        "All companies will immediately abandon cloud AI services",
-                        "Organizations with existing AI infrastructure will be better positioned to benefit",
-                        "Local AI deployment will become completely obsolete",
-                        "Only companies with GPT-6 API access can use AI"
+                        "50% increase",
+                        "100% increase (2x)",
+                        "200% increase (3x)",
+                        "300% increase (4x)"
                     ],
-                    answer: 1
+                    answer: 2
                 },
                 {
-                    question: "What is the predicted timeline for significant AI ecosystem changes after GPT-6 launch?",
+                    question: "Which two companies have qualified as HBM4 suppliers for NVIDIA's Rubin platform?",
                     options: [
-                        "Within 48 hours",
-                        "Within 6 months",
-                        "Within 1 year",
-                        "Gradually over 5 years"
+                        "Samsung and Micron only",
+                        "SK Hynix and Micron only",
+                        "Samsung and SK Hynix",
+                        "Samsung, SK Hynix, and Micron"
                     ],
-                    answer: 0
+                    answer: 2
                 }
             ]
         };
@@ -371,12 +371,12 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-13', label: '2026-04-13（今日）'},
-            {date: '2026-04-12', label: '2026-04-12'},
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
             {date: '2026-04-08', label: '2026-04-08'},
+            {date: '2026-04-07', label: '2026-04-07'},
+            {date: '2026-04-06', label: '2026-04-06'},
         ];
 
         // 动态生成历史记录链接
