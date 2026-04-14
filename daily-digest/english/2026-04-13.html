@@ -265,68 +265,68 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月15日星期三';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/15 10:00:00';
+        document.getElementById('currentDate').textContent = '2026年4月13日星期一';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/13 18:00:00';
 
-        // 今日学习内容 - 供应商谈判策略与合同管理
+        // 今日学习内容 - 库存管理与需求预测
         const todayContent = {
-            english: "Strategic supplier negotiation is a critical competency for supply chain cost management professionals, particularly in volatile markets characterized by component shortages and price volatility. The foundation of effective negotiation lies in thorough preparation: understanding your organization's true requirements, analyzing market conditions, researching supplier alternatives, and establishing clear walk-away positions before entering discussions. In the current DRAM and NAND market environment, where prices have experienced unprecedented volatility, negotiation leverage often shifts between buyers and suppliers depending on inventory cycles and demand forecasts.\n\nOne powerful technique is the multi-year framework agreement with price adjustment mechanisms. Rather than fixing prices for the entire contract term, sophisticated agreements incorporate quarterly or semi-annual price reviews based on objective market indices such as TrendForce contract pricing or spot market averages. This approach provides suppliers with volume certainty while protecting buyers from extreme price spikes. Additionally, these agreements should include capacity reservation clauses, ensuring that suppliers allocate specific production capacity to your organization even during supply-constrained periods.\n\nAnother essential element is the strategic use of alternative suppliers and dual-sourcing strategies. While single-sourcing may offer short-term cost advantages through volume discounts, it creates significant supply risk. For critical components like DDR5 memory modules, maintaining relationships with at least two qualified suppliers provides negotiation leverage and supply continuity insurance. When engaging in supplier discussions, presenting credible alternative options—even if not immediately exercised—strengthens your negotiating position and often yields better terms without actually switching suppliers.",
-            chinese: "战略供应商谈判是供应链成本管理专业人员的关键能力，特别是在以零部件短缺和价格波动为特征的不稳定市场中。有效谈判的基础在于充分准备：了解组织的真实需求、分析市场状况、研究替代供应商，并在进入讨论前建立明确的退出底线。在当前DRAM和NAND市场环境中，价格经历了前所未有的波动，谈判杠杆往往在买方和供应商之间转移，取决于库存周期和需求预测。\n\n一种强有力的技术是带有价格调整机制的多年框架协议。不是为整个合同期限固定价格，而是复杂的协议纳入基于客观市场指数的季度或半年度价格审查，如TrendForce合约价格或现货市场均价。这种方法为供应商提供销量确定性，同时保护买方免受极端价格飙升的影响。此外，这些协议应包括产能预留条款，确保供应商即使在供应受限期间也为您的组织分配特定生产能力。\n\n另一个关键要素是战略性地使用替代供应商和双源采购策略。虽然单一采购可能通过批量折扣提供短期成本优势，但它创造了重大供应风险。对于DDR5内存模块等关键零部件，与至少两家合格供应商保持关系可提供谈判杠杆和供应连续性保障。在与供应商讨论时，提出可信的替代方案——即使不立即执行——也能加强您的谈判地位，并经常在无需实际更换供应商的情况下获得更好的条款。",
+            english: "Effective inventory management is the cornerstone of supply chain cost control, particularly in the PC spare parts industry where component obsolescence and price volatility present constant challenges. The fundamental principle is balancing service levels against carrying costs—holding too much inventory ties up working capital and risks write-downs when parts become obsolete, while holding too little risks stockouts that can disrupt customer service and damage relationships.\n\nDemand forecasting in the PC repair ecosystem requires sophisticated multi-dimensional modeling. Unlike new product sales, spare parts demand is driven by failure rates, warranty expirations, and product lifecycle stages. For critical components like motherboards and LCD panels—which represent 80-90% of repair costs—forecasting must incorporate: historical failure rate data by product line, seasonal patterns in repair volume, upcoming warranty cliff events, and planned product end-of-life announcements. Advanced organizations use machine learning models that continuously refine predictions based on actual consumption patterns.\n\nSafety stock optimization is particularly crucial given the current DRAM and NAND price volatility. Traditional safety stock formulas assume stable lead times and demand patterns, but today's storage market requires dynamic adjustment. When prices are rising rapidly, increasing safety stock before further price hikes can generate significant cost savings. Conversely, when spot prices are falling faster than contract prices, minimizing inventory exposure becomes the priority. This requires close coordination between procurement, finance, and repair operations teams.",
+            chinese: "有效的库存管理是供应链成本控制的基石，特别是在PC备件行业，零部件过时和价格波动带来持续挑战。基本原则是在服务水平和持有成本之间取得平衡——库存过多会占用营运资金，并在零部件过时时面临减值风险；库存过少则面临缺货风险，可能中断客户服务并损害关系。\n\nPC维修生态系统中的需求预测需要复杂的多维建模。与新产品销售不同，备件需求由故障率、保修到期和产品生命周期阶段驱动。对于主板和LCD面板等关键零部件——占维修成本的80-90%——预测必须纳入：按产品线的历史故障率数据、维修量的季节性模式、即将到来的保修到期高峰，以及计划的产品停产公告。先进的组织使用机器学习模型，根据实际消耗模式持续优化预测。\n\n鉴于当前DRAM和NAND价格波动，安全库存优化尤为关键。传统安全库存公式假设稳定的交货期和需求模式，但今天的存储市场需要动态调整。当价格快速上涨时，在进一步涨价前增加安全库存可以产生显著的成本节约。相反，当现货价格跌幅超过合约价格时，最小化库存敞口成为优先事项。这需要采购、财务和维修运营团队之间的密切协调。",
             vocabulary: [
                 {
-                    word: "walk-away position",
-                    meaning: "退出底线/ walk-away立场；谈判中可接受的最低条件，低于此条件则终止谈判",
-                    example: "Before the negotiation, we established a clear walk-away position based on our budget constraints."
+                    word: "carrying costs",
+                    meaning: "持有成本；维持库存所产生的成本，包括资金占用、仓储、保险和贬值风险",
+                    example: "High carrying costs led the company to implement just-in-time inventory practices."
                 },
                 {
-                    word: "framework agreement",
-                    meaning: "框架协议；规定长期合作基本条款的协议，通常包含价格调整机制和产能预留条款",
-                    example: "We signed a three-year framework agreement with quarterly price review mechanisms."
+                    word: "stockouts",
+                    meaning: "缺货/断货；库存耗尽无法满足客户需求的情况",
+                    example: "Stockouts of critical components can result in significant customer dissatisfaction."
                 },
                 {
-                    word: "capacity reservation clause",
-                    meaning: "产能预留条款；合同中确保供应商在供应紧张期间为买方保留特定生产能力的条款",
-                    example: "The capacity reservation clause ensured supply continuity even during the DRAM shortage."
+                    word: "warranty cliff",
+                    meaning: "保修到期高峰；大量产品同时过保导致维修需求激增的时间点",
+                    example: "We need to prepare for the warranty cliff when the 2023 laptop models expire next quarter."
                 },
                 {
-                    word: "dual-sourcing strategy",
-                    meaning: "双源采购策略；同时从两家或多家供应商采购同一零部件以降低供应风险的策略",
-                    example: "Implementing a dual-sourcing strategy for critical components reduced our supply risk significantly."
+                    word: "safety stock",
+                    meaning: "安全库存；为应对需求波动和供应不确定性而持有的额外库存",
+                    example: "The procurement team increased safety stock levels ahead of the anticipated price hike."
                 },
                 {
-                    word: "negotiation leverage",
-                    meaning: "谈判杠杆/谈判筹码；在谈判中获得优势地位的能力或资源",
-                    example: "Having qualified alternative suppliers gave us significant negotiation leverage during contract renewal."
+                    word: "inventory exposure",
+                    meaning: "库存敞口；因持有库存而面临的价格下跌或贬值风险",
+                    example: "When spot prices are falling, minimizing inventory exposure becomes critical to avoid losses."
                 }
             ],
             practice: [
                 {
-                    question: "According to the passage, what is the foundation of effective supplier negotiation?",
+                    question: "According to the passage, what is the fundamental principle of inventory management?",
                     options: [
-                        "Aggressive bargaining tactics",
-                        "Thorough preparation including market analysis and walk-away positions",
-                        "Long-term personal relationships with suppliers",
-                        "Accepting the first offer to maintain goodwill"
+                        "Maximizing inventory levels to ensure availability",
+                        "Balancing service levels against carrying costs",
+                        "Minimizing all inventory regardless of service impact",
+                        "Focusing only on procurement cost reduction"
                     ],
                     answer: 1
                 },
                 {
-                    question: "What type of price adjustment mechanism is recommended for multi-year framework agreements?",
+                    question: "What factors should be considered when forecasting demand for PC spare parts?",
                     options: [
-                        "Fixed prices for the entire contract term",
-                        "Quarterly or semi-annual reviews based on objective market indices",
-                        "Annual increases tied to inflation only",
-                        "No price adjustments allowed"
+                        "Only historical sales data",
+                        "Failure rates, warranty expirations, and product lifecycle stages",
+                        "Marketing campaigns and advertising spend",
+                        "Competitor pricing strategies"
                     ],
                     answer: 1
                 },
                 {
-                    question: "Why does the passage recommend dual-sourcing for critical components like DDR5 memory?",
+                    question: "How should safety stock strategy adapt during periods of rapidly rising prices?",
                     options: [
-                        "It always results in lower prices",
-                        "It provides negotiation leverage and supply continuity insurance",
-                        "It simplifies inventory management",
-                        "It reduces the number of supplier relationships to manage"
+                        "Reduce safety stock to minimize exposure",
+                        "Increase safety stock before further price hikes",
+                        "Keep safety stock constant regardless of market conditions",
+                        "Eliminate safety stock entirely"
                     ],
                     answer: 1
                 }
@@ -371,13 +371,12 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-15', label: '2026-04-15（今日）'},
-            {date: '2026-04-14', label: '2026-04-14'},
-            {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-12', label: '2026-04-12'},
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
+            {date: '2026-04-08', label: '2026-04-08'},
+            {date: '2026-04-07', label: '2026-04-07'},
         ];
 
         // 动态生成历史记录链接

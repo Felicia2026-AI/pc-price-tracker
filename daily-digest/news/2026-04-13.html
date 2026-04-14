@@ -250,25 +250,25 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月14日星期二';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/14 10:00:00';
+        document.getElementById('currentDate').textContent = '2026年4月13日星期一';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/13 10:00:00';
 
         // 价格数据
         const priceData = {
             ddr5: {
                 name: 'DDR5 UDIMM 16GB 模组（全球现货均价）',
-                price: 532.00,
+                price: 535.00,
                 change: -3,
                 trend: 'down',
-                date: '2026-04-14',
+                date: '2026-04-13',
                 unit: '¥'
             },
             ssd: {
                 name: '1TB SSD（零售）',
-                price: 795,
+                price: 792,
                 change: 3,
                 trend: 'up',
-                date: '2026-04-14',
+                date: '2026-04-13',
                 unit: '¥'
             }
         };
@@ -292,57 +292,57 @@
         const newsData = {
             industry: [
                 {
-                    tag: 'DDR5继续松动',
-                    title: 'DDR5现货再跌3元至532元：GPT-6发布后算力需求转向，存储短期承压',
+                    tag: 'DDR5回调',
+                    title: 'DDR5现货535元连续两周回调：渠道库存释放，Q2合约价预测维持不变',
                     source: 'TrendForce集邦咨询 / CFM闪存市场',
-                    date: '2026-04-14',
-                    summary: '2026年4月14日当周，DDR5 16GB模组现货价格继续回落至532元（↓3元），连续两周下跌。TrendForce分析：GPT-6发布后，部分AI算力需求从训练端转向推理端，对HBM和高端DRAM的短期需求出现结构性调整；同时渠道商在Q1涨价周期中囤积的库存开始释放，导致现货价格持续松动。但中长期看，Q2 DRAM合约价环比再涨58-63%的预测不变，HBM挤占通用DRAM产能态势持续。对SSC启示：现货端松动是短期采购窗口，建议适度增加即期采购。'
+                    date: '2026-04-13',
+                    summary: '2026年4月13日当周，DDR5 16GB模组现货价格继续回落至535元（↓3元），连续两周技术性回调。TrendForce分析：渠道商在Q1涨价周期中囤积的库存开始释放，导致现货价格短期承压；但Q2 DRAM合约价环比再涨58-63%的预测维持不变，HBM挤占通用DRAM产能态势持续。对SSC启示：现货端回调是短期采购窗口，建议适度增加即期采购。'
                 },
                 {
                     tag: 'SSD涨价',
-                    title: '企业级SSD 795元续涨3元：NAND原厂5月涨价15-20%计划获渠道确认',
+                    title: '企业级SSD 792元续涨3元：NAND原厂5月涨价15-20%计划基本确定',
                     source: '上海证券报 / IT之家',
-                    date: '2026-04-14',
-                    summary: '2026年4月14日当周，企业级1TB SSD渠道价续涨3元至795元。三星、SK海力士、美光三大原厂已向渠道正式确认5月新一轮涨价计划，幅度15-20%，主要针对高密度QLC NAND和大容量企业级SSD。供应链人士透露：AI服务器需求持续爆发，QLC晶圆产能紧张局面短期无解；PLC商业化推迟至2027年，NAND供应紧张将延续至2026年底。对联想SSC参考：5月涨价前是最后采购窗口期，建议立即启动Q2末补货计划。'
+                    date: '2026-04-13',
+                    summary: '2026年4月13日当周，企业级1TB SSD渠道价续涨3元至792元。三星、SK海力士、美光三大原厂5月新一轮涨价计划已基本确定，幅度15-20%，主要针对高密度QLC NAND和大容量企业级SSD。供应链人士透露：AI服务器需求持续爆发，QLC晶圆产能紧张局面短期无解。对联想SSC参考：5月涨价前是最后采购窗口期，建议立即启动Q2末补货计划。'
                 },
                 {
-                    tag: 'AI PC预测',
-                    title: 'Canalys维持AI PC渗透率38%预测：GPT-6生态落地速度或超预期',
-                    source: 'Canalys / IDC',
-                    date: '2026-04-14',
-                    summary: 'Canalys于4月14日发布报告，维持2026年全球AI PC渗透率38%的预测。报告指出：GPT-6发布后24小时内即获得Microsoft、Google、Meta三大巨头接入，AI应用生态落地速度或超预期；企业级AI应用（Copilot、Gemini for Workspace等）的快速普及将加速AI PC换机潮；2026下半年NPU性能再翻倍，AI PC将从"尝鲜"走向"刚需"。对中国市场影响：本土AI应用与GPT-6 API的整合将加速，AI PC普及速度有望领先全球。对SSC启示：AI PC备件需求将呈指数级增长，需提前规划产能。'
+                    tag: '存储周期',
+                    title: '2026存储超级周期持续：HBM产能争夺加剧，通用DRAM供应紧张难缓解',
+                    source: '雪球 / 21世纪经济报道',
+                    date: '2026-04-13',
+                    summary: '截至2026年4月，全球存储器市场正处于由AI驱动的"超级周期"之中。三星、SK海力士、美光三大存储巨头围绕HBM需求展开全面扩产竞赛，导致通用DRAM产能持续被挤占。分析指出：本轮涨价周期至少持续至2026年底，PC和服务器DRAM供应紧张短期难缓解。对SSC启示：Q2-Q3采购预算需持续上调，建议与供应商签订长期框架协议锁定价格。'
                 }
             ],
             ai: [
                 {
-                    tag: 'GPT-6生态',
-                    title: 'GPT-6发布48小时：Microsoft/Google/Meta全面接入，全球AI生态重构加速',
+                    tag: 'GPT-6倒计时',
+                    title: 'GPT-6发布倒计时1天：代号Spud、训练成本20亿美元、4月14日揭幕',
                     source: 'OpenAI / The Verge / TechCrunch',
-                    date: '2026-04-14',
-                    summary: 'GPT-6发布后48小时内，全球AI生态重构已全面启动。Microsoft宣布Copilot全面升级为GPT-6架构；Google Gemini宣布支持GPT-6 API兼容模式；Meta AI接入GPT-6用于社交场景智能回复。OpenAI CEO Altman称这是"人类最后需要记住的API"，意味着未来所有AI应用都将基于GPT-6构建。对企业影响：本地+云端混合AI架构成为主流，AI PC换机需求将呈爆发式增长；预计2026下半年企业AI PC采购量将同比增长200%以上。'
+                    date: '2026-04-13',
+                    summary: 'OpenAI将于4月14日正式发布GPT-6（代号Spud/土豆），训练成本超20亿美元，动用约10万张H100 GPU在德克萨斯Stargate数据中心完成。核心参数：Symphony架构+200万Token超长上下文，原生多模态，性能较GPT-5.4暴涨40%。OpenAI CEO Altman称之为"人类最后需要记住的API"。对企业影响：本地+云端混合架构或成主流，AI PC换机需求将呈爆发式增长。'
                 },
                 {
                     tag: '国产芯片',
-                    title: '华为昇腾950PR产能爬坡：DeepSeek/文心一言/通义千问全面适配完成',
+                    title: '华为昇腾950PR产能爬坡：DeepSeek V4全面适配，国产AI芯片竞争力提升',
                     source: '36氪 / 知乎 / 华为官方',
-                    date: '2026-04-14',
-                    summary: '华为昇腾950PR芯片产能正在快速爬坡，预计Q2末月产能将达10万片。DeepSeek V4、百度文心一言、阿里通义千问已完成与昇腾950PR的全面适配，在多个基准测试中性能与英伟达H100相当。业内分析：昇腾950PR采用国产7nm工艺，性能功耗比显著提升，标志着国产AI芯片在大模型推理领域正式具备竞争力。对国内企业影响：昇腾生态快速成熟，本地AI部署成本有望下降30-40%，AI PC和服务器需求将进一步上行。'
+                    date: '2026-04-13',
+                    summary: '华为昇腾950PR芯片产能正在快速爬坡，预计Q2末月产能将达10万片。DeepSeek V4已完成与昇腾950PR的全面适配，在多个基准测试中性能与英伟达H100相当。业内分析：昇腾950PR采用国产7nm工艺，性能功耗比显著提升，标志着国产AI芯片在大模型推理领域正式具备竞争力。对国内企业影响：本地AI部署成本有望下降30-40%。'
                 }
             ],
             lenovo: [
                 {
-                    tag: 'ThinkPad倒计时',
-                    title: '联想ThinkPad发布会倒计时8天：X1 Carbon 2026定价15999元起，零部件成本上涨20%',
-                    source: '联想官网 / IT之家 / 格隆汇',
-                    date: '2026-04-14',
-                    summary: '联想ThinkPad 2026新品发布会将于4月22日举行，倒计时8天。据悉，新一代ThinkPad X1 Carbon将搭载英特尔Panther Lake Core Ultra 300系列和AMD Zen 5 Ryzen AI 400系列双平台，起售价15999元（较上代上浮约2000元）。零部件成本上涨主要来自：DDR5内存涨价、1TB SSD涨价、以及新一代NPU芯片成本。对SSC启示：新品上市后旧款零部件清仓需求将增加，建议提前规划库存结构调整；高端备件采购预算需上调15-20%。'
+                    tag: 'IDC Q1数据',
+                    title: 'IDC：联想Q1 PC出货量同比增长8.6%，份额25.2%稳居全球第一',
+                    source: 'IDC中国 / 雪球',
+                    date: '2026-04-13',
+                    summary: 'IDC发布2026年第一季度全球PC市场追踪报告，联想集团以25.2%市场份额蝉联全球第一，出货量同比增长8.6%，增速超市场平均水平3倍以上。受益于AI PC新品推出和ThinkPad产品线更新，联想在全球PC市场复苏中占据领先地位。4月22日ThinkPad发布会渐近，新品定价和供应链策略值得持续关注。'
                 },
                 {
-                    tag: '供应链动态',
-                    title: '联想天禧AI生态接入GPT-6 API：DingOS智能助手将迎来重大升级',
-                    source: '联想官方 / 36氪',
-                    date: '2026-04-14',
-                    summary: '联想天禧AI生态（DingOS）宣布正式接入GPT-6 API，旗下智能助手"小天"将迎来重大升级。升级后的DingOS将支持200万Token超长上下文，可实现跨文档智能分析、多轮复杂对话、以及本地化AI推理+云端GPT-6混合架构。联想表示：天禧生态与GPT-6的深度整合，将使ThinkPad 2026系列成为"最懂企业用户"的AI PC。对SSC启示：天禧生态的升级将带动AI PC软件服务收入增长，但硬件成本压力同步上升，需关注新品毛利率走势。'
+                    tag: 'ThinkPad倒计时',
+                    title: '联想ThinkPad发布会倒计时9天：X1 Carbon 2026零部件成本上涨18-22%',
+                    source: '格隆汇 / IT之家',
+                    date: '2026-04-13',
+                    summary: '联想ThinkPad 2026新品发布会将于4月22日举行，倒计时9天。据悉，新一代ThinkPad X1 Carbon将搭载英特尔Panther Lake Core Ultra 300系列和AMD Zen 5 Ryzen AI 400系列双平台。供应链消息：新品零部件成本上涨主要来自DDR5内存涨价、1TB SSD涨价、以及新一代NPU芯片成本，预计起售价将达15999元。对SSC启示：关注新品零部件规格变化，提前调整备件库存结构。'
                 }
             ]
         };
@@ -366,13 +366,12 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-14', label: '2026-04-14（今日）'},
-            {date: '2026-04-14', label: '2026-04-14'},
-            {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-12', label: '2026-04-12'},
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
+            {date: '2026-04-08', label: '2026-04-08'},
+            {date: '2026-04-07', label: '2026-04-07'},
         ];
 
         // 动态生成历史记录链接
