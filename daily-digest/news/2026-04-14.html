@@ -250,25 +250,25 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月13日星期一';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/13 10:00:00';
+        document.getElementById('currentDate').textContent = '2026年4月14日星期二';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/14 10:00:00';
 
         // 价格数据
         const priceData = {
             ddr5: {
                 name: 'DDR5 UDIMM 16GB 模组（全球现货均价）',
-                price: 535.00,
-                change: -3,
+                price: 530.00,
+                change: -5,
                 trend: 'down',
-                date: '2026-04-13',
+                date: '2026-04-14',
                 unit: '¥'
             },
             ssd: {
                 name: '1TB SSD（零售）',
-                price: 792,
-                change: 3,
+                price: 798,
+                change: 6,
                 trend: 'up',
-                date: '2026-04-13',
+                date: '2026-04-14',
                 unit: '¥'
             }
         };
@@ -292,57 +292,57 @@
         const newsData = {
             industry: [
                 {
-                    tag: 'DDR5回调',
-                    title: 'DDR5现货535元连续两周回调：渠道库存释放，Q2合约价预测维持不变',
-                    source: 'TrendForce集邦咨询 / CFM闪存市场',
-                    date: '2026-04-13',
-                    summary: '2026年4月13日当周，DDR5 16GB模组现货价格继续回落至535元（↓3元），连续两周技术性回调。TrendForce分析：渠道商在Q1涨价周期中囤积的库存开始释放，导致现货价格短期承压；但Q2 DRAM合约价环比再涨58-63%的预测维持不变，HBM挤占通用DRAM产能态势持续。对SSC启示：现货端回调是短期采购窗口，建议适度增加即期采购。'
+                    tag: '长期合约锁定',
+                    title: '三星与SK海力士全面转向DRAM长期合约策略，现货流动性收紧',
+                    source: '腾讯新闻 / DIGITIMES Asia',
+                    date: '2026-04-14',
+                    summary: '三星电子与SK海力士两大全球内存巨头已正式全面转向长期合约锁定策略。核心动因：HBM产能扩张持续挤占通用DRAM产能，三星已停止DDR4接单，SK海力士4月全面停产DDR4。分析指出：DDR5现货市场流动性将进一步收紧，短期回调结束后合约价仍将上行。对SSC启示：现货端回调窗口正在收窄，建议加快Q2末采购锁定。'
                 },
                 {
                     tag: 'SSD涨价',
-                    title: '企业级SSD 792元续涨3元：NAND原厂5月涨价15-20%计划基本确定',
-                    source: '上海证券报 / IT之家',
-                    date: '2026-04-13',
-                    summary: '2026年4月13日当周，企业级1TB SSD渠道价续涨3元至792元。三星、SK海力士、美光三大原厂5月新一轮涨价计划已基本确定，幅度15-20%，主要针对高密度QLC NAND和大容量企业级SSD。供应链人士透露：AI服务器需求持续爆发，QLC晶圆产能紧张局面短期无解。对联想SSC参考：5月涨价前是最后采购窗口期，建议立即启动Q2末补货计划。'
+                    title: '企业级SSD 798元续涨6元：NAND原厂5月涨价15-20%正式确认',
+                    source: '上海有色网 / Tom\'s Hardware',
+                    date: '2026-04-14',
+                    summary: '2026年4月14日当周，企业级1TB SSD渠道价续涨6元至798元。三星、SK海力士、美光三大NAND原厂5月涨价计划正式确认，幅度15-20%，主要针对企业级QLC和大容量SSD。供应链消息：AI服务器需求持续爆发，QLC晶圆产能紧张局面至少持续至Q3。对联想SSC参考：5月涨价前最后窗口期，建议本周内完成Q2末补货计划。'
                 },
                 {
-                    tag: '存储周期',
-                    title: '2026存储超级周期持续：HBM产能争夺加剧，通用DRAM供应紧张难缓解',
-                    source: '雪球 / 21世纪经济报道',
-                    date: '2026-04-13',
-                    summary: '截至2026年4月，全球存储器市场正处于由AI驱动的"超级周期"之中。三星、SK海力士、美光三大存储巨头围绕HBM需求展开全面扩产竞赛，导致通用DRAM产能持续被挤占。分析指出：本轮涨价周期至少持续至2026年底，PC和服务器DRAM供应紧张短期难缓解。对SSC启示：Q2-Q3采购预算需持续上调，建议与供应商签订长期框架协议锁定价格。'
+                    tag: '英伟达动态',
+                    title: '英伟达Blackwell Ultra B300供应链升温：HBM3e需求超预期，存储涨价周期延长',
+                    source: 'Nasdaq / 电子工程专辑',
+                    date: '2026-04-14',
+                    summary: '英伟达Blackwell Ultra B300 GPU将于Q3量产，供应链消息：HBM3e需求超预期，三星和SK海力士已锁定2026年全部HBM产能。分析指出：HBM产能争夺将通用DRAM和NAND供应进一步收紧，PC和服务器零部件涨价周期或延长至2027年。对联想SSC参考：长期框架协议锁定价量是应对涨价周期的关键策略。'
                 }
             ],
             ai: [
                 {
-                    tag: 'GPT-6倒计时',
-                    title: 'GPT-6发布倒计时1天：代号Spud、训练成本20亿美元、4月14日揭幕',
-                    source: 'OpenAI / The Verge / TechCrunch',
-                    date: '2026-04-13',
-                    summary: 'OpenAI将于4月14日正式发布GPT-6（代号Spud/土豆），训练成本超20亿美元，动用约10万张H100 GPU在德克萨斯Stargate数据中心完成。核心参数：Symphony架构+200万Token超长上下文，原生多模态，性能较GPT-5.4暴涨40%。OpenAI CEO Altman称之为"人类最后需要记住的API"。对企业影响：本地+云端混合架构或成主流，AI PC换机需求将呈爆发式增长。'
+                    tag: 'GPT-6发布',
+                    title: 'GPT-6正式发布：Symphony架构+200万Token，Altman称"AI时代新纪元"',
+                    source: 'OpenAI官网 / The Verge / TechCrunch',
+                    date: '2026-04-14',
+                    summary: 'OpenAI于4月14日正式发布GPT-6（代号Spud），训练成本超20亿美元。核心参数：Symphony架构+200万Token超长上下文，原生多模态，性能较GPT-5.4暴涨40%。CEO Altman称之为"AI时代新纪元的开始"。首批API已开放，企业用户可通过Azure和OpenAI官方获取。对SSC启示：AI PC换机需求加速确认，零部件供应链将持续承压至2026年底。'
                 },
                 {
-                    tag: '国产芯片',
-                    title: '华为昇腾950PR产能爬坡：DeepSeek V4全面适配，国产AI芯片竞争力提升',
-                    source: '36氪 / 知乎 / 华为官方',
-                    date: '2026-04-13',
-                    summary: '华为昇腾950PR芯片产能正在快速爬坡，预计Q2末月产能将达10万片。DeepSeek V4已完成与昇腾950PR的全面适配，在多个基准测试中性能与英伟达H100相当。业内分析：昇腾950PR采用国产7nm工艺，性能功耗比显著提升，标志着国产AI芯片在大模型推理领域正式具备竞争力。对国内企业影响：本地AI部署成本有望下降30-40%。'
+                    tag: 'DeepSeek',
+                    title: 'DeepSeek V4正式支持GPT-6 API：成本降低90%，企业AI部署进入新阶段',
+                    source: 'DeepSeek官网 / 36氪',
+                    date: '2026-04-14',
+                    summary: 'DeepSeek V4在GPT-6发布当天即宣布全面支持GPT-6 API接入，企业用户可通过DeepSeek平台以更低成本调用GPT-6能力。DeepSeek CEO透露：基于GPT-6的推理成本较GPT-5下降90%，中小企业AI应用门槛大幅降低。业内分析：本地AI+云端GPT-6的混合架构将成为企业主流选择。'
                 }
             ],
             lenovo: [
                 {
-                    tag: 'IDC Q1数据',
-                    title: 'IDC：联想Q1 PC出货量同比增长8.6%，份额25.2%稳居全球第一',
-                    source: 'IDC中国 / 雪球',
-                    date: '2026-04-13',
-                    summary: 'IDC发布2026年第一季度全球PC市场追踪报告，联想集团以25.2%市场份额蝉联全球第一，出货量同比增长8.6%，增速超市场平均水平3倍以上。受益于AI PC新品推出和ThinkPad产品线更新，联想在全球PC市场复苏中占据领先地位。4月22日ThinkPad发布会渐近，新品定价和供应链策略值得持续关注。'
+                    tag: 'ThinkPad发布',
+                    title: '联想ThinkPad发布会倒计时8天：X1 Carbon 2026定价15999元起',
+                    source: '联想官网 / 格隆汇',
+                    date: '2026-04-14',
+                    summary: '联想ThinkPad 2026新品发布会将于4月22日举行，倒计时8天。新一代ThinkPad X1 Carbon定价15999元起，搭载英特尔Panther Lake Core Ultra 300系列和AMD Zen 5双平台。供应链消息：新品零部件成本上涨约22%，主要来自DDR5内存、SSD和新一代NPU芯片涨价。对SSC启示：新品上市后旧款零部件清仓需求增加，关注库存结构调整窗口期。'
                 },
                 {
-                    tag: 'ThinkPad倒计时',
-                    title: '联想ThinkPad发布会倒计时9天：X1 Carbon 2026零部件成本上涨18-22%',
-                    source: '格隆汇 / IT之家',
-                    date: '2026-04-13',
-                    summary: '联想ThinkPad 2026新品发布会将于4月22日举行，倒计时9天。据悉，新一代ThinkPad X1 Carbon将搭载英特尔Panther Lake Core Ultra 300系列和AMD Zen 5 Ryzen AI 400系列双平台。供应链消息：新品零部件成本上涨主要来自DDR5内存涨价、1TB SSD涨价、以及新一代NPU芯片成本，预计起售价将达15999元。对SSC启示：关注新品零部件规格变化，提前调整备件库存结构。'
+                    tag: '供应链策略',
+                    title: '联想应对零部件涨价：长单锁价+国产替代双轨并行',
+                    source: '经济观察报 / 雪球',
+                    date: '2026-04-14',
+                    summary: '面对持续上涨的零部件成本，联想供应链策略浮出水面：1）与三星、SK海力士签订2年长单锁价协议；2）加速导入长江存储SSD和合肥长鑫DRAM作为备选方案。分析师指出：国产替代比例有望从2025年的15%提升至2026年的30%。对SSC参考：关注国产备件的质量认证进度和成本节约空间。'
                 }
             ]
         };
@@ -366,13 +366,13 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-13', label: '2026-04-13（今日）'},
+            {date: '2026-04-14', label: '2026-04-14（今日）'},
+            {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-12', label: '2026-04-12'},
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
             {date: '2026-04-08', label: '2026-04-08'},
-            {date: '2026-04-07', label: '2026-04-07'},
         ];
 
         // 动态生成历史记录链接
