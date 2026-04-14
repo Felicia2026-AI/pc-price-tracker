@@ -90,6 +90,34 @@
             padding-top: 15px;
         }
 
+        .phrase-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .phrase-english {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .phrase-chinese {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        .phrase-example {
+            font-size: 14px;
+            font-style: italic;
+            opacity: 0.85;
+            margin-top: 8px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 8px;
+        }
+
         .vocabulary-section {
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             padding: 25px;
@@ -235,6 +263,11 @@
 
         <div class="content">
             <div class="section">
+                <div class="section-title">💬 Business English Phrase of the Day</div>
+                <div class="phrase-section" id="phraseSection"></div>
+            </div>
+
+            <div class="section">
                 <div class="section-title">📖 今日阅读</div>
                 <div class="text-container">
                     <div class="english-text" id="englishText"></div>
@@ -268,65 +301,80 @@
         document.getElementById('currentDate').textContent = '2026年4月14日星期二';
         document.getElementById('updateTime').textContent = '更新时间：2026/4/14 18:00:00';
 
-        // 今日学习内容 - AI大模型与供应链变革
+        // 今日短语
+        const todayPhrase = {
+            english: "\"We need to front-load our inventory before the May price hike takes effect.\"",
+            chinese: "我们需要在5月涨价生效之前提前增加库存。",
+            meaning: "front-load：提前加载/前置。此处指在涨价前抢先采购和储备库存，以锁定当前较低价格。",
+            example: "Given the confirmed 15-20% NAND price increase in May, our procurement team decided to front-load Q2 inventory to capture cost savings."
+        };
+
+        // 渲染短语
+        document.getElementById('phraseSection').innerHTML = `
+            <div class="phrase-english">${todayPhrase.english}</div>
+            <div class="phrase-chinese">${todayPhrase.chinese}</div>
+            <div class="phrase-example">💡 含义：${todayPhrase.meaning}</div>
+        `;
+
+        // 今日学习内容 - 采购与供应商管理
         const todayContent = {
-            english: "The emergence of large language models is fundamentally reshaping the technology landscape and by extension, the supply chain ecosystems that support it. When OpenAI releases a new model capable of reasoning across millions of tokens, the ripple effects cascade through semiconductor supply chains, cloud infrastructure investments, and ultimately, the PC hardware market. This interconnection between AI capability breakthroughs and hardware demand represents a new paradigm that supply chain professionals must understand.\n\nConsider the GPU supply chain. The training of GPT-6 reportedly required approximately 100,000 H100 GPUs operating in concert at a single facility—the Stargate data center in Texas. This concentration of compute resources creates unprecedented demand signals that reverberate through TSMC's CoWoS advanced packaging capacity, SK Hynix's HBM memory production, and ultimately, the commodity DRAM and NAND markets. The mechanism is elegant but powerful: AI capability improvements drive GPU demand, which pulls through HBM and advanced packaging capacity, which in turn tightens supply of components used in PC spare parts.\n\nFor PC spare parts cost managers, the implication is clear: AI model releases have become a leading indicator for component pricing. Monitoring the release schedules and capability milestones of major AI labs—OpenAI, Anthropic, Google DeepMind, Meta AI, and emerging Chinese players like DeepSeek—provides valuable foresight into capacity utilization rates and potential supply constraints. The most sophisticated procurement teams now employ dedicated AI monitoring functions specifically to track these dynamics.",
-            chinese: "大语言模型的出现正在从根本上重塑技术格局，并由此影响到支撑它的供应链生态系统。当OpenAI发布能够跨数百万Token进行推理的新模型时，涟漪效应会波及半导体供应链、云基础设施投资，并最终影响到PC硬件市场。AI能力突破与硬件需求之间的这种相互联系，代表着供应链专业人士必须理解的新范式。\n\n以GPU供应链为例。据报道，GPT-6的训练需要约10万张H100 GPU在德克萨斯Stargate数据中心协同运行。这种计算资源的集中创造了前所未有的需求信号，通过台积电的CoWoS先进封装产能、SK海力士的HBM内存生产，最终影响到商品DRAM和NAND市场。其机制优雅而强大：AI能力改进推动GPU需求，GPU需求拉动HBM和先进封装产能，而这又收紧了在PC备件中使用的组件供应。\n\n对于PC备件成本管理者而言，启示很明确：AI模型发布已成为零部件定价的领先指标。监控主要AI实验室（OpenAI、Anthropic、Google DeepMind、Meta AI，以及DeepSeek等新兴中国玩家）的发布日程和能力里程碑，可以为了解产能利用率和潜在供应约束提供宝贵的前瞻信息。最先进的采购团队现在专门设立AI监控职能来追踪这些动态。",
+            english: "Strategic procurement in the PC spare parts industry requires balancing multiple factors: component availability, cost optimization, and supply chain resilience. In today's volatile memory market, successful procurement teams employ several key strategies to manage risk and maximize value.\n\nLong-term framework agreements with tier-one suppliers have become essential for managing DRAM and NAND price volatility. These agreements typically lock in volume commitments and price formulas for 12-24 months, providing cost predictability while maintaining flexibility for volume adjustments. Major OEMs like Lenovo have increasingly turned to 2-year pricing frameworks with Samsung and SK Hynix to secure supply and stabilize costs for the SSC.\n\nDiversification is another critical strategy. Relying on a single supplier for critical components creates unacceptable risk. Progressive organizations maintain relationships with 2-3 qualified suppliers for each critical part category. This not only provides backup supply options but also creates competitive tension that can yield better pricing terms. The ongoing push for domestic alternatives—such as ChangXin Memory DRAM and Yangtze Memory NAND—adds another dimension to supplier diversification strategies.\n\nDynamic inventory management tied to market intelligence is the third pillar. When price forecasts indicate upward pressure—as with the confirmed May NAND increase—procurement teams must act decisively to front-load inventory. Conversely, when spot prices are trending down faster than contract prices, minimizing new purchases and drawing down inventory becomes prudent. This requires close collaboration between procurement, finance, and the SSC cost team to balance working capital constraints against cost savings opportunities.",
+            chinese: "PC备件行业的战略性采购需要平衡多个因素：零部件可得性、成本优化和供应链韧性。在当今波动的存储市场中，成功的采购团队采用多种关键策略来管理风险和最大化价值。\n\n与一级供应商签订长期框架协议已成为管理DRAM和NAND价格波动的关键。这些协议通常锁定12-24个月的量价承诺，提供成本可预测性，同时保持量价调整的灵活性。联想等主要OEM越来越多地与三星和SK海力士签订2年定价框架协议，以锁定供应并稳定SSC成本。\n\n多元化是另一个关键策略。依赖单一供应商供应关键零部件会造成不可接受的风险。先进的企业为每个关键零部件类别维持2-3个合格供应商关系。这不仅提供备用供应选项，还创造竞争压力以获得更好的定价条款。推进国产替代（如长江存储DRAM和长江存储NAND）为供应商多元化策略增添了新维度。\n\n与市场情报挂钩的动态库存管理是第三支柱。当价格预测显示上行压力时——如5月NAND涨价已确认——采购团队必须果断行动提前增加库存。相反，当现货价格下跌速度快于合约价格时，最小化新采购和消耗现有库存是审慎之举。这需要采购、财务和SSC成本团队密切协作，在营运资金限制与成本节约机会之间取得平衡。",
             vocabulary: [
                 {
-                    word: "ripple effects",
-                    meaning: "涟漪效应；一个事件引发的连锁反应或间接影响",
-                    example: "The chip shortage had ripple effects across multiple industries, from automotive to consumer electronics."
+                    word: "framework agreement",
+                    meaning: "框架协议；规定合作基本条款的长期合同，通常包含量价承诺和灵活性条款",
+                    example: "Our 2-year framework agreement with Samsung provides price stability for DRAM procurement."
                 },
                 {
-                    word: "cascade through",
-                    meaning: "级联/逐级传递；像瀑布一样层层向下传递影响",
-                    example: "Rising energy costs cascaded through the entire manufacturing sector, driving up prices across the board."
+                    word: "tier-one supplier",
+                    meaning: "一级供应商；指行业领先、规模最大、质量和交付能力最强的供应商",
+                    example: "Samsung and SK Hynix are considered tier-one suppliers in the memory market."
                 },
                 {
-                    word: "reverberate",
-                    meaning: "回荡/持续产生影响；产生广泛而持久的连锁反应",
-                    example: "The interest rate hike reverberated through global financial markets for months."
+                    word: "front-load",
+                    meaning: "提前加载；在价格变动发生前抢先采取行动，通常指提前采购以锁定价格",
+                    example: "We decided to front-load inventory ahead of the confirmed May price increase."
                 },
                 {
-                    word: "pull through",
-                    meaning: "拉动/推动；通过需求带动供应链上游的增长",
-                    example: "Strong consumer electronics demand pulled through the entire semiconductor supply chain."
+                    word: "supply chain resilience",
+                    meaning: "供应链韧性；供应链应对中断、波动和意外事件的能力",
+                    example: "Building supply chain resilience requires diversifying suppliers and maintaining safety stock."
                 },
                 {
-                    word: "leading indicator",
-                    meaning: "领先指标；能够预测未来趋势的先行数据或事件",
-                    example: "Housing starts are often considered a leading indicator of economic activity."
+                    word: "cost predictability",
+                    meaning: "成本可预测性；能够预见和规划未来成本水平的能力",
+                    example: "Long-term agreements provide cost predictability for annual budgeting."
                 }
             ],
             practice: [
                 {
-                    question: "According to the passage, what is the relationship between AI capability improvements and hardware demand?",
+                    question: "What is the primary benefit of long-term framework agreements with tier-one suppliers?",
                     options: [
-                        "AI improvements reduce hardware requirements",
-                        "AI improvements drive increased hardware demand through supply chain connections",
-                        "AI has no impact on hardware demand",
-                        "Hardware demand is independent of AI developments"
+                        "Guaranteed exclusive supply",
+                        "Cost predictability and supply security",
+                        "Access to the newest technology first",
+                        "Elimination of all procurement risks"
                     ],
                     answer: 1
                 },
                 {
-                    question: "How many GPUs were reportedly required to train GPT-6 according to the passage?",
+                    question: "Why is supplier diversification important in strategic procurement?",
                     options: [
-                        "About 10,000 H100 GPUs",
-                        "About 50,000 H100 GPUs",
-                        "About 100,000 H100 GPUs",
-                        "About 500,000 H100 GPUs"
+                        "To increase dependence on a single supplier",
+                        "To reduce risk and create competitive pricing pressure",
+                        "To simplify the procurement process",
+                        "To reduce the number of contracts needed"
                     ],
-                    answer: 2
+                    answer: 1
                 },
                 {
-                    question: "Why should PC spare parts cost managers monitor AI model releases?",
+                    question: "What does 'front-load inventory' mean in the context of rising prices?",
                     options: [
-                        "AI models can replace human procurement decisions",
-                        "AI model releases are leading indicators for component pricing",
-                        "AI labs provide free components to PC manufacturers",
-                        "AI has no relevance to PC spare parts"
+                        "Delay purchases until prices peak",
+                        "Purchase extra inventory before price increases take effect",
+                        "Reduce inventory levels to save storage costs",
+                        "Spread purchases evenly throughout the year"
                     ],
                     answer: 1
                 }
