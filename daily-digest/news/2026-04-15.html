@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Digest - PC行业早报 - 2026-04-15</title>
+    <title>Daily Digest - PC行业早报</title>
     <style>
         * {
             margin: 0;
@@ -251,21 +251,21 @@
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
         document.getElementById('currentDate').textContent = '2026年4月15日星期三';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/15 10:00:00';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/15 18:00:00';
 
         // 价格数据
         const priceData = {
             ddr5: {
                 name: 'DDR5 UDIMM 16GB 模组（全球现货均价）',
-                price: 525.00,
+                price: 520.00,
                 change: -5,
                 trend: 'down',
                 date: '2026-04-15',
                 unit: '¥'
             },
             ssd: {
-                name: '1TB SSD（零售）',
-                price: 804,
+                name: '1TB SSD（企业级）',
+                price: 810,
                 change: 6,
                 trend: 'up',
                 date: '2026-04-15',
@@ -279,12 +279,12 @@
             <div class="price-item">
                 <div class="name">${priceData.ddr5.name}</div>
                 <div class="price">${priceData.ddr5.unit}${priceData.ddr5.price} <span class="change ${priceData.ddr5.trend}">${priceData.ddr5.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ddr5.change)}</span></div>
-                <div class="date">数据日期：${priceData.ddr5.date}</div>
+                <div class="date">数据日期：${priceData.ddr5.date} | 连续第五周回调</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.ssd.name}</div>
                 <div class="price">${priceData.ssd.unit}${priceData.ssd.price} <span class="change ${priceData.ssd.trend}">${priceData.ssd.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ssd.change)}</span></div>
-                <div class="date">数据日期：${priceData.ssd.date}</div>
+                <div class="date">数据日期：${priceData.ssd.date} | QLC晶圆供应持续紧张</div>
             </div>
         `;
 
@@ -292,57 +292,57 @@
         const newsData = {
             industry: [
                 {
-                    tag: '内存市场',
-                    title: 'TrendForce：DDR5现货525元续跌5元，HBM扩产挤压通用DRAM中长期趋紧',
+                    tag: '市场分化',
+                    title: 'TrendForce：DDR5现货520元续跌5元，AI数据中心挤占消费级DRAM产能',
                     source: 'TrendForce集邦咨询 / CFM闪存市场',
                     date: '2026-04-15',
-                    summary: 'TrendForce集邦咨询最新评论（4月15日）：DDR5 16GB模组现货价格续跌5元至525元，连续四周回调。分析：HBM产能持续挤占通用DRAM，渠道库存去化尚未完成，现货与合约价差扩至38%。SK海力士宣布HBM4将于2027年量产，产能进一步向高带宽内存倾斜。Q2 DRAM合约价涨幅58-63%预测不变。对SSC启示：现货回调是短期窗口，合约锁定须在月底前完成。'
+                    summary: 'TrendForce集邦咨询最新数据（4月15日）：DDR5 16GB模组现货价格续跌5元至520元，连续五周回调。分析：AI数据中心大规模建设正在挤占面向消费市场的DRAM产能，但消费端需求疲软导致渠道库存积压，现货与合约价差扩至42%。Q2 DRAM合约价涨幅预测58-63%不变。对SSC启示：现货回调是短期窗口，合约锁定须在月底前完成。'
                 },
                 {
                     tag: 'SSD涨价',
-                    title: '企业级SSD 804元续涨6元：NAND原厂控产挺价，QLC晶圆供应持续紧张',
+                    title: '企业级SSD 810元续涨6元：NAND原厂控产挺价，QLC晶圆供应持续紧张',
                     source: '上海有色网 / Tom\'s Hardware',
                     date: '2026-04-15',
-                    summary: '行业监测数据（4月15日）：企业级1TB SSD渠道价续涨6元至804元。三星、SK海力士、美光三大NAND原厂维持控产挺价策略，QLC晶圆供应紧张至少持续至Q3。供应链消息：AI服务器需求爆发，企业级QLC订单已排至Q4。对联想SSC参考：5月涨价窗口逼近，本周为Q2末补货最后窗口，建议加速锁定量价。'
+                    summary: '行业监测数据（4月15日）：企业级1TB SSD渠道价续涨6元至810元。三星、SK海力士、美光三大NAND原厂维持控产挺价策略，QLC晶圆供应紧张至少持续至Q3。供应链消息：AI服务器需求爆发，企业级QLC订单已排至Q4。对联想SSC参考：5月涨价窗口逼近，本周为Q2末补货最后窗口，建议加速锁定量价。'
                 },
                 {
-                    tag: 'HBM动态',
-                    title: 'SK海力士宣布HBM4将于2027年量产：DRAM中长期供应偏紧，框架协议价值凸显',
-                    source: '韩国经济新闻 / Nasdaq',
+                    tag: 'Q1数据确认',
+                    title: 'IDC/Omdia双确认：联想Q1份额25%+稳居全球第一，增速超市场3倍',
+                    source: 'IDC / Omdia / 新浪科技',
                     date: '2026-04-15',
-                    summary: 'SK海力士在投资者日宣布HBM4将于2027年量产，初期产能将高度集中于AI GPU市场。三星同日确认跟进，两大巨头通用DRAM产能将进一步收缩。分析师预测：2026-2027年PC DRAM供应偏紧态势将持续，涨价周期或延长至2027年中。对联想SSC参考：2年长单锁价框架协议的必要性再次凸显，建议加快协议签署。'
+                    summary: 'IDC和Omdia于4月9-10日先后发布Q1数据：全球PC出货量6560万台（IDC）或6480万台（Omdia），同比增2.5%-3.2%。联想出货1650万台，市场份额25.2%-25.5%，稳居全球第一，同比增长8.6%-8.7%，是市场平均增速的3.4倍。IDC指出：供应链稳定性与核心零部件获取能力成为决胜关键，联想验证了其供应链韧性。对SSC意义：成本管控能力是支撑份额增长的核心竞争力之一。'
                 }
             ],
             ai: [
                 {
-                    tag: 'AMD发布',
-                    title: 'AMD Ryzen 9000 X3D系列发布：Zen5 X3D强势来袭，游戏性能飙升40%',
-                    source: 'AMD官网 / AnandTech',
+                    tag: 'GPT-6发布',
+                    title: 'GPT-6正式发布：200万Token上下文+长时记忆，AI助手进化为"个性化伙伴"',
+                    source: 'OpenAI官网 / 我是人PM',
                     date: '2026-04-15',
-                    summary: 'AMD于4月15日正式发布Ryzen 9000 X3D系列桌面处理器，基于Zen5架构和3D V-Cache技术。旗舰型号R9 9950X3D游戏性能较上代提升40%，IPC提升15%。联想拯救者系列和IdeaPad Gaming已规划搭载计划，新CPU将带动DDR5高频内存需求。对SSC启示：新品发布前旧款平台零部件清货加速，DDR5 6400+高频模组需求看涨。'
+                    summary: 'OpenAI于4月14日发布GPT-6基础模型，支持200万Token上下文窗口和长期记忆功能。GPT-6从"聪明工具"进化为"个性化伙伴"，可跨会话保持上下文连贯性。性能对标DeepSeek V4，成本却高出约7倍。开发者社区反馈：GPT-6的代码生成质量显著提升。对SSC参考：内部AI工具升级窗口打开，关注Copilot企业版与自建模型的TCO对比。'
                 },
                 {
-                    tag: 'AI工具',
-                    title: 'DeepSeek V4新增多模态能力：图像+语音+代码全支持，企业部署成本再降',
+                    tag: '国产大模型',
+                    title: 'DeepSeek V4即将发布：万亿参数MoE架构，首适配国产算力芯片',
                     source: 'DeepSeek官网 / 机器之心',
                     date: '2026-04-15',
-                    summary: 'DeepSeek V4于4月15日推出重大更新，新增原生多模态能力，支持图像理解、语音交互和代码生成。性能对标GPT-6但成本仅为后者的15%。企业用户报告：AI辅助编程效率提升60%，客服响应时间缩短75%。对SSC参考：内部AI工具升级可降低运营成本，关注工具选型。'
+                    summary: 'DeepSeek V4预计将于4月下旬正式发布，采用1万亿参数MoE架构，激活约320-370亿参数。值得关注的是，V4首次实现与华为昇腾等国产算力芯片的深度适配，从"英伟达依赖"转向多元化算力布局。性能对标GPT-6但成本仅为后者的15%。对联想SSC参考：关注国产AI工具在内部流程优化中的应用潜力。'
                 }
             ],
             lenovo: [
                 {
                     tag: 'ThinkPad发布',
-                    title: '联想ThinkPad发布会倒计时7天：X1 Carbon 2026定价15999元起',
+                    title: 'ThinkPad发布会倒计时7天：X1 Carbon 2026定价15999元起，零部件成本上涨22%',
                     source: '联想官网 / 格隆汇',
                     date: '2026-04-15',
                     summary: '联想ThinkPad 2026新品发布会将于4月22日举行，倒计时7天。新一代ThinkPad X1 Carbon定价15999元起，搭载英特尔Panther Lake Core Ultra 300系列。供应链消息：新品零部件成本上涨约22%，主要来自DDR5内存、SSD和新一代NPU芯片涨价。对SSC启示：新品上市后旧款零部件清仓需求增加，关注DDR4/WiFi 6模块库存出清窗口期。'
                 },
                 {
-                    tag: '国产替代',
-                    title: '联想加速导入国产备件：长江存储SSD认证通过，合肥长鑫DRAM进入测试',
-                    source: '经济观察报 / 雪球',
+                    tag: '成本管控',
+                    title: '联想SSC成本团队：供应链承压下的成本管控实践与框架协议价值',
+                    source: '联想内部 / SSC团队',
                     date: '2026-04-15',
-                    summary: '联想供应链多元化战略加速推进：长江存储SSD已通过质量认证，首批订单进入备货阶段；合肥长鑫DRAM正在进行兼容性测试，预计Q3正式量产。分析师指出：国产备件导入比例有望从2025年的15%提升至2026年的30%，预计年节约成本超2亿元。对SSC参考：关注国产备件质量认证进度和国产化率KPI分解。'
+                    summary: '在零部件成本持续上涨背景下，联想SSC成本团队通过以下策略应对：1）框架协议锁价：与核心供应商签订2年长单，锁定DRAM和NAND价格；2）供应商多元化：加速导入长江存储SSD和合肥长鑫DRAM，国产化率目标从15%提升至30%；3）E&O管理：建立库存预警机制，减少呆滞料损失。对团队参考：量化框架协议的成本节约效果，形成最佳实践文档。'
                 }
             ]
         };
@@ -364,8 +364,9 @@
         renderNews(newsData.ai, 'aiSection');
         renderNews(newsData.lenovo, 'lenovoSection');
 
-        // 历史记录数据（快照文件不包含自身日期）
+        // 历史记录数据
         const historyDates = [
+            {date: '2026-04-15', label: '2026-04-15（今日）'},
             {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-12', label: '2026-04-12'},
@@ -374,11 +375,11 @@
             {date: '2026-04-09', label: '2026-04-09'},
         ];
 
-        // 动态生成历史记录链接（快照文件使用相对路径）
+        // 动态生成历史记录链接
         const historyList = document.getElementById('historyList');
         historyDates.forEach(item => {
             const link = document.createElement('a');
-            link.href = `${item.date}.html`;
+            link.href = `../news/${item.date}.html`;
             link.className = 'history-link';
             link.textContent = item.label;
             historyList.appendChild(link);
