@@ -298,15 +298,15 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月15日星期三';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/15 18:00:00';
+        document.getElementById('currentDate').textContent = '2026年4月16日星期四';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/16 09:58';
 
         // 今日短语
         const todayPhrase = {
-            english: "\"With spot prices trending down but contract prices firm, we need to lock in our Q2 volume commitment before the pricing window closes.\"",
-            chinese: "随着现货价格下跌但合约价格坚挺，我们需要在定价窗口关闭前锁定Q2的量价承诺。",
-            meaning: "lock in：锁定，锁定价格或数量以避免未来波动风险。pricing window：定价窗口，指供应商接受特定报价的有效时间段。理解这两个概念对于采购时机决策至关重要。",
-            example: "The DRAM pricing window is expected to close by end of April—we should lock in our HBM volume commitment with SK Hynix this week."
+            english: "\"With NAND contract prices expected to compress from 55-65% to 45-50% growth in Q2, we should recalibrate our cost forecast and explore spot market opportunities for non-critical components.\"",
+            chinese: "随着NAND合约价Q2涨幅预期从55-65%收窄至45-50%，我们应该重新校准成本预测，并为非关键零部件探索现货市场机会。",
+            meaning: "recalibrate：重新校准、重新调整，以适应新情况。explore spot market opportunities：探索现货市场机会，指在现货市场寻找更优惠的采购价格。理解成本预测的动态调整机制对采购决策至关重要。",
+            example: "Given the softening smartphone demand, we've recalibrated our Q2 NAND cost forecast downward by 8% and are now exploring spot market purchases for consumer-grade components."
         };
 
         // 渲染短语
@@ -316,67 +316,67 @@
             <div class="phrase-example">💡 含义：${todayPhrase.meaning}</div>
         `;
 
-        // 今日学习内容 - 供应链风险管理与成本优化
+        // 今日学习内容 - BOM成本管理与产品定价策略
         const todayContent = {
-            english: "Supply chain risk management has become a critical discipline for procurement teams in the semiconductor and memory industry. With spot prices trending downward while contract prices remain firm, timing the lock-in of volume commitments has become both an art and a science.\n\nThe first principle of risk management is diversification. No single supplier should account for more than 40% of your total component spend—this prevents over-reliance on any one vendor's pricing decisions or production issues. Lenovo SSC's strategy of qualifying Yangtze Memory Technologies (YMTC) for SSD supply while maintaining Samsung and SK Hynix partnerships exemplifies this principle. Diversification not only reduces supply risk but also creates competitive tension that can be leveraged during price negotiations.\n\nThe second principle is the strategic use of framework agreements. These long-term contracts, typically spanning 18-24 months, lock in pricing, allocation volumes, and supply commitments in exchange for volume guarantees from the buyer. The key to successful framework agreements lies in the price adjustment mechanism—linking contract prices to market indices like TrendForce quarterly averages can protect both parties from extreme volatility. For Lenovo SSC, framework agreements with tier-one DRAM suppliers provide cost predictability essential for annual budgeting and margin protection.\n\nThe third principle is maintaining operational flexibility through buffer inventory. While just-in-time inventory minimizes carrying costs, the current supply uncertainty makes a modest safety stock strategically valuable. The optimal buffer level depends on your supply lead times, demand volatility, and the cost of stockouts versus the cost of capital tied up in inventory. Many procurement teams target 2-4 weeks of safety stock for critical components.\n\nFinally, continuous market intelligence gathering is non-negotiable. Weekly tracking of spot prices, monthly review of contract price forecasts from multiple sources, and quarterly supplier meetings to discuss roadmap alignment form the backbone of an effective risk management program. The goal is not to predict the market perfectly but to make better-informed decisions faster than competitors.\n\nFor cost managers at Lenovo SSC, these principles translate into concrete actions: qualifying alternative suppliers, negotiating framework agreements with favorable adjustment clauses, right-sizing inventory buffers, and maintaining robust market intelligence capabilities.",
-            chinese: "供应链风险管理已成为半导体和存储行业采购团队的关键能力。随着现货价格下跌但合约价格坚挺，锁定量价承诺的时机选择已成为一门艺术和科学。\n\n风险管理的第一个原则是多元化。任何单一供应商都不应占你总零部件支出的40%以上——这可以避免过度依赖任何供应商的定价决策或生产问题。联想SSC通过认证长江存储（YMTC）作为SSD供应来源，同时保持与三星和SK海力士的合作，正是这一原则的体现。多元化不仅降低供应风险，还创造了竞争张力，可在价格谈判中加以利用。\n\n第二个原则是战略性使用框架协议。这些通常跨度18-24个月的长期合同，通过买方的量价保证来锁定价格、分配量和供应承诺。成功的框架协议关键在于价格调整机制——将合同价格与TrendForce季度均价等市场指数挂钩，可以保护双方免受极端波动的影响。对于联想SSC来说，与一级DRAM供应商的框架协议提供了年度预算和利润保护所必需的成本可预测性。\n\n第三个原则是通过缓冲库存保持运营灵活性。虽然准时制库存将持有成本降至最低，但当前的供应不确定性使适度的安全库存在战略上具有价值。最优缓冲水平取决于你的供应交货周期、需求波动性以及缺货成本与库存占用资金成本的权衡。许多采购团队针对关键零部件设定2-4周的安全库存目标。\n\n最后，持续收集市场情报是不可妥协的。每周跟踪现货价格、每月审查多个来源的合约价格预测、每季度与供应商召开会议讨论路线图对齐，是有效风险管理计划的基础。目标不是完美预测市场，而是比竞争对手更快做出更好的信息驱动决策。\n\n对于联想SSC的成本经理来说，这些原则转化为具体行动：认证替代供应商、谈判具有有利调整条款的框架协议、正确调整库存缓冲规模，以及保持强大的市场情报能力。",
+            english: "In the highly competitive PC industry, Bill of Materials (BOM) cost management and product pricing strategy are tightly intertwined disciplines that directly impact a company's profitability and market positioning.\n\nThe fundamental challenge lies in the cost-price gap. When component costs rise faster than product prices—as happened with DDR5 memory, SSDs, and new NPU chips in 2026—manufacturers face a difficult choice: absorb the cost increase (hurting margins), pass it on to customers (risking demand destruction), or find a middle path through value engineering and component optimization.\n\nConsider Lenovo's situation with the ThinkPad X1 Carbon 2026 launch. The BOM cost increased approximately 22% due to three key drivers: DDR5 modules now represent 18% of total BOM cost (up 5 percentage points), a new NPU chip accounts for 22% (previously nonexistent), and SSD costs rose 3 percentage points to 15%. However, the retail price only increased 12%, creating a 10-percentage-point gap that Lenovo must absorb through operational efficiency, volume leverage, or alternative cost savings.\n\nValue engineering is a critical tool for bridging this gap. This systematic approach involves analyzing each component's function relative to its cost, then finding ways to deliver the same function at lower cost or enhanced function at the same cost. Common strategies include: component standardization (using the same part across multiple product lines to achieve volume economics), design simplification (eliminating unnecessary features that don't contribute to customer value), and supplier-driven innovation (encouraging suppliers to propose cost-saving alternatives during design phase).\n\nFor the SSC (Service & Support Cost) team, BOM cost increases have downstream implications. When product margins compress, companies often reduce warranty periods, tighten service level agreements, or increase spare parts pricing—all of which impact after-sales service profitability. The SSC team must proactively model these scenarios and develop mitigation strategies, such as negotiating extended warranty terms with suppliers or optimizing spare parts inventory to reduce carrying costs.\n\nThe key insight is that BOM cost management is not just a product development responsibility—it's a cross-functional discipline that requires close collaboration between R&D, procurement, finance, and service teams. At Lenovo SSC, this means actively participating in product planning meetings, challenging cost assumptions, and developing service-related cost models that inform commercial decisions.\n\nIn today's rapidly evolving technology landscape, where AI capabilities are becoming a key differentiator, BOM management also increasingly involves evaluating the cost-benefit trade-offs of AI integration. The NPU chip in the ThinkPad X1 Carbon 2026 is a prime example: while adding 22% to BOM cost, it enables AI features that justify premium pricing and potentially improve long-term customer retention.",
+            chinese: "在竞争激烈的PC行业，物料清单（BOM）成本管理与产品定价策略是紧密相关的学科，直接影响公司的盈利能力和市场定位。\n\n根本挑战在于成本-价格差距。当零部件成本上涨速度快于产品价格——如2026年DDR5内存、SSD和新NPU芯片的情况——制造商面临艰难选择：吸收成本上涨（损害利润）、转嫁给客户（可能破坏需求），或通过价值工程和零部件优化找到中间路径。\n\n以联想ThinkPad X1 Carbon 2026为例。BOM成本因三个关键因素上涨约22%：DDR5模组现在占BOM总成本的18%（上升5个百分点），新NPU芯片占22%（之前不存在），SSD成本上升3个百分点至15%。然而，零售价仅上调12%，产生了联想必须通过运营效率、体量杠杆或替代成本节约来吸收的10个百分点差距。\n\n价值工程是弥合这一差距的关键工具。这种系统性方法涉及分析每个零部件功能相对于其成本的价值，然后找到以更低成本实现相同功能或以相同成本实现增强功能的方法。常见策略包括：零部件标准化（在多个产品线中使用相同零件以实现体量经济）、设计简化（消除对客户价值贡献不大的不必要功能）、供应商驱动的创新（在设计阶段鼓励供应商提出节约成本的替代方案）。\n\n对于SSC（服务与支持成本）团队，BOM成本上涨具有下游影响。当产品利润压缩时，公司通常会缩短保修期、收紧服务水平协议或提高备件价格——所有这些都会影响售后服务盈利能力。SSC团队必须主动建模这些情景并制定缓解策略，如与供应商谈判延长保修期或优化备件库存以降低持有成本。\n\n关键洞察是，BOM成本管理不仅仅是产品开发的责任——它是一门需要研发、采购、财务和服务团队密切协作的跨职能学科。在联想SSC，这意味着积极参与产品规划会议、质疑成本假设，并开发为商业决策提供信息的服务相关成本模型。\n\n在当今快速发展的技术格局中，AI能力正成为关键差异化因素，BOM管理也越来越多地涉及评估AI整合的成本效益权衡。ThinkPad X1 Carbon 2026中的NPU芯片就是一个典型例子：虽然使BOM成本增加22%，但它支持AI功能，可证明溢价定价的合理性，并可能提高长期客户留存。",
             vocabulary: [
                 {
-                    word: "lock in",
-                    meaning: "锁定；锁定价格、数量或承诺以避免未来风险",
-                    example: "We should lock in our Q2 DRAM volume commitment before the pricing window closes at the end of April."
+                    word: "Bill of Materials (BOM)",
+                    meaning: "物料清单；列出产品所需所有零部件及其成本的清单",
+                    example: "The BOM for ThinkPad X1 Carbon 2026 shows a 22% cost increase, driven primarily by DDR5 and NPU chips."
                 },
                 {
-                    word: "pricing window",
-                    meaning: "定价窗口；供应商接受特定报价的有效时间段",
-                    example: "The NAND pricing window typically opens at the beginning of each quarter and closes 2-3 weeks later."
+                    word: "value engineering",
+                    meaning: "价值工程；通过系统分析在保持功能的同时降低成本的方法",
+                    example: "Through value engineering, we reduced the hinge assembly cost by 15% while maintaining durability standards."
                 },
                 {
-                    word: "framework agreement",
-                    meaning: "框架协议；定义长期合作条款和条件的合同",
-                    example: "Our 2-year framework agreement with Samsung provides price stability in exchange for volume commitment."
+                    word: "absorb the cost increase",
+                    meaning: "吸收成本上涨；公司承担零部件成本上涨而非转嫁给客户",
+                    example: "We decided to absorb a 5% material cost increase rather than raise product prices during a competitive launch period."
                 },
                 {
-                    word: "safety stock",
-                    meaning: "安全库存；为应对供应中断或需求波动而保持的额外库存",
-                    example: "We maintain 3 weeks of safety stock for DDR5 modules to protect against supply disruptions."
+                    word: "margin compression",
+                    meaning: "利润压缩；因成本上升或价格下降导致利润率收窄",
+                    example: "Margin compression in the consumer PC segment has forced many vendors to focus on premium products and services."
                 },
                 {
-                    word: "just-in-time (JIT)",
-                    meaning: "准时制；一种库存管理策略，最大限度减少库存持有成本",
-                    example: "While JIT reduces inventory costs, it increases vulnerability to supply shocks—hence the need for safety stock."
+                    word: "cost-benefit trade-off",
+                    meaning: "成本效益权衡；比较一项投资的成本与其带来的收益",
+                    example: "The NPU chip presents a clear cost-benefit trade-off: higher BOM cost but enables AI features that justify premium pricing."
                 }
             ],
             practice: [
                 {
-                    question: "What is the recommended maximum percentage of total component spend from a single supplier?",
+                    question: "What happened to Lenovo's ThinkPad X1 Carbon 2026 retail price increase compared to its BOM cost increase?",
                     options: [
-                        "20%",
-                        "40%",
-                        "60%",
-                        "80%"
+                        "Retail price increased more than BOM cost",
+                        "Retail price increase matched BOM cost increase exactly",
+                        "Retail price increase was less than BOM cost increase",
+                        "Retail price decreased while BOM cost increased"
                     ],
-                    answer: 1
+                    answer: 2
                 },
                 {
-                    question: "Why is it important to link contract prices to market indices in framework agreements?",
+                    question: "What is 'value engineering' in the context of cost management?",
                     options: [
-                        "To make the supplier richer",
-                        "To protect both parties from extreme price volatility",
-                        "To complicate the contract terms",
-                        "To reduce the buyer's purchasing volume"
+                        "Hiring more engineers to reduce labor costs",
+                        "Eliminating engineering features to save money",
+                        "Systematically analyzing components to deliver same function at lower cost",
+                        "Outsource engineering work to lower-cost countries"
                     ],
-                    answer: 1
+                    answer: 2
                 },
                 {
-                    question: "What does 'lock in' mean in the context of procurement?",
+                    question: "What does 'margin compression' mean for a company?",
                     options: [
-                        "To physically store products in a warehouse",
-                        "To secure pricing or volume commitments before conditions change",
-                        "To increase the order quantity",
-                        "To cancel existing supplier contracts"
+                        "Expanding profit margins through higher sales",
+                        "Reducing the workforce to cut costs",
+                        "Experiencing reduced profitability due to cost increases or price pressure",
+                        "Compressing the product size to save materials"
                     ],
-                    answer: 1
+                    answer: 2
                 }
             ]
         };
@@ -417,18 +417,18 @@
             }
         }
 
-        // 历史记录数据
+        // 历史记录数据（快照文件需加../前缀）
         const historyDates = [
-            {date: '2026-04-15', label: '2026-04-15（今日）'},
+            {date: '2026-04-16', label: '2026-04-16（快照）'},
+            {date: '2026-04-15', label: '2026-04-15'},
             {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-12', label: '2026-04-12'},
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
-            {date: '2026-04-09', label: '2026-04-09'},
         ];
 
-        // 动态生成历史记录链接
+        // 动态生成历史记录链接（快照文件需加../前缀）
         const historyList = document.getElementById('historyList');
         historyDates.forEach(item => {
             const link = document.createElement('a');

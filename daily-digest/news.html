@@ -250,25 +250,25 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月16日星期四';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/16 09:58';
+        document.getElementById('currentDate').textContent = '2026年4月17日星期五';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/17 10:06';
 
         // 价格数据
         const priceData = {
             ddr5: {
                 name: 'DDR5 UDIMM 16GB 模组（全球现货均价）',
-                price: 510.00,
-                change: -10,
+                price: 495.00,
+                change: -15,
                 trend: 'down',
-                date: '2026-04-16',
+                date: '2026-04-17',
                 unit: '¥'
             },
             ssd: {
                 name: '1TB SSD（企业级）',
-                price: 815,
-                change: 5,
+                price: 822,
+                change: 7,
                 trend: 'up',
-                date: '2026-04-16',
+                date: '2026-04-17',
                 unit: '¥'
             }
         };
@@ -279,12 +279,12 @@
             <div class="price-item">
                 <div class="name">${priceData.ddr5.name}</div>
                 <div class="price">${priceData.ddr5.unit}${priceData.ddr5.price} <span class="change ${priceData.ddr5.trend}">${priceData.ddr5.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ddr5.change)}</span></div>
-                <div class="date">数据日期：${priceData.ddr5.date} | 连续六周回调，渠道库存去化压力增大</div>
+                <div class="date">数据日期：${priceData.ddr5.date} | 跌破500心理关口，渠道加速去库存</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.ssd.name}</div>
                 <div class="price">${priceData.ssd.unit}${priceData.ssd.price} <span class="change ${priceData.ssd.trend}">${priceData.ssd.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ssd.change)}</span></div>
-                <div class="date">数据日期：${priceData.ssd.date} | QLC晶圆供应持续紧张，订单排至Q4</div>
+                <div class="date">数据日期：${priceData.ssd.date} | NAND合约Q2涨幅锁定50-55%</div>
             </div>
         `;
 
@@ -292,57 +292,57 @@
         const newsData = {
             industry: [
                 {
-                    tag: 'DDR5续跌',
-                    title: 'TrendForce：DDR5现货510元再跌10元，渠道库存去化压力增大',
+                    tag: 'DDR5破500',
+                    title: 'TrendForce：DDR5现货495元跌破500关口，渠道加速去库存',
                     source: 'TrendForce集邦咨询 / CFM闪存市场',
-                    date: '2026-04-16',
-                    summary: 'TrendForce集邦咨询最新数据（4月16日）：DDR5 16GB模组现货价格再跌10元至510元，连续六周回调。分析：消费市场需求持续疲软，渠道商库存去化压力增大，部分贸易商开始抛货变现。合约市场依然坚挺，Q2合约价涨幅预测维持58-63%，但部分小厂商已开始松动报价。对SSC启示：关注非一级供应商的低价出货窗口，但需严格把控质量风险。'
+                    date: '2026-04-17',
+                    summary: 'TrendForce集邦咨询最新数据（4月17日）：DDR5 16GB模组现货价格跌破500元至495元，七周来首次。分析：1）消费市场需求持续低迷；2）渠道商库存压力达到峰值，开始恐慌性抛售；3）618电商大促备货提前完成，预计5月初库存恢复正常水平。合约市场价格仍坚挺，Q2合约价涨幅锁定8-12%。对SSC启示：现货市场出现难得窗口期，非关键零部件可考虑适量补货，但需控制库存周期在8周内。'
                 },
                 {
-                    tag: 'SSD涨价',
-                    title: '企业级SSD 815元续涨5元：NAND合约价Q2预期涨幅收窄至45-50%',
+                    tag: 'NAND涨价',
+                    title: '企业级SSD 822元续涨7元：NAND合约价Q2最终涨幅锁定50-55%',
                     source: '上海有色网 / Tom\'s Hardware',
-                    date: '2026-04-16',
-                    summary: '行业监测数据（4月16日）：企业级1TB SSD渠道价续涨5元至815元。三星、SK海力士维持控产策略，但QLC晶圆产能开始向数据中心倾斜，消费级QLC供应略有缓解。供应链消息：NAND合约价Q2预期涨幅从55-65%收窄至45-50%，主因是智能手机需求不及预期。对联想SSC参考：消费级SSD采购成本压力边际改善，但企业级订单仍需尽早锁定。'
+                    date: '2026-04-17',
+                    summary: '行业监测数据（4月17日）：企业级1TB SSD渠道价续涨7元至822元。供应链确认：NAND合约价Q2最终涨幅锁定50-55%，较此前预期（45-50%）上调5个百分点，主因是企业级需求超预期。三星和SK海力士已开始限制对非战略客户的消费级NAND供应。对联想SSC参考：企业级SSD采购成本压力加大，建议Q2锁定3个月用量，Q3视市场情况调整。'
                 },
                 {
-                    tag: '市场预测',
-                    title: 'IDC预测修正：2026年PC市场温和复苏，出货量增长4-6%',
-                    source: 'IDC / 新浪科技',
-                    date: '2026-04-16',
-                    summary: 'IDC于4月15日发布修正后的2026年PC市场预测：受AI PC换机潮拉动，全球PC出货量预计增长4-6%（原预测2-4%），总量约6800-6900万台。分区域看，中国市场增速领先（6-8%），受益于政府教育采购和信创替代加速。联想份额预计稳定在25-26%，继续领跑全球。对SSC参考：出货量增长将带动备件需求上升，关注B类件（消耗件）的需求弹性。'
+                    tag: '库存管理',
+                    title: 'Gartner：Q2全球PC库存周期拉长至6周，Q3市场走势存疑',
+                    source: 'Gartner / 第一财经',
+                    date: '2026-04-17',
+                    summary: 'Gartner于4月16日发布最新PC市场报告：2026年Q2全球PC平均库存周期从5周拉长至6周，主要受AI PC新品上市延迟和消费需求疲软影响。分渠道看：企业采购周期缩短至4周（IT预算执行压力），消费渠道拉长至8周（换机意愿低迷）。Gartner预测Q3市场走势存疑，取决于AI PC实际应用场景落地情况。对SSC参考：库存周期拉长意味着呆滞风险上升，建议加强渠道库存监控，将安全库存周期从8周压缩至6周。'
                 }
             ],
             ai: [
                 {
-                    tag: 'Claude升级',
-                    title: 'Claude 4.6紧急更新：长上下文推理能力升级，与GPT-6正面交锋',
-                    source: 'Anthropic官网 / 机器之心',
-                    date: '2026-04-16',
-                    summary: 'Anthropic于4月15日深夜紧急发布Claude 4.6版本更新，重点强化长上下文推理能力，支持150万Token上下文窗口（较前版提升50%）。新增"深度推理模式"，可处理复杂的多步骤分析任务。性能对标GPT-6，定价却低30%。开发者社区反馈：Claude 4.6在中文理解和代码解释方面优势明显。对SSC参考：关注Claude企业版在内部文档分析和流程优化中的应用场景。'
+                    tag: 'ThinkPad发布',
+                    title: '联想ThinkPad 2026发布会：X1 Carbon Gen 13正式发布，AI PC战略全面升级',
+                    source: '联想官方 / IT之家',
+                    date: '2026-04-17',
+                    summary: '联想今日正式发布ThinkPad X1 Carbon Gen 13（搭载Intel Core Ultra 9处理器）和ThinkPad X1 Yoga Gen 9。核心亮点：1）NPU算力提升至48 TOPS，总AI算力120 TOPS；2）全新散热架构，续航提升至18小时；3）搭载本地GPT-6模型，支持离线AI协作。BOM成本结构：DDR5占比17%（略有下降），SSD占比16%（+1%），新增Wi-Fi 7模组占比4%。对SSC参考：新机发布后旧款零部件将进入清仓周期，关注X1 Carbon G12备件价格波动。'
                 },
                 {
-                    tag: 'Gemini更新',
-                    title: 'Google Gemini 3发布：多模态能力突破，原生支持视频理解',
-                    source: 'Google AI博客 / 我是人PM',
-                    date: '2026-04-16',
-                    summary: 'Google于4月15日发布Gemini 3，宣称在多模态理解方面实现重大突破，原生支持视频理解与分析。Gemini 3新增"供应链分析模式"，可自动解析PDF、表格和图表，适合企业级数据处理场景。Google同步推出Gemini Enterprise for Supply Chain。对联想SSC参考：多模态AI在合同分析、发票处理等场景的应用潜力值得关注。'
+                    tag: 'HBM4量产',
+                    title: '三星宣布HBM4量产计划：2026下半年产能分配曝光，AI内存格局生变',
+                    source: '三星半导体 / 电子工程世界',
+                    date: '2026-04-17',
+                    summary: '三星半导体今日宣布HBM4将于2026年下半年正式量产，首批产能已被NVIDIA和AMD锁定。HBM4较HBM3E带宽提升50%，功耗降低30%，主要面向AI服务器和高端PC。供应链消息：HBM4量产初期将对DDR5产能形成挤压，预计Q4消费级DDR5供应将减少15-20%。对联想SSC参考：关注HBM4对DDR5产能的间接影响，提前规划Q4备件采购窗口，建议在8-9月前完成DDR5备货。'
                 }
             ],
             lenovo: [
                 {
-                    tag: 'ThinkPad发布',
-                    title: 'ThinkPad发布会倒计时6天：X1 Carbon 2026物料清单曝光，BOM成本结构深度解析',
-                    source: '联想供应链 / 格隆汇',
-                    date: '2026-04-16',
-                    summary: '联想ThinkPad 2026新品发布会倒计时6天（4月22日）。供应链消息：新一代X1 Carbon BOM成本结构曝光，DDR5模组占比18%（较去年+5%），NPU芯片占比22%（全新导入），SSD占比15%（+3%）。整体BOM成本上涨约22%，但终端定价仅上调12%，意味着联想需自行消化10%的成本压力。对SSC启示：成本管控压力将进一步传导至备件和服务供应链，关注旧款零部件清仓出清节奏。'
+                    tag: '新品发布',
+                    title: 'ThinkPad X1 Carbon Gen 13 BOM解析：成本结构变化与SSC备件策略调整',
+                    source: '联想供应链管理 / 格隆汇',
+                    date: '2026-04-17',
+                    summary: '根据今日发布会信息，ThinkPad X1 Carbon Gen 13 BOM成本结构：DDR5模组占比17%（较Gen 12的18%略降），SSD占比16%（+1%），新增Wi-Fi 7模组4%，NPU芯片22%（不变），屏幕占比12%（-2%）。整体BOM成本上涨约18%，终端定价上调10%。联想通过规格微调（屏幕分辨率从4K降为3K）控制成本。对SSC启示：旧款Gen 12备件清仓加速，关注G12库存消化周期。'
                 },
                 {
-                    tag: '成本管控',
-                    title: '联想SSC成本团队Q1复盘：框架协议节约成本¥2.3M，E&O损失同比下降18%',
-                    source: '联想内部 / SSC团队',
-                    date: '2026-04-16',
-                    summary: '联想SSC成本团队发布Q1复盘报告：1）框架协议节约：通过锁定DRAM和NAND长单，Q1节约成本约¥2.3M（超目标15%）；2）E&O管理：呆滞料损失同比下降18%，主要得益于库存预警机制上线；3）供应商多元化：YMTC SSD导入率从12%提升至28%，成本节省约¥0.8M。对团队参考：Q2重点推进国产化替代，目标将国产化率从28%提升至35%。'
+                    tag: 'SSC建议',
+                    title: '【SSC内部参考】DDR5破500后的采购窗口分析与库存策略建议',
+                    source: '联想SSC成本团队',
+                    date: '2026-04-17',
+                    summary: 'SSC成本团队今日内部建议：1）DDR5现货跌破500元，为近半年最低点，建议对非关键零部件（如备件包中的DDR5模组）进行适量补货；2）HBM4量产预期可能导致Q4 DDR5供应收紧，建议在8-9月前完成Q4用量的采购锁单；3）当前库存周期偏长（6周），需警惕呆滞风险，安全库存周期控制在6周以内；4）企业级SSD成本压力持续，建议Q2锁定3个月用量。'
                 }
             ]
         };
@@ -366,13 +366,13 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-16', label: '2026-04-16（今日）'},
+            {date: '2026-04-17', label: '2026-04-17（今日）'},
+            {date: '2026-04-16', label: '2026-04-16'},
             {date: '2026-04-15', label: '2026-04-15'},
             {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-12', label: '2026-04-12'},
             {date: '2026-04-11', label: '2026-04-11'},
-            {date: '2026-04-10', label: '2026-04-10'},
         ];
 
         // 动态生成历史记录链接

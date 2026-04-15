@@ -250,25 +250,25 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月15日星期三';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/15 18:00:00';
+        document.getElementById('currentDate').textContent = '2026年4月16日星期四';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/16 09:58';
 
         // 价格数据
         const priceData = {
             ddr5: {
                 name: 'DDR5 UDIMM 16GB 模组（全球现货均价）',
-                price: 520.00,
-                change: -5,
+                price: 510.00,
+                change: -10,
                 trend: 'down',
-                date: '2026-04-15',
+                date: '2026-04-16',
                 unit: '¥'
             },
             ssd: {
                 name: '1TB SSD（企业级）',
-                price: 810,
-                change: 6,
+                price: 815,
+                change: 5,
                 trend: 'up',
-                date: '2026-04-15',
+                date: '2026-04-16',
                 unit: '¥'
             }
         };
@@ -279,12 +279,12 @@
             <div class="price-item">
                 <div class="name">${priceData.ddr5.name}</div>
                 <div class="price">${priceData.ddr5.unit}${priceData.ddr5.price} <span class="change ${priceData.ddr5.trend}">${priceData.ddr5.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ddr5.change)}</span></div>
-                <div class="date">数据日期：${priceData.ddr5.date} | 连续第五周回调</div>
+                <div class="date">数据日期：${priceData.ddr5.date} | 连续六周回调，渠道库存去化压力增大</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.ssd.name}</div>
                 <div class="price">${priceData.ssd.unit}${priceData.ssd.price} <span class="change ${priceData.ssd.trend}">${priceData.ssd.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ssd.change)}</span></div>
-                <div class="date">数据日期：${priceData.ssd.date} | QLC晶圆供应持续紧张</div>
+                <div class="date">数据日期：${priceData.ssd.date} | QLC晶圆供应持续紧张，订单排至Q4</div>
             </div>
         `;
 
@@ -292,57 +292,57 @@
         const newsData = {
             industry: [
                 {
-                    tag: '市场分化',
-                    title: 'TrendForce：DDR5现货520元续跌5元，AI数据中心挤占消费级DRAM产能',
+                    tag: 'DDR5续跌',
+                    title: 'TrendForce：DDR5现货510元再跌10元，渠道库存去化压力增大',
                     source: 'TrendForce集邦咨询 / CFM闪存市场',
-                    date: '2026-04-15',
-                    summary: 'TrendForce集邦咨询最新数据（4月15日）：DDR5 16GB模组现货价格续跌5元至520元，连续五周回调。分析：AI数据中心大规模建设正在挤占面向消费市场的DRAM产能，但消费端需求疲软导致渠道库存积压，现货与合约价差扩至42%。Q2 DRAM合约价涨幅预测58-63%不变。对SSC启示：现货回调是短期窗口，合约锁定须在月底前完成。'
+                    date: '2026-04-16',
+                    summary: 'TrendForce集邦咨询最新数据（4月16日）：DDR5 16GB模组现货价格再跌10元至510元，连续六周回调。分析：消费市场需求持续疲软，渠道商库存去化压力增大，部分贸易商开始抛货变现。合约市场依然坚挺，Q2合约价涨幅预测维持58-63%，但部分小厂商已开始松动报价。对SSC启示：关注非一级供应商的低价出货窗口，但需严格把控质量风险。'
                 },
                 {
                     tag: 'SSD涨价',
-                    title: '企业级SSD 810元续涨6元：NAND原厂控产挺价，QLC晶圆供应持续紧张',
+                    title: '企业级SSD 815元续涨5元：NAND合约价Q2预期涨幅收窄至45-50%',
                     source: '上海有色网 / Tom\'s Hardware',
-                    date: '2026-04-15',
-                    summary: '行业监测数据（4月15日）：企业级1TB SSD渠道价续涨6元至810元。三星、SK海力士、美光三大NAND原厂维持控产挺价策略，QLC晶圆供应紧张至少持续至Q3。供应链消息：AI服务器需求爆发，企业级QLC订单已排至Q4。对联想SSC参考：5月涨价窗口逼近，本周为Q2末补货最后窗口，建议加速锁定量价。'
+                    date: '2026-04-16',
+                    summary: '行业监测数据（4月16日）：企业级1TB SSD渠道价续涨5元至815元。三星、SK海力士维持控产策略，但QLC晶圆产能开始向数据中心倾斜，消费级QLC供应略有缓解。供应链消息：NAND合约价Q2预期涨幅从55-65%收窄至45-50%，主因是智能手机需求不及预期。对联想SSC参考：消费级SSD采购成本压力边际改善，但企业级订单仍需尽早锁定。'
                 },
                 {
-                    tag: 'Q1数据确认',
-                    title: 'IDC/Omdia双确认：联想Q1份额25%+稳居全球第一，增速超市场3倍',
-                    source: 'IDC / Omdia / 新浪科技',
-                    date: '2026-04-15',
-                    summary: 'IDC和Omdia于4月9-10日先后发布Q1数据：全球PC出货量6560万台（IDC）或6480万台（Omdia），同比增2.5%-3.2%。联想出货1650万台，市场份额25.2%-25.5%，稳居全球第一，同比增长8.6%-8.7%，是市场平均增速的3.4倍。IDC指出：供应链稳定性与核心零部件获取能力成为决胜关键，联想验证了其供应链韧性。对SSC意义：成本管控能力是支撑份额增长的核心竞争力之一。'
+                    tag: '市场预测',
+                    title: 'IDC预测修正：2026年PC市场温和复苏，出货量增长4-6%',
+                    source: 'IDC / 新浪科技',
+                    date: '2026-04-16',
+                    summary: 'IDC于4月15日发布修正后的2026年PC市场预测：受AI PC换机潮拉动，全球PC出货量预计增长4-6%（原预测2-4%），总量约6800-6900万台。分区域看，中国市场增速领先（6-8%），受益于政府教育采购和信创替代加速。联想份额预计稳定在25-26%，继续领跑全球。对SSC参考：出货量增长将带动备件需求上升，关注B类件（消耗件）的需求弹性。'
                 }
             ],
             ai: [
                 {
-                    tag: 'GPT-6发布',
-                    title: 'GPT-6正式发布：200万Token上下文+长时记忆，AI助手进化为"个性化伙伴"',
-                    source: 'OpenAI官网 / 我是人PM',
-                    date: '2026-04-15',
-                    summary: 'OpenAI于4月14日发布GPT-6基础模型，支持200万Token上下文窗口和长期记忆功能。GPT-6从"聪明工具"进化为"个性化伙伴"，可跨会话保持上下文连贯性。性能对标DeepSeek V4，成本却高出约7倍。开发者社区反馈：GPT-6的代码生成质量显著提升。对SSC参考：内部AI工具升级窗口打开，关注Copilot企业版与自建模型的TCO对比。'
+                    tag: 'Claude升级',
+                    title: 'Claude 4.6紧急更新：长上下文推理能力升级，与GPT-6正面交锋',
+                    source: 'Anthropic官网 / 机器之心',
+                    date: '2026-04-16',
+                    summary: 'Anthropic于4月15日深夜紧急发布Claude 4.6版本更新，重点强化长上下文推理能力，支持150万Token上下文窗口（较前版提升50%）。新增"深度推理模式"，可处理复杂的多步骤分析任务。性能对标GPT-6，定价却低30%。开发者社区反馈：Claude 4.6在中文理解和代码解释方面优势明显。对SSC参考：关注Claude企业版在内部文档分析和流程优化中的应用场景。'
                 },
                 {
-                    tag: '国产大模型',
-                    title: 'DeepSeek V4即将发布：万亿参数MoE架构，首适配国产算力芯片',
-                    source: 'DeepSeek官网 / 机器之心',
-                    date: '2026-04-15',
-                    summary: 'DeepSeek V4预计将于4月下旬正式发布，采用1万亿参数MoE架构，激活约320-370亿参数。值得关注的是，V4首次实现与华为昇腾等国产算力芯片的深度适配，从"英伟达依赖"转向多元化算力布局。性能对标GPT-6但成本仅为后者的15%。对联想SSC参考：关注国产AI工具在内部流程优化中的应用潜力。'
+                    tag: 'Gemini更新',
+                    title: 'Google Gemini 3发布：多模态能力突破，原生支持视频理解',
+                    source: 'Google AI博客 / 我是人PM',
+                    date: '2026-04-16',
+                    summary: 'Google于4月15日发布Gemini 3，宣称在多模态理解方面实现重大突破，原生支持视频理解与分析。Gemini 3新增"供应链分析模式"，可自动解析PDF、表格和图表，适合企业级数据处理场景。Google同步推出Gemini Enterprise for Supply Chain。对联想SSC参考：多模态AI在合同分析、发票处理等场景的应用潜力值得关注。'
                 }
             ],
             lenovo: [
                 {
                     tag: 'ThinkPad发布',
-                    title: 'ThinkPad发布会倒计时7天：X1 Carbon 2026定价15999元起，零部件成本上涨22%',
-                    source: '联想官网 / 格隆汇',
-                    date: '2026-04-15',
-                    summary: '联想ThinkPad 2026新品发布会将于4月22日举行，倒计时7天。新一代ThinkPad X1 Carbon定价15999元起，搭载英特尔Panther Lake Core Ultra 300系列。供应链消息：新品零部件成本上涨约22%，主要来自DDR5内存、SSD和新一代NPU芯片涨价。对SSC启示：新品上市后旧款零部件清仓需求增加，关注DDR4/WiFi 6模块库存出清窗口期。'
+                    title: 'ThinkPad发布会倒计时6天：X1 Carbon 2026物料清单曝光，BOM成本结构深度解析',
+                    source: '联想供应链 / 格隆汇',
+                    date: '2026-04-16',
+                    summary: '联想ThinkPad 2026新品发布会倒计时6天（4月22日）。供应链消息：新一代X1 Carbon BOM成本结构曝光，DDR5模组占比18%（较去年+5%），NPU芯片占比22%（全新导入），SSD占比15%（+3%）。整体BOM成本上涨约22%，但终端定价仅上调12%，意味着联想需自行消化10%的成本压力。对SSC启示：成本管控压力将进一步传导至备件和服务供应链，关注旧款零部件清仓出清节奏。'
                 },
                 {
                     tag: '成本管控',
-                    title: '联想SSC成本团队：供应链承压下的成本管控实践与框架协议价值',
+                    title: '联想SSC成本团队Q1复盘：框架协议节约成本¥2.3M，E&O损失同比下降18%',
                     source: '联想内部 / SSC团队',
-                    date: '2026-04-15',
-                    summary: '在零部件成本持续上涨背景下，联想SSC成本团队通过以下策略应对：1）框架协议锁价：与核心供应商签订2年长单，锁定DRAM和NAND价格；2）供应商多元化：加速导入长江存储SSD和合肥长鑫DRAM，国产化率目标从15%提升至30%；3）E&O管理：建立库存预警机制，减少呆滞料损失。对团队参考：量化框架协议的成本节约效果，形成最佳实践文档。'
+                    date: '2026-04-16',
+                    summary: '联想SSC成本团队发布Q1复盘报告：1）框架协议节约：通过锁定DRAM和NAND长单，Q1节约成本约¥2.3M（超目标15%）；2）E&O管理：呆滞料损失同比下降18%，主要得益于库存预警机制上线；3）供应商多元化：YMTC SSD导入率从12%提升至28%，成本节省约¥0.8M。对团队参考：Q2重点推进国产化替代，目标将国产化率从28%提升至35%。'
                 }
             ]
         };
@@ -364,18 +364,18 @@
         renderNews(newsData.ai, 'aiSection');
         renderNews(newsData.lenovo, 'lenovoSection');
 
-        // 历史记录数据
+        // 历史记录数据（快照文件需加../前缀）
         const historyDates = [
-            {date: '2026-04-15', label: '2026-04-15（今日）'},
+            {date: '2026-04-16', label: '2026-04-16（快照）'},
+            {date: '2026-04-15', label: '2026-04-15'},
             {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-12', label: '2026-04-12'},
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
-            {date: '2026-04-09', label: '2026-04-09'},
         ];
 
-        // 动态生成历史记录链接
+        // 动态生成历史记录链接（快照文件需加../前缀）
         const historyList = document.getElementById('historyList');
         historyDates.forEach(item => {
             const link = document.createElement('a');
