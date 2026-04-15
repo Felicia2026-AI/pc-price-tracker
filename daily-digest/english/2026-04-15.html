@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Digest - 英文学习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .date {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .header .update-time {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #212529;
+            border-left: 4px solid #11998e;
+            padding-left: 15px;
+        }
+
+        .text-container {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .english-text {
+            font-size: 16px;
+            color: #212529;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .chinese-translation {
+            font-size: 15px;
+            color: #6c757d;
+            line-height: 1.8;
+            border-top: 2px solid #dee2e6;
+            padding-top: 15px;
+        }
+
+        .phrase-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .phrase-english {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .phrase-chinese {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        .phrase-example {
+            font-size: 14px;
+            font-style: italic;
+            opacity: 0.85;
+            margin-top: 8px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 8px;
+        }
+
+        .vocabulary-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .vocab-item {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 12px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .vocab-word {
+            font-size: 18px;
+            font-weight: 700;
+            color: #11998e;
+            min-width: 150px;
+        }
+
+        .vocab-meaning {
+            font-size: 15px;
+            color: #495057;
+            flex: 1;
+        }
+
+        .vocab-example {
+            font-size: 14px;
+            color: #6c757d;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .practice-section {
+            background: #fff3cd;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+        }
+
+        .practice-item {
+            margin-bottom: 15px;
+        }
+
+        .practice-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #212529;
+        }
+
+        .practice-option {
+            display: block;
+            padding: 8px 12px;
+            margin: 5px 0;
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .practice-option:hover {
+            background: #11998e;
+            color: white;
+            border-color: #11998e;
+        }
+
+        .history-section {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+
+        .history-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #212529;
+            border-left: 4px solid #11998e;
+            padding-left: 15px;
+        }
+
+        .history-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .history-link {
+            display: block;
+            padding: 12px 16px;
+            background: white;
+            color: #495057;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid #dee2e6;
+        }
+
+        .history-link:hover {
+            background: #11998e;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(17, 153, 142, 0.3);
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .vocab-item {
+                flex-direction: column;
+            }
+
+            .vocab-word {
+                min-width: auto;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 英文学习</h1>
+            <div class="date" id="currentDate"></div>
+            <div class="update-time" id="updateTime"></div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <div class="section-title">💬 Business English Phrase of the Day</div>
+                <div class="phrase-section" id="phraseSection"></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">📖 今日阅读</div>
+                <div class="text-container">
+                    <div class="english-text" id="englishText"></div>
+                    <div class="chinese-translation" id="chineseText"></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">📝 重点词汇</div>
+                <div class="vocabulary-section" id="vocabularySection"></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">✍️ 理解练习</div>
+                <div class="practice-section" id="practiceSection"></div>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <div class="history-title">📜 历史记录</div>
+            <div class="history-list" id="historyList"></div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Daily Digest - 英文学习 | 每日更新</p>
+        </div>
+    </div>
+
+    <script>
+        // 设置日期（硬编码，禁止使用new Date()）
+        document.getElementById('currentDate').textContent = '2026年4月15日星期三';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/15 18:00:00';
+
+        // 今日短语
+        const todayPhrase = {
+            english: "\"We are running against the clock to finalize the Q2 framework agreement before SK Hynix raises its HBM allocation pricing.\"",
+            chinese: "我们正在争分夺秒赶在SK海力士提高HBM配额定价的之前敲定Q2框架协议。",
+            meaning: "run against the clock：与时间赛跑，形容时间紧迫、任务紧急。此处强调Q2框架协议签署的紧迫性，HBM供应紧张背景下必须快速决策。",
+            example: "With NAND spot prices trending down but contract prices firm, we are running against the clock to lock in our Q2 volume commitment with Samsung."
+        };
+
+        // 渲染短语
+        document.getElementById('phraseSection').innerHTML = `
+            <div class="phrase-english">${todayPhrase.english}</div>
+            <div class="phrase-chinese">${todayPhrase.chinese}</div>
+            <div class="phrase-example">💡 含义：${todayPhrase.meaning}</div>
+        `;
+
+        // 今日学习内容 - 供应商谈判与合同签署
+        const todayContent = {
+            english: "Supplier negotiations in the semiconductor and memory industry require a deep understanding of market dynamics, supplier incentives, and internal business priorities. Running against the clock is often the reality when negotiating with tier-one memory suppliers, as pricing windows can close rapidly in a tightening market.\n\nThe most effective negotiation approach begins with thorough market intelligence. Before entering any negotiation with Samsung or SK Hynix for DRAM and NAND contracts, successful procurement teams spend weeks analyzing spot price trends, contract price forecasts from TrendForce, HBM allocation patterns, and the supplier's own financial pressures. This intelligence provides the factual foundation for setting negotiation targets and identifying leverage points.\n\nUnderstanding the supplier's perspective is equally critical. Memory manufacturers face their own constraints: HBM capacity is largely locked by NVIDIA's orders, legacy DRAM lines are being phased out, and capital expenditure for new fabs is enormous. Suppliers need long-term volume commitments to justify capacity investments. This creates genuine mutual dependency—both sides need each other—which savvy negotiators use to structure win-win agreements.\n\nKey negotiation levers include volume commitment levels (higher commitments unlock lower pricing), payment terms (advance payment in exchange for discounts), duration flexibility (2-year vs. 18-month terms), and price adjustment mechanisms (spot-price linkage vs. fixed price with escalation clauses). The Lenovo SSC cost team's role is to translate these commercial levers into net cost implications for the parts under management, considering not just unit price but logistics, E&O reserves, and repair costs.\n\nFinally, time management in negotiations is a skill in itself. Running against the clock to finalize Q2 agreements is not just a figure of speech—missing the pricing window by even a few weeks can mean accepting significantly higher contracted prices. Proactive engagement, early alignment with internal stakeholders, and clear escalation paths when negotiations stall are essential disciplines.",
+            chinese: "半导体和存储行业的供应商谈判需要深入了解市场动态、供应商激励机制和内部业务优先级。在供应趋紧的市场中，与一级存储供应商谈判时，与时间赛跑往往是真实写照。\n\n最有效的谈判方法始于充分的市场情报。在与三星或SK海力士就DRAM和NAND合同进行任何谈判之前，成功的采购团队会花数周时间分析现货价格趋势、TrendForce合约价格预测、HBM分配模式和供应商自身的财务压力。这些情报为设定谈判目标和识别杠杆点提供了事实基础。\n\n理解供应商的立场同样关键。存储制造商面临自身约束：HBM产能大部分被英伟达订单锁定，制式DRAM产能正在逐步淘汰，新工厂资本支出巨大。供应商需要长期量价承诺来证明产能投资的合理性。这创造了真正的相互依赖——双方都需要对方——精明的谈判者利用这一点来构建双赢协议。\n\n关键谈判杠杆包括：量价承诺水平（更高承诺解锁更低价格）、付款条款（预付款换取折扣）、期限灵活性（2年vs.18个月条款）以及价格调整机制（现货价联动vs.含升级条款的固定价）。联想SSC成本团队的职责是将这些商业杠杆转化为所管理零部件的净成本影响，不仅考虑单价，还包括物流、E&O准备金和维修成本。\n\n最后，谈判中的时间管理本身就是一项技能。争分夺秒敲定Q2协议不仅仅是比喻——错过定价窗口哪怕几周，就可能意味着接受显著更高的合约价。积极主动、内部利益相关者早期对齐、谈判停滞时的清晰升级路径都是必不可少的纪律。",
+            vocabulary: [
+                {
+                    word: "run against the clock",
+                    meaning: "与时间赛跑；形容时间紧迫、任务紧急的状态",
+                    example: "We are running against the clock to finalize the Q2 NAND framework before the May price increase takes effect."
+                },
+                {
+                    word: "market intelligence",
+                    meaning: "市场情报；关于市场竞争格局、价格趋势、供应商动态的深度分析信息",
+                    example: "Our market intelligence team tracks TrendForce weekly DRAM and NAND reports to inform procurement strategy."
+                },
+                {
+                    word: "leverage point",
+                    meaning: "杠杆点；谈判中可用于影响对方决策的关键筹码或优势",
+                    example: "Our volume commitment is a key leverage point when negotiating with Samsung for better DRAM pricing."
+                },
+                {
+                    word: "win-win agreement",
+                    meaning: "双赢协议；对双方都有实质利益的合作安排",
+                    example: "The 2-year framework agreement is structured as a win-win: we get price stability, and Samsung gets volume commitment."
+                },
+                {
+                    word: "escalation path",
+                    meaning: "升级路径；当常规流程无法解决问题时，升级到更高层级决策的正式流程",
+                    example: "If the procurement team cannot reach agreement by end of week, we need a clear escalation path to senior management."
+                }
+            ],
+            practice: [
+                {
+                    question: "What is the primary purpose of gathering market intelligence before supplier negotiations?",
+                    options: [
+                        "To impress the supplier with detailed data",
+                        "To establish factual foundation for negotiation targets and identify leverage points",
+                        "To delay the negotiation process intentionally",
+                        "To find evidence of supplier misconduct"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "Why is understanding the supplier's perspective important in negotiations?",
+                    options: [
+                        "To exploit their weaknesses aggressively",
+                        "To identify mutual dependency and structure win-win solutions",
+                        "To predict their next product launch",
+                        "To determine if they are lying about market conditions"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "What does 'running against the clock' mean in the context of Q2 agreement negotiations?",
+                    options: [
+                        "Negotiating during night shifts for better focus",
+                        "Racing to complete negotiations before a pricing window closes",
+                        "Setting extremely tight deadlines for suppliers",
+                        "Disputing the accuracy of the supplier's clock system"
+                    ],
+                    answer: 1
+                }
+            ]
+        };
+
+        // 渲染学习内容
+        document.getElementById('englishText').textContent = todayContent.english;
+        document.getElementById('chineseText').textContent = todayContent.chinese;
+
+        // 渲染词汇
+        const vocabSection = document.getElementById('vocabularySection');
+        vocabSection.innerHTML = todayContent.vocabulary.map(item => `
+            <div class="vocab-item">
+                <div class="vocab-word">${item.word}</div>
+                <div class="vocab-meaning">${item.meaning}</div>
+                <div class="vocab-example">${item.example}</div>
+            </div>
+        `).join('');
+
+        // 渲染练习
+        const practiceSection = document.getElementById('practiceSection');
+        practiceSection.innerHTML = todayContent.practice.map((item, index) => `
+            <div class="practice-item">
+                <div class="practice-question">${index + 1}. ${item.question}</div>
+                ${item.options.map((opt, optIndex) => `
+                    <div class="practice-option" onclick="checkAnswer(${index}, ${optIndex}, ${item.answer})">${opt}</div>
+                `).join('')}
+                <div id="answer-${index}" style="margin-top: 10px; font-weight: bold;"></div>
+            </div>
+        `).join('');
+
+        // 检查答案
+        function checkAnswer(questionIndex, selectedOption, correctAnswer) {
+            const resultDiv = document.getElementById(`answer-${questionIndex}`);
+            if (selectedOption === correctAnswer) {
+                resultDiv.innerHTML = '<span style="color: #28a745;">✓ Correct!</span>';
+            } else {
+                resultDiv.innerHTML = '<span style="color: #dc3545;">✗ Try again</span>';
+            }
+        }
+
+        // 历史记录数据
+        const historyDates = [
+            {date: '2026-04-14', label: '2026-04-14'},
+            {date: '2026-04-13', label: '2026-04-13'},
+            {date: '2026-04-12', label: '2026-04-12'},
+            {date: '2026-04-11', label: '2026-04-11'},
+            {date: '2026-04-10', label: '2026-04-10'},
+            {date: '2026-04-09', label: '2026-04-09'},
+        ];
+
+        // 动态生成历史记录链接
+        const historyList = document.getElementById('historyList');
+        historyDates.forEach(item => {
+            const link = document.createElement('a');
+            link.href = `../english/${item.date}.html`;
+            link.className = 'history-link';
+            link.textContent = item.label;
+            historyList.appendChild(link);
+        });
+    </script>
+</body>
+</html>
