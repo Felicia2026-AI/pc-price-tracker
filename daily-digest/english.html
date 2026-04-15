@@ -298,15 +298,15 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月17日星期五';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/17 10:06';
+        document.getElementById('currentDate').textContent = '2026年4月15日星期三';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/15 10:15';
 
         // 今日短语
         const todayPhrase = {
-            english: "\"With DDR5 spot prices breaking through the ¥500 psychological level, this creates a buying window for non-critical components. However, we should lock in our Q4 requirements before the HBM4 production ramp-up tightens DDR5 supply in August-September.\"",
-            chinese: "随着DDR5现货价格跌破500元心理关口，这为非关键零部件创造了采购窗口。但我们应在HBM4量产拉升导致DDR5供应收紧前（8-9月前），锁定Q4需求。",
-            meaning: "breaking through the psychological level：突破心理关口，指价格跌破重要整数位引发市场情绪变化。buying window：采购窗口，指市场价格或供应条件有利的短期机会。lock in：锁定，指通过合约或预购确保未来的采购价格和供应。",
-            example: "The DRAM spot market has dropped to ¥12, creating a short-term buying window. We're planning to lock in our Q2 notebook memory requirements through long-term contracts to avoid the anticipated supply tightness in Q3."
+            english: "\"With IDC revising the 2026 PC market forecast upward to 6.2% growth, we need to front-load our spare parts procurement to capture the buying window before Q3 demand surge. Let's also lock in Q3 SSD supply contracts before NAND contract prices rise further.\"",
+            chinese: "随着IDC将2026年PC市场预测上调至6.2%增长，我们需要在Q3需求高峰前提速备件采购以抓住采购窗口。同时，在NAND合约价进一步上涨前锁定Q3 SSD供应协议。",
+            meaning: "revising upward：上调预测，指调整数字或预期向更高方向变动。front-load：前置，指将活动或资源安排在计划前期执行。lock in：锁定，指通过合约确保未来的价格和供应。",
+            example: "Given the revised demand forecast, we're planning to front-load our Q2 notebook component orders to secure allocation before the peak season. We're also looking to lock in pricing through long-term agreements with our key suppliers."
         };
 
         // 渲染短语
@@ -316,67 +316,67 @@
             <div class="phrase-example">💡 含义：${todayPhrase.meaning}</div>
         `;
 
-        // 今日学习内容 - 库存周期管理与采购策略
+        // 今日学习内容 - 供应商谈判与采购策略
         const todayContent = {
-            english: "In the complex world of supply chain management, understanding inventory cycles and their implications for procurement strategy is fundamental to maintaining operational efficiency while controlling costs.\n\nThe inventory cycle refers to the time period from when raw materials are procured until finished goods are sold. In the PC industry, this cycle typically spans 6-12 weeks, depending on component availability, manufacturing lead times, and channel distribution. For the SSC (Service & Support Cost) team, managing the inventory cycle of spare parts is particularly challenging because demand is driven by product failure rates rather than consumer purchasing patterns.\n\nInventory days of supply (DOS) is a key metric for measuring inventory health. It indicates how many days of inventory are on hand to meet current demand. A high DOS suggests overstocking and potential obsolescence risk, while a low DOS indicates potential stockout risk. For PC spare parts, the optimal DOS varies by component criticality: critical components like motherboards may require 8-10 weeks of safety stock, while non-critical items like cables may only need 4-6 weeks.\n\nBuffer stock and safety stock serve different purposes in inventory management. Buffer stock refers to additional inventory held above theoretical requirements to absorb demand variability or supply disruptions. It's typically used for high-value components or items with long lead times. Safety stock, on the other hand, is the minimum inventory level maintained to prevent stockouts under normal demand fluctuations. The formula for calculating safety stock typically considers demand variability, lead time variability, and the desired service level.\n\nThe recent Gartner report highlighting extended PC inventory cycles from 5 to 6 weeks in Q2 2026 has significant implications for procurement strategy. When inventory cycles extend, companies face higher carrying costs, increased obsolescence risk, and greater capital tied up in inventory. For SSC, this means we need to recalibrate our safety stock levels and potentially renegotiate terms with suppliers to allow for more flexible inventory commitments.\n\nProcurement strategy during inventory cycle extensions should focus on several key areas: first, demand forecasting accuracy must improve to avoid over-ordering; second, supplier relationships become critical to ensure priority allocation during tight supply periods; third, inventory monitoring systems need real-time visibility to trigger alerts when stock levels approach critical thresholds; fourth, disposition strategies for slow-moving inventory should be pre-planned rather than reactive.\n\nThe concept of inventory velocity is equally important. High inventory velocity means products move quickly through the supply chain, reducing holding costs and minimizing obsolescence risk. Strategies to improve inventory velocity include just-in-time delivery, demand-driven replenishment, and channel-stuffing reduction. For spare parts specifically, improving inventory velocity requires close coordination with service operations to match parts availability with actual repair demand patterns.\n\nFrom an SSC perspective, the key takeaway is that inventory management is not a set-it-and-forget-it discipline. It requires continuous monitoring, forecasting refinement, and strategic supplier engagement. The current market conditions—extended inventory cycles, DDR5 price volatility, and HBM4 supply uncertainties—demand a more sophisticated approach to spare parts inventory management that balances service level requirements with cost efficiency.",
-            chinese: "在复杂的供应链管理领域，理解库存周期及其对采购策略的影响，是保持运营效率和控制成本的基础。\n\n库存周期是指从原材料采购到成品销售的整个时间段。在PC行业，这一周期通常跨越6-12周，取决于零部件可用性、生产交付周期和渠道分销情况。对于SSC（服务与支持成本）团队而言，备件库存周期管理尤其具有挑战性，因为需求是由产品故障率而非消费者购买模式驱动的。\n\n库存天数（DOS）是衡量库存健康状况的关键指标。它表示满足当前需求所需的库存天数。DOS高意味着库存过剩和潜在过时风险，而DOS低则表示潜在的缺货风险。对于PC备件，最优DOS因零部件关键程度而异：关键零部件（如主板）可能需要8-10周的安全库存，而Cable等非关键物料可能仅需4-6周。\n\n缓冲库存和安全库存在库存管理中服务不同目的。缓冲库存是指在理论需求之上持有的额外库存，用于吸收需求变化或供应中断。它通常用于高价值零部件或交付周期较长的物料。另一方面，安全库存是指为防止正常需求波动下的缺货而维持的最低库存水平。安全库存计算公式通常考虑需求可变性、交付周期可变性和所需服务水平。\n\nGartner最近报告显示2026年Q2全球PC库存周期从5周拉长至6周，这对采购策略具有重要影响。当库存周期拉长时，公司面临更高的持有成本、更大的过时风险，以及被库存占用的更多资金。对SSC而言，这意味着我们需要重新校准安全库存水平，并可能与供应商重新谈判条款，以允许更灵活的库存承诺。\n\n库存周期拉长期间的采购策略应聚焦几个关键领域：首先，需求预测准确性必须提高以避免过量订购；其次，供应商关系变得至关重要，以确保在供应紧张时期的优先分配；第三，库存监控系统需要实时可见性，在库存水平接近临界阈值时触发警报；第四，滞销库存处置策略应预先计划而非被动反应。\n\n库存周转速度的概念同样重要。高库存周转速度意味着产品快速通过供应链，降低持有成本并最大限度减少过时风险。提高库存周转速度的策略包括准时制交付、需求驱动补货和减少渠道囤货。具体到备件，提高库存周转速度需要与服务商密切协调，将零部件可用性与实际维修需求模式相匹配。\n\n从SSC的角度来看，关键要点是：库存管理不是一劳永逸的学科。它需要持续监控、预测优化和战略性供应商合作。当前市场状况——库存周期拉长、DDR5价格波动和HBM4供应不确定性——要求采用更复杂的备件库存管理方法，在服务水平要求和成本效率之间取得平衡。",
+            english: "In the fast-paced world of component procurement, supplier negotiation skills are essential for cost management and supply security. The ability to negotiate effectively with suppliers can mean the difference between a profitable product launch and a costly supply chain disruption.\n\nSupplier relationship management (SRM) forms the foundation of successful procurement. Modern SRM goes beyond transactional purchasing to build strategic partnerships with key suppliers. These partnerships are characterized by mutual trust, shared risk, and collaborative problem-solving. For the SSC (Service & Support Cost) team, strong supplier relationships are particularly valuable because spare parts demand is often unpredictable and requires flexible response from suppliers.\n\nThe concept of total cost of ownership (TCO) is critical in supplier negotiations. TCO includes not just the unit price, but also logistics costs, quality costs, inventory holding costs, and the cost of potential supply disruptions. A lower unit price may actually result in higher TCO if it leads to longer lead times, lower quality, or increased inventory requirements. When negotiating with suppliers, always consider the full TCO picture rather than focusing solely on unit price.\n\nVolume commitment and flexibility are key negotiation variables. Suppliers typically offer better pricing in exchange for volume commitments, but these commitments can create risk if demand forecasts are inaccurate. The modern approach is to negotiate frame contracts with flexible volume bands—typically plus or minus 20-30% from the committed volume. This provides price benefits while maintaining operational flexibility. For SSC, where demand is driven by product failure rates rather than planned production, flexible commitments are essential.\n\nLead time optimization is another critical negotiation point. Shorter lead times provide operational flexibility but usually come at a cost premium. The optimal approach is to negotiate differentiated lead times for different component categories: standard lead times for stable-demand items, and expedited lead times with premium pricing for critical or high-uncertainty components. This tiered approach balances cost and flexibility.\n\nQuality specifications must be clearly defined in supplier agreements. Vague quality requirements lead to disputes, returns, and increased costs. The best practice is to establish objective, measurable quality standards including defect rates, inspection criteria, and rejection procedures. For spare parts specifically, quality consistency is paramount because a defective spare part can damage customer relationships and increase warranty costs far beyond the part's purchase price.\n\nSupply chain risk management should be integrated into supplier negotiations. This includes identifying single-source components, negotiating alternate sourcing options, and establishing business continuity plans with key suppliers. The recent global supply chain disruptions have highlighted the importance of supply chain resilience. For SSC, having backup suppliers or emergency sourcing channels for critical spare parts is essential for maintaining service level agreements.\n\nThe concept of collaborative forecasting has gained traction in supplier relationships. By sharing demand forecasts with suppliers, companies can help suppliers better plan their production and inventory, which often results in better pricing and availability. However, collaborative forecasting requires trust and data-sharing agreements that protect proprietary information while enabling supply chain coordination.\n\nStrategic sourcing is a systematic approach to procurement that analyzes spend data, market conditions, and supplier capabilities to optimize the supplier base. For the SSC team, strategic sourcing can identify opportunities to consolidate spare parts suppliers, standardize components across product lines, and leverage volume for better pricing. The goal is to create a supplier portfolio that balances cost, quality, risk, and innovation.\n\nIn today's dynamic market environment, successful supplier negotiation requires a combination of market knowledge, analytical skills, and relationship management. The SSC team must stay informed about component market trends, understand the supplier's cost structure and margin pressures, and build relationships that enable collaborative problem-solving. By mastering these skills, procurement professionals can create value that extends far beyond the unit price savings achieved at the negotiation table.",
+            chinese: "在快节奏的零部件采购世界中，供应商谈判技巧对于成本管理和供应保障至关重要。与供应商有效谈判的能力，可能意味着产品发布的盈利与供应链中断的高成本之间的差异。\n\n供应商关系管理（SRM）是成功采购的基础。现代SRM超越交易性采购，与关键供应商建立战略伙伴关系。这些伙伴关系的特点是相互信任、风险共担和协作解决问题。对于SSC（服务与支持成本）团队而言，强有力的供应商关系尤其有价值，因为备件需求通常不可预测，需要供应商的灵活响应。\n\n总拥有成本（TCO）的概念在供应商谈判中至关重要。TCO不仅包括单价，还包括物流成本、质量成本、库存持有成本和潜在供应中断成本。如果低价导致更长的交付周期、更低的质量或更高的库存需求，实际上可能导致更高的TCO。在与供应商谈判时，应始终考虑完整的TCO情况，而非仅关注单价。\n\n数量承诺和灵活性是关键的谈判变量。供应商通常会为数量承诺提供更好的价格，但这些承诺如果需求预测不准确就会带来风险。现代方法是谈判带有灵活数量区间的框架合同——通常为承诺数量的正负20-30%。这既提供价格优惠又保持运营灵活性。对于SSC而言，由于需求由产品故障率而非计划生产驱动，灵活的承诺至关重要。\n\n交付周期优化是另一个关键谈判点。更短的交付周期提供运营灵活性，但通常需要支付溢价。最佳方法是针对不同零部件类别谈判差异化的交付周期：稳定需求的物料采用标准交付周期，关键或高不确定性物料采用溢价加急交付。这种分层方法在成本和灵活性之间取得平衡。\n\n质量规格必须在供应商协议中明确界定。模糊的质量要求会导致争议、退货和成本增加。最佳实践是建立客观、可测量的质量标准，包括不良率、检验标准和拒收程序。对于备件而言，质量一致性至关重要，因为有缺陷的备件可能损害客户关系，增加远超零部件采购价格的保修成本。\n\n供应链风险管理应纳入供应商谈判。这包括识别单一来源零部件、谈判替代采购选项，以及与关键供应商建立业务连续性计划。近期全球供应链中断凸显了供应链韧性的重要性。对于SSC，为关键备件提供备用供应商或紧急采购渠道对于维持服务水平协议至关重要。\n\n协作预测的概念在供应商关系中越来越受关注。通过与供应商共享需求预测，公司可以帮助供应商更好地规划其生产和库存，这通常会带来更好的价格和可用性。然而，协作预测需要信任和数据共享协议，在保护专有信息的同时实现供应链协调。\n\n战略采购是一种系统化的采购方法，通过分析支出数据、市场状况和供应商能力来优化供应商基础。对于SSC团队，战略采购可以识别整合备件供应商、跨产品线标准化零部件以及利用量价优势的机会。目标是创建一个在成本、质量、风险和创新之间取得平衡的供应商组合。\n\n在当今动态的市场环境中，成功的供应商谈判需要市场知识、分析技能和关系管理的结合。SSC团队必须了解零部件市场趋势，理解供应商的成本结构和利润压力，并建立能够实现协作解决问题的关系。掌握这些技能，采购专业人员可以创造远超谈判桌上实现的单位价格节约的价值。",
             vocabulary: [
                 {
-                    word: "inventory cycle / DOS",
-                    meaning: "库存周期/库存天数；衡量库存周转速度的关键指标",
-                    example: "Our current inventory DOS has extended to 6 weeks, indicating we need to review our safety stock policies."
+                    word: "supplier relationship management (SRM)",
+                    meaning: "供应商关系管理；与供应商建立和维护战略性伙伴关系的系统方法",
+                    example: "Our SRM program has helped us secure priority allocation from key component suppliers during tight supply periods."
                 },
                 {
-                    word: "buffer stock",
-                    meaning: "缓冲库存；在理论需求之上持有的额外库存，用于应对供应中断",
-                    example: "We're building buffer stock for critical NPU components due to the uncertain supply situation in Q3."
+                    word: "total cost of ownership (TCO)",
+                    meaning: "总拥有成本；采购决策中考虑的所有相关成本的综合衡量",
+                    example: "The lower unit price from Supplier B actually resulted in higher TCO due to increased logistics and quality costs."
                 },
                 {
-                    word: "safety stock",
-                    meaning: "安全库存；防止正常需求波动下缺货的最低库存水平",
-                    example: "The safety stock calculation considers both demand variability and lead time fluctuations."
+                    word: "frame contract / flexible commitment",
+                    meaning: "框架合同/灵活承诺；带有数量灵活区间的长期采购协议",
+                    example: "We've negotiated a frame contract with flexible commitments of plus or minus 25% to balance pricing and inventory risk."
                 },
                 {
-                    word: "inventory velocity",
-                    meaning: "库存周转速度；产品通过供应链的速度，高速度降低持有成本",
-                    example: "Improving inventory velocity from 6 weeks to 4 weeks would reduce our carrying costs by approximately 15%."
+                    word: "collaborative forecasting",
+                    meaning: "协作预测；与供应商共享需求预测以改善供应链协调的做法",
+                    example: "Through collaborative forecasting with our top suppliers, we've reduced lead times by 15% while maintaining competitive pricing."
                 },
                 {
-                    word: "demand-driven replenishment",
-                    meaning: "需求驱动补货；基于实际需求而非预测进行库存补充的策略",
-                    example: "We've implemented a demand-driven replenishment system that automatically triggers orders when inventory falls below threshold."
+                    word: "strategic sourcing",
+                    meaning: "战略采购；系统性分析和优化供应商基础以实现最佳采购结果的方法",
+                    example: "Strategic sourcing analysis helped us identify consolidation opportunities that saved 12% on our annual component spend."
                 }
             ],
             practice: [
                 {
-                    question: "According to the Gartner report, what happened to global PC inventory cycles in Q2 2026?",
+                    question: "What is the key characteristic of modern Supplier Relationship Management (SRM)?",
                     options: [
-                        "Inventory cycles shortened from 5 to 4 weeks",
-                        "Inventory cycles extended from 5 to 6 weeks",
-                        "Inventory cycles remained stable at 5 weeks",
-                        "Inventory cycles extended from 4 to 6 weeks"
+                        "Focusing solely on unit price negotiation",
+                        "Building strategic partnerships with mutual trust and shared risk",
+                        "Minimizing communication with suppliers",
+                        "Avoiding long-term commitments"
                     ],
                     answer: 1
                 },
                 {
-                    question: "What is the difference between 'buffer stock' and 'safety stock'?",
+                    question: "Why should TCO (Total Cost of Ownership) be considered instead of just unit price?",
                     options: [
-                        "They are the same thing with different names",
-                        "Buffer stock handles normal demand fluctuations; safety stock addresses supply disruptions",
-                        "Buffer stock addresses supply disruptions; safety stock handles normal demand fluctuations",
-                        "Buffer stock is for non-critical items; safety stock is for critical items"
+                        "Unit prices are always accurate",
+                        "Lower unit prices always mean lower total costs",
+                        "TCO includes hidden costs like logistics, quality, and inventory that can make a 'lower' unit price more expensive overall",
+                        "TCO is only relevant for consumer products"
                     ],
                     answer: 2
                 },
                 {
-                    question: "Why is 'inventory velocity' important for SSC?",
+                    question: "What is the advantage of 'frame contracts with flexible commitment' over fixed volume contracts?",
                     options: [
-                        "It helps predict product failure rates",
-                        "Higher velocity reduces carrying costs and minimizes obsolescence risk",
-                        "It determines supplier payment terms",
-                        "It measures employee productivity"
+                        "They guarantee the lowest possible price",
+                        "They eliminate all supply chain risks",
+                        "They provide price benefits while maintaining operational flexibility to adjust volumes",
+                        "They require no negotiation"
                     ],
-                    answer: 1
+                    answer: 2
                 }
             ]
         };
@@ -419,13 +419,13 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-17', label: '2026-04-17（今日）'},
-            {date: '2026-04-16', label: '2026-04-16'},
-            {date: '2026-04-15', label: '2026-04-15'},
+            {date: '2026-04-15', label: '2026-04-15（今日）'},
             {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
-            {date: '2026-04-12', label: '2026-04-12'},
             {date: '2026-04-11', label: '2026-04-11'},
+            {date: '2026-04-10', label: '2026-04-10'},
+            {date: '2026-04-09', label: '2026-04-09'},
+            {date: '2026-04-08', label: '2026-04-08'},
         ];
 
         // 动态生成历史记录链接

@@ -298,15 +298,15 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月16日星期四';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/16 09:58';
+        document.getElementById('currentDate').textContent = '2026年4月17日星期五';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/17 10:06';
 
         // 今日短语
         const todayPhrase = {
-            english: "\"With NAND contract prices expected to compress from 55-65% to 45-50% growth in Q2, we should recalibrate our cost forecast and explore spot market opportunities for non-critical components.\"",
-            chinese: "随着NAND合约价Q2涨幅预期从55-65%收窄至45-50%，我们应该重新校准成本预测，并为非关键零部件探索现货市场机会。",
-            meaning: "recalibrate：重新校准、重新调整，以适应新情况。explore spot market opportunities：探索现货市场机会，指在现货市场寻找更优惠的采购价格。理解成本预测的动态调整机制对采购决策至关重要。",
-            example: "Given the softening smartphone demand, we've recalibrated our Q2 NAND cost forecast downward by 8% and are now exploring spot market purchases for consumer-grade components."
+            english: "\"With DDR5 spot prices breaking through the ¥500 psychological level, this creates a buying window for non-critical components. However, we should lock in our Q4 requirements before the HBM4 production ramp-up tightens DDR5 supply in August-September.\"",
+            chinese: "随着DDR5现货价格跌破500元心理关口，这为非关键零部件创造了采购窗口。但我们应在HBM4量产拉升导致DDR5供应收紧前（8-9月前），锁定Q4需求。",
+            meaning: "breaking through the psychological level：突破心理关口，指价格跌破重要整数位引发市场情绪变化。buying window：采购窗口，指市场价格或供应条件有利的短期机会。lock in：锁定，指通过合约或预购确保未来的采购价格和供应。",
+            example: "The DRAM spot market has dropped to ¥12, creating a short-term buying window. We're planning to lock in our Q2 notebook memory requirements through long-term contracts to avoid the anticipated supply tightness in Q3."
         };
 
         // 渲染短语
@@ -316,67 +316,67 @@
             <div class="phrase-example">💡 含义：${todayPhrase.meaning}</div>
         `;
 
-        // 今日学习内容 - BOM成本管理与产品定价策略
+        // 今日学习内容 - 库存周期管理与采购策略
         const todayContent = {
-            english: "In the highly competitive PC industry, Bill of Materials (BOM) cost management and product pricing strategy are tightly intertwined disciplines that directly impact a company's profitability and market positioning.\n\nThe fundamental challenge lies in the cost-price gap. When component costs rise faster than product prices—as happened with DDR5 memory, SSDs, and new NPU chips in 2026—manufacturers face a difficult choice: absorb the cost increase (hurting margins), pass it on to customers (risking demand destruction), or find a middle path through value engineering and component optimization.\n\nConsider Lenovo's situation with the ThinkPad X1 Carbon 2026 launch. The BOM cost increased approximately 22% due to three key drivers: DDR5 modules now represent 18% of total BOM cost (up 5 percentage points), a new NPU chip accounts for 22% (previously nonexistent), and SSD costs rose 3 percentage points to 15%. However, the retail price only increased 12%, creating a 10-percentage-point gap that Lenovo must absorb through operational efficiency, volume leverage, or alternative cost savings.\n\nValue engineering is a critical tool for bridging this gap. This systematic approach involves analyzing each component's function relative to its cost, then finding ways to deliver the same function at lower cost or enhanced function at the same cost. Common strategies include: component standardization (using the same part across multiple product lines to achieve volume economics), design simplification (eliminating unnecessary features that don't contribute to customer value), and supplier-driven innovation (encouraging suppliers to propose cost-saving alternatives during design phase).\n\nFor the SSC (Service & Support Cost) team, BOM cost increases have downstream implications. When product margins compress, companies often reduce warranty periods, tighten service level agreements, or increase spare parts pricing—all of which impact after-sales service profitability. The SSC team must proactively model these scenarios and develop mitigation strategies, such as negotiating extended warranty terms with suppliers or optimizing spare parts inventory to reduce carrying costs.\n\nThe key insight is that BOM cost management is not just a product development responsibility—it's a cross-functional discipline that requires close collaboration between R&D, procurement, finance, and service teams. At Lenovo SSC, this means actively participating in product planning meetings, challenging cost assumptions, and developing service-related cost models that inform commercial decisions.\n\nIn today's rapidly evolving technology landscape, where AI capabilities are becoming a key differentiator, BOM management also increasingly involves evaluating the cost-benefit trade-offs of AI integration. The NPU chip in the ThinkPad X1 Carbon 2026 is a prime example: while adding 22% to BOM cost, it enables AI features that justify premium pricing and potentially improve long-term customer retention.",
-            chinese: "在竞争激烈的PC行业，物料清单（BOM）成本管理与产品定价策略是紧密相关的学科，直接影响公司的盈利能力和市场定位。\n\n根本挑战在于成本-价格差距。当零部件成本上涨速度快于产品价格——如2026年DDR5内存、SSD和新NPU芯片的情况——制造商面临艰难选择：吸收成本上涨（损害利润）、转嫁给客户（可能破坏需求），或通过价值工程和零部件优化找到中间路径。\n\n以联想ThinkPad X1 Carbon 2026为例。BOM成本因三个关键因素上涨约22%：DDR5模组现在占BOM总成本的18%（上升5个百分点），新NPU芯片占22%（之前不存在），SSD成本上升3个百分点至15%。然而，零售价仅上调12%，产生了联想必须通过运营效率、体量杠杆或替代成本节约来吸收的10个百分点差距。\n\n价值工程是弥合这一差距的关键工具。这种系统性方法涉及分析每个零部件功能相对于其成本的价值，然后找到以更低成本实现相同功能或以相同成本实现增强功能的方法。常见策略包括：零部件标准化（在多个产品线中使用相同零件以实现体量经济）、设计简化（消除对客户价值贡献不大的不必要功能）、供应商驱动的创新（在设计阶段鼓励供应商提出节约成本的替代方案）。\n\n对于SSC（服务与支持成本）团队，BOM成本上涨具有下游影响。当产品利润压缩时，公司通常会缩短保修期、收紧服务水平协议或提高备件价格——所有这些都会影响售后服务盈利能力。SSC团队必须主动建模这些情景并制定缓解策略，如与供应商谈判延长保修期或优化备件库存以降低持有成本。\n\n关键洞察是，BOM成本管理不仅仅是产品开发的责任——它是一门需要研发、采购、财务和服务团队密切协作的跨职能学科。在联想SSC，这意味着积极参与产品规划会议、质疑成本假设，并开发为商业决策提供信息的服务相关成本模型。\n\n在当今快速发展的技术格局中，AI能力正成为关键差异化因素，BOM管理也越来越多地涉及评估AI整合的成本效益权衡。ThinkPad X1 Carbon 2026中的NPU芯片就是一个典型例子：虽然使BOM成本增加22%，但它支持AI功能，可证明溢价定价的合理性，并可能提高长期客户留存。",
+            english: "In the complex world of supply chain management, understanding inventory cycles and their implications for procurement strategy is fundamental to maintaining operational efficiency while controlling costs.\n\nThe inventory cycle refers to the time period from when raw materials are procured until finished goods are sold. In the PC industry, this cycle typically spans 6-12 weeks, depending on component availability, manufacturing lead times, and channel distribution. For the SSC (Service & Support Cost) team, managing the inventory cycle of spare parts is particularly challenging because demand is driven by product failure rates rather than consumer purchasing patterns.\n\nInventory days of supply (DOS) is a key metric for measuring inventory health. It indicates how many days of inventory are on hand to meet current demand. A high DOS suggests overstocking and potential obsolescence risk, while a low DOS indicates potential stockout risk. For PC spare parts, the optimal DOS varies by component criticality: critical components like motherboards may require 8-10 weeks of safety stock, while non-critical items like cables may only need 4-6 weeks.\n\nBuffer stock and safety stock serve different purposes in inventory management. Buffer stock refers to additional inventory held above theoretical requirements to absorb demand variability or supply disruptions. It's typically used for high-value components or items with long lead times. Safety stock, on the other hand, is the minimum inventory level maintained to prevent stockouts under normal demand fluctuations. The formula for calculating safety stock typically considers demand variability, lead time variability, and the desired service level.\n\nThe recent Gartner report highlighting extended PC inventory cycles from 5 to 6 weeks in Q2 2026 has significant implications for procurement strategy. When inventory cycles extend, companies face higher carrying costs, increased obsolescence risk, and greater capital tied up in inventory. For SSC, this means we need to recalibrate our safety stock levels and potentially renegotiate terms with suppliers to allow for more flexible inventory commitments.\n\nProcurement strategy during inventory cycle extensions should focus on several key areas: first, demand forecasting accuracy must improve to avoid over-ordering; second, supplier relationships become critical to ensure priority allocation during tight supply periods; third, inventory monitoring systems need real-time visibility to trigger alerts when stock levels approach critical thresholds; fourth, disposition strategies for slow-moving inventory should be pre-planned rather than reactive.\n\nThe concept of inventory velocity is equally important. High inventory velocity means products move quickly through the supply chain, reducing holding costs and minimizing obsolescence risk. Strategies to improve inventory velocity include just-in-time delivery, demand-driven replenishment, and channel-stuffing reduction. For spare parts specifically, improving inventory velocity requires close coordination with service operations to match parts availability with actual repair demand patterns.\n\nFrom an SSC perspective, the key takeaway is that inventory management is not a set-it-and-forget-it discipline. It requires continuous monitoring, forecasting refinement, and strategic supplier engagement. The current market conditions—extended inventory cycles, DDR5 price volatility, and HBM4 supply uncertainties—demand a more sophisticated approach to spare parts inventory management that balances service level requirements with cost efficiency.",
+            chinese: "在复杂的供应链管理领域，理解库存周期及其对采购策略的影响，是保持运营效率和控制成本的基础。\n\n库存周期是指从原材料采购到成品销售的整个时间段。在PC行业，这一周期通常跨越6-12周，取决于零部件可用性、生产交付周期和渠道分销情况。对于SSC（服务与支持成本）团队而言，备件库存周期管理尤其具有挑战性，因为需求是由产品故障率而非消费者购买模式驱动的。\n\n库存天数（DOS）是衡量库存健康状况的关键指标。它表示满足当前需求所需的库存天数。DOS高意味着库存过剩和潜在过时风险，而DOS低则表示潜在的缺货风险。对于PC备件，最优DOS因零部件关键程度而异：关键零部件（如主板）可能需要8-10周的安全库存，而Cable等非关键物料可能仅需4-6周。\n\n缓冲库存和安全库存在库存管理中服务不同目的。缓冲库存是指在理论需求之上持有的额外库存，用于吸收需求变化或供应中断。它通常用于高价值零部件或交付周期较长的物料。另一方面，安全库存是指为防止正常需求波动下的缺货而维持的最低库存水平。安全库存计算公式通常考虑需求可变性、交付周期可变性和所需服务水平。\n\nGartner最近报告显示2026年Q2全球PC库存周期从5周拉长至6周，这对采购策略具有重要影响。当库存周期拉长时，公司面临更高的持有成本、更大的过时风险，以及被库存占用的更多资金。对SSC而言，这意味着我们需要重新校准安全库存水平，并可能与供应商重新谈判条款，以允许更灵活的库存承诺。\n\n库存周期拉长期间的采购策略应聚焦几个关键领域：首先，需求预测准确性必须提高以避免过量订购；其次，供应商关系变得至关重要，以确保在供应紧张时期的优先分配；第三，库存监控系统需要实时可见性，在库存水平接近临界阈值时触发警报；第四，滞销库存处置策略应预先计划而非被动反应。\n\n库存周转速度的概念同样重要。高库存周转速度意味着产品快速通过供应链，降低持有成本并最大限度减少过时风险。提高库存周转速度的策略包括准时制交付、需求驱动补货和减少渠道囤货。具体到备件，提高库存周转速度需要与服务商密切协调，将零部件可用性与实际维修需求模式相匹配。\n\n从SSC的角度来看，关键要点是：库存管理不是一劳永逸的学科。它需要持续监控、预测优化和战略性供应商合作。当前市场状况——库存周期拉长、DDR5价格波动和HBM4供应不确定性——要求采用更复杂的备件库存管理方法，在服务水平要求和成本效率之间取得平衡。",
             vocabulary: [
                 {
-                    word: "Bill of Materials (BOM)",
-                    meaning: "物料清单；列出产品所需所有零部件及其成本的清单",
-                    example: "The BOM for ThinkPad X1 Carbon 2026 shows a 22% cost increase, driven primarily by DDR5 and NPU chips."
+                    word: "inventory cycle / DOS",
+                    meaning: "库存周期/库存天数；衡量库存周转速度的关键指标",
+                    example: "Our current inventory DOS has extended to 6 weeks, indicating we need to review our safety stock policies."
                 },
                 {
-                    word: "value engineering",
-                    meaning: "价值工程；通过系统分析在保持功能的同时降低成本的方法",
-                    example: "Through value engineering, we reduced the hinge assembly cost by 15% while maintaining durability standards."
+                    word: "buffer stock",
+                    meaning: "缓冲库存；在理论需求之上持有的额外库存，用于应对供应中断",
+                    example: "We're building buffer stock for critical NPU components due to the uncertain supply situation in Q3."
                 },
                 {
-                    word: "absorb the cost increase",
-                    meaning: "吸收成本上涨；公司承担零部件成本上涨而非转嫁给客户",
-                    example: "We decided to absorb a 5% material cost increase rather than raise product prices during a competitive launch period."
+                    word: "safety stock",
+                    meaning: "安全库存；防止正常需求波动下缺货的最低库存水平",
+                    example: "The safety stock calculation considers both demand variability and lead time fluctuations."
                 },
                 {
-                    word: "margin compression",
-                    meaning: "利润压缩；因成本上升或价格下降导致利润率收窄",
-                    example: "Margin compression in the consumer PC segment has forced many vendors to focus on premium products and services."
+                    word: "inventory velocity",
+                    meaning: "库存周转速度；产品通过供应链的速度，高速度降低持有成本",
+                    example: "Improving inventory velocity from 6 weeks to 4 weeks would reduce our carrying costs by approximately 15%."
                 },
                 {
-                    word: "cost-benefit trade-off",
-                    meaning: "成本效益权衡；比较一项投资的成本与其带来的收益",
-                    example: "The NPU chip presents a clear cost-benefit trade-off: higher BOM cost but enables AI features that justify premium pricing."
+                    word: "demand-driven replenishment",
+                    meaning: "需求驱动补货；基于实际需求而非预测进行库存补充的策略",
+                    example: "We've implemented a demand-driven replenishment system that automatically triggers orders when inventory falls below threshold."
                 }
             ],
             practice: [
                 {
-                    question: "What happened to Lenovo's ThinkPad X1 Carbon 2026 retail price increase compared to its BOM cost increase?",
+                    question: "According to the Gartner report, what happened to global PC inventory cycles in Q2 2026?",
                     options: [
-                        "Retail price increased more than BOM cost",
-                        "Retail price increase matched BOM cost increase exactly",
-                        "Retail price increase was less than BOM cost increase",
-                        "Retail price decreased while BOM cost increased"
+                        "Inventory cycles shortened from 5 to 4 weeks",
+                        "Inventory cycles extended from 5 to 6 weeks",
+                        "Inventory cycles remained stable at 5 weeks",
+                        "Inventory cycles extended from 4 to 6 weeks"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "What is the difference between 'buffer stock' and 'safety stock'?",
+                    options: [
+                        "They are the same thing with different names",
+                        "Buffer stock handles normal demand fluctuations; safety stock addresses supply disruptions",
+                        "Buffer stock addresses supply disruptions; safety stock handles normal demand fluctuations",
+                        "Buffer stock is for non-critical items; safety stock is for critical items"
                     ],
                     answer: 2
                 },
                 {
-                    question: "What is 'value engineering' in the context of cost management?",
+                    question: "Why is 'inventory velocity' important for SSC?",
                     options: [
-                        "Hiring more engineers to reduce labor costs",
-                        "Eliminating engineering features to save money",
-                        "Systematically analyzing components to deliver same function at lower cost",
-                        "Outsource engineering work to lower-cost countries"
+                        "It helps predict product failure rates",
+                        "Higher velocity reduces carrying costs and minimizes obsolescence risk",
+                        "It determines supplier payment terms",
+                        "It measures employee productivity"
                     ],
-                    answer: 2
-                },
-                {
-                    question: "What does 'margin compression' mean for a company?",
-                    options: [
-                        "Expanding profit margins through higher sales",
-                        "Reducing the workforce to cut costs",
-                        "Experiencing reduced profitability due to cost increases or price pressure",
-                        "Compressing the product size to save materials"
-                    ],
-                    answer: 2
+                    answer: 1
                 }
             ]
         };
@@ -417,18 +417,18 @@
             }
         }
 
-        // 历史记录数据（快照文件需加../前缀）
+        // 历史记录数据
         const historyDates = [
-            {date: '2026-04-16', label: '2026-04-16（快照）'},
+            {date: '2026-04-17', label: '2026-04-17（今日）'},
+            {date: '2026-04-16', label: '2026-04-16'},
             {date: '2026-04-15', label: '2026-04-15'},
             {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-12', label: '2026-04-12'},
             {date: '2026-04-11', label: '2026-04-11'},
-            {date: '2026-04-10', label: '2026-04-10'},
         ];
 
-        // 动态生成历史记录链接（快照文件需加../前缀）
+        // 动态生成历史记录链接
         const historyList = document.getElementById('historyList');
         historyDates.forEach(item => {
             const link = document.createElement('a');
