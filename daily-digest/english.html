@@ -303,10 +303,10 @@
 
         // 今日短语
         const todayPhrase = {
-            english: "\"We are running against the clock to finalize the Q2 framework agreement before SK Hynix raises its HBM allocation pricing.\"",
-            chinese: "我们正在争分夺秒赶在SK海力士提高HBM配额定价的之前敲定Q2框架协议。",
-            meaning: "run against the clock：与时间赛跑，形容时间紧迫、任务紧急。此处强调Q2框架协议签署的紧迫性，HBM供应紧张背景下必须快速决策。",
-            example: "With NAND spot prices trending down but contract prices firm, we are running against the clock to lock in our Q2 volume commitment with Samsung."
+            english: "\"With spot prices trending down but contract prices firm, we need to lock in our Q2 volume commitment before the pricing window closes.\"",
+            chinese: "随着现货价格下跌但合约价格坚挺，我们需要在定价窗口关闭前锁定Q2的量价承诺。",
+            meaning: "lock in：锁定，锁定价格或数量以避免未来波动风险。pricing window：定价窗口，指供应商接受特定报价的有效时间段。理解这两个概念对于采购时机决策至关重要。",
+            example: "The DRAM pricing window is expected to close by end of April—we should lock in our HBM volume commitment with SK Hynix this week."
         };
 
         // 渲染短语
@@ -316,65 +316,65 @@
             <div class="phrase-example">💡 含义：${todayPhrase.meaning}</div>
         `;
 
-        // 今日学习内容 - 供应商谈判与合同签署
+        // 今日学习内容 - 供应链风险管理与成本优化
         const todayContent = {
-            english: "Supplier negotiations in the semiconductor and memory industry require a deep understanding of market dynamics, supplier incentives, and internal business priorities. Running against the clock is often the reality when negotiating with tier-one memory suppliers, as pricing windows can close rapidly in a tightening market.\n\nThe most effective negotiation approach begins with thorough market intelligence. Before entering any negotiation with Samsung or SK Hynix for DRAM and NAND contracts, successful procurement teams spend weeks analyzing spot price trends, contract price forecasts from TrendForce, HBM allocation patterns, and the supplier's own financial pressures. This intelligence provides the factual foundation for setting negotiation targets and identifying leverage points.\n\nUnderstanding the supplier's perspective is equally critical. Memory manufacturers face their own constraints: HBM capacity is largely locked by NVIDIA's orders, legacy DRAM lines are being phased out, and capital expenditure for new fabs is enormous. Suppliers need long-term volume commitments to justify capacity investments. This creates genuine mutual dependency—both sides need each other—which savvy negotiators use to structure win-win agreements.\n\nKey negotiation levers include volume commitment levels (higher commitments unlock lower pricing), payment terms (advance payment in exchange for discounts), duration flexibility (2-year vs. 18-month terms), and price adjustment mechanisms (spot-price linkage vs. fixed price with escalation clauses). The Lenovo SSC cost team's role is to translate these commercial levers into net cost implications for the parts under management, considering not just unit price but logistics, E&O reserves, and repair costs.\n\nFinally, time management in negotiations is a skill in itself. Running against the clock to finalize Q2 agreements is not just a figure of speech—missing the pricing window by even a few weeks can mean accepting significantly higher contracted prices. Proactive engagement, early alignment with internal stakeholders, and clear escalation paths when negotiations stall are essential disciplines.",
-            chinese: "半导体和存储行业的供应商谈判需要深入了解市场动态、供应商激励机制和内部业务优先级。在供应趋紧的市场中，与一级存储供应商谈判时，与时间赛跑往往是真实写照。\n\n最有效的谈判方法始于充分的市场情报。在与三星或SK海力士就DRAM和NAND合同进行任何谈判之前，成功的采购团队会花数周时间分析现货价格趋势、TrendForce合约价格预测、HBM分配模式和供应商自身的财务压力。这些情报为设定谈判目标和识别杠杆点提供了事实基础。\n\n理解供应商的立场同样关键。存储制造商面临自身约束：HBM产能大部分被英伟达订单锁定，制式DRAM产能正在逐步淘汰，新工厂资本支出巨大。供应商需要长期量价承诺来证明产能投资的合理性。这创造了真正的相互依赖——双方都需要对方——精明的谈判者利用这一点来构建双赢协议。\n\n关键谈判杠杆包括：量价承诺水平（更高承诺解锁更低价格）、付款条款（预付款换取折扣）、期限灵活性（2年vs.18个月条款）以及价格调整机制（现货价联动vs.含升级条款的固定价）。联想SSC成本团队的职责是将这些商业杠杆转化为所管理零部件的净成本影响，不仅考虑单价，还包括物流、E&O准备金和维修成本。\n\n最后，谈判中的时间管理本身就是一项技能。争分夺秒敲定Q2协议不仅仅是比喻——错过定价窗口哪怕几周，就可能意味着接受显著更高的合约价。积极主动、内部利益相关者早期对齐、谈判停滞时的清晰升级路径都是必不可少的纪律。",
+            english: "Supply chain risk management has become a critical discipline for procurement teams in the semiconductor and memory industry. With spot prices trending downward while contract prices remain firm, timing the lock-in of volume commitments has become both an art and a science.\n\nThe first principle of risk management is diversification. No single supplier should account for more than 40% of your total component spend—this prevents over-reliance on any one vendor's pricing decisions or production issues. Lenovo SSC's strategy of qualifying Yangtze Memory Technologies (YMTC) for SSD supply while maintaining Samsung and SK Hynix partnerships exemplifies this principle. Diversification not only reduces supply risk but also creates competitive tension that can be leveraged during price negotiations.\n\nThe second principle is the strategic use of framework agreements. These long-term contracts, typically spanning 18-24 months, lock in pricing, allocation volumes, and supply commitments in exchange for volume guarantees from the buyer. The key to successful framework agreements lies in the price adjustment mechanism—linking contract prices to market indices like TrendForce quarterly averages can protect both parties from extreme volatility. For Lenovo SSC, framework agreements with tier-one DRAM suppliers provide cost predictability essential for annual budgeting and margin protection.\n\nThe third principle is maintaining operational flexibility through buffer inventory. While just-in-time inventory minimizes carrying costs, the current supply uncertainty makes a modest safety stock strategically valuable. The optimal buffer level depends on your supply lead times, demand volatility, and the cost of stockouts versus the cost of capital tied up in inventory. Many procurement teams target 2-4 weeks of safety stock for critical components.\n\nFinally, continuous market intelligence gathering is non-negotiable. Weekly tracking of spot prices, monthly review of contract price forecasts from multiple sources, and quarterly supplier meetings to discuss roadmap alignment form the backbone of an effective risk management program. The goal is not to predict the market perfectly but to make better-informed decisions faster than competitors.\n\nFor cost managers at Lenovo SSC, these principles translate into concrete actions: qualifying alternative suppliers, negotiating framework agreements with favorable adjustment clauses, right-sizing inventory buffers, and maintaining robust market intelligence capabilities.",
+            chinese: "供应链风险管理已成为半导体和存储行业采购团队的关键能力。随着现货价格下跌但合约价格坚挺，锁定量价承诺的时机选择已成为一门艺术和科学。\n\n风险管理的第一个原则是多元化。任何单一供应商都不应占你总零部件支出的40%以上——这可以避免过度依赖任何供应商的定价决策或生产问题。联想SSC通过认证长江存储（YMTC）作为SSD供应来源，同时保持与三星和SK海力士的合作，正是这一原则的体现。多元化不仅降低供应风险，还创造了竞争张力，可在价格谈判中加以利用。\n\n第二个原则是战略性使用框架协议。这些通常跨度18-24个月的长期合同，通过买方的量价保证来锁定价格、分配量和供应承诺。成功的框架协议关键在于价格调整机制——将合同价格与TrendForce季度均价等市场指数挂钩，可以保护双方免受极端波动的影响。对于联想SSC来说，与一级DRAM供应商的框架协议提供了年度预算和利润保护所必需的成本可预测性。\n\n第三个原则是通过缓冲库存保持运营灵活性。虽然准时制库存将持有成本降至最低，但当前的供应不确定性使适度的安全库存在战略上具有价值。最优缓冲水平取决于你的供应交货周期、需求波动性以及缺货成本与库存占用资金成本的权衡。许多采购团队针对关键零部件设定2-4周的安全库存目标。\n\n最后，持续收集市场情报是不可妥协的。每周跟踪现货价格、每月审查多个来源的合约价格预测、每季度与供应商召开会议讨论路线图对齐，是有效风险管理计划的基础。目标不是完美预测市场，而是比竞争对手更快做出更好的信息驱动决策。\n\n对于联想SSC的成本经理来说，这些原则转化为具体行动：认证替代供应商、谈判具有有利调整条款的框架协议、正确调整库存缓冲规模，以及保持强大的市场情报能力。",
             vocabulary: [
                 {
-                    word: "run against the clock",
-                    meaning: "与时间赛跑；形容时间紧迫、任务紧急的状态",
-                    example: "We are running against the clock to finalize the Q2 NAND framework before the May price increase takes effect."
+                    word: "lock in",
+                    meaning: "锁定；锁定价格、数量或承诺以避免未来风险",
+                    example: "We should lock in our Q2 DRAM volume commitment before the pricing window closes at the end of April."
                 },
                 {
-                    word: "market intelligence",
-                    meaning: "市场情报；关于市场竞争格局、价格趋势、供应商动态的深度分析信息",
-                    example: "Our market intelligence team tracks TrendForce weekly DRAM and NAND reports to inform procurement strategy."
+                    word: "pricing window",
+                    meaning: "定价窗口；供应商接受特定报价的有效时间段",
+                    example: "The NAND pricing window typically opens at the beginning of each quarter and closes 2-3 weeks later."
                 },
                 {
-                    word: "leverage point",
-                    meaning: "杠杆点；谈判中可用于影响对方决策的关键筹码或优势",
-                    example: "Our volume commitment is a key leverage point when negotiating with Samsung for better DRAM pricing."
+                    word: "framework agreement",
+                    meaning: "框架协议；定义长期合作条款和条件的合同",
+                    example: "Our 2-year framework agreement with Samsung provides price stability in exchange for volume commitment."
                 },
                 {
-                    word: "win-win agreement",
-                    meaning: "双赢协议；对双方都有实质利益的合作安排",
-                    example: "The 2-year framework agreement is structured as a win-win: we get price stability, and Samsung gets volume commitment."
+                    word: "safety stock",
+                    meaning: "安全库存；为应对供应中断或需求波动而保持的额外库存",
+                    example: "We maintain 3 weeks of safety stock for DDR5 modules to protect against supply disruptions."
                 },
                 {
-                    word: "escalation path",
-                    meaning: "升级路径；当常规流程无法解决问题时，升级到更高层级决策的正式流程",
-                    example: "If the procurement team cannot reach agreement by end of week, we need a clear escalation path to senior management."
+                    word: "just-in-time (JIT)",
+                    meaning: "准时制；一种库存管理策略，最大限度减少库存持有成本",
+                    example: "While JIT reduces inventory costs, it increases vulnerability to supply shocks—hence the need for safety stock."
                 }
             ],
             practice: [
                 {
-                    question: "What is the primary purpose of gathering market intelligence before supplier negotiations?",
+                    question: "What is the recommended maximum percentage of total component spend from a single supplier?",
                     options: [
-                        "To impress the supplier with detailed data",
-                        "To establish factual foundation for negotiation targets and identify leverage points",
-                        "To delay the negotiation process intentionally",
-                        "To find evidence of supplier misconduct"
+                        "20%",
+                        "40%",
+                        "60%",
+                        "80%"
                     ],
                     answer: 1
                 },
                 {
-                    question: "Why is understanding the supplier's perspective important in negotiations?",
+                    question: "Why is it important to link contract prices to market indices in framework agreements?",
                     options: [
-                        "To exploit their weaknesses aggressively",
-                        "To identify mutual dependency and structure win-win solutions",
-                        "To predict their next product launch",
-                        "To determine if they are lying about market conditions"
+                        "To make the supplier richer",
+                        "To protect both parties from extreme price volatility",
+                        "To complicate the contract terms",
+                        "To reduce the buyer's purchasing volume"
                     ],
                     answer: 1
                 },
                 {
-                    question: "What does 'running against the clock' mean in the context of Q2 agreement negotiations?",
+                    question: "What does 'lock in' mean in the context of procurement?",
                     options: [
-                        "Negotiating during night shifts for better focus",
-                        "Racing to complete negotiations before a pricing window closes",
-                        "Setting extremely tight deadlines for suppliers",
-                        "Disputing the accuracy of the supplier's clock system"
+                        "To physically store products in a warehouse",
+                        "To secure pricing or volume commitments before conditions change",
+                        "To increase the order quantity",
+                        "To cancel existing supplier contracts"
                     ],
                     answer: 1
                 }

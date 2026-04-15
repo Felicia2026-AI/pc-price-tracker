@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Digest - 英文学习</title>
+    <title>Daily Digest - 英文学习 - 2026-04-15</title>
     <style>
         * {
             margin: 0;
@@ -417,7 +417,7 @@
             }
         }
 
-        // 历史记录数据
+        // 历史记录数据（快照文件不包含自身日期）
         const historyDates = [
             {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
@@ -427,11 +427,11 @@
             {date: '2026-04-09', label: '2026-04-09'},
         ];
 
-        // 动态生成历史记录链接
+        // 动态生成历史记录链接（快照文件使用相对路径）
         const historyList = document.getElementById('historyList');
         historyDates.forEach(item => {
             const link = document.createElement('a');
-            link.href = `../english/${item.date}.html`;
+            link.href = `${item.date}.html`;
             link.className = 'history-link';
             link.textContent = item.label;
             historyList.appendChild(link);
