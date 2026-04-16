@@ -303,10 +303,75 @@
 
         // 今日短语
         const todayPhrase = {
-            english: "\"With NAND supplier inventory at historical lows and pricing power shifting decisively to OEMs, we're facing a supercycle where spot price dips are just noise. The real story is contract pricing—Q2 NAND contracts are up 75% QoQ. We need to secure our LTA allocations before the window closes.\"",
-            chinese: "随着NAND供应商库存降至历史低位，定价权已决定性地转向原厂，我们正面临一个超级周期，现货价格的下跌只是噪音。真正的问题是合约价——Q2 NAND合约价环比上涨75%。我们需要在窗口关闭之前确保长协配额。",
-            meaning: "pricing power shifting to OEMs：定价权转向原厂（OEM在这里指内存原厂如三星/SK海力士）。supercycle：超级周期。spot price dips are just noise：现货下跌只是噪音/干扰信号。contract pricing：合约价。LTA allocations：长协配额。",
-            example: "While competitors focus on spot market movements, we're locking in LTA allocations to secure our contract pricing position for Q3."
+            english: "\"According to TrendForce's latest forecast, DRAM contract prices are expected to rise 58-63% in Q2, while NAND flash contract prices could surge 70-75%. We need to lock in our Q2 parts orders immediately before suppliers further tighten allocation.\"",
+            chinese: "根据TrendForce最新预测，Q2 DRAM合约价格预计将上涨58-63%，而NAND闪存合约价格可能飙升70-75%。我们需要在供应商进一步收紧分配之前立即锁定Q2备件订单。",
+            meaning: "contract prices：合约价格，与spot prices（现货价格）相对。surge：飙升、激增。lock in orders：锁定订单。allocation：分配、配额。",
+            example: "Given the projected 60%+ price surge, we should lock in our Q2 DRAM orders by end of this week to secure current pricing levels."
+        };
+
+        // 今日学习内容 - 供应链风险管理
+        const todayContent = {
+            english: "Supply chain risk management has evolved from a back-office operational concern to a C-suite strategic priority. The events of recent years—from pandemic disruptions to geopolitical tensions—have demonstrated that supply chain resilience can make or break corporate performance. For procurement and supply chain professionals, this shift requires new skills, new frameworks, and new ways of thinking about supplier relationships.\n\nAt its core, supply chain risk management is about identifying, assessing, and mitigating risks that could disrupt the flow of materials, components, or finished goods. But in practice, it encompasses far more than simply having backup suppliers. A comprehensive risk management strategy addresses multiple dimensions: supplier financial stability, geopolitical exposure, concentration risk, quality consistency, and regulatory compliance.\n\nThe first step in effective risk management is visibility. You cannot manage what you cannot see. This means mapping your supply chain not just to direct suppliers (Tier 1), but to their suppliers (Tier 2) and beyond. For a PC manufacturer like Lenovo, this might mean understanding not just who supplies the LCD panels, but who supplies the glass substrates, the driver ICs, and the polarizing films. Each of these sub-tier suppliers represents a potential single point of failure.\n\nSupplier financial risk is often underestimated. A supplier that goes bankrupt or faces severe cash flow constraints can disrupt your supply chain even if their manufacturing operations are intact. Financial monitoring should include regular review of key financial ratios, credit ratings, and market signals. For critical suppliers, consider requiring audited financial statements or even taking equity stakes to ensure alignment of interests.\n\nGeopolitical risk has become increasingly prominent in supply chain planning. Trade wars, export controls, sanctions, and regional conflicts can suddenly render established supply routes untenable. The U.S.-China technology tensions have already forced many companies to restructure their supply chains, diversifying manufacturing away from China or establishing separate China-for-China supply chains. For memory components specifically, the concentration of advanced DRAM and NAND production in South Korea and the U.S. creates geopolitical exposure that must be actively managed.\n\nConcentration risk—the over-reliance on a single supplier or a small number of suppliers for critical components—is one of the most common and dangerous supply chain vulnerabilities. The principle of dual-sourcing or multi-sourcing is well-established, but implementing it requires significant effort. Alternative suppliers must be qualified, which involves extensive testing and validation. For spare parts supply chains, where exact component matching is required, this qualification process is even more critical and time-consuming.\n\nQuality risk is another dimension that deserves attention. A supplier that delivers inconsistent quality can cause more disruption than one that fails to deliver at all. Quality issues lead to returns, rework, warranty claims, and damage to brand reputation. Effective quality risk management requires robust incoming inspection processes, supplier quality audits, and clear specifications with measurable criteria.\n\nRegulatory and compliance risk has grown substantially with the proliferation of environmental regulations, conflict minerals requirements, and data privacy laws. Suppliers must be vetted not just for their ability to deliver quality components on time, but for their compliance with relevant regulations. Non-compliance by a supplier can expose the buying company to legal liability, fines, and reputational damage.\n\nSo how should supply chain professionals operationalize risk management? Several best practices have emerged.\n\nFirst, establish a risk scoring framework that quantifies different types of risk for each supplier and component. This framework should weight risks according to their potential impact and likelihood. High-impact, high-likelihood risks require the most attention and mitigation resources.\n\nSecond, develop contingency plans for high-risk scenarios. What happens if your primary memory supplier cannot deliver for three months? Do you have qualified alternatives? Can you redesign products to use different components? Contingency planning should be specific and actionable, not just theoretical.\n\nThird, build strategic inventory buffers for critical components. Just-in-time inventory is efficient but fragile. For components with long lead times, single-source suppliers, or high demand volatility, maintaining strategic safety stock can provide crucial resilience. The optimal inventory level balances carrying costs against the cost of potential stockouts.\n\nFourth, invest in supplier relationship management. Strong relationships with key suppliers provide early warning of potential problems and greater flexibility when disruptions occur. Regular business reviews, joint planning sessions, and transparent communication build the trust that enables rapid response to emerging risks.\n\nFifth, leverage technology for risk monitoring. Modern supply chain risk management platforms can monitor thousands of data sources—financial reports, news feeds, social media, weather data, regulatory filings—to provide early warning of potential disruptions. Artificial intelligence and machine learning are increasingly being used to identify patterns and predict risks before they materialize.\n\nFor Lenovo's SSC organization specifically, risk management takes on additional dimensions. Spare parts must match the exact specifications of original components, which limits the flexibility to switch suppliers or use alternative components. The long tail of spare parts—many SKUs with relatively low volumes—makes it challenging to maintain strategic inventory across all components. And the global nature of Lenovo's service operations means that supply chain disruptions in one region can affect service levels worldwide.\n\nThe practical implication is that SSC risk management requires close coordination with procurement, engineering, and service operations. Procurement must ensure supplier diversification and LTA coverage. Engineering must design for component commonality where possible and maintain accurate Bills of Materials. Service operations must provide accurate demand forecasts and manage customer expectations during supply disruptions.\n\nThe key questions for your next risk management review: What is our maximum tolerable disruption period for each critical component? Do we have qualified alternative suppliers for our top 20 components by spend? What is our current exposure to single-source suppliers? How quickly can we activate contingency plans when disruptions occur? The answers to these questions will determine your organization's resilience in an increasingly volatile supply environment.",
+            chinese: "供应链风险管理已从后台运营问题演变为高管层的战略优先事项。近年来从疫情中断到地缘政治紧张局势的事件表明，供应链韧性可以决定企业绩效的成败。对于采购和供应链专业人士而言，这一转变需要新技能、新框架以及思考供应商关系的新方式。\n\n从核心来看，供应链风险管理是识别、评估和缓解可能中断材料、零部件或成品流动的风险。但在实践中，它涵盖的内容远不止拥有备用供应商。全面的风险管理策略涉及多个维度：供应商财务稳定性、地缘政治风险敞口、集中度风险、质量一致性和监管合规性。\n\n有效风险管理的第一步是可见性。你无法管理你看不见的东西。这意味着不仅要绘制直接供应商（一级）的供应链图谱，还要绘制他们的供应商（二级）及更深层级的图谱。对于联想这样的PC制造商，这意味着不仅要了解谁供应LCD面板，还要了解谁供应玻璃基板、驱动IC和偏光膜。这些次级供应商中的每一个都代表潜在的单一故障点。\n\n供应商财务风险常被低估。即使制造运营完好无损，破产或面临严重现金流限制的供应商也可能中断你的供应链。财务监控应包括定期审查关键财务比率、信用评级和市场信号。对于关键供应商，考虑要求经审计的财务报表，甚至持股以确保利益一致。\n\n地缘政治风险在供应链规划中变得越来越突出。贸易战、出口管制、制裁和区域冲突可能突然使既定供应路线无法维持。美中科技紧张局势已迫使许多公司重组供应链，将制造从中国分散出去，或建立独立的中国本土供应链。具体到内存零部件，先进DRAM和NAND生产集中在韩国和美国，造成了必须积极管理的地缘政治风险敞口。\n\n集中度风险——对单一供应商或少数供应商的过度依赖——是最常见和最危险的供应链漏洞之一。双源或多源采购原则已确立，但实施它需要大量工作。替代供应商必须经过认证，这涉及广泛的测试和验证。对于备件供应链，由于需要精确的零部件匹配，这一认证过程更为关键和耗时。\n\n质量风险是另一个值得关注的维度。交付质量不一致的供应商可能比完全不交付的供应商造成更多中断。质量问题导致退货、返工、保修索赔和品牌声誉受损。有效的质量风险管理需要强大的进货检验流程、供应商质量审核以及具有可衡量标准的明确规格。\n\n随着环境法规、冲突矿产要求和数据隐私法的激增，监管和合规风险大幅增长。供应商不仅要审查其按时交付高质量零部件的能力，还要审查其对相关法规的合规性。供应商的不合规可能使采购公司面临法律责任、罚款和声誉损害。\n\n那么供应链专业人士应如何操作化风险管理？已出现几项最佳实践。\n\n第一，建立风险评分框架，量化每个供应商和零部件的不同类型风险。该框架应根据潜在影响和可能性对风险进行加权。高影响、高可能性风险需要最多的关注和缓解资源。\n\n第二，为高风险情景制定应急计划。如果你的主要内存供应商三个月无法交付怎么办？你有合格的替代方案吗？你能重新设计产品以使用不同的零部件吗？应急计划应具体且可执行，而不仅仅是理论性的。\n\n第三，为关键零部件建立战略库存缓冲。准时制库存效率高但脆弱。对于交货期长、单一来源供应商或需求波动性高的零部件，维持战略安全库存可以提供关键的韧性。最佳库存水平平衡持有成本与潜在缺货成本。\n\n第四，投资供应商关系管理。与关键供应商的牢固关系提供潜在问题的早期预警，并在中断发生时提供更大的灵活性。定期业务审查、联合规划会议和透明沟通建立信任，使能够快速应对新兴风险。\n\n第五，利用技术进行风险监控。现代供应链风险管理平台可以监控数千个数据源——财务报告、新闻源、社交媒体、天气数据、监管文件——以提供潜在中断的早期预警。人工智能和机器学习正越来越多地用于识别模式并在风险具体化之前进行预测。\n\n具体到联想的SSC组织，风险管理具有额外的维度。备件必须匹配原始零部件的确切规格，这限制了切换供应商或使用替代零部件的灵活性。备件的长尾——许多SKU但相对低销量——使得在所有零部件上维持战略库存具有挑战性。联想服务运营的全球性意味着一个区域的供应链中断可能影响全球的服务水平。\n\n实际含义是SSC风险管理需要与采购、工程和服务运营密切协调。采购必须确保供应商多元化和LTA覆盖。工程必须在可能的情况下设计零部件通用性，并维护准确的物料清单。服务运营必须提供准确的需求预测，并在供应中断期间管理客户期望。\n\n下次风险管理审查的关键问题：每个关键零部件的最大可容忍中断期是多少？我们前20大采购额零部件是否有合格的替代供应商？我们目前对单一来源供应商的风险敞口如何？中断发生时我们能多快激活应急计划？这些问题的答案将决定你的组织在日益波动的供应环境中的韧性。",
+            vocabulary: [
+                {
+                    word: "supply chain resilience",
+                    meaning: "供应链韧性/弹性；供应链在面对中断时维持运营并快速恢复的能力",
+                    example: "Building supply chain resilience requires diversifying suppliers and maintaining strategic inventory buffers."
+                },
+                {
+                    word: "single point of failure",
+                    meaning: "单一故障点；系统中一旦失效就会导致整个系统停止运行的组件或环节",
+                    example: "Relying on one supplier for critical components creates a dangerous single point of failure in our supply chain."
+                },
+                {
+                    word: "concentration risk",
+                    meaning: "集中度风险；过度依赖单一供应商或少数供应商的风险",
+                    example: "Our audit revealed high concentration risk—70% of our memory spend is with just two suppliers."
+                },
+                {
+                    word: "contingency plan",
+                    meaning: "应急计划/应急预案；在意外事件发生时采取的行动方案",
+                    example: "We activated our contingency plan when the earthquake disrupted our primary supplier's factory."
+                },
+                {
+                    word: "strategic safety stock",
+                    meaning: "战略安全库存；为应对供应不确定性而额外储备的关键物料",
+                    example: "Given the supply uncertainty, we decided to hold 8 weeks of strategic safety stock for DDR5 modules."
+                }
+            ],
+            practice: [
+                {
+                    question: "What is the first step in effective supply chain risk management?",
+                    options: [
+                        "Immediately switching to dual-source suppliers",
+                        "Establishing visibility across all tiers of the supply chain",
+                        "Increasing inventory levels for all components",
+                        "Terminating relationships with high-risk suppliers"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "Why is concentration risk particularly dangerous in supply chains?",
+                    options: [
+                        "It always leads to higher prices",
+                        "Over-reliance on a single supplier creates vulnerability if that supplier fails",
+                        "It makes inventory management easier",
+                        "Regulators prohibit concentration risk"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "What is the trade-off involved in maintaining strategic safety stock?",
+                    options: [
+                        "Between carrying costs and the cost of potential stockouts",
+                        "Between supplier quality and delivery speed",
+                        "Between product features and manufacturing cost",
+                        "Between domestic and international suppliers"
+                    ],
+                    answer: 0
+                }
+            ]
         };
 
         // 渲染短语
@@ -315,71 +380,6 @@
             <div class="phrase-chinese">${todayPhrase.chinese}</div>
             <div class="phrase-example">💡 含义：${todayPhrase.meaning}</div>
         `;
-
-        // 今日学习内容 - 供应链弹性
-        const todayContent = {
-            english: "Supply chain resilience has become the defining competitive advantage in the memory and storage industry during the 2026 supercycle. As component shortages persist and price volatility intensifies, companies with robust supply chain capabilities are outperforming those relying on spot markets and just-in-time procurement.\n\nSupply chain resilience refers to a company's ability to anticipate, prepare for, and respond to unexpected disruptions while maintaining continuous operations. In the context of memory components, resilience encompasses multiple dimensions: supplier relationship depth, inventory strategy sophistication, demand forecasting accuracy, and logistical flexibility.\n\nThe first pillar of resilience is strategic supplier partnerships. Long-term agreements (LTAs) with memory OEMs provide price stability, allocation priority during shortages, and access to new product generations. Companies that secured LTAs before the 2025-2026 supercycle are now enjoying cost advantages and supply security that competitors lack. The key is developing relationships at multiple levels—executive, technical, and commercial—to ensure mutual commitment during challenging periods.\n\nSupplier diversification is another critical element. Relying on a single memory supplier creates concentration risk that can materialize during geopolitical tensions, natural disasters, or production issues. Leading PC manufacturers maintain relationships with three or more major memory OEMs, enabling them to shift volumes based on availability and pricing. However, diversification requires careful management to avoid sacrificing volume discounts and relationship depth.\n\nInventory resilience involves balancing the trade-offs between carrying costs, working capital requirements, and supply security. The supercycle has demonstrated that aggressive inventory building before price increases can generate significant cost savings. Strategic stockpiling—maintaining inventory above normal safety stock levels in anticipation of future constraints—has proven valuable for companies with sufficient capital and storage capacity.\n\nThe rise of consignment models represents another resilience mechanism. Under consignment, suppliers hold inventory at customer facilities until components are consumed, transferring carrying cost risk and improving cash flow. While consignment requires sophisticated inventory tracking systems, it can provide supply security during shortages when spot market availability is limited.\n\nDemand forecasting accuracy underpins all resilience strategies. Accurate forecasts enable optimal inventory levels, effective LTA negotiation, and proactive supplier communication. In volatile markets, forecasting methods must evolve beyond simple historical averaging. Machine learning models that incorporate market signals, economic indicators, and supplier data can improve forecast accuracy significantly.\n\nRisk monitoring and early warning systems represent the proactive dimension of resilience. Leading companies monitor a range of indicators including supplier capacity utilization, lead time trends, spot-to-contract price spreads, and geopolitical risk indices. When indicators signal increasing risk, pre-planned response protocols activate, such as accelerating orders, qualifying alternative suppliers, or adjusting production schedules.\n\nGeographic diversification of supply chain operations adds another layer of resilience. Companies with manufacturing facilities in multiple regions can shift production based on logistics disruptions, tariff changes, or regional demand shifts. For memory components, this often means maintaining relationships with suppliers in different geographic clusters—Korea, Taiwan, China, and emerging markets—to reduce single-region exposure.\n\nThe financial dimension of resilience deserves attention. Companies with strong credit ratings and cash reserves can invest in inventory building, secure LTAs, and absorb short-term cost volatility. Those with constrained balance sheets may find themselves unable to participate in strategic inventory programs, leaving them vulnerable to price increases.\n\nTechnology investment in supply chain systems enables resilience at scale. Real-time visibility into inventory levels, supplier production status, and logistics operations allows rapid decision-making during disruptions. Cloud-based supply chain platforms, IoT tracking, and AI-powered analytics are becoming standard tools for leading organizations.\n\nCollaboration across the supply chain represents the final frontier of resilience. Sharing demand forecasts, production plans, and risk information with suppliers enables proactive response to potential issues. Collaborative forecasting programs, joint inventory optimization initiatives, and shared risk management frameworks strengthen relationships and improve overall supply chain performance.\n\nIn the 2026 memory supercycle, companies that have invested in supply chain resilience are demonstrating clear competitive advantages. They maintain lower costs through LTA security, avoid production disruptions through diversified supply, and identify market opportunities through superior forecasting. As the supercycle continues and market volatility persists, resilience will remain the key differentiator between industry leaders and laggards.",
-            chinese: "在2026年超级周期中，供应链弹性已成为内存和存储行业决定性的竞争优势。随着零部件短缺持续和价格波动加剧，拥有强大供应链能力的公司正在超越那些依赖现货市场和准时制采购的竞争对手。\n\n供应链弹性指公司在保持持续运营的同时，预测、准备和应对意外中断的能力。在内存零部件领域，弹性涵盖多个维度：供应商关系深度、库存策略成熟度、需求预测准确性和物流灵活性。\n\n弹性的第一个支柱是战略性供应商伙伴关系。与内存原始设备制造商签订的长期协议（LTA）提供价格稳定、短缺时期的优先分配权以及获取新一代产品的机会。在2025-2026超级周期之前锁定LTA的公司现在正享受着竞争对手缺乏的成本优势和供应安全保障。关键是建立多层次的关系——高管、技术和商业层面——以确保在困难时期的相互承诺。\n\n供应商多元化是另一个关键要素。依赖单一内存供应商会造成集中风险，在地缘政治紧张、自然灾害或生产问题时可能显现。领先的PC制造商与三个或更多主要内存原始设备制造商保持关系，能够根据可用性和定价调整数量。然而，多元化需要谨慎管理，以避免牺牲数量折扣和关系深度。\n\n库存弹性涉及平衡持有成本、营运资金需求与供应安全之间的权衡。超级周期表明，在价格上涨之前积极建立库存可以产生显著的成本节约。战略储备——在预期未来约束时维持高于正常安全库存水平的库存——已被证明对拥有充足资本和存储容量的公司有价值。\n\n寄售模式的兴起代表了另一种弹性机制。在寄售模式下，供应商在客户设施持有库存直到零部件被消耗，转移持有成本风险并改善现金流。虽然寄售需要复杂的库存跟踪系统，但在现货市场可用性有限的短缺时期，它可以提供供应保障。\n\n需求预测准确性是所有弹性策略的基础。准确的预测使最佳库存水平、有效的长协谈判和积极的供应商沟通成为可能。在波动市场中，预测方法必须超越简单的历史平均。纳入市场信号、经济指标和供应商数据的机器学习模型可以显著提高预测准确性。\n\n风险监控和早期预警系统代表了弹性的主动维度。领先公司监控一系列指标，包括供应商产能利用率、交期趋势、现货-合约价差和地缘政治风险指数。当指标显示风险增加时，预设的响应协议被激活，如加速订单、认证替代供应商或调整生产计划。\n\n供应链运营的地理多元化增加了弹性的另一层。在多个地区拥有制造设施的公司可以根据物流中断、关税变化或区域需求变化调整生产。对于内存零部件，这通常意味着保持与不同地理集群供应商的关系——韩国、台湾、中国和新兴市场——以减少单一地区敞口。\n\n弹性的财务维度值得关注。拥有强劲信用评级和现金储备的公司可以投资于库存建设、锁定长协，并吸收短期成本波动。那些资产负债表受限的公司可能发现自己无法参与战略库存计划，使他们容易受到价格上涨的影响。\n\n对供应链系统的技术投资使弹性能够规模化。实时了解库存水平、供应商生产状态和物流运营情况，使公司在中断期间能够快速决策。基于云的供应链平台、物联网跟踪和AI驱动的分析正在成为领先组织的标准工具。\n\n跨供应链协作代表了弹性的最后前沿。与供应商共享需求预测、生产计划和风险信息，能够对潜在问题做出积极响应。协作预测计划、联合库存优化举措和共享风险管理框架加强了关系并改善了整体供应链绩效。\n\n在2026年内存超级周期中，投资于供应链弹性的公司正在展示明显的竞争优势。他们通过长协保障维持较低成本，通过多元化供应避免生产中断，并通过卓越的预测识别市场机会。随着超级周期的持续和市场波动的持续，弹性仍将是在行业领导者和落后者之间区分的关键因素。",
-            vocabulary: [
-                {
-                    word: "supply chain resilience",
-                    meaning: "供应链弹性；应对中断并保持持续运营的能力",
-                    example: "Our supply chain resilience strategy helped us navigate the memory shortage better than competitors."
-                },
-                {
-                    word: "strategic supplier partnerships",
-                    meaning: "战略性供应商伙伴关系；与关键供应商建立长期深度合作",
-                    example: "Strategic supplier partnerships enabled priority allocation during the NAND shortage."
-                },
-                {
-                    word: "consignment model",
-                    meaning: "寄售模式；供应商在客户处持有库存直到消耗",
-                    example: "The consignment model reduced our carrying costs while ensuring supply security."
-                },
-                {
-                    word: "geographic diversification",
-                    meaning: "地理多元化；在多个地区建立供应链以降低风险",
-                    example: "Geographic diversification of our supplier base reduced single-region risk exposure."
-                },
-                {
-                    word: "collaborative forecasting",
-                    meaning: "协作预测；与供应商共享信息以提高预测准确性",
-                    example: "Collaborative forecasting with our NAND suppliers improved our demand planning accuracy by 25%."
-                }
-            ],
-            practice: [
-                {
-                    question: "Why are Long-Term Agreements (LTAs) important during a memory supercycle?",
-                    options: [
-                        "They reduce the need for inventory",
-                        "They provide price stability and allocation priority during shortages",
-                        "They eliminate the need for supplier relationships",
-                        "They guarantee unlimited supply at fixed prices"
-                    ],
-                    answer: 1
-                },
-                {
-                    question: "What is a key limitation of aggressive inventory building during a supercycle?",
-                    options: [
-                        "It reduces supplier relationships",
-                        "It requires significant capital and storage capacity",
-                        "It increases spot market dependence",
-                        "It eliminates the need for forecasting"
-                    ],
-                    answer: 1
-                },
-                {
-                    question: "What does geographic diversification of supply chain help companies avoid?",
-                    options: [
-                        "Price negotiations",
-                        "Single-region exposure to disruptions",
-                        "Long-term agreements",
-                        "Inventory management"
-                    ],
-                    answer: 1
-                }
-            ]
-        };
 
         // 渲染学习内容
         document.getElementById('englishText').textContent = todayContent.english;
