@@ -299,14 +299,14 @@
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
         document.getElementById('currentDate').textContent = '2026年4月15日星期三';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/15 10:15';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/15 10:28';
 
         // 今日短语
         const todayPhrase = {
-            english: "\"With IDC revising the 2026 PC market forecast upward to 6.2% growth, we need to front-load our spare parts procurement to capture the buying window before Q3 demand surge. Let's also lock in Q3 SSD supply contracts before NAND contract prices rise further.\"",
-            chinese: "随着IDC将2026年PC市场预测上调至6.2%增长，我们需要在Q3需求高峰前提速备件采购以抓住采购窗口。同时，在NAND合约价进一步上涨前锁定Q3 SSD供应协议。",
-            meaning: "revising upward：上调预测，指调整数字或预期向更高方向变动。front-load：前置，指将活动或资源安排在计划前期执行。lock in：锁定，指通过合约确保未来的价格和供应。",
-            example: "Given the revised demand forecast, we're planning to front-load our Q2 notebook component orders to secure allocation before the peak season. We're also looking to lock in pricing through long-term agreements with our key suppliers."
+            english: "\"With Q1 PC shipment growth slowing to 2.5-3.2% and full-year forecast revised downward to -11.3%, we need to dynamically adjust our spare parts inventory strategy—front-loading procurement before CPU and storage contract prices rise further in Q2, while avoiding overstocking ahead of a potentially weaker Q3 upgrade cycle.\"",
+            chinese: "Q1 PC出货增速放缓至2.5-3.2%，全年预测下调至下滑11.3%——在此背景下，我们需要动态调整备件库存策略：在Q2 CPU和存储合约价进一步上涨前提速采购，同时避免在Q3换机潮可能不及预期的情况下库存积压。",
+            meaning: "revised downward：下调预测，与 revising upward（上调）相对。dynamic adjustment：动态调整，指根据最新市场变化实时调整策略。front-loading：前置采购，指在价格上涨前提前采购。overstocking：库存积压，指库存超出需求导致的成本浪费。",
+            example: "Given the downward-revised market forecast, we're planning a dynamic inventory adjustment—reducing advance orders for consumer segment components while front-loading enterprise parts procurement before the Q2 price increases take effect, to avoid overstocking risk in Q3."
         };
 
         // 渲染短语
@@ -316,67 +316,67 @@
             <div class="phrase-example">💡 含义：${todayPhrase.meaning}</div>
         `;
 
-        // 今日学习内容 - 供应商谈判与采购策略
+        // 今日学习内容 - 市场预测分析与供应链策略
         const todayContent = {
-            english: "In the fast-paced world of component procurement, supplier negotiation skills are essential for cost management and supply security. The ability to negotiate effectively with suppliers can mean the difference between a profitable product launch and a costly supply chain disruption.\n\nSupplier relationship management (SRM) forms the foundation of successful procurement. Modern SRM goes beyond transactional purchasing to build strategic partnerships with key suppliers. These partnerships are characterized by mutual trust, shared risk, and collaborative problem-solving. For the SSC (Service & Support Cost) team, strong supplier relationships are particularly valuable because spare parts demand is often unpredictable and requires flexible response from suppliers.\n\nThe concept of total cost of ownership (TCO) is critical in supplier negotiations. TCO includes not just the unit price, but also logistics costs, quality costs, inventory holding costs, and the cost of potential supply disruptions. A lower unit price may actually result in higher TCO if it leads to longer lead times, lower quality, or increased inventory requirements. When negotiating with suppliers, always consider the full TCO picture rather than focusing solely on unit price.\n\nVolume commitment and flexibility are key negotiation variables. Suppliers typically offer better pricing in exchange for volume commitments, but these commitments can create risk if demand forecasts are inaccurate. The modern approach is to negotiate frame contracts with flexible volume bands—typically plus or minus 20-30% from the committed volume. This provides price benefits while maintaining operational flexibility. For SSC, where demand is driven by product failure rates rather than planned production, flexible commitments are essential.\n\nLead time optimization is another critical negotiation point. Shorter lead times provide operational flexibility but usually come at a cost premium. The optimal approach is to negotiate differentiated lead times for different component categories: standard lead times for stable-demand items, and expedited lead times with premium pricing for critical or high-uncertainty components. This tiered approach balances cost and flexibility.\n\nQuality specifications must be clearly defined in supplier agreements. Vague quality requirements lead to disputes, returns, and increased costs. The best practice is to establish objective, measurable quality standards including defect rates, inspection criteria, and rejection procedures. For spare parts specifically, quality consistency is paramount because a defective spare part can damage customer relationships and increase warranty costs far beyond the part's purchase price.\n\nSupply chain risk management should be integrated into supplier negotiations. This includes identifying single-source components, negotiating alternate sourcing options, and establishing business continuity plans with key suppliers. The recent global supply chain disruptions have highlighted the importance of supply chain resilience. For SSC, having backup suppliers or emergency sourcing channels for critical spare parts is essential for maintaining service level agreements.\n\nThe concept of collaborative forecasting has gained traction in supplier relationships. By sharing demand forecasts with suppliers, companies can help suppliers better plan their production and inventory, which often results in better pricing and availability. However, collaborative forecasting requires trust and data-sharing agreements that protect proprietary information while enabling supply chain coordination.\n\nStrategic sourcing is a systematic approach to procurement that analyzes spend data, market conditions, and supplier capabilities to optimize the supplier base. For the SSC team, strategic sourcing can identify opportunities to consolidate spare parts suppliers, standardize components across product lines, and leverage volume for better pricing. The goal is to create a supplier portfolio that balances cost, quality, risk, and innovation.\n\nIn today's dynamic market environment, successful supplier negotiation requires a combination of market knowledge, analytical skills, and relationship management. The SSC team must stay informed about component market trends, understand the supplier's cost structure and margin pressures, and build relationships that enable collaborative problem-solving. By mastering these skills, procurement professionals can create value that extends far beyond the unit price savings achieved at the negotiation table.",
-            chinese: "在快节奏的零部件采购世界中，供应商谈判技巧对于成本管理和供应保障至关重要。与供应商有效谈判的能力，可能意味着产品发布的盈利与供应链中断的高成本之间的差异。\n\n供应商关系管理（SRM）是成功采购的基础。现代SRM超越交易性采购，与关键供应商建立战略伙伴关系。这些伙伴关系的特点是相互信任、风险共担和协作解决问题。对于SSC（服务与支持成本）团队而言，强有力的供应商关系尤其有价值，因为备件需求通常不可预测，需要供应商的灵活响应。\n\n总拥有成本（TCO）的概念在供应商谈判中至关重要。TCO不仅包括单价，还包括物流成本、质量成本、库存持有成本和潜在供应中断成本。如果低价导致更长的交付周期、更低的质量或更高的库存需求，实际上可能导致更高的TCO。在与供应商谈判时，应始终考虑完整的TCO情况，而非仅关注单价。\n\n数量承诺和灵活性是关键的谈判变量。供应商通常会为数量承诺提供更好的价格，但这些承诺如果需求预测不准确就会带来风险。现代方法是谈判带有灵活数量区间的框架合同——通常为承诺数量的正负20-30%。这既提供价格优惠又保持运营灵活性。对于SSC而言，由于需求由产品故障率而非计划生产驱动，灵活的承诺至关重要。\n\n交付周期优化是另一个关键谈判点。更短的交付周期提供运营灵活性，但通常需要支付溢价。最佳方法是针对不同零部件类别谈判差异化的交付周期：稳定需求的物料采用标准交付周期，关键或高不确定性物料采用溢价加急交付。这种分层方法在成本和灵活性之间取得平衡。\n\n质量规格必须在供应商协议中明确界定。模糊的质量要求会导致争议、退货和成本增加。最佳实践是建立客观、可测量的质量标准，包括不良率、检验标准和拒收程序。对于备件而言，质量一致性至关重要，因为有缺陷的备件可能损害客户关系，增加远超零部件采购价格的保修成本。\n\n供应链风险管理应纳入供应商谈判。这包括识别单一来源零部件、谈判替代采购选项，以及与关键供应商建立业务连续性计划。近期全球供应链中断凸显了供应链韧性的重要性。对于SSC，为关键备件提供备用供应商或紧急采购渠道对于维持服务水平协议至关重要。\n\n协作预测的概念在供应商关系中越来越受关注。通过与供应商共享需求预测，公司可以帮助供应商更好地规划其生产和库存，这通常会带来更好的价格和可用性。然而，协作预测需要信任和数据共享协议，在保护专有信息的同时实现供应链协调。\n\n战略采购是一种系统化的采购方法，通过分析支出数据、市场状况和供应商能力来优化供应商基础。对于SSC团队，战略采购可以识别整合备件供应商、跨产品线标准化零部件以及利用量价优势的机会。目标是创建一个在成本、质量、风险和创新之间取得平衡的供应商组合。\n\n在当今动态的市场环境中，成功的供应商谈判需要市场知识、分析技能和关系管理的结合。SSC团队必须了解零部件市场趋势，理解供应商的成本结构和利润压力，并建立能够实现协作解决问题的关系。掌握这些技能，采购专业人员可以创造远超谈判桌上实现的单位价格节约的价值。",
+            english: "Understanding market forecasts and their implications is a cornerstone skill for any supply chain or cost management professional. Market forecasts drive everything from production planning to spare parts inventory decisions, and the ability to interpret, challenge, and act on forecasts separates effective supply chain managers from reactive ones.\n\nThe first principle of forecast management is to always understand the methodology behind any projection. Different forecasting methods produce different results, and understanding whether a forecast is based on bottom-up demand modeling, top-down macroeconomic analysis, or historical trend extrapolation is critical for proper interpretation. IDC and Omdia, for example, use different panel samples and weighting methodologies, which explains why their Q1 2026 PC shipment figures differ slightly (64.8 million vs. 65.6 million units). When you see conflicting forecasts from different sources, the key is to understand the assumptions and adjust accordingly rather than simply averaging them.\n\nForecast revisions are an inevitable part of supply chain management, and how organizations respond to them is a test of their agility. When IDC revised its full-year 2026 PC market forecast downward from positive growth to -11.3%, this was not a failure of forecasting—it was a necessary adjustment as new Q1 data became available. Effective supply chain teams treat forecast revisions as early warning signals and trigger pre-defined contingency plans rather than panicking or ignoring the data. The key is to have trigger points defined in advance: at what deviation from forecast do you activate inventory buffer plans, engage alternative suppliers, or adjust production schedules?\n\nMarket segmentation is essential for translating macro forecasts into actionable supply chain insights. The Q1 2026 data shows that while the overall PC market grew 2.5-3.2%, this aggregate figure masks significant regional and product segment variations. EMEA grew 7.4%, the Americas contracted, Asia-Pacific grew 4.3%, and within product categories, gaming and creator laptops outperformed while entry-level consumer PCs underperformed. For the SSC team, this segmentation means that spare parts demand forecasting should be done at the product-model level rather than relying solely on category-level or regional aggregates.\n\nThe concept of demand preemption versus demand透支 (demand advance/consumption) is particularly relevant in technology markets. In Q4 2025, strong holiday sales and AI PC launch excitement likely pulled forward demand that would otherwise have occurred in Q1-Q2 2026. This phenomenon of demand advancement means that growth figures need to be adjusted for the timing shift, not just the absolute volume. When you see a growth figure that seems inconsistent with market sentiment, always investigate whether demand advancement or deferral is at play.\n\nSupply-driven demand is another dynamic increasingly relevant in the current market environment. Unlike traditional demand-driven markets where consumer preference determines outcomes, supply-driven dynamics occur when component shortages or pricing create self-fulfilling demand patterns. When DRAM and NAND suppliers redirect capacity to HBM for AI servers, the resulting supply squeeze in PC-grade memory creates price increases that trigger advance buying behavior, which further tightens supply. Understanding these feedback loops is essential for predicting when demand surges or slowdowns are structural versus cyclical.\n\nInventory management under forecast uncertainty requires a probabilistic rather than deterministic approach. Rather than planning for a single forecast scenario, effective supply chain teams develop multiple scenarios—base case, upside case, and downside case—and maintain inventory strategies that perform reasonably across all scenarios. For SSC, where spare parts demand is driven by product failure rates (which are somewhat predictable through historical data) rather than consumer preference (which is highly variable), the appropriate inventory strategy differs by component category. High-value, long-lead-time components warrant safety stock and sometimes strategic buffer inventory, while lower-value, shorter-lead-time items can be managed with more responsive just-in-time approaches.\n\nThe relationship between contract pricing and spot pricing is a critical analytical distinction. Contract prices (set quarterly for major memory and storage components) reflect longer-term supply-demand dynamics and are the relevant benchmark for cost planning and supplier negotiations. Spot prices (daily or weekly market prices) reflect immediate supply-demand conditions and are more relevant for opportunistic buying and understanding market sentiment. The recent divergence—spot prices falling 25% while Q2 contract prices are forecast to rise 58-75%—illustrates this distinction clearly. SSC cost planning should be based on contract prices, while opportunistic spot market purchases can supplement but not replace contract-based supply agreements.\n\nStrategic supplier engagement becomes particularly important in periods of market volatility. When component prices are rising, the value of long-term pricing agreements (LTPAs) and framework contracts with price adjustment clauses becomes evident. The key negotiation variables in such agreements include: the price adjustment mechanism (fixed price vs. index-linked vs. band-based), volume flexibility (plus/minus percentages from committed volumes), allocation priority during tight supply periods, and quality and delivery performance guarantees. For SSC, having these agreements in place before a price increase cycle begins is far more effective than trying to negotiate during a supply crunch.\n\nIn today's complex supply chain environment, the most valuable skill is not just data analysis but judgment synthesis—the ability to combine quantitative forecast data with qualitative market intelligence, supplier insights, and operational constraints into actionable decisions. The SSC team that masters this synthesis will be best positioned to navigate the challenging but opportunity-rich environment of 2026's evolving PC market.",
+            chinese: "理解市场预测及其影响是供应链和成本管理专业人士的核心技能。市场预测驱动从生产计划到备件库存决策的一切，能解读、质疑并根据预测采取行动的能力，是高效供应链管理者与被动响应者的关键区别。\n\n预测管理的首要原则是始终理解任何预测背后的方法论。不同的预测方法会产生不同的结果，理解预测是基于自下而上的需求模型、自上而下的宏观经济分析还是历史趋势外推，对正确解读至关重要。例如，IDC和Omdia使用不同的面板样本和加权方法，这就是它们Q1 2026年PC出货数据略有差异的原因（6480万台 vs. 6560万台）。当你看到来自不同来源的相互矛盾的预测时，关键是要理解其假设并相应调整，而不是简单地进行平均。\n\n预测调整是供应链管理中不可避免的一部分，组织如何应对这些调整是对其敏捷性的考验。当IDC将其2026年全年PC市场预测从正增长下调至下滑11.3%时，这并非预测失败——而是新Q1数据出现后的必要调整。高效的供应链团队将预测调整视为早期预警信号，并触发预定义的应急计划，而非恐慌或忽视数据。关键是要预先定义触发点：偏离预测多少时激活库存缓冲计划、联系替代供应商或调整生产计划？\n\n市场细分对于将宏观预测转化为可操作的供应链洞察至关重要。Q1 2026数据显示，虽然整体PC市场增长2.5-3.2%，但这一汇总数字掩盖了显著的地区和产品细分差异。EMEA增长7.4%，美洲收缩，亚太增长4.3%，游戏本和创作者本表现优于预期，而入门级消费PC表现不佳。对于SSC团队而言，这意味着备件需求预测应在产品型号层面进行，而非仅依赖类别层面或地区汇总数据。\n\n需求前置与需求透支的概念在科技市场中尤为相关。2025年Q4，强劲的假日销售和AI PC发布热潮可能提前透支了原本会在2026年Q1-Q2发生的需求。这种需求前置现象意味着增长数据需要根据时间变化调整，而不仅仅是绝对数量。当你认为某个增长数字与市场情绪不一致时，应始终调查是否存在需求前置或延迟。\n\n供给驱动需求是当前市场环境中日益重要的一种动态。与传统需求驱动市场（消费者偏好决定结果）不同，供给驱动动态发生在零部件短缺或定价产生自我实现的供需模式时。当DRAM和NAND供应商将产能转向AI服务器的HBM时，PC级内存的供给紧缩创造了价格上涨，触发提前购买行为，进一步加剧供给紧张。理解这些反馈循环对于预测需求激增或放缓是结构性的还是周期性的至关重要。\n\n在预测不确定性下的库存管理需要概率性而非确定性方法。高效的供应链团队不是为单一预测场景做计划，而是开发多种场景（基准情景、上行情景、下行情景），并维持能在所有场景中表现合理的库存策略。对于SSC而言，备件需求由产品故障率（可通过历史数据在一定程度上预测）而非消费者偏好（高度可变）驱动，不同零部件类别应采用不同的库存策略。高价值、长交付周期的零部件需要安全库存，有时还需要战略缓冲库存，而低价值、短交付周期的物料可以采用更灵活的即时管理方式。\n\n合约价与现货价之间的关系是一个关键的分析区别。合约价（主要内存和存储零部件按季度设定）反映较长期的供需动态，是成本规划和供应商谈判的相关基准。现货价（每日或每周市场价格）反映即期供需状况，更适合机会性采购和市场情绪理解。最近的分歧——现货价下跌25%而Q2合约价预计上涨58-75%——清楚地说明了这一区别。SSC成本规划应以合约价为基础，而机会性现货市场采购可作为补充，但不能取代基于合约的供应协议。\n\n在市场波动期，战略性供应商参与变得尤为重要。当零部件价格上涨时，长期定价协议（LTPAs）和带有价格调整条款的框架合同的价值就显现出来了。此类协议的关键谈判变量包括：价格调整机制（固定价格 vs. 指数联动 vs. 区间制）、数量灵活性（承诺数量的正负百分比）、供应紧张期的分配优先级，以及质量和交付绩效保证。对于SSC而言，在价格上涨周期开始前达成这些协议远比在供应紧张时谈判要有效得多。\n\n在当今复杂的供应链环境中，最宝贵的技能不仅是数据分析，而是判断综合——将定量预测数据与定性市场情报、供应商洞察和运营约束相结合，形成可操作决策的能力。在2026年不断演变的PC市场这一充满挑战但机遇丰富的环境中，掌握这种综合能力将使SSC团队处于最佳位置。",
             vocabulary: [
                 {
-                    word: "supplier relationship management (SRM)",
-                    meaning: "供应商关系管理；与供应商建立和维护战略性伙伴关系的系统方法",
-                    example: "Our SRM program has helped us secure priority allocation from key component suppliers during tight supply periods."
+                    word: "revised downward / revised upward",
+                    meaning: "预测下调/上调；根据新数据调整预测数字向更低或更高方向变动",
+                    example: "With Q1 data coming in below expectations, the full-year forecast has been revised downward from +4.5% to -11.3%, triggering our contingency inventory plan."
                 },
                 {
-                    word: "total cost of ownership (TCO)",
-                    meaning: "总拥有成本；采购决策中考虑的所有相关成本的综合衡量",
-                    example: "The lower unit price from Supplier B actually resulted in higher TCO due to increased logistics and quality costs."
+                    word: "demand preemption / demand pull-forward",
+                    meaning: "需求前置/提前消费；将未来需求提前到当前实现，导致后期需求减少",
+                    example: "Strong Q4 2025 holiday sales likely represented demand preemption, pulling forward purchases that would otherwise have occurred in Q1-Q2 2026."
                 },
                 {
-                    word: "frame contract / flexible commitment",
-                    meaning: "框架合同/灵活承诺；带有数量灵活区间的长期采购协议",
-                    example: "We've negotiated a frame contract with flexible commitments of plus or minus 25% to balance pricing and inventory risk."
+                    word: "contract pricing vs. spot pricing",
+                    meaning: "合约价与现货价；合约价是季度谈判的长期价格，现货价是即时市场波动价格",
+                    example: "Spot prices fell 25% this week, but this doesn't change our Q2 cost forecast—we're tracking contract prices, which are set to rise 58-75%."
                 },
                 {
-                    word: "collaborative forecasting",
-                    meaning: "协作预测；与供应商共享需求预测以改善供应链协调的做法",
-                    example: "Through collaborative forecasting with our top suppliers, we've reduced lead times by 15% while maintaining competitive pricing."
+                    word: "supply-driven demand",
+                    meaning: "供给驱动需求；当供给紧缩时引发的自我实现式需求变化",
+                    example: "Memory supply-driven demand is creating a feedback loop: tighter supply → price increase → advance buying → further supply tightening."
                 },
                 {
-                    word: "strategic sourcing",
-                    meaning: "战略采购；系统性分析和优化供应商基础以实现最佳采购结果的方法",
-                    example: "Strategic sourcing analysis helped us identify consolidation opportunities that saved 12% on our annual component spend."
+                    word: "trigger point / contingency plan",
+                    meaning: "触发点/应急预案；预先设定的阈值和相应行动方案",
+                    example: "Our contingency plan has a trigger point at 10% negative deviation from forecast, which activates buffer inventory deployment and alternative supplier engagement."
                 }
             ],
             practice: [
                 {
-                    question: "What is the key characteristic of modern Supplier Relationship Management (SRM)?",
+                    question: "Why might IDC and Omdia report different Q1 2026 PC shipment figures (64.8M vs. 65.6M)?",
                     options: [
-                        "Focusing solely on unit price negotiation",
-                        "Building strategic partnerships with mutual trust and shared risk",
-                        "Minimizing communication with suppliers",
-                        "Avoiding long-term commitments"
+                        "One of them is wrong",
+                        "They use different panel samples and weighting methodologies",
+                        "PC manufacturers report to only one of them",
+                        "The difference is too small to matter"
                     ],
                     answer: 1
                 },
                 {
-                    question: "Why should TCO (Total Cost of Ownership) be considered instead of just unit price?",
+                    question: "Why might a 'downward revised' forecast actually represent good supply chain management?",
                     options: [
-                        "Unit prices are always accurate",
-                        "Lower unit prices always mean lower total costs",
-                        "TCO includes hidden costs like logistics, quality, and inventory that can make a 'lower' unit price more expensive overall",
-                        "TCO is only relevant for consumer products"
+                        "It means the market is failing",
+                        "It is a necessary adjustment based on new data, not a forecasting failure, and effective teams respond with pre-planned contingency actions",
+                        "Lower forecasts always lead to lower costs",
+                        "It has no practical implications"
                     ],
-                    answer: 2
+                    answer: 1
                 },
                 {
-                    question: "What is the advantage of 'frame contracts with flexible commitment' over fixed volume contracts?",
+                    question: "Why should SSC cost planning be based on contract prices rather than spot prices?",
                     options: [
-                        "They guarantee the lowest possible price",
-                        "They eliminate all supply chain risks",
-                        "They provide price benefits while maintaining operational flexibility to adjust volumes",
-                        "They require no negotiation"
+                        "Contract prices are always lower",
+                        "Contract prices are set quarterly and reflect longer-term supply-demand dynamics, which are the relevant benchmark for cost planning",
+                        "Spot prices are not available",
+                        "Contract prices are government-regulated"
                     ],
-                    answer: 2
+                    answer: 1
                 }
             ]
         };
@@ -432,7 +432,7 @@
         const historyList = document.getElementById('historyList');
         historyDates.forEach(item => {
             const link = document.createElement('a');
-            link.href = `../english/${item.date}.html`;
+            link.href = `english/${item.date}.html`;
             link.className = 'history-link';
             link.textContent = item.label;
             historyList.appendChild(link);
