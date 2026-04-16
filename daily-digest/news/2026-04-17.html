@@ -228,13 +228,13 @@
             </div>
 
             <div class="section">
-                <div class="section-title">💡 联想动态</div>
-                <div id="lenovoSection"></div>
+                <div class="section-title">💡 AI工具前沿</div>
+                <div id="aiSection"></div>
             </div>
 
             <div class="section">
-                <div class="section-title">📊 SSC参考</div>
-                <div id="sscSection"></div>
+                <div class="section-title">📊 联想动态</div>
+                <div id="lenovoSection"></div>
             </div>
         </div>
 
@@ -257,25 +257,25 @@
         const priceData = {
             ddr5: {
                 name: 'DDR5 UDIMM 16GB 模组（全球现货均价）',
-                price: 498.00,
-                change: 17,
+                price: 512.00,
+                change: 3,
                 trend: 'down',
                 date: '2026-04-17',
                 unit: '¥'
             },
             ssd: {
                 name: '1TB SSD（企业级）',
-                price: 808,
-                change: 7,
-                trend: 'down',
+                price: 818,
+                change: 3,
+                trend: 'up',
                 date: '2026-04-17',
                 unit: '¥'
             },
             lenovo: {
                 name: '联想集团 (00992.HK)',
-                price: 9.26,
-                change: 0.65,
-                trend: 'up',
+                price: 9.18,
+                change: 0.22,
+                trend: 'down',
                 date: '2026-04-16',
                 unit: 'HK$'
             }
@@ -287,17 +287,17 @@
             <div class="price-item">
                 <div class="name">${priceData.ddr5.name}</div>
                 <div class="price">${priceData.ddr5.unit}${priceData.ddr5.price} <span class="change ${priceData.ddr5.trend}">${priceData.ddr5.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ddr5.change)}</span></div>
-                <div class="date">数据日期：${priceData.ddr5.date} | 现货较年内高点回落约17%，渠道商抛售+AI订单延后导致短期供需缓和</div>
+                <div class="date">数据日期：${priceData.ddr5.date} | 高盛警示三重紧平衡持续，Q2合约价上涨58-63%</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.ssd.name}</div>
                 <div class="price">${priceData.ssd.unit}${priceData.ssd.price} <span class="change ${priceData.ssd.trend}">${priceData.ssd.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ssd.change)}</span></div>
-                <div class="date">数据日期：${priceData.ssd.date} | NAND现货小幅松动，但合约价Q2仍将上涨40-50%</div>
+                <div class="date">数据日期：${priceData.ssd.date} | NAND合约Q2涨幅70-75%确认，发改委确认向下游传导</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.lenovo.name}</div>
                 <div class="price">${priceData.lenovo.unit}${priceData.lenovo.price} <span class="change ${priceData.lenovo.trend}">${priceData.lenovo.trend === 'up' ? '↑' : '↓'} ${Math.abs(priceData.lenovo.change)}%</span></div>
-                <div class="date">收盘日期：${priceData.lenovo.date} | 港股通持股比例升至9.26%创历史新高</div>
+                <div class="date">收盘日期：${priceData.lenovo.date} | 港股收盘报HK$9.18，市值约$167.0亿</div>
             </div>
         `;
 
@@ -305,57 +305,64 @@
         const newsData = {
             industry: [
                 {
-                    tag: '内存回落',
-                    title: '内存价格大幅回落！从暴涨300%到持续降价：2026年内存市场的"过山车"行情',
-                    source: '头条 / 什么值得买',
+                    tag: '重磅·高盛研报',
+                    title: '高盛研报：DRAM/NAND/HBM三重紧平衡持续，缺口扩大超预期',
+                    source: '高盛研报 / 雪球',
                     date: '2026-04-16',
-                    summary: '头条4月16日报道：今年1月DDR5 16G单条还卖到1100-1200元，32G套条逼近4000元，涨幅超过300%。但最近半个月，电脑圈最火的消息是内存价格大跳水——DDR5 16GB模组已从年内高点回落约15-20%。核心逻辑：前期过度囤货的渠道商开始抛售，加上部分AI服务器订单延后，短期内现货市场供需缓和。对联想SSC参考：现货市场回落为谈判长协框架提供了良好时机，建议利用当前窗口与供应商锁定部分长协配额。'
+                    summary: '高盛4月16日发布研报《全球存储芯片供需更新与物料成本分析》。报告指出：DRAM、NAND、HBM三重产品线均处于紧平衡状态，供需缺口超出此前预期。高盛认为AI服务器需求持续吞噬产能，HBM先进制程排挤通用DRAM产能，导致整体存储供应紧张态势将延续至2026下半年。对联想SSC参考：三重紧平衡意味着备件采购需更加前瞻，建议提前一个季度锁单，避免Q3出现缺货风险。'
                 },
                 {
-                    tag: 'Q1出货',
-                    title: 'Q1全球PC出货增长3%低于预期：机构警告供应链压力将持续',
-                    source: 'IDC/Omdia / MSN中文',
-                    date: '2026-04-15',
-                    summary: 'IDC/Omdia数据显示，2026年Q1全球PC出货约6560万台，同比增长3%，低于此前预期。联想出货1650万台，市占突破25%领跑全球。分析师警告：从Q2开始，内存和存储成本预计将比此前预期更快、更大幅度上涨，这将压缩PC厂商的毛利空间。对联想SSC启示：全年出货前高后低态势确立，Q2起备件成本压力加大，需提前锁定长协配额控制成本。'
+                    tag: '发改委确认',
+                    title: '国家发改委：存储芯片涨价向下游传导，2026年电脑手机涨价已成定局',
+                    source: '国家发改委 / 央视新闻',
+                    date: '2026-02-28',
+                    summary: '国家发改委价格监测中心发文确认：自2025年9月至今，受需求爆发式增长、产能断崖式紧缺等因素影响，全球存储器市场缺口扩大，存储芯片价格持续上涨并向下游传导。2026年手机、电脑产品涨价已成定局。对联想SSC启示：涨价传导意味着终端产品成本上升压力持续，LCD/MB/SSD三大件需重点锁定长协价格。'
                 },
                 {
-                    tag: '存储周期',
-                    title: '2026年存储器价格走势分析：AI驱动的"超级周期"仍在持续',
-                    source: '中国IC交易网',
-                    date: '2026-04-05',
-                    summary: '2026年4月，全球存储器市场正处于由AI驱动的"超级周期"之中。这一周期的特征是需求强劲增长与供给结构性短缺并存，导致HBM、标准DRAM和NAND价格持续处于高位。虽然现货价格在4月有所回落，但合约市场依然紧张。对SSC参考：超级周期特征下，备件成本将长期高于历史平均水平，长协框架是控制成本波动的关键工具。'
+                    tag: 'Q2合约价',
+                    title: 'TrendForce确认Q2 DRAM合约涨58-63%、NAND涨70-75%',
+                    source: 'TrendForce / MSN科技',
+                    date: '2026-04-02',
+                    summary: 'TrendForce集邦咨询预测：2026年Q2通用型DRAM内存合约价格预计环比上涨58%至63%，NAND闪存合约价格涨幅预计达70-75%。涨价主因：AI服务器持续吞噬HBM先进产能，HBM与通用DRAM共享制造资源，导致通用DRAM产能受限。对联想SSC参考：Q2合约价大幅上涨将直接推高备件成本，需在Q1末完成Q2锁单。'
+                }
+            ],
+            ai: [
+                {
+                    tag: 'AI大模型',
+                    title: 'GPT-6预训练完成+DeepSeek V4发布+Claude Opus 4.6：AI大模型进入"三国杀"格局',
+                    source: 'CSDN / AI Hub',
+                    date: '2026-04-12',
+                    summary: '2026年4月AI大模型迎来爆发式更新：OpenAI宣布GPT-6预训练完成、DeepSeek V4全流程采用华为昇腾950芯片+自研HBM、Claude Opus 4.6在中文写作和长文处理上超越GPT-5.4。国产模型密集发布：阿里HappyHorse、智谱GLM-5.1取得关键技术突破。对联想ISS业务：AI大模型算力需求持续驱动服务器存储采购。'
+                },
+                {
+                    tag: 'AI PC渗透',
+                    title: 'Gartner预计2026年AI PC出货1.43亿台：渗透率达55%，企业采购成最大变量',
+                    source: 'Gartner / ESM China',
+                    date: '2026-04-07',
+                    summary: 'Gartner预计2026年AI PC出货约1.43亿台，渗透率将达55%左右。需求分化明显：消费端买单主要是重度生产力创作者和早期尝鲜者；美国大企业倾向云端/SaaS；中国AI原生公司和中小软件设计团队更积极。对联想SSC影响：AI PC机型已占出货三成以上，备件规划需重点关注Copilot+标准配置对应的存储备件成本上升问题。'
                 }
             ],
             lenovo: [
                 {
-                    tag: '新品倒计时',
-                    title: 'ThinkPad 2026新品发布会倒计时6天：天禧AI生态即将揭晓',
-                    source: '联想官方 / IT之家',
-                    date: '2026-04-16',
-                    summary: '联想官方4月16日发布倒计时预告：ThinkPad 2026新品暨天禧AI生态发布会将于4月22日举行，主题"我·即我们"。已开启1元预约通道，X1 Carbon、X9-15p、X14等新品即将亮相。对SSC参考：新品发布后对应的备件SKU将更新，需提前准备新机型LCD/MB/SSD关键备件采购计划。'
+                    tag: '政企业务升级',
+                    title: '联想政企业务升级AI战略：从IT预算经营客户转向基于客户业务经营',
+                    source: '和讯网 / 东方财富网',
+                    date: '2026-04-09',
+                    summary: '联想中国区政企业务群4月3日召开2026/2027财年誓师大会，宣布从"基于IT预算经营客户"升级为"基于客户业务经营"的AI战略。聚焦智能体AI从探索步入规模化落地的关键阶段，政企业务将更深度融入客户业务场景。4月22日ThinkPad发布会进入倒计时。对SSC参考：新财年战略意味着联想整体出货结构可能向高价值AI PC倾斜，备件成本结构需相应调整。'
                 },
                 {
-                    tag: '资金流入',
-                    title: '联想港股通持股比例升至9.26%创历史新高：资金持续流入科技硬件板块',
-                    source: '格隆汇 / Wind数据',
-                    date: '2026-04-16',
-                    summary: '格隆汇4月16日报道：进入四月以来，港股市场整体回暖，科技板块活跃，联想集团获得资金关注度显著提升。Wind数据显示，截止2026年4月13日，联想港股通持股比例已升至9.26%，创出历史新高。联想Q1出货1650万台增9%领跑全球，市占超25%。'
+                    tag: 'ThinkPad发布',
+                    title: 'ThinkPad 2026新品发布会倒计时：4月22日见，X1 Carbon等全系亮相',
+                    source: 'IT之家 / 新浪财经',
+                    date: '2026-04-07',
+                    summary: '联想ThinkPad官方确认2026年度新品暨天禧AI生态发布会将于4月22日举行，主题"我·即我们"。X1 Carbon、X9-15p、X14等多款新品已完成线上上架。对SSC参考：发布会后3-6个月为新机型备件需求高峰期，需提前与供应商确认LCD/MB关键料件的产能分配。'
                 },
-                {
-                    tag: '供应链',
-                    title: '联想集团何以成为业绩"异类"？韧性的全球供应链是核心优势',
-                    source: '新浪财经 / Gartner',
-                    date: '2026-02-13',
-                    summary: '新浪财经2月报道：联想集团在过去数十年积累的规模优势、韧性的全球供应链以及稳固的合作伙伴关系，将在AI时代被进一步放大。Gartner 2026供应链Top 25榜单中，联想位列第8位，较2025年上升2位，连续三年领跑中国科技企业。'
-                }
-            ],
-            ssc: [
                 {
                     tag: 'SSC建议',
-                    title: '【SSC内部参考】内存价格回落窗口期：长协谈判策略建议',
+                    title: '【SSC内部参考】高盛研报警示下的备件采购策略调整',
                     source: '联想SSC成本团队',
                     date: '2026-04-17',
-                    summary: '基于最新市场动态的SSC成本团队建议：1）DDR5现货较年内高点回落约17%，是启动长协谈判的良好窗口期；2）Q1 PC出货低于预期，但Q2起存储成本上涨压力加大，需提前锁定配额；3）ThinkPad 2026发布会（4月22日）后新机型备件SKU将更新，提前备货；4）联想港股通持股创历史新高（9.26%），市场信心充足；5）NAND现货小幅松动但合约价Q2仍将上涨40-50%，核心采购仍以合约价为准。'
+                    summary: '基于高盛最新研报的SSC成本团队建议：1）高盛警示DRAM/NAND/HBM三重紧平衡持续，Q2合约价Q3仍将高位运行；2）联想港股HK$9.18，市值约$167.0亿；3）ThinkPad 4月22日发布会进入倒计时，提前准备新机型备件SKU；4）发改委确认涨价向下游传导，LCD/MB/SSD三大件需重点锁定长协；5）建议提前一个季度锁单，避免Q3缺货风险。'
                 }
             ]
         };
@@ -374,8 +381,8 @@
         }
 
         renderNews(newsData.industry, 'newsSection');
+        renderNews(newsData.ai, 'aiSection');
         renderNews(newsData.lenovo, 'lenovoSection');
-        renderNews(newsData.ssc, 'sscSection');
 
         // 历史记录数据
         const historyDates = [
@@ -387,6 +394,7 @@
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
+            {date: '2026-04-08', label: '2026-04-08'},
         ];
 
         // 动态生成历史记录链接

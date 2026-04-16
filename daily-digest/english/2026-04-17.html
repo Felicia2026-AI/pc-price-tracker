@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Digest - 英文学习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .date {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .header .update-time {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #212529;
+            border-left: 4px solid #11998e;
+            padding-left: 15px;
+        }
+
+        .text-container {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .english-text {
+            font-size: 16px;
+            color: #212529;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .chinese-translation {
+            font-size: 15px;
+            color: #6c757d;
+            line-height: 1.8;
+            border-top: 2px solid #dee2e6;
+            padding-top: 15px;
+        }
+
+        .phrase-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .phrase-english {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .phrase-chinese {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        .phrase-example {
+            font-size: 14px;
+            font-style: italic;
+            opacity: 0.85;
+            margin-top: 8px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 8px;
+        }
+
+        .vocabulary-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .vocab-item {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 12px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .vocab-word {
+            font-size: 18px;
+            font-weight: 700;
+            color: #11998e;
+            min-width: 150px;
+        }
+
+        .vocab-meaning {
+            font-size: 15px;
+            color: #495057;
+            flex: 1;
+        }
+
+        .vocab-example {
+            font-size: 14px;
+            color: #6c757d;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .practice-section {
+            background: #fff3cd;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+        }
+
+        .practice-item {
+            margin-bottom: 15px;
+        }
+
+        .practice-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #212529;
+        }
+
+        .practice-option {
+            display: block;
+            padding: 8px 12px;
+            margin: 5px 0;
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .practice-option:hover {
+            background: #11998e;
+            color: white;
+            border-color: #11998e;
+        }
+
+        .history-section {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+
+        .history-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #212529;
+            border-left: 4px solid #11998e;
+            padding-left: 15px;
+        }
+
+        .history-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .history-link {
+            display: block;
+            padding: 12px 16px;
+            background: white;
+            color: #495057;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid #dee2e6;
+        }
+
+        .history-link:hover {
+            background: #11998e;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(17, 153, 142, 0.3);
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .vocab-item {
+                flex-direction: column;
+            }
+
+            .vocab-word {
+                min-width: auto;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 英文学习</h1>
+            <div class="date" id="currentDate"></div>
+            <div class="update-time" id="updateTime"></div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <div class="section-title">💬 Business English Phrase of the Day</div>
+                <div class="phrase-section" id="phraseSection"></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">📖 今日阅读</div>
+                <div class="text-container">
+                    <div class="english-text" id="englishText"></div>
+                    <div class="chinese-translation" id="chineseText"></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">📝 重点词汇</div>
+                <div class="vocabulary-section" id="vocabularySection"></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">✍️ 理解练习</div>
+                <div class="practice-section" id="practiceSection"></div>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <div class="history-title">📜 历史记录</div>
+            <div class="history-list" id="historyList"></div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Daily Digest - 英文学习 | 每日更新</p>
+        </div>
+    </div>
+
+    <script>
+        // 设置日期（硬编码，禁止使用new Date()）
+        document.getElementById('currentDate').textContent = '2026年4月17日星期五';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/17 10:00';
+
+        // 今日短语
+        const todayPhrase = {
+            english: "\"Goldman Sachs' latest research confirms a triple tightening balance across DRAM, NAND, and HBM markets—the supply-demand gap is widening beyond previous expectations. For our Q2 parts procurement, this means we need to lock in orders at least one quarter ahead to avoid shortage risk in Q3.\"",
+            chinese: "高盛最新研究确认DRAM、NAND和HBM市场三重紧平衡——供需缺口超出此前预期。对我们的Q2备件采购而言，这意味着需要提前至少一个季度锁单，以避免Q3缺货风险。",
+            meaning: "triple tightening balance：三重紧平衡，指DRAM、NAND、HBM三条产品线同时处于供应紧张状态。supply-demand gap：供需缺口。lock in orders：锁单/锁定订单。shortage risk：缺货风险。",
+            example: "Given the triple tightening balance, we should submit our Q3 parts orders to key suppliers by end of April to secure allocation priority."
+        };
+
+        // 渲染短语
+        document.getElementById('phraseSection').innerHTML = `
+            <div class="phrase-english">${todayPhrase.english}</div>
+            <div class="phrase-chinese">${todayPhrase.chinese}</div>
+            <div class="phrase-example">💡 含义：${todayPhrase.meaning}</div>
+        `;
+
+        // 今日学习内容 - 长期合约与供应策略
+        const todayContent = {
+            english: "The memory industry is undergoing a fundamental transformation. Samsung and SK Hynix, which together control over 70% of the global DRAM supply, have announced a dramatic shift from traditional quarterly and annual contracts to 3-to-5-year Long-Term Agreements (LTAs) with major technology customers. This is not a minor policy tweak—it represents a structural change in how memory components will be sourced and priced for the foreseeable future.\n\nTo understand why this matters, consider the traditional memory procurement cycle. In the past, DRAM and NAND prices followed predictable boom-and-bust cycles: prices would rise when demand exceeded supply, prompting manufacturers to invest in capacity expansion, which eventually led to oversupply and price collapse. This cycle, known as the \"memory cycle\" or \"silicon cycle,\" typically lasted 3-4 years from peak to trough. Procurement teams could time their purchases—buying aggressively during downturns and building inventory before upturns. This cyclical behavior was uncomfortable but manageable.\n\nWhat changed? The answer is AI. The explosive growth of AI training and inference workloads has created an insatiable demand for high-bandwidth memory (HBM). A single AI GPU requires 4-8 HBM stacks, and each data center GPU server needs 8 of these GPUs. The total HBM demand from AI servers is now consuming over 70% of advanced DRAM manufacturing capacity. Samsung, SK Hynix, and Micron have essentially redirected their most advanced production lines toward HBM, leaving less capacity for commodity DRAM and NAND used in PCs, laptops, and conventional servers.\n\nFor Samsung and SK Hynix, the shift to LTAs makes perfect strategic sense. By locking in 3-5 year commitments from major cloud providers and OEMs, they gain several advantages: predictable demand visibility for capacity planning, guaranteed revenue streams during what would otherwise be volatile market periods, and the ability to prioritize their most valuable customers during supply constraints. The LTA model essentially converts the traditional buyer's market cyclicality into a seller's market stability.\n\nWhat does this mean for PC manufacturers and their spare parts supply chains? Several implications are worth highlighting.\n\nFirst, pricing predictability improves but at a higher floor. LTAs typically come with price adjustment mechanisms—either index-linked (tied to spot market or industry benchmarks) or band-based (prices fluctuate within a predefined range). While this reduces extreme price volatility, it also means that the baseline cost level will likely remain elevated as long as AI-driven demand continues to absorb supply. For SSC teams, this means budget planning becomes more reliable, but the cost baseline itself is structurally higher than pre-AI levels.\n\nSecond, allocation priority becomes a critical negotiation variable. In a supply-constrained environment with LTAs in place, the key question is not just price—it's allocation. Will you get your agreed volumes when everyone else also wants more? LTA negotiations should explicitly address allocation priority, volume flexibility (how much you can increase or decrease orders within the contract period), and penalty/bonus mechanisms for volume deviations.\n\nThird, the relationship between spot prices and contract prices becomes more decoupled. Traditionally, spot and contract prices moved roughly in parallel, with spot prices leading contract prices by 1-2 quarters. With LTAs, contract prices become more stable while spot prices may still fluctuate based on short-term supply-demand imbalances. This creates opportunities for opportunistic spot purchases when spot prices dip below LTA levels—but only if you have the flexibility and working capital to absorb timing risk.\n\nFourth, supplier diversification becomes more challenging but more important. When Samsung and SK Hynix commit their capacity to LTA customers, the available capacity for non-LTA customers shrinks. This means that companies without LTAs—or those whose LTAs don't cover their full needs—must turn to alternative suppliers (Micron, Chinese domestic manufacturers) or the spot market. While Chinese DRAM manufacturers like CXMT (ChangXin Memory Technologies) are improving their technology and capacity, they still lag behind Samsung and SK Hynix in advanced nodes. For SSC, having multiple qualified suppliers for each component category is no longer just best practice—it's becoming a survival necessity.\n\nFifth, component obsolescence and technology transition risk increases. LTAs typically lock in specific technology generations (e.g., DDR5-5600 or DDR5-6400). If your product roadmap calls for a technology upgrade (e.g., to DDR5-7200 or next-generation DDR6), the LTA may need renegotiation. For SSC, where spare parts must match the original component specifications, this means careful attention to which technology generation is covered by the LTA and ensuring adequate coverage for the expected lifecycle of each product model.\n\nFor Lenovo specifically, the LTA shift presents both opportunity and challenge. As the world's largest PC manufacturer with 25%+ market share, Lenovo has significant negotiating leverage with memory suppliers. The ThinkPad 2026 product launch on April 22 will likely feature the latest DDR5 specifications and NPU integration, requiring careful coordination with memory suppliers on both current and next-generation component availability. SSC teams should work closely with the procurement organization to ensure that LTA terms adequately cover spare parts demand projections.\n\nThe practical takeaway for supply chain professionals: the era of cyclical memory procurement is ending. The new normal features stable but elevated pricing, allocation-based competition for supply, and multi-year commitment requirements. Organizations that adapt their procurement strategies to this new reality—by securing LTA slots, building diversified supplier relationships, and developing scenario-based inventory planning—will maintain competitive advantage. Those that continue to operate with the old cyclical playbook will find themselves increasingly marginalized.\n\nIn your next supplier meeting or procurement review, consider asking these questions: Do we have LTA coverage for our top 10 components by spend? What is our allocation priority if supply tightens further? How much flexibility do our current agreements provide for volume adjustments? What is our contingency plan if a key supplier cannot meet committed volumes? These questions are no longer theoretical—they are the operational reality of 2026's transformed memory supply landscape.",
+            chinese: "内存行业正在经历一场根本性的变革。三星和SK海力士合计控制着全球超过70%的DRAM供应，它们宣布将从传统的季度和年度合约模式，转向与主要科技客户签订3-5年长期协议（LTA）。这不是一次小幅度的政策调整——它代表了未来可预见的时期内内存零部件采购和定价方式的根本性结构变化。\n\n要理解为什么这很重要，先看看传统的内存采购周期。过去，DRAM和NAND价格遵循可预测的繁荣与衰退周期：需求超过供给时价格上涨，促使制造商投资扩产，最终导致供过于求和价格暴跌。这个被称为"内存周期"或"硅周期"的循环通常持续3-4年。采购团队可以择时购买——在下行期积极采购，在上行期前建库存。这种周期性行为虽然令人不适但可以管理。\n\n是什么改变了？答案是AI。AI训练和推理工作负载的爆炸式增长创造了对高带宽内存（HBM）的无限需求。单个AI GPU需要4-8个HBM堆栈，每台数据中心GPU服务器需要8个这样的GPU。仅AI服务器对HBM的需求就已消耗超过70%的先进DRAM制造产能。三星、SK海力士和美光基本上已将其最先进的生产线转向HBM，留给PC、笔记本和传统服务器使用的普通DRAM和NAND的产能减少了。\n\n对三星和SK海力士而言，转向LTA具有完美的战略意义。通过与主要云厂商和OEM锁定3-5年承诺，它们获得多项优势：产能规划的可见需求、在原本波动剧烈的市场中确保稳定收入流，以及在供应紧张时优先服务最有价值客户的能力。LTA模式本质上将传统买方市场的周期性转化为卖方市场的稳定性。\n\n这对PC制造商及其备件供应链意味着什么？几个值得关注的要点。\n\n第一，定价可预测性改善但底线更高。LTA通常附带价格调整机制——要么与指数挂钩（与现货市场或行业基准绑定），要么基于区间（价格在预设范围内波动）。虽然这降低了极端价格波动，但也意味着只要AI驱动的需求持续消耗供应，基础成本水平将保持在较高位置。对SSC团队而言，预算规划变得更可靠，但成本基准本身就比AI之前结构性更高。\n\n第二，分配优先级成为关键谈判变量。在供应紧张且LTA到位的环境中，关键问题不仅是价格——而是分配。当所有人都想要更多时，你能拿到约定的数量吗？LTA谈判应明确涉及分配优先级、数量灵活性（合同期内可以增减多少订单）以及数量偏离的惩罚/奖励机制。\n\n第三，现货价与合约价的关系变得更加脱钩。传统上，现货价和合约价大致同步变动，现货价领先合约价1-2个季度。有了LTA，合约价变得更加稳定，而现货价可能仍基于短期供需失衡而波动。这创造了在现货价低于LTA水平时机会性现货采购的可能性——但前提是你有灵活性和营运资金来吸收时机风险。\n\n第四，供应商多元化变得更加困难但也更加重要。当三星和SK海力士将产能承诺给LTA客户时，非LTA客户的可用产能就会缩减。这意味着没有LTA或LTA不能覆盖全部需求的公司，必须转向替代供应商（美光、中国本土制造商）或现货市场。虽然中国的DRAM制造商如长鑫存储在技术和产能上正在改善，但在先进制程上仍落后于三星和SK海力士。对SSC而言，为每个零部件类别建立多个合格供应商不再是最佳实践——它正在成为生存必需。\n\n第五，零部件淘汰和技术转型风险增加。LTA通常锁定特定技术代次（如DDR5-5600或DDR5-6400）。如果产品路线图需要技术升级（如升级到DDR5-7200或下一代DDR6），LTA可能需要重新谈判。对SSC而言，备件必须匹配原始零部件规格，这意味着需要仔细关注LTA覆盖的是哪个技术代次，并确保对每个产品型号的预期生命周期有充足的覆盖。\n\n具体到联想，LTA转变既是机遇也是挑战。作为全球最大的PC制造商（25%以上市场份额），联想在内存供应商面前拥有显著的谈判筹码。4月22日的ThinkPad 2026产品发布可能会采用最新的DDR5规格和NPU集成，需要与内存供应商就当前和下一代零部件的可用性进行仔细协调。SSC团队应与采购组织密切合作，确保LTA条款充分覆盖备件需求预测。\n\n对供应链专业人士的实用建议：周期性内存采购的时代正在结束。新常态的特点是稳定但偏高的定价、基于分配的供应竞争、以及多年承诺要求。能够适应这一新现实的组织——通过争取LTA配额、构建多元化的供应商关系、制定基于场景的库存规划——将保持竞争优势。继续按照旧有周期性策略运营的组织将发现自己越来越被边缘化。\n\n在下一次供应商会议或采购评审中，考虑提出以下问题：我们前10大采购额零部件是否有LTA覆盖？如果供应进一步紧张，我们的分配优先级如何？当前协议提供多少数量调整灵活性？如果关键供应商无法满足承诺数量，我们的应急计划是什么？这些问题不再是理论性的——它们是2026年转型后内存供应格局的运营现实。",
+            vocabulary: [
+                {
+                    word: "Long-Term Agreement (LTA)",
+                    meaning: "长期协议/长协；通常为3-5年期的供应合同，含价格调整机制、数量承诺和分配优先级条款",
+                    example: "We just signed a 3-year LTA with our primary DRAM supplier that gives us allocation priority during supply-constrained quarters."
+                },
+                {
+                    word: "allocation priority",
+                    meaning: "分配优先级；在供应紧张时，供应商优先满足哪些客户的约定顺序",
+                    example: "Our LTA includes a Tier-1 allocation priority clause, meaning we get our committed volumes even when supply is 20% below demand."
+                },
+                {
+                    word: "volume flexibility / volume commitment",
+                    meaning: "数量灵活性/采购量承诺；LTA中约定的订单量可调整范围（如±15%）",
+                    example: "The volume flexibility in our contract allows us to adjust orders by plus or minus 15% from the baseline commitment each quarter."
+                },
+                {
+                    word: "supplier diversification",
+                    meaning: "供应商多元化；不依赖单一供应商，建立多个合格供应商以分散风险",
+                    example: "Given the LTA trend, we need to accelerate our supplier diversification strategy for NAND components to avoid over-dependence on Samsung."
+                },
+                {
+                    word: "opportunistic spot purchase",
+                    meaning: "机会性现货采购；在现货价低于合约价时利用市场波动进行的临时采购",
+                    example: "When DDR5 spot prices dropped 25% last month, we made an opportunistic spot purchase of 5,000 units to supplement our LTA volumes."
+                }
+            ],
+            practice: [
+                {
+                    question: "Why are Samsung and SK Hynix shifting from quarterly/annual contracts to 3-5 year LTAs?",
+                    options: [
+                        "Government regulation requires it",
+                        "To gain predictable demand visibility, guaranteed revenue, and allocation control during AI-driven supply constraints",
+                        "Because PC demand is declining rapidly",
+                        "LTAs are cheaper for buyers"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "What is a key risk of LTAs for spare parts supply chains?",
+                    options: [
+                        "LTAs always result in lower quality components",
+                        "LTAs lock in specific technology generations, creating obsolescence risk if product roadmaps require technology upgrades",
+                        "LTAs are too short to be useful",
+                        "LTAs prevent any price negotiation"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "In the new LTA-dominated environment, what becomes more critical than price?",
+                    options: [
+                        "Marketing budgets",
+                        "Allocation priority — ensuring you get your committed volumes when supply is tight",
+                        "Office location",
+                        "Product color choices"
+                    ],
+                    answer: 1
+                }
+            ]
+        };
+
+        // 渲染学习内容
+        document.getElementById('englishText').textContent = todayContent.english;
+        document.getElementById('chineseText').textContent = todayContent.chinese;
+
+        // 渲染词汇
+        const vocabSection = document.getElementById('vocabularySection');
+        vocabSection.innerHTML = todayContent.vocabulary.map(item => `
+            <div class="vocab-item">
+                <div class="vocab-word">${item.word}</div>
+                <div class="vocab-meaning">${item.meaning}</div>
+                <div class="vocab-example">${item.example}</div>
+            </div>
+        `).join('');
+
+        // 渲染练习
+        const practiceSection = document.getElementById('practiceSection');
+        practiceSection.innerHTML = todayContent.practice.map((item, index) => `
+            <div class="practice-item">
+                <div class="practice-question">${index + 1}. ${item.question}</div>
+                ${item.options.map((opt, optIndex) => `
+                    <div class="practice-option" onclick="checkAnswer(${index}, ${optIndex}, ${item.answer})">${opt}</div>
+                `).join('')}
+                <div id="answer-${index}" style="margin-top: 10px; font-weight: bold;"></div>
+            </div>
+        `).join('');
+
+        // 检查答案
+        function checkAnswer(questionIndex, selectedOption, correctAnswer) {
+            const resultDiv = document.getElementById(`answer-${questionIndex}`);
+            if (selectedOption === correctAnswer) {
+                resultDiv.innerHTML = '<span style="color: #28a745;">✓ Correct!</span>';
+            } else {
+                resultDiv.innerHTML = '<span style="color: #dc3545;">✗ Try again</span>';
+            }
+        }
+
+        // 历史记录数据
+        const historyDates = [
+            {date: '2026-04-17', label: '2026-04-17（今日）'},
+            {date: '2026-04-16', label: '2026-04-16'},
+            {date: '2026-04-15', label: '2026-04-15'},
+            {date: '2026-04-14', label: '2026-04-14'},
+            {date: '2026-04-13', label: '2026-04-13'},
+            {date: '2026-04-11', label: '2026-04-11'},
+            {date: '2026-04-10', label: '2026-04-10'},
+            {date: '2026-04-09', label: '2026-04-09'},
+            {date: '2026-04-08', label: '2026-04-08'},
+        ];
+
+        // 动态生成历史记录链接
+        const historyList = document.getElementById('historyList');
+        historyDates.forEach(item => {
+            const link = document.createElement('a');
+            link.href = `../english/${item.date}.html`;
+            link.className = 'history-link';
+            link.textContent = item.label;
+            historyList.appendChild(link);
+        });
+    </script>
+</body>
+</html>

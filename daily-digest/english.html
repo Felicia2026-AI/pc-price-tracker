@@ -298,15 +298,15 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月17日星期五';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/17 10:00';
+        document.getElementById('currentDate').textContent = '2026年4月16日星期四';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/16 10:00';
 
         // 今日短语
         const todayPhrase = {
-            english: "\"Q1 PC shipments came in below expectations at just 3% YoY growth. However, we expect cost pressures to intensify from Q2 as memory and storage prices surge faster than anticipated, which will squeeze our margins. We need to accelerate our LTA negotiations before the window closes.\"",
-            chinese: "Q1 PC出货低于预期，同比增长仅3%。然而，我们预计从Q2开始，随着内存和存储价格以超出预期的速度上涨，成本压力将加剧，这将压缩我们的毛利空间。我们需要在窗口关闭之前加快长协谈判。",
-            meaning: "come in below expectations：低于预期（常用商业表达）。YoY = Year-over-Year：同比增长。cost pressures intensify：成本压力加剧。surge faster than anticipated：以超出预期的速度上涨。squeeze margins：压缩利润空间。accelerate LTA negotiations：加快长协谈判。",
-            example: "Given that Q1 shipments came in below expectations, we need to accelerate our cost control initiatives and explore alternative sourcing strategies before the pricing window closes."
+            english: "\"With NAND supplier inventory at historical lows and pricing power shifting decisively to OEMs, we're facing a supercycle where spot price dips are just noise. The real story is contract pricing—Q2 NAND contracts are up 75% QoQ. We need to secure our LTA allocations before the window closes.\"",
+            chinese: "随着NAND供应商库存降至历史低位，定价权已决定性地转向原厂，我们正面临一个超级周期，现货价格的下跌只是噪音。真正的问题是合约价——Q2 NAND合约价环比上涨75%。我们需要在窗口关闭之前确保长协配额。",
+            meaning: "pricing power shifting to OEMs：定价权转向原厂（OEM在这里指内存原厂如三星/SK海力士）。supercycle：超级周期。spot price dips are just noise：现货下跌只是噪音/干扰信号。contract pricing：合约价。LTA allocations：长协配额。",
+            example: "While competitors focus on spot market movements, we're locking in LTA allocations to secure our contract pricing position for Q3."
         };
 
         // 渲染短语
@@ -316,65 +316,65 @@
             <div class="phrase-example">💡 含义：${todayPhrase.meaning}</div>
         `;
 
-        // 今日学习内容 - 库存管理
+        // 今日学习内容 - 供应链弹性
         const todayContent = {
-            english: "In the memory and storage supply chain, effective inventory management is critical to balancing cost control with production continuity. For SSC teams managing spare parts procurement, understanding the key inventory strategies and their trade-offs is essential.\n\nThe first concept to grasp is safety stock. Safety stock is the buffer inventory kept to protect against variability in demand and supply. In the context of memory components, where prices can fluctuate dramatically and lead times are unpredictable, maintaining adequate safety stock is crucial. However, the challenge lies in determining the right level—too much safety stock ties up working capital and increases carrying costs; too little risks stockouts that can halt production.\n\nThe safety stock formula incorporates several factors: average daily usage rate, lead time variability, and service level requirements. For DDR5 and NAND components, where demand can spike突然 due to AI server orders or drop suddenly when channel inventory corrects, safety stock calculations must account for high volatility. SSC teams should review safety stock levels quarterly and adjust based on recent demand patterns.\n\nAnother critical concept is Economic Order Quantity (EOQ). EOQ determines the optimal order quantity that minimizes total inventory costs, including ordering costs and carrying costs. The formula balances the trade-off between ordering frequency (more frequent orders mean lower inventory levels but higher ordering costs) and order quantity (larger orders mean lower ordering costs but higher carrying costs).\n\nFor memory components, EOQ calculations are complicated by price volatility. When prices are rising, it may make sense to order larger quantities to lock in current prices, even if this increases carrying costs. When prices are falling, ordering smaller quantities more frequently may be preferable. SSC teams must integrate price trend analysis into their EOQ calculations.\n\nLead time management is equally important. Memory component lead times can range from 4 weeks to 16 weeks depending on the component type and market conditions. Long lead times require earlier ordering and more accurate demand forecasting. In a supercycle environment where supply constraints persist, lead times tend to lengthen, requiring procurement teams to plan further ahead.\n\nJust-In-Time (JIT) inventory is a strategy where components arrive exactly when needed for production, minimizing inventory holding costs. While JIT can be highly efficient in stable environments, it becomes risky when lead times are long and variable. During the 2025-2026 memory supercycle, many PC manufacturers that relied heavily on JIT found themselves unable to secure sufficient components when demand spiked.\n\nConsignment inventory is another option where the supplier holds inventory at the customer's location until it is consumed. This transfers carrying cost risk to the supplier and can improve cash flow. However, consignment requires careful tracking and may not be available for all component types or suppliers.\n\nDemand forecasting accuracy is the foundation of effective inventory management. For memory components, forecasting is particularly challenging due to the influence of external factors such as AI server demand, geopolitical tensions affecting semiconductor supply chains, and channel inventory corrections. SSC teams should use multiple forecasting methods—quantitative models for short-term projections and qualitative judgment for longer-term scenarios.\n\nWhen demand forecasting indicates potential shortages, procurement teams should consider strategic stockpiling. Strategic stockpiling involves building inventory above normal safety stock levels in anticipation of future price increases or supply constraints. The decision to strategically stockpile requires careful cost-benefit analysis, considering the probability and magnitude of price increases, available storage capacity, and working capital constraints.\n\nInventory turns is a key performance indicator that measures how many times inventory is sold and replaced over a period. Higher inventory turns indicate more efficient inventory management, but excessively high turns may signal insufficient inventory that risks stockouts. For memory components with volatile pricing, the optimal inventory turn rate balances carrying costs against the risk of holding expensive inventory that may decline in value.\n\nThe days of inventory (DOI) metric complements inventory turns by showing how many days of inventory are on hand. Industry benchmarks for memory components typically range from 30 to 60 days, depending on product lifecycle stage and demand predictability. SSC teams should track DOI trends and investigate deviations from benchmarks.\n\nIn practice, the most effective inventory management approach for SSC teams combines multiple strategies. Maintain appropriate safety stock based on component criticality and demand volatility. Use EOQ principles adjusted for price trends. Build strategic stockpiles when market analysis indicates favorable conditions. Monitor lead times closely and adjust order timing accordingly. Continuously improve demand forecasting accuracy through data analytics and cross-functional collaboration.\n\nThe memory market dynamics of 2026 demand that SSC teams be more sophisticated in their inventory management approaches. The days of simple reorder-point systems are gone. Today's environment requires integrated demand planning, strategic supplier partnerships, and agile response to market signals. Those who master these skills will deliver competitive advantage through better cost control and production continuity.",
-            chinese: "在内存和存储供应链中，有效的库存管理对于平衡成本控制与生产连续性至关重要。对于管理备件采购的SSC团队来说，理解关键库存策略及其权衡取舍是必不可少的。\n\n第一个需要掌握的概念是安全库存。安全库存是为防止需求和供应波动而保持的缓冲库存。在内存零部件的背景下——价格可能剧烈波动，交期不可预测——保持充足的安全库存至关重要。然而，挑战在于确定正确的水平——过多的安全库存会占用营运资金并增加持有成本；过少则可能导致缺货，进而中断生产。\n\n安全库存公式包含几个因素：平均日使用率、交期变动性和服务水平要求。对于DDR5和NAND零部件，需求可能因AI服务器订单而突然激增，或因渠道库存修正而突然下降，因此安全库存计算必须考虑高波动性。SSC团队应每季度审查安全库存水平，并根据近期需求模式进行调整。\n\n另一个关键概念是经济订货量（EOQ）。EOQ决定使总库存成本最小化的最优订货量，包括订货成本和持有成本。该公式平衡了订货频率（更频繁的订货意味着更低的库存水平但更高的订货成本）与订货量（大额订单意味着更低的订货成本但更高的持有成本）之间的权衡。\n\n对于内存零部件，EOQ计算因价格波动而变得复杂。当价格上涨时，订货更大数量以锁定当前价格可能是合理的，即使这会增加持有成本。当价格下跌时，更频繁地订购更小数量可能更可取。SSC团队必须将价格趋势分析整合到EOQ计算中。\n\n交期管理同样重要。内存零部件的交期可能从4周到16周不等，具体取决于零部件类型和市场状况。长交期需要更早订货和更准确的需求预测。在供应约束持续的超级周期环境中，交期往往会延长，要求采购团队更早规划。\n\n准时制（JIT）库存是一种策略，零部件在生产需要时刚好到达，将库存持有成本降至最低。虽然JIT在稳定环境中可能非常高效，但当交期长且变动大时，它就变得有风险。在2025-2026年内存超级周期期间，许多严重依赖JIT的PC制造商发现，当需求激增时，他们无法获得足够的零部件。\n\n寄售库存是另一个选项，供应商将库存放在客户所在地直到被消耗。这将持有成本风险转移给供应商，可以改善现金流。然而，寄售需要仔细跟踪，可能并非所有零部件类型或供应商都提供。\n\n需求预测准确性是有效库存管理的基础。对于内存零部件，预测尤其困难，因为受外部因素影响较大，如AI服务器需求、影响半导体供应链的地缘政治紧张局势以及渠道库存修正。SSC团队应使用多种预测方法——定量模型用于短期预测，定性判断用于长期情景。\n\n当需求预测显示潜在短缺时，采购团队应考虑战略储备。战略储备是在预期未来价格上涨或供应紧张时，建立高于正常安全库存水平的库存。决定进行战略储备需要仔细的成本效益分析，考虑价格上涨的概率和幅度、可用存储容量以及营运资金限制。\n\n库存周转率是衡量库存在一段时间内被销售和更换次数的关键绩效指标。较高的库存周转率表明库存管理更高效，但过高的周转率可能表明库存不足，有缺货风险。对于价格波动较大的内存零部件，最佳库存周转率平衡持有成本与持有可能贬值的昂贵库存的风险。\n\n库存天数（DOI）指标补充了库存周转率，显示手头有多少天的库存。内存零部件的行业基准通常在30至60天之间，取决于产品生命周期阶段和需求可预测性。SSC团队应跟踪DOI趋势并调查与基准的偏差。\n\n在实践中，SSC团队最有效的库存管理方法结合了多种策略。根据零部件关键性和需求波动性保持适当的安全库存。使用根据趋势调整的EOQ原则。当市场分析显示有利条件时建立战略储备。密切监控交期并相应调整订货时间。通过数据分析和跨职能协作持续提高需求预测准确性。\n\n2026年的内存市场动态要求SSC团队在库存管理方法上更加成熟。简单的再订货点系统时代已经过去。今天的环境需要综合需求规划、战略性供应商伙伴关系以及对市场信号的敏捷响应。那些掌握这些技能的人将通过更好的成本控制和生产连续性交付竞争优势。",
+            english: "Supply chain resilience has become the defining competitive advantage in the memory and storage industry during the 2026 supercycle. As component shortages persist and price volatility intensifies, companies with robust supply chain capabilities are outperforming those relying on spot markets and just-in-time procurement.\n\nSupply chain resilience refers to a company's ability to anticipate, prepare for, and respond to unexpected disruptions while maintaining continuous operations. In the context of memory components, resilience encompasses multiple dimensions: supplier relationship depth, inventory strategy sophistication, demand forecasting accuracy, and logistical flexibility.\n\nThe first pillar of resilience is strategic supplier partnerships. Long-term agreements (LTAs) with memory OEMs provide price stability, allocation priority during shortages, and access to new product generations. Companies that secured LTAs before the 2025-2026 supercycle are now enjoying cost advantages and supply security that competitors lack. The key is developing relationships at multiple levels—executive, technical, and commercial—to ensure mutual commitment during challenging periods.\n\nSupplier diversification is another critical element. Relying on a single memory supplier creates concentration risk that can materialize during geopolitical tensions, natural disasters, or production issues. Leading PC manufacturers maintain relationships with three or more major memory OEMs, enabling them to shift volumes based on availability and pricing. However, diversification requires careful management to avoid sacrificing volume discounts and relationship depth.\n\nInventory resilience involves balancing the trade-offs between carrying costs, working capital requirements, and supply security. The supercycle has demonstrated that aggressive inventory building before price increases can generate significant cost savings. Strategic stockpiling—maintaining inventory above normal safety stock levels in anticipation of future constraints—has proven valuable for companies with sufficient capital and storage capacity.\n\nThe rise of consignment models represents another resilience mechanism. Under consignment, suppliers hold inventory at customer facilities until components are consumed, transferring carrying cost risk and improving cash flow. While consignment requires sophisticated inventory tracking systems, it can provide supply security during shortages when spot market availability is limited.\n\nDemand forecasting accuracy underpins all resilience strategies. Accurate forecasts enable optimal inventory levels, effective LTA negotiation, and proactive supplier communication. In volatile markets, forecasting methods must evolve beyond simple historical averaging. Machine learning models that incorporate market signals, economic indicators, and supplier data can improve forecast accuracy significantly.\n\nRisk monitoring and early warning systems represent the proactive dimension of resilience. Leading companies monitor a range of indicators including supplier capacity utilization, lead time trends, spot-to-contract price spreads, and geopolitical risk indices. When indicators signal increasing risk, pre-planned response protocols activate, such as accelerating orders, qualifying alternative suppliers, or adjusting production schedules.\n\nGeographic diversification of supply chain operations adds another layer of resilience. Companies with manufacturing facilities in multiple regions can shift production based on logistics disruptions, tariff changes, or regional demand shifts. For memory components, this often means maintaining relationships with suppliers in different geographic clusters—Korea, Taiwan, China, and emerging markets—to reduce single-region exposure.\n\nThe financial dimension of resilience deserves attention. Companies with strong credit ratings and cash reserves can invest in inventory building, secure LTAs, and absorb short-term cost volatility. Those with constrained balance sheets may find themselves unable to participate in strategic inventory programs, leaving them vulnerable to price increases.\n\nTechnology investment in supply chain systems enables resilience at scale. Real-time visibility into inventory levels, supplier production status, and logistics operations allows rapid decision-making during disruptions. Cloud-based supply chain platforms, IoT tracking, and AI-powered analytics are becoming standard tools for leading organizations.\n\nCollaboration across the supply chain represents the final frontier of resilience. Sharing demand forecasts, production plans, and risk information with suppliers enables proactive response to potential issues. Collaborative forecasting programs, joint inventory optimization initiatives, and shared risk management frameworks strengthen relationships and improve overall supply chain performance.\n\nIn the 2026 memory supercycle, companies that have invested in supply chain resilience are demonstrating clear competitive advantages. They maintain lower costs through LTA security, avoid production disruptions through diversified supply, and identify market opportunities through superior forecasting. As the supercycle continues and market volatility persists, resilience will remain the key differentiator between industry leaders and laggards.",
+            chinese: "在2026年超级周期中，供应链弹性已成为内存和存储行业决定性的竞争优势。随着零部件短缺持续和价格波动加剧，拥有强大供应链能力的公司正在超越那些依赖现货市场和准时制采购的竞争对手。\n\n供应链弹性指公司在保持持续运营的同时，预测、准备和应对意外中断的能力。在内存零部件领域，弹性涵盖多个维度：供应商关系深度、库存策略成熟度、需求预测准确性和物流灵活性。\n\n弹性的第一个支柱是战略性供应商伙伴关系。与内存原始设备制造商签订的长期协议（LTA）提供价格稳定、短缺时期的优先分配权以及获取新一代产品的机会。在2025-2026超级周期之前锁定LTA的公司现在正享受着竞争对手缺乏的成本优势和供应安全保障。关键是建立多层次的关系——高管、技术和商业层面——以确保在困难时期的相互承诺。\n\n供应商多元化是另一个关键要素。依赖单一内存供应商会造成集中风险，在地缘政治紧张、自然灾害或生产问题时可能显现。领先的PC制造商与三个或更多主要内存原始设备制造商保持关系，能够根据可用性和定价调整数量。然而，多元化需要谨慎管理，以避免牺牲数量折扣和关系深度。\n\n库存弹性涉及平衡持有成本、营运资金需求与供应安全之间的权衡。超级周期表明，在价格上涨之前积极建立库存可以产生显著的成本节约。战略储备——在预期未来约束时维持高于正常安全库存水平的库存——已被证明对拥有充足资本和存储容量的公司有价值。\n\n寄售模式的兴起代表了另一种弹性机制。在寄售模式下，供应商在客户设施持有库存直到零部件被消耗，转移持有成本风险并改善现金流。虽然寄售需要复杂的库存跟踪系统，但在现货市场可用性有限的短缺时期，它可以提供供应保障。\n\n需求预测准确性是所有弹性策略的基础。准确的预测使最佳库存水平、有效的长协谈判和积极的供应商沟通成为可能。在波动市场中，预测方法必须超越简单的历史平均。纳入市场信号、经济指标和供应商数据的机器学习模型可以显著提高预测准确性。\n\n风险监控和早期预警系统代表了弹性的主动维度。领先公司监控一系列指标，包括供应商产能利用率、交期趋势、现货-合约价差和地缘政治风险指数。当指标显示风险增加时，预设的响应协议被激活，如加速订单、认证替代供应商或调整生产计划。\n\n供应链运营的地理多元化增加了弹性的另一层。在多个地区拥有制造设施的公司可以根据物流中断、关税变化或区域需求变化调整生产。对于内存零部件，这通常意味着保持与不同地理集群供应商的关系——韩国、台湾、中国和新兴市场——以减少单一地区敞口。\n\n弹性的财务维度值得关注。拥有强劲信用评级和现金储备的公司可以投资于库存建设、锁定长协，并吸收短期成本波动。那些资产负债表受限的公司可能发现自己无法参与战略库存计划，使他们容易受到价格上涨的影响。\n\n对供应链系统的技术投资使弹性能够规模化。实时了解库存水平、供应商生产状态和物流运营情况，使公司在中断期间能够快速决策。基于云的供应链平台、物联网跟踪和AI驱动的分析正在成为领先组织的标准工具。\n\n跨供应链协作代表了弹性的最后前沿。与供应商共享需求预测、生产计划和风险信息，能够对潜在问题做出积极响应。协作预测计划、联合库存优化举措和共享风险管理框架加强了关系并改善了整体供应链绩效。\n\n在2026年内存超级周期中，投资于供应链弹性的公司正在展示明显的竞争优势。他们通过长协保障维持较低成本，通过多元化供应避免生产中断，并通过卓越的预测识别市场机会。随着超级周期的持续和市场波动的持续，弹性仍将是在行业领导者和落后者之间区分的关键因素。",
             vocabulary: [
                 {
-                    word: "safety stock",
-                    meaning: "安全库存；为防止需求和供应波动而保持的缓冲库存",
-                    example: "We maintain 15 days of safety stock for DDR5 components due to high demand volatility."
+                    word: "supply chain resilience",
+                    meaning: "供应链弹性；应对中断并保持持续运营的能力",
+                    example: "Our supply chain resilience strategy helped us navigate the memory shortage better than competitors."
                 },
                 {
-                    word: "economic order quantity (EOQ)",
-                    meaning: "经济订货量；使总库存成本最小化的最优订货量",
-                    example: "The EOQ model suggests ordering 5,000 units per batch, but we adjust this based on price trends."
+                    word: "strategic supplier partnerships",
+                    meaning: "战略性供应商伙伴关系；与关键供应商建立长期深度合作",
+                    example: "Strategic supplier partnerships enabled priority allocation during the NAND shortage."
                 },
                 {
-                    word: "lead time",
-                    meaning: "交期/前置时间；从下单到交货所需的时间",
-                    example: "Current DDR5 lead times range from 8 to 12 weeks, up from 4 weeks last quarter."
+                    word: "consignment model",
+                    meaning: "寄售模式；供应商在客户处持有库存直到消耗",
+                    example: "The consignment model reduced our carrying costs while ensuring supply security."
                 },
                 {
-                    word: "just-in-time (JIT)",
-                    meaning: "准时制；零部件在生产需要时刚好到达的库存策略",
-                    example: "JIT worked well in stable markets but became risky during the memory supercycle."
+                    word: "geographic diversification",
+                    meaning: "地理多元化；在多个地区建立供应链以降低风险",
+                    example: "Geographic diversification of our supplier base reduced single-region risk exposure."
                 },
                 {
-                    word: "inventory turns / days of inventory (DOI)",
-                    meaning: "库存周转率/库存天数；衡量库存效率的关键指标",
-                    example: "Our inventory turns improved to 8x annually, reducing DOI from 60 to 45 days."
+                    word: "collaborative forecasting",
+                    meaning: "协作预测；与供应商共享信息以提高预测准确性",
+                    example: "Collaborative forecasting with our NAND suppliers improved our demand planning accuracy by 25%."
                 }
             ],
             practice: [
                 {
-                    question: "Why is safety stock important for memory component inventory management?",
+                    question: "Why are Long-Term Agreements (LTAs) important during a memory supercycle?",
                     options: [
-                        "It reduces ordering costs",
-                        "It protects against demand and supply variability in a volatile market",
-                        "It eliminates the need for forecasting",
-                        "It lowers the purchase price"
+                        "They reduce the need for inventory",
+                        "They provide price stability and allocation priority during shortages",
+                        "They eliminate the need for supplier relationships",
+                        "They guarantee unlimited supply at fixed prices"
                     ],
                     answer: 1
                 },
                 {
-                    question: "What is a key limitation of Just-In-Time (JIT) inventory during a memory supercycle?",
+                    question: "What is a key limitation of aggressive inventory building during a supercycle?",
                     options: [
-                        "JIT increases carrying costs",
-                        "JIT becomes risky when lead times are long and variable",
-                        "JIT requires more storage space",
-                        "JIT is too expensive to implement"
+                        "It reduces supplier relationships",
+                        "It requires significant capital and storage capacity",
+                        "It increases spot market dependence",
+                        "It eliminates the need for forecasting"
                     ],
                     answer: 1
                 },
                 {
-                    question: "When might it make sense to order larger quantities than EOQ suggests?",
+                    question: "What does geographic diversification of supply chain help companies avoid?",
                     options: [
-                        "When prices are falling rapidly",
-                        "When prices are rising and you want to lock in current prices",
-                        "When lead times are short",
-                        "When inventory turns are high"
+                        "Price negotiations",
+                        "Single-region exposure to disruptions",
+                        "Long-term agreements",
+                        "Inventory management"
                     ],
                     answer: 1
                 }
@@ -419,14 +419,14 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-17', label: '2026-04-17（今日）'},
-            {date: '2026-04-16', label: '2026-04-16'},
+            {date: '2026-04-16', label: '2026-04-16（今日）'},
             {date: '2026-04-15', label: '2026-04-15'},
             {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
+            {date: '2026-04-08', label: '2026-04-08'},
         ];
 
         // 动态生成历史记录链接
