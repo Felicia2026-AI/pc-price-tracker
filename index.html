@@ -213,14 +213,14 @@
         </div>
 
         <div class="trend-summary">
-            关键趋势（4月17日）：高盛研报警示DRAM/NAND/HBM三重紧平衡持续，缺口扩大超预期；TrendForce确认Q2 DRAM合约涨58-63%、NAND涨70-75%；联想中国区政企业务升级为"基于客户业务经营"AI战略，4月22日ThinkPad发布会进入倒计时；国家发改委价格监测中心确认存储涨价向下游传导；Q2备件成本压力持续，SSC需重点锁定LCD/MB长协份额。</div>
+            关键趋势（4月17日）：内存价格持续回落，DDR5现货较年内高点跌近20%，长协框架谈判窗口开启；Q1全球PC出货增长3%低于预期，机构下调全年展望；ThinkPad 2026发布会倒计时6天（4月22日）；联想港股通持股比例升至9.26%创历史新高；三星西安工厂获美出口许可延期，存储供应边际改善信号。</div>
 
         <div class="charts-container">
             <!-- DDR5价格图表 -->
             <div class="chart-section">
                 <div class="chart-title">
                     DDR5内存价格走势
-                    <span class="trend-indicator trend-up">↑ TrendForce确认Q2合约涨58-63%+高盛警示三重紧平衡</span>
+                    <span class="trend-indicator trend-down">↓ 现货持续回落，较年内高点跌近20%；长协框架谈判窗口开启</span>
                 </div>
                 <div class="chart-wrapper">
                     <canvas id="ddr5Chart"></canvas>
@@ -231,7 +231,7 @@
             <div class="chart-section">
                 <div class="chart-title">
                     SSD固态硬盘价格走势
-                    <span class="trend-indicator trend-up">↑ NAND合约Q2涨70-75%+发改委确认向下游传导</span>
+                    <span class="trend-indicator trend-down">↓ NAND现货小幅松动，但合约价Q2仍将上涨40-50%</span>
                 </div>
                 <div class="chart-wrapper">
                     <canvas id="ssdChart"></canvas>
@@ -243,33 +243,33 @@
             <div class="news-title">📰 热点新闻（权威来源精选）</div>
 
             <div class="news-item">
-                <a href="https://xueqiu.com/9993624771/376273888" target="_blank">高盛研报：DRAM/NAND/HBM三重紧平衡持续，缺口扩大超预期</a>
-                <div class="news-summary">高盛4月16日发布研报，标题《全球存储芯片供需更新与物料成本分析》。报告指出：DRAM、NAND、HBM三重产品线均处于紧平衡状态，供需缺口超出此前预期。高盛认为AI服务器需求持续吞噬产能，HBM先进制程排挤通用DRAM产能，导致整体存储供应紧张态势将延续至2026下半年。对联想SSC参考：三重紧平衡意味着备件采购需更加前瞻，建议提前一个季度锁单，避免Q3出现缺货风险。</div>
-                <div class="source">来源：高盛研报 / 雪球 | 2026-04-16</div>
+                <a href="https://www.toutiao.com/article/7622930591280906779/" target="_blank">内存价格大幅回落！从暴涨300%到持续降价：2026年内存市场的"过山车"行情</a>
+                <div class="news-summary">头条4月16日报道：今年1月DDR5 16G单条还卖到1100-1200元，32G套条逼近4000元，涨幅超过300%。但最近半个月，电脑圈最火的消息是内存价格大跳水——DDR5 16GB模组已从年内高点回落约15-20%。核心逻辑：前期过度囤货的渠道商开始抛售，加上部分AI服务器订单延后，短期内现货市场供需缓和。对联想SSC参考：现货市场回落为谈判长协框架提供了良好时机，建议利用当前窗口与供应商锁定部分长协配额。</div>
+                <div class="source">来源：头条 / 什么值得买 | 2026-04-16</div>
             </div>
 
             <div class="news-item">
-                <a href="https://news.cctv.cn/2026/02/28/ARTIgZEtgYhwtdbOAt2pvTQ2260228.shtml" target="_blank">国家发改委：存储芯片涨价向下游传导，2026年电脑手机涨价已成定局</a>
-                <div class="news-summary">国家发改委价格监测中心2月28日发文确认：自2025年9月至今，受需求爆发式增长、产能断崖式紧缺等因素影响，全球存储器市场缺口扩大，存储芯片价格持续上涨并向下游传导。2026年手机、电脑产品涨价已成定局。对联想SSC启示：涨价传导意味着终端产品成本上升压力持续，备件采购成本管控更加关键，LCD/MB/SSD三大件需重点锁定长协价格。</div>
-                <div class="source">来源：国家发改委 / 央视新闻 | 2026-02-28</div>
+                <a href="https://www.msn.cn/zh-cn/news/other/2026%E5%B9%B4%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E5%85%A8%E7%90%83pc%E5%87%BA%E8%B4%A8%E9%87%8F%E5%A2%9E%E9%95%BF3-%E8%81%94%E6%83%B3%E4%BB%BD%E9%A2%9D%E7%A0%B425/ar-AA20xUQW" target="_blank">Q1全球PC出货增长3%低于预期：机构警告供应链压力将持续</a>
+                <div class="news-summary">IDC/Omdia数据显示，2026年Q1全球PC出货约6560万台，同比增长3%，低于此前预期。联想出货1650万台，市占突破25%领跑全球。分析师警告：从Q2开始，内存和存储成本预计将比此前预期更快、更大幅度上涨，这将压缩PC厂商的毛利空间。对联想SSC启示：全年出货前高后低态势确立，Q2起备件成本压力加大，需提前锁定长协配额控制成本。</div>
+                <div class="source">来源：IDC/Omdia / MSN中文 | 2026-04-15</div>
             </div>
 
             <div class="news-item">
-                <a href="http://hy.stock.cnfol.com/dianzixinxijishu/20260409/32133507.shtml" target="_blank">联想政企业务升级AI战略：从IT预算经营客户转向基于客户业务经营</a>
-                <div class="news-summary">联想中国区政企业务群4月3日召开2026/2027财年誓师大会，宣布从"基于IT预算经营客户"升级为"基于客户业务经营"的AI战略。聚焦智能体AI从探索步入规模化落地的关键阶段，政企业务将更深度融入客户业务场景。4月22日ThinkPad发布会进入倒计时，天禧AI生态新品即将亮相。对SSC参考：新财年战略意味着联想整体出货结构可能向高价值AI PC倾斜，备件成本结构需相应调整。</div>
-                <div class="source">来源：和讯网 / 东方财富网 | 2026-04-09</div>
+                <a href="https://zhuanlan.zhihu.com/p/2027356420966813768" target="_blank">ThinkPad 2026新品发布会倒计时6天：天禧AI生态即将揭晓</a>
+                <div class="news-summary">联想官方4月16日发布倒计时预告：ThinkPad 2026新品暨天禧AI生态发布会将于4月22日举行，主题"我·即我们"。已开启1元预约通道，X1 Carbon、X9-15p、X14等新品即将亮相。对SSC参考：新品发布后对应的备件SKU将更新，需提前准备新机型LCD/MB/SSD关键备件采购计划；新品搭载的天禧AI生态或带动换机潮，需关注Q2备件需求变化。</div>
+                <div class="source">来源：联想官方 / IT之家 | 2026-04-16</div>
             </div>
 
             <div class="news-item">
-                <a href="https://www.ithome.com/0/936/528.htm" target="_blank">ThinkPad 2026新品发布会倒计时：4月22日见，X1 Carbon等全系亮相</a>
-                <div class="news-summary">IT之家4月7日报道：联想ThinkPad官方确认2026年度新品暨天禧AI生态发布会将于4月22日举行，主题"我·即我们"。X1 Carbon、X9-15p、X14等多款新品已完成线上上架。对SSC参考：发布会后3-6个月为新机型备件需求高峰期，需提前与供应商确认LCD/MB关键料件的产能分配。</div>
-                <div class="source">来源：IT之家 / 新浪财经 | 2026-04-07</div>
+                <a href="https://www.gelonghui.com/stock/hk00992" target="_blank">联想港股通持股比例升至9.26%创历史新高：资金持续流入科技硬件板块</a>
+                <div class="news-summary">格隆汇4月16日报道：进入四月以来，港股市场整体回暖，科技板块活跃，联想集团获得资金关注度显著提升。Wind数据显示，截止2026年4月13日，联想港股通持股比例已升至9.26%，创出历史新高，在科技硬件板块中位居前列。联想Q1出货1650万台增9%领跑全球，市占超25%。</div>
+                <div class="source">来源：格隆汇 / Wind数据 | 2026-04-16</div>
             </div>
 
             <div class="news-item">
-                <a href="https://www.gartner.com/" target="_blank">联想集团港股报HK$9.18，市值约$167.0亿</a>
-                <div class="news-summary">截至4月16日收盘，联想集团(00992.HK)报收HK$9.18。Gartner 2026供应链榜单联想升至第8位，连续三年领跑中国科技企业。联想Q1出货1650万台增9%领跑全球，市占超25%。4月22日ThinkPad发布会进入倒计时，天禧AI生态新品发布在即，供应链需做好新品备件保障。</div>
-                <div class="source">来源：证券之星 / MarketCapWatch | 2026-04-16</div>
+                <a href="https://finance.sina.com.cn/stock/bxjj/2026-02-13/doc-inhmrxrm3187491.shtml" target="_blank">联想集团何以成为业绩"异类"？韧性的全球供应链是核心优势</a>
+                <div class="news-summary">新浪财经2月报道：联想集团在过去数十年积累的规模优势、韧性的全球供应链以及稳固的合作伙伴关系，将在AI时代被进一步放大。Gartner 2026供应链Top 25榜单中，联想位列第8位，较2025年上升2位，连续三年领跑中国科技企业。智能排产系统覆盖全球40+工厂，端到端数字化覆盖率超90%，供应商协同平台连接1200+合作伙伴。</div>
+                <div class="source">来源：新浪财经 / Gartner | 2026-02-13</div>
             </div>
         </div>
 
@@ -293,8 +293,7 @@
             {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
-            {date: '2026-04-09', label: '2026-04-09'},
-            {date: '2026-04-08', label: '2026-04-08'}
+            {date: '2026-04-09', label: '2026-04-09'}
         ];
 
         // 动态生成历史记录链接
@@ -319,7 +318,7 @@
                 180, 195, 210, 235, 260, 300,
                 380, 450, 550, 680, 820, 1000,
                 920, 860, 780, 700, 638, 610, 600, 580, 560,
-                535, 525, 520, 515, 512
+                535, 525, 520, 515, 498
             ]
         };
 
@@ -335,7 +334,7 @@
                 280, 295, 310, 330, 350, 375,
                 410, 450, 520, 600, 680, 750,
                 760, 770, 775, 780, 782, 785, 787, 786, 787,
-                792, 804, 810, 815, 818
+                792, 804, 810, 815, 808
             ]
         };
 
