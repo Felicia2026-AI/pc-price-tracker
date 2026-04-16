@@ -303,10 +303,10 @@
 
         // 今日短语
         const todayPhrase = {
-            english: "\"Goldman Sachs' latest research confirms a triple tightening balance across DRAM, NAND, and HBM markets—the supply-demand gap is widening beyond previous expectations. For our Q2 parts procurement, this means we need to lock in orders at least one quarter ahead to avoid shortage risk in Q3.\"",
-            chinese: "高盛最新研究确认DRAM、NAND和HBM市场三重紧平衡——供需缺口超出此前预期。对我们的Q2备件采购而言，这意味着需要提前至少一个季度锁单，以避免Q3缺货风险。",
-            meaning: "triple tightening balance：三重紧平衡，指DRAM、NAND、HBM三条产品线同时处于供应紧张状态。supply-demand gap：供需缺口。lock in orders：锁单/锁定订单。shortage risk：缺货风险。",
-            example: "Given the triple tightening balance, we should submit our Q3 parts orders to key suppliers by end of April to secure allocation priority."
+            english: "\"Q1 PC shipments came in below expectations at just 3% YoY growth. However, we expect cost pressures to intensify from Q2 as memory and storage prices surge faster than anticipated, which will squeeze our margins. We need to accelerate our LTA negotiations before the window closes.\"",
+            chinese: "Q1 PC出货低于预期，同比增长仅3%。然而，我们预计从Q2开始，随着内存和存储价格以超出预期的速度上涨，成本压力将加剧，这将压缩我们的毛利空间。我们需要在窗口关闭之前加快长协谈判。",
+            meaning: "come in below expectations：低于预期（常用商业表达）。YoY = Year-over-Year：同比增长。cost pressures intensify：成本压力加剧。surge faster than anticipated：以超出预期的速度上涨。squeeze margins：压缩利润空间。accelerate LTA negotiations：加快长协谈判。",
+            example: "Given that Q1 shipments came in below expectations, we need to accelerate our cost control initiatives and explore alternative sourcing strategies before the pricing window closes."
         };
 
         // 渲染短语
@@ -316,67 +316,67 @@
             <div class="phrase-example">💡 含义：${todayPhrase.meaning}</div>
         `;
 
-        // 今日学习内容 - 供应紧张下的库存策略
+        // 今日学习内容 - 库存管理
         const todayContent = {
-            english: "Goldman Sachs' latest research note on global semiconductor supply dynamics has confirmed a \"triple tightening balance\" across DRAM, NAND, and High-Bandwidth Memory (HBM) markets—the supply-demand gap is widening beyond previous expectations. This represents a significant shift from the cyclical supply-demand patterns that characterized the memory industry for decades.\n\nThe concept of triple tightening balance means that supply constraints are not isolated to one product category—they are systemic across the entire memory ecosystem. In previous cycles, when DRAM prices were rising, NAND might have been in oversupply, allowing buyers to shift their procurement mix. Today, all three product families are simultaneously constrained, leaving buyers with fewer degrees of freedom to optimize their component sourcing.\n\nLet's examine what's happening in each market segment. In DRAM, the dual pressure of AI server demand and conventional PC/consumer demand has created insufficient manufacturing capacity. HBM, used exclusively in AI accelerators like NVIDIA's H100 and H200 GPUs, requires specialized manufacturing processes that share some capacity with conventional DRAM. As HBM demand exploded, manufacturers redirected their most advanced processes toward HBM production, creating a structural constraint in commodity DRAM supply.\n\nThe NAND market faces similar pressures. Enterprise SSD demand for AI training infrastructure is consuming NAND supply that would otherwise go to consumer applications. TrendForce forecasts of 70-75% Q2 contract price increases for NAND reflect this fundamental imbalance.\n\nFor HBM specifically, the constraint is even more severe. SK Hynix remains the primary supplier for NVIDIA's HBM3, with Samsung and Micron racing to qualify their HBM3e solutions. The tight HBM supply has direct implications even for PC manufacturers—servers using HBM-based AI accelerators require supporting infrastructure that competes with PC component supply.\n\nWhat does triple tightening mean for spare parts supply chain management? First, procurement lead times need to extend. Standard lead times of 4-8 weeks have extended to 12-16 weeks or longer for high-demand SKUs. SSC teams should rebuild planning assumptions to account for these longer cycles.\n\nSecond, safety stock levels need to increase. Traditional 2-4 week safety stock may be insufficient when replenishment lead times are 12+ weeks. Some practitioners recommend increasing safety stock to 6-8 weeks for critical components, though this increases working capital requirements.\n\nThird, demand forecasting accuracy becomes more critical than ever. When supply is tight and lead times are long, forecast errors are expensive—a 10% demand miss might mean a 10-week wait to correct inventory imbalance. SSC teams should work closely with product planning and sales operations to improve demand signal quality.\n\nFourth, supplier relationship management takes center stage. In a tight supply environment, suppliers allocate based on customer priority and relationship strength. Companies with strong existing relationships and LTA coverage will get allocated first; those without LTAs may face extended delivery schedules or allocation cuts.\n\nFifth, design-for-supply-chain becomes a competitive advantage. Product designs allowing multiple qualified component sources, wider operating voltage ranges, and modular architecture provide flexibility to adapt to supply constraints.\n\nFor Lenovo's SSC, the triple tightening has immediate implications. The ThinkPad 2026 launch on April 22 will introduce new product models requiring new component specifications. Ensuring supply for new models while maintaining service parts coverage for existing models demands careful coordination with procurement and suppliers.\n\nThe practical takeaway: the era of abundant component supply has ended. The new normal requires supply chain organizations to be more proactive, more strategic in supplier relationships, and more rigorous in demand planning. Those who adapt will maintain service levels and cost efficiency; those who cling to old practices will face increasing supply disruptions and cost volatility.",
-            chinese: "高盛关于全球半导体供应动态的最新研究报告确认了DRAM、NAND和HBM市场的"三重紧平衡"——供需缺口超出此前预期。这代表了数十年来内存行业周期性供需模式的重大转变。\n\n三重紧平衡意味着供应紧张不是孤立于某一产品类别——而是系统性地贯穿整个内存生态系统。在过去的周期中，当DRAM价格上涨时，NAND可能处于供过于求状态，买家可以通过调整采购组合来优化。如今，三条产品线同时受到约束，买家几乎没有自由度来优化零部件采购。\n\n让我们分析每个细分市场。DRAM市场面临AI服务器需求和传统PC/消费需求的双重压力，产能不足。HBM用于NVIDIA H100/H200 GPU等AI加速器，需要与常规DRAM共享产能的专用制造工艺。随着HBM需求暴增，制造商将最先进工艺转向HBM生产，在商品DRAM市场造成结构性约束。\n\nNAND市场面临类似压力。AI训练基础设施的企业级SSD需求正在消耗原本流向消费应用的NAND供应。TrendForce预测NAND Q2合约价将上涨70-75%，反映了这一基本失衡。\n\nHBM的约束更为严峻。SK海力士仍是NVIDIA HBM3的主要供应商，三星和美光正竞相认证HBM3e解决方案。紧张的HBM供应对PC制造商有直接影响——使用HBM加速器的服务器需要与PC零部件供应形成竞争的支持性基础设施。\n\n三重紧平衡对备件供应链管理意味着什么？第一，采购交期需要延长。标准交期从4-8周延长至12-16周或更长。第二，安全库存水平需要提高。传统2-4周的安全库存在12+周补货交期下可能不够充分。第三，需求预测准确性比以往更加关键。第四，供应商关系管理成为核心。第五，面向供应链的设计成为竞争优势。\n\n具体到联想SSC，4月22日的ThinkPad 2026发布将推出需要新规格的新产品型号。为新型号确保供应同时保持现有产品的服务零部件覆盖，需要与采购和供应商仔细协调。\n\n实用建议：零部件供应充裕的时代已经结束。新常态要求供应链组织更加积极主动、更加战略性地处理供应商关系、更加严格地进行需求规划。",
+            english: "In the memory and storage supply chain, effective inventory management is critical to balancing cost control with production continuity. For SSC teams managing spare parts procurement, understanding the key inventory strategies and their trade-offs is essential.\n\nThe first concept to grasp is safety stock. Safety stock is the buffer inventory kept to protect against variability in demand and supply. In the context of memory components, where prices can fluctuate dramatically and lead times are unpredictable, maintaining adequate safety stock is crucial. However, the challenge lies in determining the right level—too much safety stock ties up working capital and increases carrying costs; too little risks stockouts that can halt production.\n\nThe safety stock formula incorporates several factors: average daily usage rate, lead time variability, and service level requirements. For DDR5 and NAND components, where demand can spike突然 due to AI server orders or drop suddenly when channel inventory corrects, safety stock calculations must account for high volatility. SSC teams should review safety stock levels quarterly and adjust based on recent demand patterns.\n\nAnother critical concept is Economic Order Quantity (EOQ). EOQ determines the optimal order quantity that minimizes total inventory costs, including ordering costs and carrying costs. The formula balances the trade-off between ordering frequency (more frequent orders mean lower inventory levels but higher ordering costs) and order quantity (larger orders mean lower ordering costs but higher carrying costs).\n\nFor memory components, EOQ calculations are complicated by price volatility. When prices are rising, it may make sense to order larger quantities to lock in current prices, even if this increases carrying costs. When prices are falling, ordering smaller quantities more frequently may be preferable. SSC teams must integrate price trend analysis into their EOQ calculations.\n\nLead time management is equally important. Memory component lead times can range from 4 weeks to 16 weeks depending on the component type and market conditions. Long lead times require earlier ordering and more accurate demand forecasting. In a supercycle environment where supply constraints persist, lead times tend to lengthen, requiring procurement teams to plan further ahead.\n\nJust-In-Time (JIT) inventory is a strategy where components arrive exactly when needed for production, minimizing inventory holding costs. While JIT can be highly efficient in stable environments, it becomes risky when lead times are long and variable. During the 2025-2026 memory supercycle, many PC manufacturers that relied heavily on JIT found themselves unable to secure sufficient components when demand spiked.\n\nConsignment inventory is another option where the supplier holds inventory at the customer's location until it is consumed. This transfers carrying cost risk to the supplier and can improve cash flow. However, consignment requires careful tracking and may not be available for all component types or suppliers.\n\nDemand forecasting accuracy is the foundation of effective inventory management. For memory components, forecasting is particularly challenging due to the influence of external factors such as AI server demand, geopolitical tensions affecting semiconductor supply chains, and channel inventory corrections. SSC teams should use multiple forecasting methods—quantitative models for short-term projections and qualitative judgment for longer-term scenarios.\n\nWhen demand forecasting indicates potential shortages, procurement teams should consider strategic stockpiling. Strategic stockpiling involves building inventory above normal safety stock levels in anticipation of future price increases or supply constraints. The decision to strategically stockpile requires careful cost-benefit analysis, considering the probability and magnitude of price increases, available storage capacity, and working capital constraints.\n\nInventory turns is a key performance indicator that measures how many times inventory is sold and replaced over a period. Higher inventory turns indicate more efficient inventory management, but excessively high turns may signal insufficient inventory that risks stockouts. For memory components with volatile pricing, the optimal inventory turn rate balances carrying costs against the risk of holding expensive inventory that may decline in value.\n\nThe days of inventory (DOI) metric complements inventory turns by showing how many days of inventory are on hand. Industry benchmarks for memory components typically range from 30 to 60 days, depending on product lifecycle stage and demand predictability. SSC teams should track DOI trends and investigate deviations from benchmarks.\n\nIn practice, the most effective inventory management approach for SSC teams combines multiple strategies. Maintain appropriate safety stock based on component criticality and demand volatility. Use EOQ principles adjusted for price trends. Build strategic stockpiles when market analysis indicates favorable conditions. Monitor lead times closely and adjust order timing accordingly. Continuously improve demand forecasting accuracy through data analytics and cross-functional collaboration.\n\nThe memory market dynamics of 2026 demand that SSC teams be more sophisticated in their inventory management approaches. The days of simple reorder-point systems are gone. Today's environment requires integrated demand planning, strategic supplier partnerships, and agile response to market signals. Those who master these skills will deliver competitive advantage through better cost control and production continuity.",
+            chinese: "在内存和存储供应链中，有效的库存管理对于平衡成本控制与生产连续性至关重要。对于管理备件采购的SSC团队来说，理解关键库存策略及其权衡取舍是必不可少的。\n\n第一个需要掌握的概念是安全库存。安全库存是为防止需求和供应波动而保持的缓冲库存。在内存零部件的背景下——价格可能剧烈波动，交期不可预测——保持充足的安全库存至关重要。然而，挑战在于确定正确的水平——过多的安全库存会占用营运资金并增加持有成本；过少则可能导致缺货，进而中断生产。\n\n安全库存公式包含几个因素：平均日使用率、交期变动性和服务水平要求。对于DDR5和NAND零部件，需求可能因AI服务器订单而突然激增，或因渠道库存修正而突然下降，因此安全库存计算必须考虑高波动性。SSC团队应每季度审查安全库存水平，并根据近期需求模式进行调整。\n\n另一个关键概念是经济订货量（EOQ）。EOQ决定使总库存成本最小化的最优订货量，包括订货成本和持有成本。该公式平衡了订货频率（更频繁的订货意味着更低的库存水平但更高的订货成本）与订货量（大额订单意味着更低的订货成本但更高的持有成本）之间的权衡。\n\n对于内存零部件，EOQ计算因价格波动而变得复杂。当价格上涨时，订货更大数量以锁定当前价格可能是合理的，即使这会增加持有成本。当价格下跌时，更频繁地订购更小数量可能更可取。SSC团队必须将价格趋势分析整合到EOQ计算中。\n\n交期管理同样重要。内存零部件的交期可能从4周到16周不等，具体取决于零部件类型和市场状况。长交期需要更早订货和更准确的需求预测。在供应约束持续的超级周期环境中，交期往往会延长，要求采购团队更早规划。\n\n准时制（JIT）库存是一种策略，零部件在生产需要时刚好到达，将库存持有成本降至最低。虽然JIT在稳定环境中可能非常高效，但当交期长且变动大时，它就变得有风险。在2025-2026年内存超级周期期间，许多严重依赖JIT的PC制造商发现，当需求激增时，他们无法获得足够的零部件。\n\n寄售库存是另一个选项，供应商将库存放在客户所在地直到被消耗。这将持有成本风险转移给供应商，可以改善现金流。然而，寄售需要仔细跟踪，可能并非所有零部件类型或供应商都提供。\n\n需求预测准确性是有效库存管理的基础。对于内存零部件，预测尤其困难，因为受外部因素影响较大，如AI服务器需求、影响半导体供应链的地缘政治紧张局势以及渠道库存修正。SSC团队应使用多种预测方法——定量模型用于短期预测，定性判断用于长期情景。\n\n当需求预测显示潜在短缺时，采购团队应考虑战略储备。战略储备是在预期未来价格上涨或供应紧张时，建立高于正常安全库存水平的库存。决定进行战略储备需要仔细的成本效益分析，考虑价格上涨的概率和幅度、可用存储容量以及营运资金限制。\n\n库存周转率是衡量库存在一段时间内被销售和更换次数的关键绩效指标。较高的库存周转率表明库存管理更高效，但过高的周转率可能表明库存不足，有缺货风险。对于价格波动较大的内存零部件，最佳库存周转率平衡持有成本与持有可能贬值的昂贵库存的风险。\n\n库存天数（DOI）指标补充了库存周转率，显示手头有多少天的库存。内存零部件的行业基准通常在30至60天之间，取决于产品生命周期阶段和需求可预测性。SSC团队应跟踪DOI趋势并调查与基准的偏差。\n\n在实践中，SSC团队最有效的库存管理方法结合了多种策略。根据零部件关键性和需求波动性保持适当的安全库存。使用根据趋势调整的EOQ原则。当市场分析显示有利条件时建立战略储备。密切监控交期并相应调整订货时间。通过数据分析和跨职能协作持续提高需求预测准确性。\n\n2026年的内存市场动态要求SSC团队在库存管理方法上更加成熟。简单的再订货点系统时代已经过去。今天的环境需要综合需求规划、战略性供应商伙伴关系以及对市场信号的敏捷响应。那些掌握这些技能的人将通过更好的成本控制和生产连续性交付竞争优势。",
             vocabulary: [
                 {
-                    word: "triple tightening balance",
-                    meaning: "三重紧平衡；DRAM、NAND、HBM三条产品线同时处于供应紧张状态",
-                    example: "Goldman Sachs confirms a triple tightening balance across memory markets, with supply-demand gaps widening beyond expectations."
-                },
-                {
-                    word: "supply-demand gap",
-                    meaning: "供需缺口；市场需求超过供应能力的差额",
-                    example: "The supply-demand gap in HBM has widened to where major cloud providers commit to 3-year LTAs just to secure allocation."
-                },
-                {
-                    word: "lock in orders",
-                    meaning: "锁单；提前锁定供应商的订单配额和价格",
-                    example: "We need to lock in our Q3 DRAM orders by end of April to ensure supply for the ThinkPad 2026 launch."
-                },
-                {
-                    word: "shortage risk",
-                    meaning: "缺货风险；供应商无法按承诺时间交付足量货物的风险",
-                    example: "Given the triple tightening, our shortage risk for LCD panels has increased from 15% to 35% for Q3."
-                },
-                {
                     word: "safety stock",
-                    meaning: "安全库存；为应对需求波动和供应不确定性而额外持有的库存",
-                    example: "With lead times extending to 12+ weeks, we should increase safety stock for critical components from 3 to 6 weeks."
+                    meaning: "安全库存；为防止需求和供应波动而保持的缓冲库存",
+                    example: "We maintain 15 days of safety stock for DDR5 components due to high demand volatility."
+                },
+                {
+                    word: "economic order quantity (EOQ)",
+                    meaning: "经济订货量；使总库存成本最小化的最优订货量",
+                    example: "The EOQ model suggests ordering 5,000 units per batch, but we adjust this based on price trends."
+                },
+                {
+                    word: "lead time",
+                    meaning: "交期/前置时间；从下单到交货所需的时间",
+                    example: "Current DDR5 lead times range from 8 to 12 weeks, up from 4 weeks last quarter."
+                },
+                {
+                    word: "just-in-time (JIT)",
+                    meaning: "准时制；零部件在生产需要时刚好到达的库存策略",
+                    example: "JIT worked well in stable markets but became risky during the memory supercycle."
+                },
+                {
+                    word: "inventory turns / days of inventory (DOI)",
+                    meaning: "库存周转率/库存天数；衡量库存效率的关键指标",
+                    example: "Our inventory turns improved to 8x annually, reducing DOI from 60 to 45 days."
                 }
             ],
             practice: [
                 {
-                    question: "What does 'triple tightening balance' mean in memory supply?",
+                    question: "Why is safety stock important for memory component inventory management?",
                     options: [
-                        "Three memory chip types are getting cheaper",
-                        "DRAM, NAND, and HBM are all simultaneously in tight supply",
-                        "Three major suppliers are competing for market share",
-                        "Three product generations are available at the same time"
+                        "It reduces ordering costs",
+                        "It protects against demand and supply variability in a volatile market",
+                        "It eliminates the need for forecasting",
+                        "It lowers the purchase price"
                     ],
                     answer: 1
                 },
                 {
-                    question: "Why have DRAM and NAND lead times extended?",
+                    question: "What is a key limitation of Just-In-Time (JIT) inventory during a memory supercycle?",
                     options: [
-                        "Suppliers are deliberately delaying deliveries to raise prices",
-                        "Transportation has become more complicated",
-                        "Manufacturing capacity is insufficient to meet demand across all memory segments",
-                        "Government regulations require longer inspection periods"
+                        "JIT increases carrying costs",
+                        "JIT becomes risky when lead times are long and variable",
+                        "JIT requires more storage space",
+                        "JIT is too expensive to implement"
                     ],
-                    answer: 2
+                    answer: 1
                 },
                 {
-                    question: "What safety stock level is recommended when lead times extend to 12+ weeks?",
+                    question: "When might it make sense to order larger quantities than EOQ suggests?",
                     options: [
-                        "1-2 weeks, to minimize inventory costs",
-                        "2-4 weeks, following traditional approaches",
-                        "6-8 weeks, to account for longer replenishment cycles",
-                        "12 weeks, matching the lead time"
+                        "When prices are falling rapidly",
+                        "When prices are rising and you want to lock in current prices",
+                        "When lead times are short",
+                        "When inventory turns are high"
                     ],
-                    answer: 2
+                    answer: 1
                 }
             ]
         };
@@ -427,7 +427,6 @@
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
-            {date: '2026-04-08', label: '2026-04-08'},
         ];
 
         // 动态生成历史记录链接
