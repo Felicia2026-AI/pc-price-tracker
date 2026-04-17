@@ -256,7 +256,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>📚 英文学习</h1>
+            <h1>📚 英文学习 - 周末特辑</h1>
             <div class="date" id="currentDate"></div>
             <div class="update-time" id="updateTime"></div>
         </div>
@@ -268,7 +268,7 @@
             </div>
 
             <div class="section">
-                <div class="section-title">📖 今日阅读</div>
+                <div class="section-title">📖 今日阅读 - AI in Supply Chain</div>
                 <div class="text-container">
                     <div class="english-text" id="englishText"></div>
                     <div class="chinese-translation" id="chineseText"></div>
@@ -298,76 +298,76 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月17日星期五';
+        document.getElementById('currentDate').textContent = '2026年4月17日 星期五';
         document.getElementById('updateTime').textContent = '更新时间：2026/4/17 10:00';
 
         // 今日短语
         const todayPhrase = {
-            english: "\"With Samsung announcing another 30% DRAM price hike for Q2 on top of Q1's 100% increase, our parts cost will surge over 130% year-over-year. We need to expedite our Q2 order lock-in immediately and explore alternative suppliers for long-term cost optimization.\"",
-            chinese: "随着三星宣布Q2 DRAM价格再次上涨30%（在Q1已涨100%的基础上），我们的备件成本将同比上涨超过130%。我们需要立即加快Q2订单锁定，并探索替代供应商以实现长期成本优化。",
-            meaning: "price hike：价格上涨。expedite：加快、加速。order lock-in：订单锁定。alternative suppliers：替代供应商。cost optimization：成本优化。",
-            example: "Given the unprecedented price hikes, we expedited our order lock-in for Q2 DDR5 inventory to secure pricing before the window closes."
+            english: "\"With the ThinkPad 2026 launch just 5 days away, we need to accelerate our spare parts certification process for the new models. The X1 Carbon and X9-15p SKUs require immediate attention to ensure smooth inventory planning and avoid any supply chain disruptions during the launch window.\"",
+            chinese: "随着ThinkPad 2026发布会还有5天，我们需要加快新机型的备件认证流程。X1 Carbon和X9-15p的SKU需要立即关注，以确保库存规划顺畅，避免发布会期间出现任何供应链中断。",
+            meaning: "launch window：发布窗口期。accelerate：加速。certification process：认证流程。SKU：库存单位。supply chain disruptions：供应链中断。",
+            example: "We accelerated our certification process for the new ThinkPad models to avoid any supply chain disruptions during the launch window."
         };
 
-        // 今日学习内容 - 成本管理
+        // 今日学习内容 - AI in Supply Chain
         const todayContent = {
-            english: "Cost management in spare parts supply chain operations represents one of the most complex challenges facing PC manufacturers and service organizations today. Unlike production parts, where volumes can be predicted with reasonable accuracy and inventory turns are relatively high, spare parts operate under fundamentally different economic conditions that require specialized approaches and frameworks.\n\nThe economic model of spare parts differs from production parts in several critical ways. First, demand for spare parts is inherently lumpy and unpredictable. While a PC manufacturer might produce millions of units of a particular model, the actual failure rate of individual components follows a probability distribution that means some components will fail far more or less frequently than statistical averages suggest. This demand variability makes forecasting extremely challenging.\n\nSecond, spare parts must be exact matches to original specifications. Unlike production where engineering teams can select from multiple component sources, spare parts must precisely match the components originally installed in the product. This constraint limits the ability to substitute lower-cost alternatives and requires maintaining relationships with original component manufacturers or their authorized distributors.\n\nThird, the service level requirements for spare parts are typically very high. When a business customer's ThinkPad fails, they expect the problem to be resolved within hours or days, not weeks. This expectation creates pressure to maintain high inventory levels of slow-moving parts, which ties up working capital and increases holding costs.\n\nFourth, the product lifecycle for PCs is relatively short compared to other industries. A typical ThinkPad model might be actively sold for 18-24 months, but the service lifecycle extends for 5-7 years after the last unit is sold. This creates the long tail problem—organizations must maintain spare parts inventory for products that are no longer being manufactured, sometimes for many years after the original components have been discontinued by suppliers.\n\nGiven these challenges, how do leading organizations approach spare parts cost management? Several strategies have proven effective.\n\nDemand forecasting accuracy is the foundation of effective spare parts management. Advanced statistical models that incorporate factors such as component failure rates, usage patterns, environmental conditions, and historical demand data can significantly improve forecast accuracy. Machine learning algorithms are increasingly being applied to spare parts forecasting, leveraging large datasets to identify patterns that traditional statistical methods might miss.\n\nLifecycle management is critical for managing costs across the product lifecycle. As products age, demand patterns change, and component availability becomes more constrained. Effective lifecycle management involves tracking each part through its lifecycle stages—from introduction through growth, maturity, and eventual decline—and adjusting inventory strategies accordingly. As products enter the decline phase, the focus shifts from inventory optimization to inventory liquidation and risk mitigation.\n\nSupplier relationship management takes on heightened importance in the spare parts context. Long-term agreements with key component suppliers can provide price stability, guaranteed availability, and priority allocation during supply constraints. For discontinued parts, authorized distributors and aftermarket suppliers may provide the only viable sources, making these relationships essential.\n\nStrategic inventory positioning can significantly reduce costs without compromising service levels. Rather than maintaining identical inventory at every service location, organizations can adopt hub-and-spoke models where slower-moving parts are held centrally and expedited to regional locations as needed. This approach reduces total inventory while maintaining acceptable response times for most situations.\n\nReverse logistics and refurbishment programs can recover value from failed components. Rather than disposing of returned parts, refurbishment operations can repair and restore components to original specifications, creating a secondary inventory source at significantly reduced cost compared to new parts. This approach is particularly valuable for high-cost components like motherboards and displays.\n\nTechnology enablers are transforming spare parts cost management. Radio frequency identification (RFID) and Internet of Things (IoT) sensors can provide real-time visibility into inventory levels and locations. Advanced planning systems can optimize inventory across multiple dimensions simultaneously. And blockchain technology is being explored for authenticating component sources and tracking part provenance.\n\nFor organizations like Lenovo's SSC, the implications are clear. Spare parts cost management requires sophisticated approaches that balance service level requirements against cost constraints. The good news is that technology and analytics are providing new tools to address these challenges. The key is to build organizational capabilities in forecasting, supplier management, and technology deployment while maintaining focus on the fundamental economics of spare parts operations.\n\nThe transformation journey typically involves several stages. Initial efforts focus on data quality and visibility—getting accurate information about what parts are where and how they are being used. The next stage involves implementing better forecasting and planning processes. Advanced stages involve deploying advanced analytics and machine learning, optimizing network design, and developing strategic supplier partnerships.\n\nMeasuring success requires a balanced set of metrics. Service level metrics ensure that customers continue to receive acceptable service. Cost metrics track inventory investment, holding costs, and parts costs. Efficiency metrics monitor forecast accuracy, inventory turns, and resource utilization. The optimal balance among these metrics will vary based on organizational strategy and competitive positioning.\n\nThe future of spare parts cost management will be shaped by several emerging trends. Additive manufacturing (3D printing) has the potential to disrupt traditional spare parts economics by enabling on-demand production of discontinued parts. Circular economy approaches will drive greater emphasis on refurbishment and recycling. And artificial intelligence will enable increasingly sophisticated optimization of complex, multi-variable inventory decisions.",
-            chinese: "备件供应链运营中的成本管理代表了当今PC制造商和服务组织面临的最复杂挑战之一。与生产零件不同，备件的需求量可以相对准确地预测且库存周转相对较高，而备件则在不同经济条件下运作，需要专门的方法和框架。\n\n备件的经济模型在几个关键方面与生产零件不同。首先，备件需求天生是不稳定和不可预测的。虽然PC制造商可能生产数百万台特定型号的产品，但单个组件的实际故障率遵循概率分布，这意味着某些组件的故障频率将大大高于或低于统计平均值。这种需求可变性使预测变得极具挑战性。\n\n其次，备件必须与原始规格完全匹配。与工程团队可以从多个组件来源中进行选择的生产不同，备件必须与产品最初安装的组件完全匹配。这种限制限制了替换低成本替代品的能力，需要维护与原始组件制造商或其授权分销商的关系。\n\n第三，对备件的服务水平要求通常非常高。当企业客户的ThinkPad出现故障时，他们期望问题在几小时或几天内解决，而不是几周。这种期望给维护高库存的慢速周转备件带来了压力，这占用了营运资金并增加了持有成本。\n\n第四，PC的产品生命周期相对较短。与其他行业相比，典型的ThinkPad型号可能actively销售18-24个月，但服务生命周期延续到最后一款售出后的5-7年。这就产生了长尾问题——组织必须为不再生产的产品维护备件库存，有时在原始组件停止供应后数年仍需维护。\n\n鉴于这些挑战，领先组织如何处理备件成本管理？几种策略已被证明有效。\n\n需求预测准确性是有效备件管理的基础。结合组件故障率、使用模式、环境条件和历史需求数据等因素的高级统计模型可以显著提高预测准确性。机器学习算法正越来越多地应用于备件预测，利用大型数据集识别传统统计方法可能遗漏的模式。\n\n生命周期管理对于跨产品生命周期管理成本至关重要。随着产品老化，需求模式会发生变化，组件可用性也会变得更加受限。有效的生命周期管理涉及跟踪每个零件的生命周期阶段——从引入到增长、成熟和最终衰退——并相应地调整库存策略。当产品进入衰退阶段，重点从库存优化转向库存清算和风险缓解。\n\n供应商关系管理在备件环境中变得尤为重要。与关键组件供应商的长期协议可以提供价格稳定性、保证可用性以及供应紧张时的优先分配。对于停止供应的零件，授权分销商和售后市场供应商可能是唯一的可行来源，使这些关系变得至关重要。\n\n战略性库存配置可以显著降低成本而不影响服务水平。与其在每个服务地点维护相同的库存，组织可以采用中心辐射模式，在中心位置保留较慢周转的零件，并根据需要紧急运送到区域地点。这种方法减少了总库存，同时保持大多数情况下可接受的响应时间。\n\n逆向物流和翻新计划可以从故障组件中回收价值。翻新业务可以修复和恢复组件到原始规格，而不是处理退回的零件，创建secondary库存来源，成本显著低于新零件。这种方法对于主板和显示器等高价组件特别有价值。\n\n技术赋能者正在改变备件成本管理。射频识别（RFID）和物联网（IoT）传感器可以提供库存水平和位置的实时可见性。高级规划系统可以同时优化多维库存。区块链技术正在探索用于验证组件来源和跟踪零件来源。\n\n对于联想SSC这样的组织，含义很明确。备件成本管理需要复杂的方法来平衡服务水平要求与成本约束。好消息是技术和分析正在提供应对这些挑战的新工具。关键是在预测、供应商管理和技术部署方面建立组织能力，同时保持对备件运营基本经济的关注。\n\n转型之旅通常涉及几个阶段。初步工作侧重于数据质量和可见性——获取关于零件在哪里以及如何使用它们准确信息。下一阶段涉及实施更好的预测和规划流程。高级阶段涉及部署高级分析和机器学习、优化网络设计以及开发战略供应商合作伙伴关系。\n\n衡量成功需要一套平衡的指标。服务水平指标确保客户继续获得可接受的服务。成本指标跟踪库存投资、持有成本和零件成本。效率指标监控预测准确性、库存周转和资源利用率。这些指标之间的最佳平衡将因组织策略和竞争定位而异。\n\n备件成本管理的未来将受到几个新兴趋势的影响。增材制造（3D打印）有潜力通过按需生产停止供应的零件来颠覆传统备件经济。循环经济方法将推动更加强调翻新和回收。人工智能将实现对复杂、多变量库存决策的日益复杂的优化。",
+            english: "The integration of artificial intelligence into supply chain management represents one of the most transformative developments in modern business operations. As organizations grapple with increasing complexity, globalization, and customer expectations, AI offers unprecedented opportunities to optimize operations, reduce costs, and improve service levels.\n\nUnderstanding AI's Role in Modern Supply Chains\n\nArtificial intelligence encompasses a broad range of technologies that enable machines to mimic human cognitive functions such as learning, reasoning, and problem-solving. In supply chain contexts, AI applications range from demand forecasting and inventory optimization to supplier selection and risk management.\n\nThe foundation of AI in supply chains is data. Modern supply chains generate vast amounts of data from multiple sources: enterprise resource planning systems, Internet of Things sensors, transportation management systems, and customer relationship management platforms. AI algorithms excel at processing these large, complex datasets to identify patterns and generate insights that would be impossible for humans to discover manually.\n\nMachine learning, a subset of AI, enables systems to improve automatically through experience. In supply chain applications, machine learning models can analyze historical demand patterns, weather data, economic indicators, and social media signals to generate highly accurate demand forecasts. These forecasts inform inventory decisions, production planning, and transportation scheduling.\n\nPredictive analytics represents another powerful AI application. By analyzing historical data and identifying correlations, predictive models can anticipate potential disruptions before they occur. For example, AI can predict supplier delivery delays based on carrier performance data, weather patterns, and geopolitical events, allowing organizations to take proactive mitigation measures.\n\nNatural language processing enables AI systems to understand and generate human language. In supply chain contexts, NLP can analyze supplier contracts, extract key terms and conditions, and identify potential risks. Chatbots powered by NLP can handle routine customer inquiries, freeing human agents to focus on more complex issues.\n\nComputer vision, another AI technology, enables machines to interpret visual information. In warehouses, computer vision systems can verify product quality, track inventory movements, and optimize storage layouts. Autonomous vehicles and drones equipped with computer vision are revolutionizing transportation and last-mile delivery operations.\n\nAI is also transforming procurement and supplier management. Intelligent spend analysis tools can categorize and analyze procurement data to identify savings opportunities. AI-powered supplier scorecards can evaluate supplier performance across multiple dimensions, from quality and delivery to sustainability and financial stability.\n\nThe implementation of AI in supply chains requires careful planning and change management. Organizations must ensure data quality and accessibility, invest in appropriate technology infrastructure, and develop the organizational capabilities to leverage AI insights effectively.\n\nDespite the challenges, the potential benefits of AI in supply chain management are substantial. Companies that successfully implement AI can expect improved forecast accuracy, reduced inventory costs, enhanced supplier performance, and better customer service. As AI technologies continue to evolve, their applications in supply chain management will only expand, making AI literacy an essential skill for supply chain professionals.\n\nFor finance professionals working with supply chain teams, understanding AI capabilities and limitations is increasingly important. AI-generated forecasts and recommendations often require financial validation and risk assessment. Budgeting for AI implementations requires understanding both the upfront investment and ongoing operational costs. And measuring the return on investment from AI initiatives demands financial expertise combined with operational knowledge.\n\nThe future of supply chain management is undeniably intertwined with artificial intelligence. Organizations that embrace AI while maintaining strong fundamentals in financial management, supplier relationships, and operational excellence will be best positioned to thrive in an increasingly complex and competitive global marketplace.",
+            chinese: "人工智能与供应链管理的融合代表了现代商业运营中最具变革性的发展之一。随着组织应对日益增加的复杂性、全球化和客户期望，人工智能为优化运营、降低成本和提高服务水平提供了前所未有的机会。\n\n理解人工智能在现代供应链中的作用\n\n人工智能涵盖广泛的技术，使机器能够模仿学习、推理和解决问题等人类认知功能。在供应链领域，人工智能应用涵盖从需求预测和库存优化到供应商选择和风险管理的各个方面。\n\n供应链中人工智能的基础是数据。现代供应链从多个来源生成大量数据：企业资源规划系统、物联网传感器、运输管理系统和客户关系管理平台。人工智能算法擅长处理这些大型复杂数据集，以识别人类手动无法发现的模式和洞察。\n\n机器学习是人工智能的一个子集，使系统能够通过经验自动改进。在供应链应用中，机器学习模型可以分析历史需求模式、天气数据、经济指标和社交媒体信号，以生成高度准确的需求预测。这些预测为库存决策、生产规划和运输调度提供信息。\n\n预测分析代表了另一个强大的人工智能应用。通过分析历史数据和识别相关性，预测模型可以在潜在中断发生之前预见它们。例如，人工智能可以根据承运商绩效数据、天气模式，地缘政治事件预测供应商交货延迟，使组织能够采取积极的缓解措施。\n\n自然语言处理使人工智能系统能够理解和生成人类语言。在供应链环境中，NLP可以分析供应商合同，提取关键条款和条件，并识别潜在风险。由NLP驱动的聊天机器人可以处理常规客户查询，使人工代理能够专注于更复杂的问题。\n\n计算机视觉是另一种人工智能技术，使机器能够解释视觉信息。在仓库中，计算机视觉系统可以验证产品质量、跟踪库存移动并优化存储布局。配备计算机视觉的自动驾驶汽车和无人机正在彻底改变运输和最后一公里配送运营。\n\n人工智能也在改变采购和供应商管理。智能支出分析工具可以对采购数据进行分类和分析，以识别节省机会。由人工智能驱动的供应商记分卡可以评估供应商在多个维度上的绩效，从质量和交付到可持续性和财务稳定性。\n\n供应链中人工智能的实施需要仔细的规划和变革管理。组织必须确保数据质量和可访问性，投资适当的技术基础设施，并培养有效利用人工智能洞察的组织能力。\n\n尽管面临挑战，人工智能在供应链管理中的潜在利益是实质性的。成功实施人工智能的公司可以预期提高预测准确性、降低库存成本、增强供应商绩效和改善客户服务。随着人工智能技术的不断发展，其在供应链管理中的应用只会扩大，使人工智能素养成为供应链专业人员的必备技能。\n\n对于与供应链团队合作的财务专业人员来说，了解人工智能的能力和局限性越来越重要。人工智能生成的预测和建议通常需要财务验证和风险评估。为人工智能实施编制预算需要了解前期投资和持续运营成本。衡量人工智能举措的投资回报需要结合运营知识的财务专业知识。\n\n供应链管理的未来无疑与人工智能交织在一起。在日益复杂和竞争激烈的全球市场中，拥抱人工智能同时保持财务管理、供应商关系和卓越运营强大基础的组织将处于最佳位置。",
             vocabulary: [
                 {
-                    word: "lumpy demand",
-                    meaning: "不稳定需求/脉冲式需求；需求量波动大、难以预测的模式",
-                    example: "Lumpy demand for spare parts makes traditional forecasting methods less reliable."
+                    word: "predictive analytics",
+                    meaning: "预测分析；使用历史数据和统计模型预测未来趋势的技术",
+                    example: "Predictive analytics helped us anticipate the supplier delay and secure alternative sources."
                 },
                 {
-                    word: "long tail",
-                    meaning: "长尾；指需求量小但种类繁多的产品或服务，在备件中指大量低销量SKU",
-                    example: "Managing the long tail of spare parts inventory is one of our biggest cost challenges."
+                    word: "natural language processing",
+                    meaning: "自然语言处理（NLP）；使计算机能够理解和生成人类语言的人工智能分支",
+                    example: "NLP-powered chatbots handle 80% of routine customer inquiries without human intervention."
                 },
                 {
-                    word: "hub-and-spoke model",
-                    meaning: "中心辐射模式；一种库存分布策略，中心仓库存放慢速周转零件",
-                    example: "We adopted a hub-and-spoke model to reduce total inventory while maintaining service levels."
+                    word: "computer vision",
+                    meaning: "计算机视觉；使机器能够解释和理解图像/视频的人工智能技术",
+                    example: "Computer vision systems in our warehouse verify product quality in real-time."
                 },
                 {
-                    word: "reverse logistics",
-                    meaning: "逆向物流；将产品从客户处运回的过程，用于翻新或回收",
-                    example: "Our reverse logistics program refurbishes 60% of returned components for resale."
+                    word: "demand forecasting",
+                    meaning: "需求预测；预测未来客户需求以指导库存和生产的商业实践",
+                    example: "Accurate demand forecasting reduced our inventory holding costs by 25%."
                 },
                 {
-                    word: "additive manufacturing",
-                    meaning: "增材制造/3D打印；通过逐层添加材料制造零件的技术",
-                    example: "Additive manufacturing could disrupt spare parts economics by enabling on-demand production."
+                    word: "supply chain disruptions",
+                    meaning: "供应链中断；供应链中任何导致货物/服务流动中断的意外事件",
+                    example: "We developed contingency plans to mitigate supply chain disruptions from geopolitical risks."
                 }
             ],
             practice: [
                 {
-                    question: "Why is demand forecasting for spare parts particularly challenging compared to production parts?",
+                    question: "What is the foundation of AI applications in supply chain management?",
                     options: [
-                        "Spare parts are more expensive to manufacture",
-                        "Spare parts demand is lumpy and unpredictable due to probabilistic failure rates",
-                        "Spare parts require more quality testing",
-                        "Spare parts have longer supply chains"
+                        "Advanced robotics and automation",
+                        "Large amounts of data from multiple sources",
+                        "Cloud computing infrastructure",
+                        "Blockchain technology for traceability"
                     ],
                     answer: 1
                 },
                 {
-                    question: "What is the 'long tail' problem in spare parts management?",
+                    question: "How does machine learning improve demand forecasting in supply chains?",
                     options: [
-                        "Having too many suppliers for each part",
-                        "Maintaining inventory for products no longer manufactured for many years",
-                        "Parts that are too heavy to transport efficiently",
-                        "Demand concentrated on only a few popular SKUs"
+                        "By replacing human planners entirely",
+                        "By analyzing data to identify patterns humans might miss",
+                        "By reducing the need for historical data",
+                        "By eliminating the need for IT infrastructure"
                     ],
                     answer: 1
                 },
                 {
-                    question: "What is the key advantage of a hub-and-spoke inventory model?",
+                    question: "Why is AI literacy becoming essential for supply chain professionals?",
                     options: [
-                        "Faster delivery to all customers simultaneously",
-                        "Reduced total inventory while maintaining acceptable service levels",
-                        "Elimination of all transportation costs",
-                        "Automatic forecasting of spare parts demand"
+                        "AI will replace all supply chain jobs",
+                        "AI-generated outputs require human validation and interpretation",
+                        "AI is only useful for IT departments",
+                        "AI regulations require certification"
                     ],
                     answer: 1
                 }
