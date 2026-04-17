@@ -228,13 +228,13 @@
             </div>
 
             <div class="section">
-                <div class="section-title">💡 联想动态</div>
-                <div id="lenovoSection"></div>
+                <div class="section-title">💡 AI工具前沿</div>
+                <div id="aiSection"></div>
             </div>
 
             <div class="section">
-                <div class="section-title">📊 SSC参考</div>
-                <div id="sscSection"></div>
+                <div class="section-title">📊 联想动态</div>
+                <div id="lenovoSection"></div>
             </div>
         </div>
 
@@ -250,33 +250,33 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月17日星期五';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/17 10:00';
+        document.getElementById('currentDate').textContent = '2026年4月16日星期四';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/16 10:00';
 
         // 价格数据
         const priceData = {
             ddr5: {
                 name: 'DDR5 UDIMM 16GB 模组（全球现货均价）',
-                price: 498.00,
-                change: 17,
+                price: 520.00,
+                change: 5,
                 trend: 'down',
-                date: '2026-04-17',
+                date: '2026-04-16',
                 unit: '¥'
             },
             ssd: {
                 name: '1TB SSD（企业级）',
-                price: 808,
-                change: 7,
-                trend: 'down',
-                date: '2026-04-17',
+                price: 804,
+                change: 12,
+                trend: 'up',
+                date: '2026-04-16',
                 unit: '¥'
             },
             lenovo: {
                 name: '联想集团 (00992.HK)',
-                price: 9.26,
-                change: 0.65,
+                price: 9.40,
+                change: 0.05,
                 trend: 'up',
-                date: '2026-04-16',
+                date: '2026-04-15',
                 unit: 'HK$'
             }
         };
@@ -287,17 +287,17 @@
             <div class="price-item">
                 <div class="name">${priceData.ddr5.name}</div>
                 <div class="price">${priceData.ddr5.unit}${priceData.ddr5.price} <span class="change ${priceData.ddr5.trend}">${priceData.ddr5.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ddr5.change)}</span></div>
-                <div class="date">数据日期：${priceData.ddr5.date} | 现货较年内高点回落约17%，渠道商抛售+AI订单延后导致短期供需缓和</div>
+                <div class="date">数据日期：${priceData.ddr5.date} | TrendForce确认Q2合约涨58-63%，现货小幅回落</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.ssd.name}</div>
                 <div class="price">${priceData.ssd.unit}${priceData.ssd.price} <span class="change ${priceData.ssd.trend}">${priceData.ssd.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ssd.change)}</span></div>
-                <div class="date">数据日期：${priceData.ssd.date} | NAND现货小幅松动，但合约价Q2仍将上涨40-50%</div>
+                <div class="date">数据日期：${priceData.ssd.date} | NAND合约Q2涨幅70-75%，企业级SSD承压</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.lenovo.name}</div>
                 <div class="price">${priceData.lenovo.unit}${priceData.lenovo.price} <span class="change ${priceData.lenovo.trend}">${priceData.lenovo.trend === 'up' ? '↑' : '↓'} ${Math.abs(priceData.lenovo.change)}%</span></div>
-                <div class="date">收盘日期：${priceData.lenovo.date} | 港股通持股比例升至9.26%创历史新高</div>
+                <div class="date">收盘日期：${priceData.lenovo.date} | 港股收盘报HK$9.40，市值约$171.0亿</div>
             </div>
         `;
 
@@ -305,57 +305,64 @@
         const newsData = {
             industry: [
                 {
-                    tag: '内存回落',
-                    title: '内存价格大幅回落！从暴涨300%到持续降价：2026年内存市场的"过山车"行情',
-                    source: '头条 / 什么值得买',
+                    tag: 'TrendForce',
+                    title: 'TrendForce：Q2 DRAM合约价涨58-63%，NAND涨70-75%',
+                    source: 'TrendForce集邦咨询',
                     date: '2026-04-16',
-                    summary: '头条4月16日报道：今年1月DDR5 16G单条还卖到1100-1200元，32G套条逼近4000元，涨幅超过300%。但最近半个月，电脑圈最火的消息是内存价格大跳水——DDR5 16GB模组已从年内高点回落约15-20%。核心逻辑：前期过度囤货的渠道商开始抛售，加上部分AI服务器订单延后，短期内现货市场供需缓和。对联想SSC参考：现货市场回落为谈判长协框架提供了良好时机，建议利用当前窗口与供应商锁定部分长协配额。'
+                    summary: 'TrendForce集邦咨询4月最新预测：2026年Q2通用型DRAM内存合约价格预计环比上涨58%至63%，NAND闪存合约价格涨幅预计达70-75%。涨价主因：AI服务器持续吞噬HBM先进产能，HBM与通用DRAM共享制造资源，导致通用DRAM产能受限。对联想SSC参考：Q2合约价大幅上涨将直接推高备件成本，需在Q1末完成Q2锁单。'
                 },
                 {
-                    tag: 'Q1出货',
-                    title: 'Q1全球PC出货增长3%低于预期：机构警告供应链压力将持续',
-                    source: 'IDC/Omdia / MSN中文',
+                    tag: '高盛研报',
+                    title: '高盛：DRAM/NAND/HBM三重紧平衡，缺口扩大超预期',
+                    source: '高盛研报 / 雪球',
+                    date: '2026-04-16',
+                    summary: '高盛4月16日发布研报《全球存储芯片供需更新与物料成本分析》。报告指出：DRAM、NAND、HBM三重产品线均处于紧平衡状态，供需缺口超出此前预期。AI服务器需求持续吞噬产能，HBM先进制程排挤通用DRAM产能，整体存储供应紧张态势将延续至2026下半年。对联想SSC参考：三重紧平衡意味着备件采购需更加前瞻，建议提前一个季度锁单。'
+                },
+                {
+                    tag: '供应链',
+                    title: '三星西安工厂获美出口许可延期90天，存储供应边际改善',
+                    source: '路透社 / 华尔街日报',
                     date: '2026-04-15',
-                    summary: 'IDC/Omdia数据显示，2026年Q1全球PC出货约6560万台，同比增长3%，低于此前预期。联想出货1650万台，市占突破25%领跑全球。分析师警告：从Q2开始，内存和存储成本预计将比此前预期更快、更大幅度上涨，这将压缩PC厂商的毛利空间。对联想SSC启示：全年出货前高后低态势确立，Q2起备件成本压力加大，需提前锁定长协配额控制成本。'
+                    summary: '美国商务部已批准三星电子西安NAND闪存工厂的设备出口许可延期90天。该工厂占三星全球NAND产能约40%，此前因美国对华芯片出口管制面临设备维护困难。延期许可将缓解三星先进制程产能扩张压力，对全球NAND供应形成边际改善信号。对SSC参考：短期供应紧张或略有缓解，但长期产能仍受限。'
+                }
+            ],
+            ai: [
+                {
+                    tag: 'AI PC',
+                    title: 'IDC：2026年AI PC出货1.43亿台，渗透率达55%',
+                    source: 'IDC / ESM China',
+                    date: '2026-04-16',
+                    summary: 'IDC最新预测：2026年AI PC出货约1.43亿台，渗透率将达55%左右。需求分化明显：消费端买单主要是重度生产力创作者和早期尝鲜者；美国大企业倾向云端/SaaS；中国AI原生公司和中小软件设计团队更积极。对联想SSC影响：AI PC机型已占出货三成以上，备件规划需重点关注Copilot+标准配置对应的存储备件成本上升问题。'
                 },
                 {
-                    tag: '存储周期',
-                    title: '2026年存储器价格走势分析：AI驱动的"超级周期"仍在持续',
-                    source: '中国IC交易网',
-                    date: '2026-04-05',
-                    summary: '2026年4月，全球存储器市场正处于由AI驱动的"超级周期"之中。这一周期的特征是需求强劲增长与供给结构性短缺并存，导致HBM、标准DRAM和NAND价格持续处于高位。虽然现货价格在4月有所回落，但合约市场依然紧张。对SSC参考：超级周期特征下，备件成本将长期高于历史平均水平，长协框架是控制成本波动的关键工具。'
+                    tag: 'AI芯片',
+                    title: '英伟达GB300供应链启动，HBM4需求再升级',
+                    source: 'Digitimes / 电子时报',
+                    date: '2026-04-15',
+                    summary: '英伟达下一代AI芯片GB300供应链已启动，预计2026年Q3开始量产。GB300将采用HBM4内存，单颗GPU HBM容量将提升至288GB。SK海力士、三星、美光三大HBM供应商已锁定产能。对联想SSC启示：HBM产能持续排挤通用DRAM，PC/服务器备件成本压力将持续至2027年。'
                 }
             ],
             lenovo: [
                 {
-                    tag: '新品倒计时',
-                    title: 'ThinkPad 2026新品发布会倒计时6天：天禧AI生态即将揭晓',
+                    tag: '市场份额',
+                    title: 'IDC：Q1全球PC出货6560万台，联想市占25.2%领跑',
+                    source: 'IDC / 每经网',
+                    date: '2026-04-16',
+                    summary: 'IDC最新数据显示，2026年Q1全球PC出货约6560万台，同比增长3%。联想出货1650万台，市占突破25.2%继续领跑全球。惠普、戴尔分列二三位。分析师指出：虽然Q1增长低于预期，但AI PC渗透率提升将推动下半年换机潮。对联想SSC启示：全年出货前高后低态势确立，Q2起备件成本压力加大。'
+                },
+                {
+                    tag: '新品发布',
+                    title: 'ThinkPad 2026新品发布会倒计时7天：天禧AI生态即将揭晓',
                     source: '联想官方 / IT之家',
                     date: '2026-04-16',
                     summary: '联想官方4月16日发布倒计时预告：ThinkPad 2026新品暨天禧AI生态发布会将于4月22日举行，主题"我·即我们"。已开启1元预约通道，X1 Carbon、X9-15p、X14等新品即将亮相。对SSC参考：新品发布后对应的备件SKU将更新，需提前准备新机型LCD/MB/SSD关键备件采购计划。'
                 },
                 {
-                    tag: '资金流入',
-                    title: '联想港股通持股比例升至9.26%创历史新高：资金持续流入科技硬件板块',
-                    source: '格隆汇 / Wind数据',
-                    date: '2026-04-16',
-                    summary: '格隆汇4月16日报道：进入四月以来，港股市场整体回暖，科技板块活跃，联想集团获得资金关注度显著提升。Wind数据显示，截止2026年4月13日，联想港股通持股比例已升至9.26%，创出历史新高。联想Q1出货1650万台增9%领跑全球，市占超25%。'
-                },
-                {
-                    tag: '供应链',
-                    title: '联想集团何以成为业绩"异类"？韧性的全球供应链是核心优势',
-                    source: '新浪财经 / Gartner',
-                    date: '2026-02-13',
-                    summary: '新浪财经2月报道：联想集团在过去数十年积累的规模优势、韧性的全球供应链以及稳固的合作伙伴关系，将在AI时代被进一步放大。Gartner 2026供应链Top 25榜单中，联想位列第8位，较2025年上升2位，连续三年领跑中国科技企业。'
-                }
-            ],
-            ssc: [
-                {
                     tag: 'SSC建议',
-                    title: '【SSC内部参考】内存价格回落窗口期：长协谈判策略建议',
+                    title: '【SSC内部参考】TrendForce涨价预警下的备件采购策略',
                     source: '联想SSC成本团队',
-                    date: '2026-04-17',
-                    summary: '基于最新市场动态的SSC成本团队建议：1）DDR5现货较年内高点回落约17%，是启动长协谈判的良好窗口期；2）Q1 PC出货低于预期，但Q2起存储成本上涨压力加大，需提前锁定配额；3）ThinkPad 2026发布会（4月22日）后新机型备件SKU将更新，提前备货；4）联想港股通持股创历史新高（9.26%），市场信心充足；5）NAND现货小幅松动但合约价Q2仍将上涨40-50%，核心采购仍以合约价为准。'
+                    date: '2026-04-16',
+                    summary: '基于TrendForce最新预测的SSC成本团队建议：1）Q2 DRAM合约涨58-63%、NAND涨70-75%，备件成本将大幅上升；2）联想Q1出货1650万台市占25.2%领跑；3）ThinkPad 4月22日发布会倒计时7天，提前准备新机型备件SKU；4）三星西安工厂获许可延期，短期供应边际改善；5）建议立即启动Q2锁单，避免成本进一步攀升。'
                 }
             ]
         };
@@ -374,19 +381,18 @@
         }
 
         renderNews(newsData.industry, 'newsSection');
+        renderNews(newsData.ai, 'aiSection');
         renderNews(newsData.lenovo, 'lenovoSection');
-        renderNews(newsData.ssc, 'sscSection');
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-17', label: '2026-04-17（今日）'},
-            {date: '2026-04-16', label: '2026-04-16'},
             {date: '2026-04-15', label: '2026-04-15'},
             {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
+            {date: '2026-04-08', label: '2026-04-08'}
         ];
 
         // 动态生成历史记录链接

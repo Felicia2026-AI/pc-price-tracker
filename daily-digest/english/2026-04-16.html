@@ -298,15 +298,80 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月17日星期五';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/17 10:00';
+        document.getElementById('currentDate').textContent = '2026年4月16日星期四';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/16 10:00';
 
         // 今日短语
         const todayPhrase = {
-            english: "\"Q1 PC shipments came in below expectations at just 3% YoY growth. However, we expect cost pressures to intensify from Q2 as memory and storage prices surge faster than anticipated, which will squeeze our margins. We need to accelerate our LTA negotiations before the window closes.\"",
-            chinese: "Q1 PC出货低于预期，同比增长仅3%。然而，我们预计从Q2开始，随着内存和存储价格以超出预期的速度上涨，成本压力将加剧，这将压缩我们的毛利空间。我们需要在窗口关闭之前加快长协谈判。",
-            meaning: "come in below expectations：低于预期（常用商业表达）。YoY = Year-over-Year：同比增长。cost pressures intensify：成本压力加剧。surge faster than anticipated：以超出预期的速度上涨。squeeze margins：压缩利润空间。accelerate LTA negotiations：加快长协谈判。",
-            example: "Given that Q1 shipments came in below expectations, we need to accelerate our cost control initiatives and explore alternative sourcing strategies before the pricing window closes."
+            english: "\"According to TrendForce's latest forecast, DRAM contract prices are expected to rise 58-63% in Q2, while NAND flash contract prices could surge 70-75%. We need to lock in our Q2 parts orders immediately before suppliers further tighten allocation.\"",
+            chinese: "根据TrendForce最新预测，Q2 DRAM合约价格预计将上涨58-63%，而NAND闪存合约价格可能飙升70-75%。我们需要在供应商进一步收紧分配之前立即锁定Q2备件订单。",
+            meaning: "contract prices：合约价格，与spot prices（现货价格）相对。surge：飙升、激增。lock in orders：锁定订单。allocation：分配、配额。",
+            example: "Given the projected 60%+ price surge, we should lock in our Q2 DRAM orders by end of this week to secure current pricing levels."
+        };
+
+        // 今日学习内容 - 供应链风险管理
+        const todayContent = {
+            english: "Supply chain risk management has evolved from a back-office operational concern to a C-suite strategic priority. The events of recent years—from pandemic disruptions to geopolitical tensions—have demonstrated that supply chain resilience can make or break corporate performance. For procurement and supply chain professionals, this shift requires new skills, new frameworks, and new ways of thinking about supplier relationships.\n\nAt its core, supply chain risk management is about identifying, assessing, and mitigating risks that could disrupt the flow of materials, components, or finished goods. But in practice, it encompasses far more than simply having backup suppliers. A comprehensive risk management strategy addresses multiple dimensions: supplier financial stability, geopolitical exposure, concentration risk, quality consistency, and regulatory compliance.\n\nThe first step in effective risk management is visibility. You cannot manage what you cannot see. This means mapping your supply chain not just to direct suppliers (Tier 1), but to their suppliers (Tier 2) and beyond. For a PC manufacturer like Lenovo, this might mean understanding not just who supplies the LCD panels, but who supplies the glass substrates, the driver ICs, and the polarizing films. Each of these sub-tier suppliers represents a potential single point of failure.\n\nSupplier financial risk is often underestimated. A supplier that goes bankrupt or faces severe cash flow constraints can disrupt your supply chain even if their manufacturing operations are intact. Financial monitoring should include regular review of key financial ratios, credit ratings, and market signals. For critical suppliers, consider requiring audited financial statements or even taking equity stakes to ensure alignment of interests.\n\nGeopolitical risk has become increasingly prominent in supply chain planning. Trade wars, export controls, sanctions, and regional conflicts can suddenly render established supply routes untenable. The U.S.-China technology tensions have already forced many companies to restructure their supply chains, diversifying manufacturing away from China or establishing separate China-for-China supply chains. For memory components specifically, the concentration of advanced DRAM and NAND production in South Korea and the U.S. creates geopolitical exposure that must be actively managed.\n\nConcentration risk—the over-reliance on a single supplier or a small number of suppliers for critical components—is one of the most common and dangerous supply chain vulnerabilities. The principle of dual-sourcing or multi-sourcing is well-established, but implementing it requires significant effort. Alternative suppliers must be qualified, which involves extensive testing and validation. For spare parts supply chains, where exact component matching is required, this qualification process is even more critical and time-consuming.\n\nQuality risk is another dimension that deserves attention. A supplier that delivers inconsistent quality can cause more disruption than one that fails to deliver at all. Quality issues lead to returns, rework, warranty claims, and damage to brand reputation. Effective quality risk management requires robust incoming inspection processes, supplier quality audits, and clear specifications with measurable criteria.\n\nRegulatory and compliance risk has grown substantially with the proliferation of environmental regulations, conflict minerals requirements, and data privacy laws. Suppliers must be vetted not just for their ability to deliver quality components on time, but for their compliance with relevant regulations. Non-compliance by a supplier can expose the buying company to legal liability, fines, and reputational damage.\n\nSo how should supply chain professionals operationalize risk management? Several best practices have emerged.\n\nFirst, establish a risk scoring framework that quantifies different types of risk for each supplier and component. This framework should weight risks according to their potential impact and likelihood. High-impact, high-likelihood risks require the most attention and mitigation resources.\n\nSecond, develop contingency plans for high-risk scenarios. What happens if your primary memory supplier cannot deliver for three months? Do you have qualified alternatives? Can you redesign products to use different components? Contingency planning should be specific and actionable, not just theoretical.\n\nThird, build strategic inventory buffers for critical components. Just-in-time inventory is efficient but fragile. For components with long lead times, single-source suppliers, or high demand volatility, maintaining strategic safety stock can provide crucial resilience. The optimal inventory level balances carrying costs against the cost of potential stockouts.\n\nFourth, invest in supplier relationship management. Strong relationships with key suppliers provide early warning of potential problems and greater flexibility when disruptions occur. Regular business reviews, joint planning sessions, and transparent communication build the trust that enables rapid response to emerging risks.\n\nFifth, leverage technology for risk monitoring. Modern supply chain risk management platforms can monitor thousands of data sources—financial reports, news feeds, social media, weather data, regulatory filings—to provide early warning of potential disruptions. Artificial intelligence and machine learning are increasingly being used to identify patterns and predict risks before they materialize.\n\nFor Lenovo's SSC organization specifically, risk management takes on additional dimensions. Spare parts must match the exact specifications of original components, which limits the flexibility to switch suppliers or use alternative components. The long tail of spare parts—many SKUs with relatively low volumes—makes it challenging to maintain strategic inventory across all components. And the global nature of Lenovo's service operations means that supply chain disruptions in one region can affect service levels worldwide.\n\nThe practical implication is that SSC risk management requires close coordination with procurement, engineering, and service operations. Procurement must ensure supplier diversification and LTA coverage. Engineering must design for component commonality where possible and maintain accurate Bills of Materials. Service operations must provide accurate demand forecasts and manage customer expectations during supply disruptions.\n\nThe key questions for your next risk management review: What is our maximum tolerable disruption period for each critical component? Do we have qualified alternative suppliers for our top 20 components by spend? What is our current exposure to single-source suppliers? How quickly can we activate contingency plans when disruptions occur? The answers to these questions will determine your organization's resilience in an increasingly volatile supply environment.",
+            chinese: "供应链风险管理已从后台运营问题演变为高管层的战略优先事项。近年来从疫情中断到地缘政治紧张局势的事件表明，供应链韧性可以决定企业绩效的成败。对于采购和供应链专业人士而言，这一转变需要新技能、新框架以及思考供应商关系的新方式。\n\n从核心来看，供应链风险管理是识别、评估和缓解可能中断材料、零部件或成品流动的风险。但在实践中，它涵盖的内容远不止拥有备用供应商。全面的风险管理策略涉及多个维度：供应商财务稳定性、地缘政治风险敞口、集中度风险、质量一致性和监管合规性。\n\n有效风险管理的第一步是可见性。你无法管理你看不见的东西。这意味着不仅要绘制直接供应商（一级）的供应链图谱，还要绘制他们的供应商（二级）及更深层级的图谱。对于联想这样的PC制造商，这意味着不仅要了解谁供应LCD面板，还要了解谁供应玻璃基板、驱动IC和偏光膜。这些次级供应商中的每一个都代表潜在的单一故障点。\n\n供应商财务风险常被低估。即使制造运营完好无损，破产或面临严重现金流限制的供应商也可能中断你的供应链。财务监控应包括定期审查关键财务比率、信用评级和市场信号。对于关键供应商，考虑要求经审计的财务报表，甚至持股以确保利益一致。\n\n地缘政治风险在供应链规划中变得越来越突出。贸易战、出口管制、制裁和区域冲突可能突然使既定供应路线无法维持。美中科技紧张局势已迫使许多公司重组供应链，将制造从中国分散出去，或建立独立的中国本土供应链。具体到内存零部件，先进DRAM和NAND生产集中在韩国和美国，造成了必须积极管理的地缘政治风险敞口。\n\n集中度风险——对单一供应商或少数供应商的过度依赖——是最常见和最危险的供应链漏洞之一。双源或多源采购原则已确立，但实施它需要大量工作。替代供应商必须经过认证，这涉及广泛的测试和验证。对于备件供应链，由于需要精确的零部件匹配，这一认证过程更为关键和耗时。\n\n质量风险是另一个值得关注的维度。交付质量不一致的供应商可能比完全不交付的供应商造成更多中断。质量问题导致退货、返工、保修索赔和品牌声誉受损。有效的质量风险管理需要强大的进货检验流程、供应商质量审核以及具有可衡量标准的明确规格。\n\n随着环境法规、冲突矿产要求和数据隐私法的激增，监管和合规风险大幅增长。供应商不仅要审查其按时交付高质量零部件的能力，还要审查其对相关法规的合规性。供应商的不合规可能使采购公司面临法律责任、罚款和声誉损害。\n\n那么供应链专业人士应如何操作化风险管理？已出现几项最佳实践。\n\n第一，建立风险评分框架，量化每个供应商和零部件的不同类型风险。该框架应根据潜在影响和可能性对风险进行加权。高影响、高可能性风险需要最多的关注和缓解资源。\n\n第二，为高风险情景制定应急计划。如果你的主要内存供应商三个月无法交付怎么办？你有合格的替代方案吗？你能重新设计产品以使用不同的零部件吗？应急计划应具体且可执行，而不仅仅是理论性的。\n\n第三，为关键零部件建立战略库存缓冲。准时制库存效率高但脆弱。对于交货期长、单一来源供应商或需求波动性高的零部件，维持战略安全库存可以提供关键的韧性。最佳库存水平平衡持有成本与潜在缺货成本。\n\n第四，投资供应商关系管理。与关键供应商的牢固关系提供潜在问题的早期预警，并在中断发生时提供更大的灵活性。定期业务审查、联合规划会议和透明沟通建立信任，使能够快速应对新兴风险。\n\n第五，利用技术进行风险监控。现代供应链风险管理平台可以监控数千个数据源——财务报告、新闻源、社交媒体、天气数据、监管文件——以提供潜在中断的早期预警。人工智能和机器学习正越来越多地用于识别模式并在风险具体化之前进行预测。\n\n具体到联想的SSC组织，风险管理具有额外的维度。备件必须匹配原始零部件的确切规格，这限制了切换供应商或使用替代零部件的灵活性。备件的长尾——许多SKU但相对低销量——使得在所有零部件上维持战略库存具有挑战性。联想服务运营的全球性意味着一个区域的供应链中断可能影响全球的服务水平。\n\n实际含义是SSC风险管理需要与采购、工程和服务运营密切协调。采购必须确保供应商多元化和LTA覆盖。工程必须在可能的情况下设计零部件通用性，并维护准确的物料清单。服务运营必须提供准确的需求预测，并在供应中断期间管理客户期望。\n\n下次风险管理审查的关键问题：每个关键零部件的最大可容忍中断期是多少？我们前20大采购额零部件是否有合格的替代供应商？我们目前对单一来源供应商的风险敞口如何？中断发生时我们能多快激活应急计划？这些问题的答案将决定你的组织在日益波动的供应环境中的韧性。",
+            vocabulary: [
+                {
+                    word: "supply chain resilience",
+                    meaning: "供应链韧性/弹性；供应链在面对中断时维持运营并快速恢复的能力",
+                    example: "Building supply chain resilience requires diversifying suppliers and maintaining strategic inventory buffers."
+                },
+                {
+                    word: "single point of failure",
+                    meaning: "单一故障点；系统中一旦失效就会导致整个系统停止运行的组件或环节",
+                    example: "Relying on one supplier for critical components creates a dangerous single point of failure in our supply chain."
+                },
+                {
+                    word: "concentration risk",
+                    meaning: "集中度风险；过度依赖单一供应商或少数供应商的风险",
+                    example: "Our audit revealed high concentration risk—70% of our memory spend is with just two suppliers."
+                },
+                {
+                    word: "contingency plan",
+                    meaning: "应急计划/应急预案；在意外事件发生时采取的行动方案",
+                    example: "We activated our contingency plan when the earthquake disrupted our primary supplier's factory."
+                },
+                {
+                    word: "strategic safety stock",
+                    meaning: "战略安全库存；为应对供应不确定性而额外储备的关键物料",
+                    example: "Given the supply uncertainty, we decided to hold 8 weeks of strategic safety stock for DDR5 modules."
+                }
+            ],
+            practice: [
+                {
+                    question: "What is the first step in effective supply chain risk management?",
+                    options: [
+                        "Immediately switching to dual-source suppliers",
+                        "Establishing visibility across all tiers of the supply chain",
+                        "Increasing inventory levels for all components",
+                        "Terminating relationships with high-risk suppliers"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "Why is concentration risk particularly dangerous in supply chains?",
+                    options: [
+                        "It always leads to higher prices",
+                        "Over-reliance on a single supplier creates vulnerability if that supplier fails",
+                        "It makes inventory management easier",
+                        "Regulators prohibit concentration risk"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "What is the trade-off involved in maintaining strategic safety stock?",
+                    options: [
+                        "Between carrying costs and the cost of potential stockouts",
+                        "Between supplier quality and delivery speed",
+                        "Between product features and manufacturing cost",
+                        "Between domestic and international suppliers"
+                    ],
+                    answer: 0
+                }
+            ]
         };
 
         // 渲染短语
@@ -315,71 +380,6 @@
             <div class="phrase-chinese">${todayPhrase.chinese}</div>
             <div class="phrase-example">💡 含义：${todayPhrase.meaning}</div>
         `;
-
-        // 今日学习内容 - 库存管理
-        const todayContent = {
-            english: "In the memory and storage supply chain, effective inventory management is critical to balancing cost control with production continuity. For SSC teams managing spare parts procurement, understanding the key inventory strategies and their trade-offs is essential.\n\nThe first concept to grasp is safety stock. Safety stock is the buffer inventory kept to protect against variability in demand and supply. In the context of memory components, where prices can fluctuate dramatically and lead times are unpredictable, maintaining adequate safety stock is crucial. However, the challenge lies in determining the right level—too much safety stock ties up working capital and increases carrying costs; too little risks stockouts that can halt production.\n\nThe safety stock formula incorporates several factors: average daily usage rate, lead time variability, and service level requirements. For DDR5 and NAND components, where demand can spike突然 due to AI server orders or drop suddenly when channel inventory corrects, safety stock calculations must account for high volatility. SSC teams should review safety stock levels quarterly and adjust based on recent demand patterns.\n\nAnother critical concept is Economic Order Quantity (EOQ). EOQ determines the optimal order quantity that minimizes total inventory costs, including ordering costs and carrying costs. The formula balances the trade-off between ordering frequency (more frequent orders mean lower inventory levels but higher ordering costs) and order quantity (larger orders mean lower ordering costs but higher carrying costs).\n\nFor memory components, EOQ calculations are complicated by price volatility. When prices are rising, it may make sense to order larger quantities to lock in current prices, even if this increases carrying costs. When prices are falling, ordering smaller quantities more frequently may be preferable. SSC teams must integrate price trend analysis into their EOQ calculations.\n\nLead time management is equally important. Memory component lead times can range from 4 weeks to 16 weeks depending on the component type and market conditions. Long lead times require earlier ordering and more accurate demand forecasting. In a supercycle environment where supply constraints persist, lead times tend to lengthen, requiring procurement teams to plan further ahead.\n\nJust-In-Time (JIT) inventory is a strategy where components arrive exactly when needed for production, minimizing inventory holding costs. While JIT can be highly efficient in stable environments, it becomes risky when lead times are long and variable. During the 2025-2026 memory supercycle, many PC manufacturers that relied heavily on JIT found themselves unable to secure sufficient components when demand spiked.\n\nConsignment inventory is another option where the supplier holds inventory at the customer's location until it is consumed. This transfers carrying cost risk to the supplier and can improve cash flow. However, consignment requires careful tracking and may not be available for all component types or suppliers.\n\nDemand forecasting accuracy is the foundation of effective inventory management. For memory components, forecasting is particularly challenging due to the influence of external factors such as AI server demand, geopolitical tensions affecting semiconductor supply chains, and channel inventory corrections. SSC teams should use multiple forecasting methods—quantitative models for short-term projections and qualitative judgment for longer-term scenarios.\n\nWhen demand forecasting indicates potential shortages, procurement teams should consider strategic stockpiling. Strategic stockpiling involves building inventory above normal safety stock levels in anticipation of future price increases or supply constraints. The decision to strategically stockpile requires careful cost-benefit analysis, considering the probability and magnitude of price increases, available storage capacity, and working capital constraints.\n\nInventory turns is a key performance indicator that measures how many times inventory is sold and replaced over a period. Higher inventory turns indicate more efficient inventory management, but excessively high turns may signal insufficient inventory that risks stockouts. For memory components with volatile pricing, the optimal inventory turn rate balances carrying costs against the risk of holding expensive inventory that may decline in value.\n\nThe days of inventory (DOI) metric complements inventory turns by showing how many days of inventory are on hand. Industry benchmarks for memory components typically range from 30 to 60 days, depending on product lifecycle stage and demand predictability. SSC teams should track DOI trends and investigate deviations from benchmarks.\n\nIn practice, the most effective inventory management approach for SSC teams combines multiple strategies. Maintain appropriate safety stock based on component criticality and demand volatility. Use EOQ principles adjusted for price trends. Build strategic stockpiles when market analysis indicates favorable conditions. Monitor lead times closely and adjust order timing accordingly. Continuously improve demand forecasting accuracy through data analytics and cross-functional collaboration.\n\nThe memory market dynamics of 2026 demand that SSC teams be more sophisticated in their inventory management approaches. The days of simple reorder-point systems are gone. Today's environment requires integrated demand planning, strategic supplier partnerships, and agile response to market signals. Those who master these skills will deliver competitive advantage through better cost control and production continuity.",
-            chinese: "在内存和存储供应链中，有效的库存管理对于平衡成本控制与生产连续性至关重要。对于管理备件采购的SSC团队来说，理解关键库存策略及其权衡取舍是必不可少的。\n\n第一个需要掌握的概念是安全库存。安全库存是为防止需求和供应波动而保持的缓冲库存。在内存零部件的背景下——价格可能剧烈波动，交期不可预测——保持充足的安全库存至关重要。然而，挑战在于确定正确的水平——过多的安全库存会占用营运资金并增加持有成本；过少则可能导致缺货，进而中断生产。\n\n安全库存公式包含几个因素：平均日使用率、交期变动性和服务水平要求。对于DDR5和NAND零部件，需求可能因AI服务器订单而突然激增，或因渠道库存修正而突然下降，因此安全库存计算必须考虑高波动性。SSC团队应每季度审查安全库存水平，并根据近期需求模式进行调整。\n\n另一个关键概念是经济订货量（EOQ）。EOQ决定使总库存成本最小化的最优订货量，包括订货成本和持有成本。该公式平衡了订货频率（更频繁的订货意味着更低的库存水平但更高的订货成本）与订货量（大额订单意味着更低的订货成本但更高的持有成本）之间的权衡。\n\n对于内存零部件，EOQ计算因价格波动而变得复杂。当价格上涨时，订货更大数量以锁定当前价格可能是合理的，即使这会增加持有成本。当价格下跌时，更频繁地订购更小数量可能更可取。SSC团队必须将价格趋势分析整合到EOQ计算中。\n\n交期管理同样重要。内存零部件的交期可能从4周到16周不等，具体取决于零部件类型和市场状况。长交期需要更早订货和更准确的需求预测。在供应约束持续的超级周期环境中，交期往往会延长，要求采购团队更早规划。\n\n准时制（JIT）库存是一种策略，零部件在生产需要时刚好到达，将库存持有成本降至最低。虽然JIT在稳定环境中可能非常高效，但当交期长且变动大时，它就变得有风险。在2025-2026年内存超级周期期间，许多严重依赖JIT的PC制造商发现，当需求激增时，他们无法获得足够的零部件。\n\n寄售库存是另一个选项，供应商将库存放在客户所在地直到被消耗。这将持有成本风险转移给供应商，可以改善现金流。然而，寄售需要仔细跟踪，可能并非所有零部件类型或供应商都提供。\n\n需求预测准确性是有效库存管理的基础。对于内存零部件，预测尤其困难，因为受外部因素影响较大，如AI服务器需求、影响半导体供应链的地缘政治紧张局势以及渠道库存修正。SSC团队应使用多种预测方法——定量模型用于短期预测，定性判断用于长期情景。\n\n当需求预测显示潜在短缺时，采购团队应考虑战略储备。战略储备是在预期未来价格上涨或供应紧张时，建立高于正常安全库存水平的库存。决定进行战略储备需要仔细的成本效益分析，考虑价格上涨的概率和幅度、可用存储容量以及营运资金限制。\n\n库存周转率是衡量库存在一段时间内被销售和更换次数的关键绩效指标。较高的库存周转率表明库存管理更高效，但过高的周转率可能表明库存不足，有缺货风险。对于价格波动较大的内存零部件，最佳库存周转率平衡持有成本与持有可能贬值的昂贵库存的风险。\n\n库存天数（DOI）指标补充了库存周转率，显示手头有多少天的库存。内存零部件的行业基准通常在30至60天之间，取决于产品生命周期阶段和需求可预测性。SSC团队应跟踪DOI趋势并调查与基准的偏差。\n\n在实践中，SSC团队最有效的库存管理方法结合了多种策略。根据零部件关键性和需求波动性保持适当的安全库存。使用根据趋势调整的EOQ原则。当市场分析显示有利条件时建立战略储备。密切监控交期并相应调整订货时间。通过数据分析和跨职能协作持续提高需求预测准确性。\n\n2026年的内存市场动态要求SSC团队在库存管理方法上更加成熟。简单的再订货点系统时代已经过去。今天的环境需要综合需求规划、战略性供应商伙伴关系以及对市场信号的敏捷响应。那些掌握这些技能的人将通过更好的成本控制和生产连续性交付竞争优势。",
-            vocabulary: [
-                {
-                    word: "safety stock",
-                    meaning: "安全库存；为防止需求和供应波动而保持的缓冲库存",
-                    example: "We maintain 15 days of safety stock for DDR5 components due to high demand volatility."
-                },
-                {
-                    word: "economic order quantity (EOQ)",
-                    meaning: "经济订货量；使总库存成本最小化的最优订货量",
-                    example: "The EOQ model suggests ordering 5,000 units per batch, but we adjust this based on price trends."
-                },
-                {
-                    word: "lead time",
-                    meaning: "交期/前置时间；从下单到交货所需的时间",
-                    example: "Current DDR5 lead times range from 8 to 12 weeks, up from 4 weeks last quarter."
-                },
-                {
-                    word: "just-in-time (JIT)",
-                    meaning: "准时制；零部件在生产需要时刚好到达的库存策略",
-                    example: "JIT worked well in stable markets but became risky during the memory supercycle."
-                },
-                {
-                    word: "inventory turns / days of inventory (DOI)",
-                    meaning: "库存周转率/库存天数；衡量库存效率的关键指标",
-                    example: "Our inventory turns improved to 8x annually, reducing DOI from 60 to 45 days."
-                }
-            ],
-            practice: [
-                {
-                    question: "Why is safety stock important for memory component inventory management?",
-                    options: [
-                        "It reduces ordering costs",
-                        "It protects against demand and supply variability in a volatile market",
-                        "It eliminates the need for forecasting",
-                        "It lowers the purchase price"
-                    ],
-                    answer: 1
-                },
-                {
-                    question: "What is a key limitation of Just-In-Time (JIT) inventory during a memory supercycle?",
-                    options: [
-                        "JIT increases carrying costs",
-                        "JIT becomes risky when lead times are long and variable",
-                        "JIT requires more storage space",
-                        "JIT is too expensive to implement"
-                    ],
-                    answer: 1
-                },
-                {
-                    question: "When might it make sense to order larger quantities than EOQ suggests?",
-                    options: [
-                        "When prices are falling rapidly",
-                        "When prices are rising and you want to lock in current prices",
-                        "When lead times are short",
-                        "When inventory turns are high"
-                    ],
-                    answer: 1
-                }
-            ]
-        };
 
         // 渲染学习内容
         document.getElementById('englishText').textContent = todayContent.english;
@@ -419,14 +419,13 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-17', label: '2026-04-17（今日）'},
-            {date: '2026-04-16', label: '2026-04-16'},
             {date: '2026-04-15', label: '2026-04-15'},
             {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
+            {date: '2026-04-08', label: '2026-04-08'}
         ];
 
         // 动态生成历史记录链接
