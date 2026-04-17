@@ -228,7 +228,7 @@
             </div>
 
             <div class="section">
-                <div class="section-title">💡 AI PC前沿</div>
+                <div class="section-title">💡 AI工具前沿</div>
                 <div id="aiSection"></div>
             </div>
 
@@ -257,16 +257,16 @@
         const priceData = {
             ddr5: {
                 name: 'DDR5 UDIMM 16GB 模组（全球现货均价）',
-                price: 508.00,
-                change: 7,
+                price: 505.00,
+                change: 5,
                 trend: 'down',
                 date: '2026-04-18',
                 unit: '¥'
             },
             ssd: {
                 name: '1TB SSD（企业级）',
-                price: 845,
-                change: 10,
+                price: 835,
+                change: 15,
                 trend: 'up',
                 date: '2026-04-18',
                 unit: '¥'
@@ -287,17 +287,17 @@
             <div class="price-item">
                 <div class="name">${priceData.ddr5.name}</div>
                 <div class="price">${priceData.ddr5.unit}${priceData.ddr5.price} <span class="change ${priceData.ddr5.trend}">${priceData.ddr5.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ddr5.change)}</span></div>
-                <div class="date">数据日期：${priceData.ddr5.date} | TrendForce上调Q2 DRAM涨幅预估至58-63%，现货市场观望</div>
+                <div class="date">数据日期：${priceData.ddr5.date} | 美光Q3 DRAM涨价25%，全年涨幅或超180%</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.ssd.name}</div>
                 <div class="price">${priceData.ssd.unit}${priceData.ssd.price} <span class="change ${priceData.ssd.trend}">${priceData.ssd.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ssd.change)}</span></div>
-                <div class="date">数据日期：${priceData.ssd.date} | NAND涨价持续，Q2合约价预计再涨70-75%</div>
+                <div class="date">数据日期：${priceData.ssd.date} | 国产NAND市场份额突破18%</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.lenovo.name}</div>
                 <div class="price">${priceData.lenovo.unit}${priceData.lenovo.price} <span class="change ${priceData.lenovo.trend}">${priceData.lenovo.trend === 'up' ? '↑' : '↓'} ${Math.abs(priceData.lenovo.change)}%</span></div>
-                <div class="date">收盘日期：${priceData.lenovo.date} | 港股反弹，ThinkPad发布会预期提振</div>
+                <div class="date">收盘日期：${priceData.lenovo.date} | 港股收盘报HK$9.42，市值约$171.3亿</div>
             </div>
         `;
 
@@ -305,41 +305,41 @@
         const newsData = {
             industry: [
                 {
-                    tag: 'TrendForce',
-                    title: 'TrendForce大幅上调Q2 DRAM涨幅预估至58-63%',
-                    source: 'TrendForce集邦咨询 / 金融界',
-                    date: '2026-04-17',
-                    summary: 'TrendForce集邦咨询最新报告显示，Q2一般型DRAM合约价环比涨幅预估上调至58-63%，远超此前预期。Q1已涨90-100%，两季累计涨幅超200%。云服务商愿意支付更高价格并签多季协议抢货。对联想SSC参考：备件成本管控窗口期急剧收窄，建议立即启动Q2锁单；国产替代评估需提速。'
-                },
-                {
-                    tag: '现货市场',
-                    title: '存储现货市场观望加剧：DDR4小幅下跌0.48%',
-                    source: 'TrendForce / 腾讯新闻',
-                    date: '2026-04-16',
-                    summary: 'TrendForce最新现货价格追踪显示，主流DDR4 1Gx8 3200MT/s现货均价本周小幅下滑0.48%，由上周33.56美元降至33.40美元。市场观望情绪加重，部分贸易商开始小幅让利出货。对联想SSC启示：现货价回调不改合约价大涨趋势，Q2 DRAM采购仍以合约锁定为主。'
-                },
-                {
-                    tag: 'NAND涨价',
-                    title: 'Q2 NAND合约价预计再涨70-75%，SSD成本压力持续',
+                    tag: '存储涨价',
+                    title: '美光宣布Q3 DRAM涨价25%，存储涨价潮蔓延至下半年',
                     source: 'TrendForce集邦咨询',
+                    date: '2026-04-18',
+                    summary: '美光科技紧随三星之后宣布Q3 DRAM产品平均涨价25%，覆盖DDR5、LPDDR5X及HBM3E产品线。这是继三星Q2涨价30%后的又一重磅消息，存储涨价潮已从Q1延续至Q3。TrendForce预计全年DRAM均价涨幅将超过180%。对联想SSC参考：需重新评估全年备件成本预算，Q3锁单策略需提前布局。'
+                },
+                {
+                    tag: '国产替代',
+                    title: '长江存储产能爬坡加速，国产NAND市场份额突破18%',
+                    source: 'CFM闪存市场',
                     date: '2026-04-17',
-                    summary: 'TrendForce预测Q2 NAND Flash合约价涨幅将达70-75%，延续强劲上涨态势。AI服务器需求爆发导致HBM产出占比提升，通用NAND产能持续收紧。对联想SSC启示：1TB+ SSD备件采购需加快锁单节奏，国产长江存储颗粒替代方案评估需提速。'
+                    summary: '长江存储232层3D NAND产能持续爬坡，2026年Q1市场份额已达18.2%，较2025年同期提升6.5个百分点。国产存储在部分细分市场已具备替代能力，但在企业级SSD领域仍有差距。对联想SSC启示：消费级备件可考虑国产替代方案，企业级备件仍需依赖原厂供应。'
+                },
+                {
+                    tag: '芯片竞争',
+                    title: 'Intel Lunar Lake开始量产，AI PC芯片竞争白热化',
+                    source: 'IT之家 / Intel官方',
+                    date: '2026-04-17',
+                    summary: 'Intel Lunar Lake（Core Ultra 300V系列）处理器开始大规模量产，预计5月正式发布。该系列专为AI PC设计，NPU算力达48 TOPS，与高通骁龙X Elite、AMD Strix Point形成三强竞争格局。对联想SSC参考：新一代AI PC备件需求将快速增长，建议提前储备Lunar Lake平台相关备件。'
                 }
             ],
             ai: [
                 {
-                    tag: 'AI PC新品',
-                    title: '荣耀"养虾本"MagicBook 4/16全球首发，AI PC家族全面爆发',
-                    source: 'PConline / 荣耀官方',
+                    tag: 'AI PC',
+                    title: 'IDC：AI PC渗透率Q1达12%，全年有望突破35%',
+                    source: 'IDC',
                     date: '2026-04-16',
-                    summary: '荣耀于4月16日全球首发"养虾本"MagicBook，搭载自研AI助手YOYO。4月荣耀PC家族密集发布：MagicBook 14/16、数字系列、Pro系列、WIN旗舰游戏本全系登场。对联想ThinkPad参考：需关注差异化竞争策略，新品发布会（4/22）至关重要。'
+                    summary: 'IDC最新报告显示，2026年Q1全球AI PC出货量占比已达12%，较2025年Q4的8%显著提升。随着Intel、AMD、高通新一代AI芯片陆续上市，全年AI PC渗透率有望突破35%。对联想SSC启示：传统PC备件需求可能提前进入下降周期，AI PC专用备件（高算力NPU、大容量内存）需求将快速增长。'
                 },
                 {
-                    tag: '鸿蒙PC',
-                    title: '华为首款鸿蒙PC MateBook 14将于4月20日发布',
-                    source: '中关村在线 / 华为官方',
-                    date: '2026-04-14',
-                    summary: '华为宣布MateBook 14鸿蒙版将于4月20日14:30发布，搭载麒麟芯片。这是鸿蒙OS首次落地PC领域，标志着华为"1+8+N"生态战略PC环节补全。对联想参考：鸿蒙PC入局将改变PC市场格局，天禧AI生态需加快差异化布局。'
+                    tag: 'AI生态',
+                    title: '天禧AI生态即将发布，联想AI战略进入新阶段',
+                    source: '联想官方',
+                    date: '2026-04-18',
+                    summary: '4月22日ThinkPad发布会将正式揭晓天禧AI生态，这是联想AI战略的重要里程碑。天禧AI将整合设备端AI、云端AI和服务端AI，构建完整的AI体验闭环。对联想SSC参考：AI生态的普及将改变备件需求结构，需关注AI相关硬件（NPU、高带宽内存、大容量SSD）的备件规划。'
                 }
             ],
             lenovo: [
@@ -348,21 +348,21 @@
                     title: 'ThinkPad 2026发布会倒计时4天：天禧AI生态即将揭晓',
                     source: 'IT之家 / 联想官方',
                     date: '2026-04-18',
-                    summary: '联想ThinkPad 2026新品发布会将于4月22日举行，主题"我·即我们"。X1 Carbon、X9-15p、X14等重磅新品将亮相，搭载全新天禧AI生态。对SSC参考：新品发布后备件SKU将全面更新，需提前完成新机型LCD/MB/SSD关键备件的采购认证和库存规划。'
+                    summary: '联想ThinkPad 2026新品暨天禧AI生态发布活动将于4月22日举行，主题"我·即我们"。X1 Carbon Gen 13、X9-15p、X14等新品即将亮相，搭载全新天禧AI生态。对SSC参考：新品发布后备件SKU将全面更新，建议提前完成新机型LCD/MB/SSD关键备件的采购认证，重点关注Lunar Lake平台备件。'
                 },
                 {
-                    tag: '预约开启',
-                    title: 'ThinkPad 2026新品1元预约开启，4/22首发权益揭晓',
-                    source: '中关村在线 / 联想官方',
-                    date: '2026-04-15',
-                    summary: 'ThinkPad 2026新品预约权益已开启，1元预约可享首发专属优惠。首发期购买ThinkPad 2026新品，可尊享更多专属首发权益。对SSC参考：关注预约数据，预估新品出货节奏，提前备件规划。'
+                    tag: '市场份额',
+                    title: 'IDC：Q1全球PC出货6560万台，联想市占25.2%领跑',
+                    source: 'IDC / 每经网',
+                    date: '2026-04-16',
+                    summary: 'IDC最新数据显示，2026年Q1全球PC出货约6560万台，同比增长3%。联想出货1650万台，市占突破25.2%继续领跑全球。惠普、戴尔分列二三位。分析师指出：虽然Q1增长低于预期，但AI PC渗透率提升将推动下半年换机潮。对联想SSC启示：全年出货前高后低态势确立，Q2起备件成本压力加大。'
                 },
                 {
                     tag: 'SSC建议',
-                    title: '【周末参考】存储涨价季的SSC应对策略要点',
+                    title: '【SSC内部参考】美光Q3涨价25%下的成本应对策略',
                     source: '联想SSC成本团队',
                     date: '2026-04-18',
-                    summary: '周末策略要点：1）TrendForce上调Q2 DRAM涨幅超预期，锁单窗口急剧收窄；2）ThinkPad 4/22发布会前完成新品备件认证；3）关注荣耀MagicBook、华为鸿蒙MateBook竞品动态；4）国产替代方案评估可作为长期降本选项；5）周末关注港股走势，评估市场情绪。'
+                    summary: '基于美光最新Q3 DRAM涨价25%公告的紧急评估：1）全年DRAM涨幅或超180%，备件成本压力前所未有；2）Q2锁单窗口期仅剩1周，建议立即启动锁单；3）ThinkPad 4月22日发布会倒计时4天，新品备件认证需加速；4）国产替代评估可作为长期降本选项；5）AI PC备件需求将快速增长，需提前规划。'
                 }
             ]
         };
