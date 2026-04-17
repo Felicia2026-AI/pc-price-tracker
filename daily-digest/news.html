@@ -257,16 +257,16 @@
         const priceData = {
             ddr5: {
                 name: 'DDR5 UDIMM 16GB 模组（全球现货均价）',
-                price: 518.00,
-                change: 2,
+                price: 510.00,
+                change: 10,
                 trend: 'down',
                 date: '2026-04-17',
                 unit: '¥'
             },
             ssd: {
                 name: '1TB SSD（企业级）',
-                price: 815,
-                change: 11,
+                price: 820,
+                change: 16,
                 trend: 'up',
                 date: '2026-04-17',
                 unit: '¥'
@@ -287,17 +287,17 @@
             <div class="price-item">
                 <div class="name">${priceData.ddr5.name}</div>
                 <div class="price">${priceData.ddr5.unit}${priceData.ddr5.price} <span class="change ${priceData.ddr5.trend}">${priceData.ddr5.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ddr5.change)}</span></div>
-                <div class="date">数据日期：${priceData.ddr5.date} | TrendForce全面上修Q1 DRAM涨幅至90-95%，现货小幅回落</div>
+                <div class="date">数据日期：${priceData.ddr5.date} | 三星Q2 DRAM再涨30%，连续两季累计涨幅超130%</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.ssd.name}</div>
                 <div class="price">${priceData.ssd.unit}${priceData.ssd.price} <span class="change ${priceData.ssd.trend}">${priceData.ssd.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ssd.change)}</span></div>
-                <div class="date">数据日期：${priceData.ssd.date} | 三星Q1 NAND涨价100%已执行，Q2或继续涨</div>
+                <div class="date">数据日期：${priceData.ssd.date} | NAND持续紧张，国产替代机遇显现</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.lenovo.name}</div>
                 <div class="price">${priceData.lenovo.unit}${priceData.lenovo.price} <span class="change ${priceData.lenovo.trend}">${priceData.lenovo.trend === 'up' ? '↑' : '↓'} ${Math.abs(priceData.lenovo.change)}%</span></div>
-                <div class="date">收盘日期：${priceData.lenovo.date} | 港股小幅回调，市场观望情绪浓厚</div>
+                <div class="date">收盘日期：${priceData.lenovo.date} | 港股收盘报HK$9.35，市值约$170.0亿</div>
             </div>
         `;
 
@@ -305,64 +305,64 @@
         const newsData = {
             industry: [
                 {
-                    tag: 'TrendForce',
-                    title: 'TrendForce全面上修Q1 DRAM涨幅至90-95%、NAND至55-60%',
-                    source: 'TrendForce集邦咨询 / 佰维存储财报',
+                    tag: '存储涨价',
+                    title: '三星Q2 DRAM再涨30%，连续两季累计涨幅超130%',
+                    source: '新浪财经',
                     date: '2026-04-17',
-                    summary: 'TrendForce集邦咨询最新数据显示，2026年Q1 DRAM合约价涨幅从初估的55-60%全面上修至90-95%，NAND Flash合约价从33-38%上修至55-60%，不排除进一步上修空间。AI与数据中心需求持续加剧全球存储器供需失衡，原厂议价能力有增无减。对联想SSC参考：备件成本压力超预期，建议立即启动Q2锁单谈判。'
+                    summary: '三星电子在2026年Q1 DRAM涨价100%的基础上，Q2再次宣布全系列DRAM产品平均涨价30%，涵盖AI芯片所需的高带宽内存(HBM)及通用DRAM。这是存储超级周期以来最激进的涨价节奏，连续两季累计涨幅已超过130%。对联想SSC参考：备件成本压力持续攀升，Q2锁单窗口期即将关闭，建议立即启动锁单流程。'
                 },
                 {
-                    tag: '三星涨价',
-                    title: '三星NAND闪存Q1涨价100%已执行，Q2或继续上涨',
-                    source: '新浪财经 / 韩国媒体',
-                    date: '2026-04-17',
-                    summary: '据韩国媒体报道，三星电子在2026年Q1已将NAND闪存供应价格上调100%以上，涨幅远超市场预期。这是继DRAM内存价格上调近70%之后，存储市场的又一重磅调价信号。三星已开始与客户就Q2 NAND价格进行新一轮谈判，市场普遍预计Q2涨价势头将延续。对SSC参考：NAND成本翻倍直接影响SSD备件采购，需加速锁单。'
+                    tag: '国产替代',
+                    title: '存储涨价不停歇：AI吞噬产能，国产力量崛起',
+                    source: '搜狐科技',
+                    date: '2026-04-13',
+                    summary: '2026年Q2，全球存储芯片因AI需求爆发，DRAM、NAND Flash价格持续上涨，高端产能向AI内存倾斜，为国产存储带来替代机遇。国产长江存储、合肥长鑫等在部分细分市场开始获得更多份额。对联想SSC启示：需评估国产替代可行性，同时关注国产颗粒在PC备件场景的兼容性验证。'
                 },
                 {
-                    tag: '内存厂',
-                    title: '内存厂盈利暴涨却担忧扩产：HBM吞噬通用产能格局难改',
-                    source: '36氪 / 行业分析',
-                    date: '2026-04-17',
-                    summary: '36氪深度报道：三星半导体Q4利润同比暴涨250%，SK海力士营业利润率逼近56%。但高管们反而担忧扩产——内存行业历史教训让管理层对扩产保持克制。AI服务器持续吞噬HBM产能，通用DRAM/NAND排产表已延后一年半以上。对联想SSC启示：供应紧张格局3-5年内难以改变，必须建立长期锁价机制。'
+                    tag: '市场趋势',
+                    title: 'PC市场Q1短暂增长后或进入下行周期',
+                    source: 'PConline / IDC',
+                    date: '2026-04-10',
+                    summary: 'IDC与Omdia发布报告称，Q1全球PC出货量小幅增长，但受内存和CPU成本上涨推动整机价格继续上涨，预计Q2起市场将进入下行周期。涨价压力已开始抑制消费需求。对联想SSC启示：关注需求端变化，备件库存策略需平衡成本上涨与需求下行风险。'
                 }
             ],
             ai: [
                 {
-                    tag: 'AI服务器',
-                    title: 'AI服务器需求持续吞噬HBM产能，通用芯片供应持续收紧',
-                    source: '行业分析 / 36氪',
-                    date: '2026-04-17',
-                    summary: 'AI数据中心需求激增导致HBM先进制程产能被AI服务器牢牢占据，通用DRAM/NAND排产计划已延后一年半以上。据渠道反馈，部分消费级存储产品需提前50万保证金才能获得工厂配额，货期已排至2027年。对联想SSC影响：关键备件必须提前锁量锁价，不能依赖正常供应周期。'
+                    tag: 'AI大模型',
+                    title: 'DeepSeek V4即将发布，AI竞争格局生变',
+                    source: '腾讯新闻',
+                    date: '2026-04-10',
+                    summary: 'DeepSeek V4将于4月发布，国产AI大模型持续迭代。AI PC赛道竞争加剧，各家厂商加速AI生态布局。DeepSeek的低成本高性能路线可能改变AI PC的定价策略和用户体验预期。对联想天禧AI生态参考：需关注V4的性能表现和生态适配情况，竞品动态可能影响ThinkPad新品定位。'
                 },
                 {
-                    tag: '涨价传导',
-                    title: '存储涨价传导至整机：主流笔记本可能涨价40%',
-                    source: 'TrendForce / 快科技',
-                    date: '2026-04-17',
-                    summary: 'TrendForce警告：2026年主流笔记本电脑型号可能涨价40%。戴尔12月已提价15-20%，联想像涨5-20%。涨价主要受内存通胀(memflation)推动，DRAM/NAND组件成本快速上涨，对低利润率产品影响尤为明显。对联想SSC启示：成本管控需更加精细化，锁价周期要覆盖到整机定价周期。'
+                    tag: 'AI PC',
+                    title: 'AI PC涨价风暴加剧，DDR5现货回调能否扭转颓势？',
+                    source: '搜狐科技',
+                    date: '2026-03-31',
+                    summary: 'AI本该是PC行业破局的关键，推着整个产业向智能终端迭代，可眼下这场席卷全产业链的硬件涨价潮，彻底打乱了AI PC的普及节奏。DDR5现货价小幅回调，但Q2合约价涨幅已成定局。整机涨价压力将持续传导至消费市场。对联想SSC影响：需关注消费市场反馈，适时调整备件成本预期。'
                 }
             ],
             lenovo: [
                 {
-                    tag: 'Gartner',
-                    title: 'Gartner：2026 Q1全球PC出货增4%，联想稳居第一',
-                    source: 'Gartner / 中国产业经济信息网',
+                    tag: '新品发布',
+                    title: 'ThinkPad 2026发布会倒计时5天：天禧AI生态即将揭晓',
+                    source: 'IT之家 / 联想官方',
                     date: '2026-04-17',
-                    summary: 'Gartner最新数据显示，2026年Q1全球PC出货增长4%至约6480万台。联想市占超25%稳坐第一，华硕超越宏碁升至第五。但涨价主要受内存通胀推动，对低利润率产品影响尤为明显。分析师指出：存储涨价传导至整机已成定局，Q2起各厂商将面临更大的成本压力与定价挑战。'
+                    summary: '联想ThinkPad 2026新品暨天禧AI生态发布活动将于4月22日举行，主题"我·即我们"。X1 Carbon、X9-15p、X14等新品即将亮相，搭载全新天禧AI生态。对SSC参考：新品发布后备件SKU将全面更新，建议提前完成新机型LCD/MB/SSD关键备件的采购认证。'
                 },
                 {
-                    tag: 'Omdia数据',
-                    title: 'Omdia：Q1联想PC占比超1/4，出货1650万台继续领跑',
-                    source: '快科技 / Omdia',
-                    date: '2026-04-17',
-                    summary: 'Omdia数据显示2026年Q1全球PC出货达6480万台，同比涨3.2%。联想出货约1650万台，市占超25%继续领跑。分析师指出：存储涨价传导至整机已成定局，Q2起各厂商将面临更大的成本压力与定价挑战。对SSC参考：出货领先意味着备件需求量大，更需做好锁价与库存管理。'
+                    tag: '市场份额',
+                    title: 'IDC：Q1全球PC出货6560万台，联想市占25.2%领跑',
+                    source: 'IDC / 每经网',
+                    date: '2026-04-16',
+                    summary: 'IDC最新数据显示，2026年Q1全球PC出货约6560万台，同比增长3%。联想出货1650万台，市占突破25.2%继续领跑全球。惠普、戴尔分列二三位。分析师指出：虽然Q1增长低于预期，但AI PC渗透率提升将推动下半年换机潮。对联想SSC启示：全年出货前高后低态势确立，Q2起备件成本压力加大。'
                 },
                 {
                     tag: 'SSC建议',
-                    title: '【SSC内部参考】TrendForce全面上修后的备件采购紧急建议',
+                    title: '【SSC内部参考】三星Q2涨价30%下的紧急应对策略',
                     source: '联想SSC成本团队',
                     date: '2026-04-17',
-                    summary: '基于TrendForce最新上修数据的SSC成本团队紧急建议：1）Q1 DRAM涨幅上修至90-95%、NAND至55-60%，成本压力超预期；2）三星NAND涨价100%已执行，Q2或继续涨；3）联想Q1出货1650万台市占25%+稳居第一，备件需求量维持高位；4）内存厂盈利暴涨但担忧扩产，供应紧张格局3-5年难改；5）建议立即启动Q2-Q3锁单，锁定3-6个月用量。'
+                    summary: '基于三星最新Q2 DRAM涨价30%公告的紧急评估：1）连续两季累计涨幅超130%，备件成本压力前所未有；2）Q2锁单窗口期仅剩2周，建议立即启动锁单；3）ThinkPad 4月22日发布会倒计时5天，新品备件认证需加速；4）国产替代评估可作为长期降本选项；5）需求端可能承压，备件库存策略需更加谨慎。'
                 }
             ]
         };
@@ -394,7 +394,6 @@
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
             {date: '2026-04-09', label: '2026-04-09'},
-            {date: '2026-04-08', label: '2026-04-08'},
         ];
 
         // 动态生成历史记录链接
