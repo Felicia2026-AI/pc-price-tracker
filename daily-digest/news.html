@@ -211,24 +211,24 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>📰 PC行业早报 - 周末版</h1>
+            <h1>📰 PC行业早报</h1>
             <div class="date" id="currentDate"></div>
             <div class="update-time" id="updateTime"></div>
         </div>
 
         <div class="content">
             <div class="section">
-                <div class="section-title">📈 价格快讯（周末前瞻）</div>
+                <div class="section-title">📈 价格快讯</div>
                 <div id="priceSection"></div>
             </div>
 
             <div class="section">
-                <div class="section-title">🔥 本周行业回顾</div>
+                <div class="section-title">🔥 行业动态</div>
                 <div id="newsSection"></div>
             </div>
 
             <div class="section">
-                <div class="section-title">💡 AI工具前沿</div>
+                <div class="section-title">💡 AI PC前沿</div>
                 <div id="aiSection"></div>
             </div>
 
@@ -250,33 +250,33 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月17日 星期五';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/17 10:00（周末版）';
+        document.getElementById('currentDate').textContent = '2026年4月18日星期六';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/18 10:00';
 
         // 价格数据
         const priceData = {
             ddr5: {
                 name: 'DDR5 UDIMM 16GB 模组（全球现货均价）',
-                price: 515.00,
-                change: 5,
-                trend: 'up',
-                date: '2026-04-17',
+                price: 508.00,
+                change: 7,
+                trend: 'down',
+                date: '2026-04-18',
                 unit: '¥'
             },
             ssd: {
                 name: '1TB SSD（企业级）',
-                price: 835,
-                change: 15,
+                price: 845,
+                change: 10,
                 trend: 'up',
-                date: '2026-04-17',
+                date: '2026-04-18',
                 unit: '¥'
             },
             lenovo: {
                 name: '联想集团 (00992.HK)',
-                price: 9.35,
-                change: 0.05,
-                trend: 'down',
-                date: '2026-04-16',
+                price: 9.42,
+                change: 0.75,
+                trend: 'up',
+                date: '2026-04-17',
                 unit: 'HK$'
             }
         };
@@ -287,17 +287,17 @@
             <div class="price-item">
                 <div class="name">${priceData.ddr5.name}</div>
                 <div class="price">${priceData.ddr5.unit}${priceData.ddr5.price} <span class="change ${priceData.ddr5.trend}">${priceData.ddr5.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ddr5.change)}</span></div>
-                <div class="date">数据日期：${priceData.ddr5.date} | Q2合约价锁定，Q1+Q2累计涨幅超130%</div>
+                <div class="date">数据日期：${priceData.ddr5.date} | TrendForce上调Q2 DRAM涨幅预估至58-63%，现货市场观望</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.ssd.name}</div>
                 <div class="price">${priceData.ssd.unit}${priceData.ssd.price} <span class="change ${priceData.ssd.trend}">${priceData.ssd.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ssd.change)}</span></div>
-                <div class="date">数据日期：${priceData.ssd.date} | TrendForce：Q2 NAND合约价预计再涨10-15%</div>
+                <div class="date">数据日期：${priceData.ssd.date} | NAND涨价持续，Q2合约价预计再涨70-75%</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.lenovo.name}</div>
                 <div class="price">${priceData.lenovo.unit}${priceData.lenovo.price} <span class="change ${priceData.lenovo.trend}">${priceData.lenovo.trend === 'up' ? '↑' : '↓'} ${Math.abs(priceData.lenovo.change)}%</span></div>
-                <div class="date">收盘日期：${priceData.lenovo.date} | 联想25.2%市占领跑全球</div>
+                <div class="date">收盘日期：${priceData.lenovo.date} | 港股反弹，ThinkPad发布会预期提振</div>
             </div>
         `;
 
@@ -305,64 +305,64 @@
         const newsData = {
             industry: [
                 {
-                    tag: '存储涨价',
-                    title: '三星Q2 DRAM涨价30%正式落地，Q1已涨100%累计超130%',
-                    source: '每日经济新闻',
+                    tag: 'TrendForce',
+                    title: 'TrendForce大幅上调Q2 DRAM涨幅预估至58-63%',
+                    source: 'TrendForce集邦咨询 / 金融界',
                     date: '2026-04-17',
-                    summary: '三星电子Q2 DRAM涨价30%正式生效，标志着存储超级周期进入新阶段。Q1+Q2连续两季累计涨幅超过130%，为史上罕见。对联想SSC影响：Q2锁单窗口即将关闭，建议立即启动锁单；新品LCD/MB/SSD备件采购认证需加速推进。'
+                    summary: 'TrendForce集邦咨询最新报告显示，Q2一般型DRAM合约价环比涨幅预估上调至58-63%，远超此前预期。Q1已涨90-100%，两季累计涨幅超200%。云服务商愿意支付更高价格并签多季协议抢货。对联想SSC参考：备件成本管控窗口期急剧收窄，建议立即启动Q2锁单；国产替代评估需提速。'
+                },
+                {
+                    tag: '现货市场',
+                    title: '存储现货市场观望加剧：DDR4小幅下跌0.48%',
+                    source: 'TrendForce / 腾讯新闻',
+                    date: '2026-04-16',
+                    summary: 'TrendForce最新现货价格追踪显示，主流DDR4 1Gx8 3200MT/s现货均价本周小幅下滑0.48%，由上周33.56美元降至33.40美元。市场观望情绪加重，部分贸易商开始小幅让利出货。对联想SSC启示：现货价回调不改合约价大涨趋势，Q2 DRAM采购仍以合约锁定为主。'
                 },
                 {
                     tag: 'NAND涨价',
-                    title: 'TrendForce：Q2 NAND合约价预计再涨10-15%，SSD成本压力持续',
+                    title: 'Q2 NAND合约价预计再涨70-75%，SSD成本压力持续',
                     source: 'TrendForce集邦咨询',
                     date: '2026-04-17',
-                    summary: 'TrendForce集邦咨询发布报告称，Q2 NAND Flash合约价预计再涨10-15%，SSD成本压力持续。对联想SSC启示：1TB+ SSD备件采购需加快锁单节奏，国产长江存储颗粒替代方案评估需提速。'
-                },
-                {
-                    tag: '市场数据',
-                    title: 'IDC：Q1全球PC出货6560万台，联想25.2%市占继续领跑',
-                    source: 'IDC',
-                    date: '2026-04-16',
-                    summary: 'IDC最新数据显示，2026年Q1全球PC出货约6560万台，同比增长3%。联想以25.2%市占率继续领跑，惠普、戴尔分列二三。对联想SSC启示：出货前高后低态势确立，Q2起备件成本压力加大，需平衡库存与成本关系。'
+                    summary: 'TrendForce预测Q2 NAND Flash合约价涨幅将达70-75%，延续强劲上涨态势。AI服务器需求爆发导致HBM产出占比提升，通用NAND产能持续收紧。对联想SSC启示：1TB+ SSD备件采购需加快锁单节奏，国产长江存储颗粒替代方案评估需提速。'
                 }
             ],
             ai: [
                 {
-                    tag: 'AI大模型',
-                    title: 'DeepSeek V4即将发布，国产AI大模型持续迭代',
-                    source: '腾讯新闻',
-                    date: '2026-04-10',
-                    summary: 'DeepSeek V4将于近期发布，国产AI大模型持续迭代。AI PC赛道竞争加剧，DeepSeek的低成本高性能路线可能改变AI PC的定价策略。对联想天禧AI生态参考：需关注V4性能表现和生态适配情况，竞品动态可能影响ThinkPad新品定位。'
+                    tag: 'AI PC新品',
+                    title: '荣耀"养虾本"MagicBook 4/16全球首发，AI PC家族全面爆发',
+                    source: 'PConline / 荣耀官方',
+                    date: '2026-04-16',
+                    summary: '荣耀于4月16日全球首发"养虾本"MagicBook，搭载自研AI助手YOYO。4月荣耀PC家族密集发布：MagicBook 14/16、数字系列、Pro系列、WIN旗舰游戏本全系登场。对联想ThinkPad参考：需关注差异化竞争策略，新品发布会（4/22）至关重要。'
                 },
                 {
-                    tag: 'AI PC',
-                    title: 'AI PC渗透率提升，下半年换机潮有望加速',
-                    source: '搜狐科技',
-                    date: '2026-04-12',
-                    summary: '虽然Q1 PC市场增长低于预期，但分析师指出AI PC渗透率提升将推动下半年换机潮。AI功能的差异化价值逐渐显现，有望抵消涨价带来的需求抑制。对联想启示：下半年旺季的备件需求可能超预期，需提前规划。'
+                    tag: '鸿蒙PC',
+                    title: '华为首款鸿蒙PC MateBook 14将于4月20日发布',
+                    source: '中关村在线 / 华为官方',
+                    date: '2026-04-14',
+                    summary: '华为宣布MateBook 14鸿蒙版将于4月20日14:30发布，搭载麒麟芯片。这是鸿蒙OS首次落地PC领域，标志着华为"1+8+N"生态战略PC环节补全。对联想参考：鸿蒙PC入局将改变PC市场格局，天禧AI生态需加快差异化布局。'
                 }
             ],
             lenovo: [
                 {
                     tag: '新品发布',
-                    title: 'ThinkPad 2026发布会倒计时5天：天禧AI生态重磅来袭',
+                    title: 'ThinkPad 2026发布会倒计时4天：天禧AI生态即将揭晓',
                     source: 'IT之家 / 联想官方',
-                    date: '2026-04-17',
-                    summary: '联想ThinkPad 2026新品发布会将于4月22日举行，主题"我·即我们"。X1 Carbon、X9-15p、X14等重磅新品将亮相，搭载全新天禧AI生态。对SSC参考：新品发布后备件SKU将全面更新，需提前完成新机型关键备件的采购认证和库存规划。'
+                    date: '2026-04-18',
+                    summary: '联想ThinkPad 2026新品发布会将于4月22日举行，主题"我·即我们"。X1 Carbon、X9-15p、X14等重磅新品将亮相，搭载全新天禧AI生态。对SSC参考：新品发布后备件SKU将全面更新，需提前完成新机型LCD/MB/SSD关键备件的采购认证和库存规划。'
                 },
                 {
-                    tag: '战略布局',
-                    title: '杨元庆：联想将持续加大AI投入，天禧生态成战略重心',
-                    source: '联想官方',
+                    tag: '预约开启',
+                    title: 'ThinkPad 2026新品1元预约开启，4/22首发权益揭晓',
+                    source: '中关村在线 / 联想官方',
                     date: '2026-04-15',
-                    summary: '杨元庆在接受采访时表示，联想将持续加大AI投入，天禧AI生态是未来战略重心。2026年联想AI PC出货占比目标提升至40%以上。对SSC影响：新品备件认证需提速，以匹配新品上市节奏。'
+                    summary: 'ThinkPad 2026新品预约权益已开启，1元预约可享首发专属优惠。首发期购买ThinkPad 2026新品，可尊享更多专属首发权益。对SSC参考：关注预约数据，预估新品出货节奏，提前备件规划。'
                 },
                 {
                     tag: 'SSC建议',
-                    title: '【周末必读】ThinkPad发布会倒计时，SSC备件准备 checklist',
+                    title: '【周末参考】存储涨价季的SSC应对策略要点',
                     source: '联想SSC成本团队',
-                    date: '2026-04-17',
-                    summary: 'ThinkPad 2026发布会倒计时5天！SSC备件准备清单：1）X1 Carbon新机型LCD/MB认证；2）X9-15p关键备件库存规划；3）SSD新品颗粒兼容性测试；4）Q2 DDR5锁单收尾；5）国产替代方案评估。请各部门对标进度。'
+                    date: '2026-04-18',
+                    summary: '周末策略要点：1）TrendForce上调Q2 DRAM涨幅超预期，锁单窗口急剧收窄；2）ThinkPad 4/22发布会前完成新品备件认证；3）关注荣耀MagicBook、华为鸿蒙MateBook竞品动态；4）国产替代方案评估可作为长期降本选项；5）周末关注港股走势，评估市场情绪。'
                 }
             ]
         };
@@ -386,14 +386,14 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-17', label: '2026-04-17（今日）'},
+            {date: '2026-04-18', label: '2026-04-18（今日）'},
+            {date: '2026-04-17', label: '2026-04-17'},
             {date: '2026-04-16', label: '2026-04-16'},
             {date: '2026-04-15', label: '2026-04-15'},
             {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-11', label: '2026-04-11'},
             {date: '2026-04-10', label: '2026-04-10'},
-            {date: '2026-04-09', label: '2026-04-09'},
         ];
 
         // 动态生成历史记录链接
