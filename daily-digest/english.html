@@ -298,76 +298,76 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月18日星期六';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/18 10:00';
+        document.getElementById('currentDate').textContent = '2026年4月20日星期一';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/20 10:00';
 
         // 今日短语
         const todayPhrase = {
-            english: "\"Micron's announcement of a 25% DRAM price increase for Q3, following Samsung's 30% hike in Q2, signals that the memory supercycle will extend into the second half. We need to reassess our full-year parts cost budget and lock in Q3 orders before the window closes.\"",
-            chinese: "美光宣布Q3 DRAM价格上涨25%，继三星Q2涨价30%之后，这表明存储超级周期将延续至下半年。我们需要重新评估全年备件成本预算，并在窗口关闭前锁定Q3订单。",
-            meaning: "supercycle：超级周期。reassess：重新评估。full-year budget：全年预算。lock in：锁定。window closes：窗口关闭。",
-            example: "Given the extended supercycle, we need to reassess our procurement strategy and lock in pricing for the remainder of the year."
+            english: "\"SK Hynix's mass production of the 192GB SOCAMM2 marks a pivotal shift in the AI server memory landscape. As high-end DRAM capacity is increasingly allocated to AI infrastructure, PC component buyers must act swiftly to secure long-term agreements before the procurement window closes.\"",
+            chinese: "SK海力士192GB SOCAMM2的量产标志着AI服务器内存格局的关键转变。随着高端DRAM产能越来越多地被分配给AI基础设施，PC零部件采购方必须迅速行动，在采购窗口关闭之前确保长期协议。",
+            meaning: "pivotal shift：关键转变。DRAM capacity：DRAM产能。increasingly allocated to：越来越多地分配给。secure long-term agreements：锁定长期协议。procurement window：采购窗口。",
+            example: "We need to secure long-term supply agreements now before the procurement window closes due to the SOCAMM2 capacity allocation shift."
         };
 
-        // 今日学习内容 - 供应商谈判与合同管理
+        // 今日学习内容 - AI驱动的供应链技术转型
         const todayContent = {
-            english: "Supplier negotiation and contract management are critical competencies for supply chain cost professionals, particularly in volatile markets where component prices can fluctuate dramatically quarter over quarter. The difference between an average negotiator and a skilled one can translate to millions of dollars in cost savings—or cost overruns—over the course of a fiscal year.\n\nEffective supplier negotiation begins long before the actual negotiation meeting. Preparation is everything. This means understanding not just your own requirements and constraints, but also the supplier's position, market dynamics, and alternative options available to both parties.\n\nThe first step in preparation is to clearly define your objectives. What are your must-haves versus nice-to-haves? What is your walk-away price? What are your alternatives if this negotiation fails? Having clarity on these points before entering the room gives you confidence and prevents emotional decision-making during the negotiation.\n\nUnderstanding the supplier's perspective is equally important. What are their cost structures? What pressures are they facing? What are their strategic priorities? A supplier who is desperate for volume to fill capacity may be more flexible on price than one who is capacity-constrained. Similarly, a supplier who views you as a strategic customer for their new product line may offer better terms than one who sees you as a transactional buyer.\n\nMarket intelligence provides crucial context. Current spot prices, industry forecasts, competitor actions, and macroeconomic trends all influence the negotiation landscape. In the memory market, for example, understanding the supply-demand balance, fab utilization rates, and technology transition timelines can give you significant leverage in price discussions.\n\nThe negotiation itself is both an art and a science. Skilled negotiators understand that it's not a zero-sum game. The best outcomes often come from creative solutions that address both parties' underlying interests rather than just splitting the difference on price.\n\nSeveral tactics can be effective in supplier negotiations. Anchoring—making the first offer—can set the reference point for the entire discussion. However, this requires confidence that your anchor is defensible and not so aggressive that it damages the relationship.\n\nConcessions should be planned and traded, not given away freely. When you make a concession, ask for something in return. This maintains the principle of reciprocity and prevents the negotiation from becoming one-sided.\n\nSilence can be a powerful tool. After making a proposal or receiving an offer, resist the urge to fill the silence. The other party may feel compelled to improve their position just to break the uncomfortable quiet.\n\nBATNA—Best Alternative to a Negotiated Agreement—is your most important source of power. The better your alternatives, the stronger your negotiating position. This is why developing multiple supplier relationships and maintaining competitive tension is so important.\n\nContract management is the discipline that ensures negotiated agreements deliver their intended value. A well-negotiated contract is worthless if it's not properly implemented and monitored.\n\nKey contract elements for supply chain agreements include pricing mechanisms, volume commitments, delivery terms, quality standards, and intellectual property protections. Each of these requires careful attention to detail and clear definition to prevent disputes later.\n\nPricing mechanisms can take various forms. Fixed pricing provides certainty but may not reflect market changes. Index-based pricing adjusts according to market indicators but requires agreement on the index and adjustment formula. Cost-plus pricing provides transparency but may not incentivize supplier efficiency. The right mechanism depends on the specific circumstances and risk allocation preferences.\n\nVolume commitments create obligations for both parties. Buyers commit to purchase minimum quantities; suppliers commit to provide capacity and prioritize the buyer's orders. These commitments need to be realistic and account for demand uncertainty.\n\nPerformance metrics and service level agreements (SLAs) define expected standards and consequences for non-performance. On-time delivery rates, quality defect rates, and response times are common metrics. The key is to measure what matters and to have clear remedies when standards are not met.\n\nContract administration involves monitoring performance against the agreement, managing changes and amendments, and maintaining the relationship with the supplier. Regular business reviews provide opportunities to discuss performance, address issues, and identify improvement opportunities.\n\nFor organizations like Lenovo's SSC, supplier negotiation and contract management are particularly challenging given the scale and complexity of the supply base. Hundreds of suppliers, thousands of parts, and volatile market conditions create a dynamic environment that requires sophisticated capabilities.\n\nThe investment in negotiation and contract management capabilities pays dividends. Organizations with mature practices consistently achieve better pricing, more favorable terms, and stronger supplier relationships than those that treat these activities as purely transactional. In a market where component prices can swing 30% or more in a single quarter, these capabilities are not just nice to have—they are essential for cost competitiveness.",
-            chinese: "供应商谈判和合同管理是供应链成本专业人员的关键能力，特别是在组件价格可能每季度大幅波动的动荡市场中。普通谈判者和熟练谈判者之间的差异可能在一个财政年度内转化为数百万美元的成本节约——或成本超支。\n\n有效的供应商谈判在实际谈判会议之前很久就开始了。准备就是一切。这意味着不仅要了解你自己的要求和限制，还要了解供应商的立场、市场动态以及双方可用的替代方案。\n\n准备的第一步是明确界定你的目标。什么是你的必须条件，什么是锦上添花？你的退出价格是多少？如果这次谈判失败，你的替代方案是什么？在进入会议室之前对这些要点有清晰的认识会给你信心，并防止在谈判期间做出情绪化决定。\n\n理解供应商的视角同样重要。他们的成本结构是什么？他们面临什么压力？他们的战略优先事项是什么？一个急需产量来填补产能的供应商可能比一个产能受限的供应商在价格上更灵活。同样，一个将你视为其新产品线战略客户的供应商可能比一个将你视为交易性买家的供应商提供更好的条款。\n\n市场情报提供关键背景。当前现货价格、行业预测、竞争对手行动和宏观经济趋势都会影响谈判格局。例如，在内存市场，了解供需平衡、晶圆厂利用率和技术转型时间表可以在价格讨论中给你显著的杠杆作用。\n\n谈判本身既是一门艺术也是一门科学。熟练的谈判者明白这不是零和游戏。最好的结果往往来自创造性的解决方案，解决双方的根本利益，而不仅仅是在价格上折中。\n\n有几种策略在供应商谈判中可能有效。锚定——先出价——可以为整个讨论设定参考点。然而，这需要对你的锚点是可辩护的有信心，而不是过于激进以至于损害关系。\n\n让步应该被计划和交换，而不是免费赠送。当你做出让步时，要求一些回报。这维持了互惠原则，防止谈判变得一边倒。\n\n沉默可以是一个强大的工具。在提出建议或收到报价后，抵制填补沉默的冲动。对方可能觉得有必要改善他们的立场，只是为了打破不舒服的安静。\n\nBATNA——谈判协议的最佳替代方案——是你最重要的权力来源。你的替代方案越好，你的谈判地位就越强。这就是为什么发展多个供应商关系并保持竞争张力如此重要。\n\n合同管理是确保谈判协议实现其预期价值的学科。一个谈判良好的合同如果实施和监控不当，就毫无价值。\n\n供应链协议的关键合同要素包括定价机制、数量承诺、交货条款、质量标准和知识产权保护。这些都需要仔细关注细节和明确定义，以防止以后发生争议。\n\n定价机制可以采取各种形式。固定定价提供确定性，但可能无法反映市场变化。基于指数的定价根据市场指标调整，但需要对指数和调整公式达成一致。成本加成定价提供透明度，但可能无法激励供应商提高效率。正确的机制取决于具体情况和风险分配偏好。\n\n数量承诺为双方创造义务。买家承诺购买最低数量；供应商承诺提供产能并优先考虑买家的订单。这些承诺需要现实，并考虑需求不确定性。\n\n绩效指标和服务水平协议（SLA）定义预期标准和未达到绩效的后果。准时交货率、质量缺陷率和响应时间是常见指标。关键是衡量重要的内容，并在未达到标准时有明确的补救措施。\n\n合同管理涉及监控协议执行情况、管理变更和修订，以及与供应商保持关系。定期业务审查提供了讨论绩效、解决问题和识别改进机会的机会。\n\n对于联想SSC这样的组织，鉴于供应基础的规模和复杂性，供应商谈判和合同管理尤其具有挑战性。数百家供应商、数千个零件和动荡的市场条件创造了一个需要复杂能力的动态环境。\n\n对谈判和合同管理能力的投资会带来回报。具有成熟实践的组织始终比那些将这些活动视为纯粹交易性的组织获得更好的定价、更有利的条款和更强的供应商关系。在一个组件价格可能在一个季度内波动30%或更多的市场中，这些能力不仅是锦上添花——它们对于成本竞争力至关重要。",
+            english: "The announcement by SK Hynix of mass production of the 192GB SOCAMM2 module marks yet another milestone in the rapid transformation of the memory supply chain driven by artificial intelligence. This development is not merely a product launch—it is a signal of the deepening structural shift in how memory capacity is being allocated across different market segments.\n\nSOCAMM2, which stands for Small Outline Compression Attached Memory Module 2, is a memory form factor specifically designed for high-performance AI computing platforms. Unlike traditional DIMM modules used in conventional PCs and servers, SOCAMM2 uses LPDDR5X technology with a compressed connector interface, enabling thinner, more power-efficient designs that are critical for next-generation AI server architectures such as NVIDIA's Vera Rubin platform.\n\nThe strategic significance of this mass production announcement cannot be overstated. SK Hynix is positioning itself at the forefront of the AI memory race, competing directly with Samsung and Micron. All three major DRAM manufacturers are now in either mass production or advanced validation stages for SOCAMM2, indicating that this technology will become the dominant memory interface for AI servers in the near term.\n\nFor supply chain professionals in the PC components space, this development carries important implications. When leading-edge memory capacity is preferentially allocated to high-margin, high-demand products like SOCAMM2 and HBM, the available supply for conventional PC memory products—DDR5, LPDDR5X for notebooks—becomes relatively constrained. This supply reallocation dynamic is a key driver of the current upward price pressure on PC components.\n\nUnderstanding this structural shift requires familiarity with how semiconductor manufacturers make capacity allocation decisions. Foundry economics dictate that manufacturers will prioritize products that generate the highest return per wafer. HBM and SOCAMM2 both command significant price premiums over standard PC DRAM, making them highly attractive from a margin perspective. As a result, major DRAM manufacturers have been gradually reducing their allocation to standard PC memory in favor of these AI-oriented products.\n\nThis capacity reallocation is not a temporary phenomenon. Analysts at TrendForce and IDC consistently project that AI-related memory demand—encompassing HBM, SOCAMM2, and high-capacity LPDDR5X modules—will continue to grow substantially through at least 2028. The supply-demand imbalance for conventional PC components is therefore likely to persist, if not intensify, over this period.\n\nFor organizations managing large-scale PC parts inventories, such as Lenovo's Service Supply Chain (SSC), these dynamics translate into concrete operational challenges. Cost predictability becomes more difficult when component prices are influenced not just by PC market conditions, but by AI infrastructure investment cycles that operate on different timelines and with different demand elasticity characteristics.\n\nProactive procurement strategies become essential in this environment. Long-term agreements (LTAs) with key memory suppliers can provide price certainty and supply security, but require committing to volume forecasts that may be difficult to pin down given the uncertainty in PC demand forecasting. The trade-off between price certainty and volume flexibility is a central tension in supply chain management during volatile periods.\n\nTechnology transition planning is another critical dimension. The shift from current-generation PC platforms to AI PC configurations—with higher memory capacities, faster PCIe storage, and dedicated NPU hardware—changes the component mix that procurement teams need to manage. Parts that are standard today may become obsolete faster than historical cycles would suggest, creating inventory risk alongside cost risk.\n\nThe broader lesson from the SOCAMM2 moment is that supply chain professionals in the PC industry can no longer operate with a purely PC-centric view of the market. The memory supply chain is now deeply integrated with AI infrastructure investment, and understanding AI industry dynamics—server deployment cycles, hyperscaler capex plans, chip platform transitions—is becoming a prerequisite for effective PC component cost management.\n\nThis integration of AI awareness into PC supply chain strategy represents a meaningful evolution in the skill set required of modern supply chain finance professionals. The ability to synthesize insights from multiple market segments—AI servers, cloud infrastructure, and consumer electronics—and translate them into actionable procurement strategies is increasingly the differentiator between average and exceptional supply chain cost management.",
+            chinese: "SK海力士宣布量产192GB SOCAMM2模组，标志着人工智能驱动的内存供应链快速转型中的又一个里程碑。这一进展不仅仅是产品发布，更是内存产能在不同细分市场分配方式深层结构性转变的信号。\n\nSOCAMM2全称为小型轮廓压缩连接内存模组2，是专为高性能AI计算平台设计的内存规格。与传统PC和服务器中使用的DIMM模组不同，SOCAMM2采用LPDDR5X技术和压缩连接器接口，能够实现对英伟达Vera Rubin等下一代AI服务器架构至关重要的更薄、更高能效设计。\n\n这次量产公告的战略意义不可低估。SK海力士正将自己定位在AI内存竞赛的前沿，与三星和美光直接竞争。三大DRAM厂商现在都处于SOCAMM2的量产或高级验证阶段，表明这项技术将在近期成为AI服务器的主流内存接口。\n\n对于PC零部件供应链专业人员而言，这一进展具有重要含义。当前沿内存产能被优先分配给SOCAMM2和HBM等高利润、高需求产品时，用于传统PC内存产品的可用供应——笔记本的DDR5、LPDDR5X——相对受限。这种供应重新分配动态是PC零部件当前上行价格压力的关键驱动力。\n\n了解这一结构性转变需要熟悉半导体制造商如何做出产能分配决策。晶圆厂经济学要求制造商优先考虑每片晶圆产生最高回报的产品。HBM和SOCAMM2都比标准PC DRAM具有显著的价格溢价，从利润角度来看非常有吸引力。因此，主要DRAM制造商一直在逐步减少对标准PC内存的分配，转而支持这些面向AI的产品。\n\n这种产能重新分配不是暂时现象。TrendForce和IDC的分析师一致预测，AI相关内存需求——涵盖HBM、SOCAMM2和大容量LPDDR5X模组——至少到2028年将继续大幅增长。因此，传统PC零部件的供需失衡可能在此期间持续甚至加剧。\n\n对于管理大规模PC零部件库存的组织，如联想服务供应链（SSC），这些动态转化为具体的运营挑战。成本可预测性变得更加困难，因为零部件价格不仅受PC市场条件影响，还受到以不同时间线和需求弹性特征运作的AI基础设施投资周期影响。\n\n在这种环境中，主动采购策略变得至关重要。与关键内存供应商签订长期协议（LTA）可以提供价格确定性和供应安全，但需要承诺可能难以确定的数量预测。鉴于PC需求预测的不确定性，价格确定性与数量灵活性之间的权衡是动荡时期供应链管理的核心张力。\n\n技术过渡规划是另一个关键维度。从当前代PC平台向AI PC配置的转变——更高的内存容量、更快的PCIe存储和专用NPU硬件——改变了采购团队需要管理的零部件组合。今天标准的零部件可能比历史周期所暗示的更快过时，在成本风险之外产生库存风险。\n\nSOCAMM2时刻的更广泛启示是，PC行业的供应链专业人员不能再以纯粹以PC为中心的视角看待市场。内存供应链现在与AI基础设施投资深度整合，了解AI行业动态——服务器部署周期、超大规模云服务商资本支出计划、芯片平台转型——正在成为有效管理PC零部件成本的先决条件。\n\n将AI意识整合到PC供应链策略中，代表着现代供应链金融专业人员所需技能组合的有意义演变。从多个市场细分——AI服务器、云基础设施和消费电子产品——综合洞察，并将其转化为可执行采购策略的能力，正日益成为平均水平和卓越供应链成本管理之间的差异化因素。",
             vocabulary: [
                 {
-                    word: "BATNA",
-                    meaning: "谈判协议的最佳替代方案（Best Alternative to a Negotiated Agreement）；谈判失败时的最佳选择",
-                    example: "Our BATNA is to source from the secondary market, which gives us leverage in negotiations."
+                    word: "SOCAMM2",
+                    meaning: "小型轮廓压缩连接内存模组2（Small Outline Compression Attached Memory Module 2）；面向AI服务器的新一代内存接口规格",
+                    example: "SK Hynix's SOCAMM2 mass production signals a major shift in AI server memory architecture."
                 },
                 {
-                    word: "anchoring",
-                    meaning: "锚定效应；谈判中先提出一个参考点来影响后续讨论的策略",
-                    example: "We used anchoring by opening with an aggressive but defensible price point."
+                    word: "capacity reallocation",
+                    meaning: "产能重新分配；制造商将生产资源从低利润产品转向高利润产品的过程",
+                    example: "Capacity reallocation from PC DRAM to HBM and SOCAMM2 is tightening supply for conventional components."
                 },
                 {
-                    word: "cost-plus pricing",
-                    meaning: "成本加成定价；基于供应商成本加上一定利润率的定价方式",
-                    example: "Cost-plus pricing provides transparency but doesn't incentivize supplier efficiency improvements."
+                    word: "long-term agreement (LTA)",
+                    meaning: "长期采购协议；买卖双方锁定价格和数量的中长期合同安排",
+                    example: "Securing an LTA before the procurement window closes can protect our parts budget from further price volatility."
                 },
                 {
-                    word: "service level agreement (SLA)",
-                    meaning: "服务水平协议；定义服务标准和绩效指标的合同条款",
-                    example: "Our SLA requires 98% on-time delivery with penalties for non-compliance."
+                    word: "demand elasticity",
+                    meaning: "需求弹性；价格变化对需求量影响程度的衡量指标",
+                    example: "AI infrastructure demand has low price elasticity, meaning buyers will pay premium prices to secure supply."
                 },
                 {
-                    word: "competitive tension",
-                    meaning: "竞争张力；通过维持多个供应商选择来创造谈判优势",
-                    example: "We maintain competitive tension by qualifying at least two suppliers for each critical component."
+                    word: "technology transition risk",
+                    meaning: "技术过渡风险；产品代际更替带来的库存贬值和供应链调整风险",
+                    example: "The rapid shift to AI PC platforms creates technology transition risk for existing parts inventory."
                 }
             ],
             practice: [
                 {
-                    question: "What does BATNA stand for and why is it important in negotiations?",
+                    question: "What is the primary reason SK Hynix's SOCAMM2 production affects PC component prices?",
                     options: [
-                        "Best Annual Total Negotiation Amount - it sets the budget for negotiations",
-                        "Best Alternative to a Negotiated Agreement - it provides leverage and confidence",
-                        "Business Agreement Terms and Negotiation Approach - it defines the negotiation strategy",
-                        "Budget Allocation for Negotiation Activities - it determines available resources"
+                        "SOCAMM2 is used directly in PC notebooks and replaces DDR5",
+                        "High-end DRAM capacity is reallocated from PC memory to AI server products, reducing PC supply",
+                        "SOCAMM2 production uses different raw materials that compete with PC components",
+                        "SK Hynix has stopped producing PC DRAM entirely to focus on SOCAMM2"
                     ],
                     answer: 1
                 },
                 {
-                    question: "What is the anchoring tactic in negotiations?",
+                    question: "What is the main trade-off when signing a long-term agreement (LTA) with memory suppliers?",
                     options: [
-                        "Refusing to make any concessions during the negotiation",
-                        "Making the first offer to set the reference point for discussion",
-                        "Always accepting the supplier's first offer to build goodwill",
-                        "Focusing exclusively on price rather than other terms"
+                        "Higher quality versus lower cost",
+                        "Price certainty versus volume flexibility",
+                        "Faster delivery versus better payment terms",
+                        "Single-sourcing versus dual-sourcing"
                     ],
                     answer: 1
                 },
                 {
-                    question: "Why is cost-plus pricing considered transparent but potentially problematic?",
+                    question: "Why do supply chain professionals in PC need to understand AI infrastructure investment cycles?",
                     options: [
-                        "It doesn't allow for any profit margin for the supplier",
-                        "It provides visibility into costs but may not incentivize efficiency",
-                        "It requires too much documentation and administrative overhead",
-                        "It only works for commodities, not custom components"
+                        "PC companies are investing directly in AI server manufacturing",
+                        "AI demand cycles now directly influence memory supply allocation and PC component prices",
+                        "AI infrastructure uses the same logistics networks as PC supply chains",
+                        "Regulatory requirements mandate cross-industry supply chain reporting"
                     ],
                     answer: 1
                 }
@@ -419,7 +419,8 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-18', label: '2026-04-18（今日）'},
+            {date: '2026-04-20', label: '2026-04-20（今日）'},
+            {date: '2026-04-18', label: '2026-04-18'},
             {date: '2026-04-17', label: '2026-04-17'},
             {date: '2026-04-16', label: '2026-04-16'},
             {date: '2026-04-15', label: '2026-04-15'},

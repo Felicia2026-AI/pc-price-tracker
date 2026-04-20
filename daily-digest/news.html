@@ -250,31 +250,31 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月18日星期六';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/18 10:00';
+        document.getElementById('currentDate').textContent = '2026年4月20日星期一';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/20 10:00';
 
         // 价格数据
         const priceData = {
             ddr5: {
                 name: 'DDR5 UDIMM 16GB 模组（全球现货均价）',
-                price: 505.00,
-                change: 5,
-                trend: 'down',
-                date: '2026-04-18',
+                price: 512.00,
+                change: 7,
+                trend: 'up',
+                date: '2026-04-20',
                 unit: '¥'
             },
             ssd: {
                 name: '1TB SSD（企业级）',
-                price: 835,
-                change: 15,
+                price: 848,
+                change: 13,
                 trend: 'up',
-                date: '2026-04-18',
+                date: '2026-04-20',
                 unit: '¥'
             },
             lenovo: {
                 name: '联想集团 (00992.HK)',
-                price: 9.42,
-                change: 0.75,
+                price: 11.30,
+                change: 1.8,
                 trend: 'up',
                 date: '2026-04-17',
                 unit: 'HK$'
@@ -287,17 +287,17 @@
             <div class="price-item">
                 <div class="name">${priceData.ddr5.name}</div>
                 <div class="price">${priceData.ddr5.unit}${priceData.ddr5.price} <span class="change ${priceData.ddr5.trend}">${priceData.ddr5.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ddr5.change)}</span></div>
-                <div class="date">数据日期：${priceData.ddr5.date} | 美光Q3 DRAM涨价25%，全年涨幅或超180%</div>
+                <div class="date">数据日期：${priceData.ddr5.date} | 五大PC厂商集体提价，存储成本传导加速</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.ssd.name}</div>
                 <div class="price">${priceData.ssd.unit}${priceData.ssd.price} <span class="change ${priceData.ssd.trend}">${priceData.ssd.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ssd.change)}</span></div>
-                <div class="date">数据日期：${priceData.ssd.date} | 国产NAND市场份额突破18%</div>
+                <div class="date">数据日期：${priceData.ssd.date} | SOCAMM2量产加速AI存储需求，NAND续涨</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.lenovo.name}</div>
                 <div class="price">${priceData.lenovo.unit}${priceData.lenovo.price} <span class="change ${priceData.lenovo.trend}">${priceData.lenovo.trend === 'up' ? '↑' : '↓'} ${Math.abs(priceData.lenovo.change)}%</span></div>
-                <div class="date">收盘日期：${priceData.lenovo.date} | 港股收盘报HK$9.42，市值约$171.3亿</div>
+                <div class="date">收盘日期：${priceData.lenovo.date} | 港股收盘HK$11.30，涨1.8%，4月以来累涨约12%</div>
             </div>
         `;
 
@@ -305,64 +305,64 @@
         const newsData = {
             industry: [
                 {
+                    tag: '集体提价',
+                    title: '五大PC厂商同步提价，笔记本最高涨幅超20%',
+                    source: '中关村在线ZOL / 腾讯科技',
+                    date: '2026-04-16',
+                    summary: '联想、惠普、戴尔、华硕、宏碁五大全球PC制造商于4月16日同步启动提价，部分笔记本型号单日涨幅超过20%，"一份下午发出的报价单，到晚上就被上游供应商通知作废"成为真实写照。背后推手是DDR5和NAND持续涨价叠加企业盈利压力。对联想SSC参考：整机提价是备件成本传导至终端的明确信号，全年备件cost target需结合涨价幅度重新测算，建议财务团队本周完成全年预算修订。'
+                },
+                {
                     tag: '存储涨价',
-                    title: '美光宣布Q3 DRAM涨价25%，存储涨价潮蔓延至下半年',
-                    source: 'TrendForce集邦咨询',
-                    date: '2026-04-18',
-                    summary: '美光科技紧随三星之后宣布Q3 DRAM产品平均涨价25%，覆盖DDR5、LPDDR5X及HBM3E产品线。这是继三星Q2涨价30%后的又一重磅消息，存储涨价潮已从Q1延续至Q3。TrendForce预计全年DRAM均价涨幅将超过180%。对联想SSC参考：需重新评估全年备件成本预算，Q3锁单策略需提前布局。'
+                    title: '全链条半导体涨价蔓延，部分品类已超100%',
+                    source: '21世纪经济报道',
+                    date: '2026-04-10',
+                    summary: '2026年以来，半导体涨价从存储（DDR5/NAND/HBM）延伸至模拟芯片、功率器件、晶圆代工和封测，形成全链条涨价格局，数十家厂商密集调价，部分品类涨幅超100%。AI服务器需求爆发与原厂产能向高利润品类倾斜是核心驱动力。对联想SSC参考：需系统梳理备件BOM中各类半导体器件，识别高风险品类，对非存储类备件（功率器件、模拟芯片等）同步实施涨价监控，避免盲区。'
                 },
                 {
-                    tag: '国产替代',
-                    title: '长江存储产能爬坡加速，国产NAND市场份额突破18%',
-                    source: 'CFM闪存市场',
-                    date: '2026-04-17',
-                    summary: '长江存储232层3D NAND产能持续爬坡，2026年Q1市场份额已达18.2%，较2025年同期提升6.5个百分点。国产存储在部分细分市场已具备替代能力，但在企业级SSD领域仍有差距。对联想SSC启示：消费级备件可考虑国产替代方案，企业级备件仍需依赖原厂供应。'
-                },
-                {
-                    tag: '芯片竞争',
-                    title: 'Intel Lunar Lake开始量产，AI PC芯片竞争白热化',
-                    source: 'IT之家 / Intel官方',
-                    date: '2026-04-17',
-                    summary: 'Intel Lunar Lake（Core Ultra 300V系列）处理器开始大规模量产，预计5月正式发布。该系列专为AI PC设计，NPU算力达48 TOPS，与高通骁龙X Elite、AMD Strix Point形成三强竞争格局。对联想SSC参考：新一代AI PC备件需求将快速增长，建议提前储备Lunar Lake平台相关备件。'
+                    tag: '供应链预警',
+                    title: 'SK海力士量产192GB SOCAMM2，AI存储需求进一步收紧供给',
+                    source: 'SK海力士官方 / EET电子工程专辑',
+                    date: '2026-04-20',
+                    summary: 'SK海力士今日正式量产基于1c LPDDR5X的192GB SOCAMM2，面向英伟达Vera Rubin AI服务器平台，宣称建立AI服务器存储性能新基准。SOCAMM2竞争已超越HBM4成为2026年最热存储赛道，三星、美光同步跟进。对联想SSC参考：AI基础设施对高端内存的强力吸引将持续抬高DRAM价格预期，PC端DDR5备件供给将因高端产品线优先分配而承压，Q2-Q3采购窗口需提早行动。'
                 }
             ],
             ai: [
                 {
-                    tag: 'AI PC',
-                    title: 'IDC：AI PC渗透率Q1达12%，全年有望突破35%',
-                    source: 'IDC',
-                    date: '2026-04-16',
-                    summary: 'IDC最新报告显示，2026年Q1全球AI PC出货量占比已达12%，较2025年Q4的8%显著提升。随着Intel、AMD、高通新一代AI芯片陆续上市，全年AI PC渗透率有望突破35%。对联想SSC启示：传统PC备件需求可能提前进入下降周期，AI PC专用备件（高算力NPU、大容量内存）需求将快速增长。'
+                    tag: 'AI服务器',
+                    title: 'SOCAMM2热度超越HBM4，成AI服务器存储新赛点',
+                    source: 'OFweek电子工程',
+                    date: '2026-04-18',
+                    summary: '进入2026年，SOCAMM2的升温速度远超HBM4，成为AI服务器存储赛道竞争最激烈的领域。SK海力士今日量产、三星和美光同步推进，英伟达Rubin平台预计是最大需求方。SOCAMM2采用LPDDR5X架构，具备比HBM更低功耗和更高集成度的优势。AI PC和AI服务器之间的存储技术路线分歧正在加大，PC端和服务器端备件规划策略需相互解耦。'
                 },
                 {
-                    tag: 'AI生态',
-                    title: '天禧AI生态即将发布，联想AI战略进入新阶段',
-                    source: '联想官方',
-                    date: '2026-04-18',
-                    summary: '4月22日ThinkPad发布会将正式揭晓天禧AI生态，这是联想AI战略的重要里程碑。天禧AI将整合设备端AI、云端AI和服务端AI，构建完整的AI体验闭环。对联想SSC参考：AI生态的普及将改变备件需求结构，需关注AI相关硬件（NPU、高带宽内存、大容量SSD）的备件规划。'
+                    tag: 'AI PC趋势',
+                    title: 'ThinkPad天禧AI发布在即，AI PC战略进入关键节点',
+                    source: 'IT之家 / 联想官方',
+                    date: '2026-04-07',
+                    summary: '4月22日ThinkPad 2026新品暨天禧AI生态发布会距今仅剩2天，将推出搭载天禧AI生态的全新一代AI PC产品线，涵盖X1 Carbon Gen 13、X9-15p、X14及E/T/P系列。天禧AI整合端云一体AI能力，是联想AI战略的重要里程碑。对联想SSC备件规划启示：天禧AI PC将引入新硬件规格（高算力NPU、大容量LPDDR5X内存、大容量PCIe 5.0 SSD），发布会后需48小时内启动新机型备件认证流程，避免因备件断货影响保修兑现。'
                 }
             ],
             lenovo: [
                 {
                     tag: '新品发布',
-                    title: 'ThinkPad 2026发布会倒计时4天：天禧AI生态即将揭晓',
+                    title: '倒计时2天！ThinkPad 2026+天禧AI生态即将正式亮相',
                     source: 'IT之家 / 联想官方',
-                    date: '2026-04-18',
-                    summary: '联想ThinkPad 2026新品暨天禧AI生态发布活动将于4月22日举行，主题"我·即我们"。X1 Carbon Gen 13、X9-15p、X14等新品即将亮相，搭载全新天禧AI生态。对SSC参考：新品发布后备件SKU将全面更新，建议提前完成新机型LCD/MB/SSD关键备件的采购认证，重点关注Lunar Lake平台备件。'
+                    date: '2026-04-07',
+                    summary: '联想ThinkPad 2026新品暨天禧AI生态发布活动定于4月22日举行，主题"我·即我们"。X1 Carbon Gen 13、X9-15p、X14三款旗舰型号预约权益已上架，E系列、T系列、P系列新品可能同期发布。这是联想年度最重要的PC产品发布节点。对SSC建议：发布会72小时内须完成以下准备：①获取新机型BOM，②识别关键备件变更，③启动优先备件的采购锁价，④评估现有库存的型号兼容性。'
                 },
                 {
-                    tag: '市场份额',
-                    title: 'IDC：Q1全球PC出货6560万台，联想市占25.2%领跑',
+                    tag: '涨价应对',
+                    title: '【SSC内部参考】五大厂商集体提价下的成本应对策略（4月20日）',
+                    source: '联想SSC成本团队',
+                    date: '2026-04-20',
+                    summary: '基于五大PC厂商集体提价及SK海力士SOCAMM2量产的综合评估：1）存储涨价已从上游全面传导至终端，PC备件成本同步承压；2）ThinkPad发布会在即，新机型备件规格尚未披露，需预留应急采购资金；3）DDR5现货¥512（+¥7）、企业级SSD ¥848（+¥13），周涨幅均超1%；4）AI服务器SOCAMM2量产将进一步压缩PC端内存原厂产能分配；5）建议本周内完成Q3备件采购计划修订，优先锁定DDR5/NAND关键SKU。'
+                },
+                {
+                    tag: '市场地位',
+                    title: 'IDC Q1数据：联想市占25.2%领跑，涨价潮考验Q2出货',
                     source: 'IDC / 每经网',
                     date: '2026-04-16',
-                    summary: 'IDC最新数据显示，2026年Q1全球PC出货约6560万台，同比增长3%。联想出货1650万台，市占突破25.2%继续领跑全球。惠普、戴尔分列二三位。分析师指出：虽然Q1增长低于预期，但AI PC渗透率提升将推动下半年换机潮。对联想SSC启示：全年出货前高后低态势确立，Q2起备件成本压力加大。'
-                },
-                {
-                    tag: 'SSC建议',
-                    title: '【SSC内部参考】美光Q3涨价25%下的成本应对策略',
-                    source: '联想SSC成本团队',
-                    date: '2026-04-18',
-                    summary: '基于美光最新Q3 DRAM涨价25%公告的紧急评估：1）全年DRAM涨幅或超180%，备件成本压力前所未有；2）Q2锁单窗口期仅剩1周，建议立即启动锁单；3）ThinkPad 4月22日发布会倒计时4天，新品备件认证需加速；4）国产替代评估可作为长期降本选项；5）AI PC备件需求将快速增长，需提前规划。'
+                    summary: 'IDC数据显示2026年Q1全球PC出货约6560万台，联想以25.2%市占继续领跑。但五大厂商集体提价事件将影响Q2消费者购买意愿，TrendForce已下调全年PC出货预期。对联想SSC参考：市占领先带来规模采购议价优势，但出货量下修意味着部分现有备件库存可能产生滞销风险，需结合新机型发布节奏动态调整库存策略。'
                 }
             ]
         };
@@ -386,7 +386,8 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-18', label: '2026-04-18（今日）'},
+            {date: '2026-04-20', label: '2026-04-20（今日）'},
+            {date: '2026-04-18', label: '2026-04-18'},
             {date: '2026-04-17', label: '2026-04-17'},
             {date: '2026-04-16', label: '2026-04-16'},
             {date: '2026-04-15', label: '2026-04-15'},
