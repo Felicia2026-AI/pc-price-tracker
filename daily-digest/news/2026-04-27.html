@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Digest - PC行业早报</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .date {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .header .update-time {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #212529;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+
+        .news-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .news-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #212529;
+        }
+
+        .news-item .meta {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 8px;
+        }
+
+        .news-item .summary {
+            font-size: 15px;
+            color: #495057;
+            line-height: 1.6;
+        }
+
+        .news-item .tag {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #667eea;
+            color: white;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .price-item {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .price-item .name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #212529;
+            margin-bottom: 5px;
+        }
+
+        .price-item .price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #e65100;
+        }
+
+        .price-item .change {
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        .price-item .change.up {
+            color: #dc3545;
+        }
+
+        .price-item .change.down {
+            color: #28a745;
+        }
+
+        .price-item .date {
+            font-size: 14px;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+
+        .history-section {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+
+        .history-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #212529;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+
+        .history-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .history-link {
+            display: block;
+            padding: 12px 16px;
+            background: white;
+            color: #495057;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid #dee2e6;
+        }
+
+        .history-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .history-list {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📰 PC行业早报</h1>
+            <div class="date" id="currentDate"></div>
+            <div class="update-time" id="updateTime"></div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <div class="section-title">📈 价格快讯</div>
+                <div id="priceSection"></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">🔥 行业动态</div>
+                <div id="newsSection"></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">💡 AI工具前沿</div>
+                <div id="aiSection"></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">📊 联想动态</div>
+                <div id="lenovoSection"></div>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <div class="history-title">📜 历史记录</div>
+            <div class="history-list" id="historyList"></div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Daily Digest - PC行业早报 | 每日更新</p>
+        </div>
+    </div>
+
+    <script>
+        // 设置日期（硬编码，禁止使用new Date()）
+        document.getElementById('currentDate').textContent = '2026年4月27日星期一';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/27 10:00';
+
+        // 价格数据
+        const priceData = {
+            ddr5: {
+                name: 'DDR5 UDIMM 16GB 模组（全球现货均价）',
+                price: 508.00,
+                change: 4,
+                trend: 'down',
+                date: '2026-04-27',
+                unit: '¥'
+            },
+            ssd: {
+                name: '1TB SSD（企业级）',
+                price: 855,
+                change: 7,
+                trend: 'up',
+                date: '2026-04-27',
+                unit: '¥'
+            },
+            lenovo: {
+                name: '联想集团 (00992.HK)',
+                price: 11.54,
+                change: 0.7,
+                trend: 'up',
+                date: '2026-04-25',
+                unit: 'HK$'
+            }
+        };
+
+        // 渲染价格
+        const priceSection = document.getElementById('priceSection');
+        priceSection.innerHTML = `
+            <div class="price-item">
+                <div class="name">${priceData.ddr5.name}</div>
+                <div class="price">${priceData.ddr5.unit}${priceData.ddr5.price} <span class="change ${priceData.ddr5.trend}">${priceData.ddr5.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ddr5.change)}</span></div>
+                <div class="date">数据日期：${priceData.ddr5.date} | 渠道现货小幅回落，合约价仍高位，终端整机已集体涨价20%</div>
+            </div>
+            <div class="price-item">
+                <div class="name">${priceData.ssd.name}</div>
+                <div class="price">${priceData.ssd.unit}${priceData.ssd.price} <span class="change ${priceData.ssd.trend}">${priceData.ssd.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ssd.change)}</span></div>
+                <div class="date">数据日期：${priceData.ssd.date} | 企业级SSD持续走高，PC整机全线提价15%-30%</div>
+            </div>
+            <div class="price-item">
+                <div class="name">${priceData.lenovo.name}</div>
+                <div class="price">${priceData.lenovo.unit}${priceData.lenovo.price} <span class="change ${priceData.lenovo.trend}">${priceData.lenovo.trend === 'up' ? '↑' : '↓'} ${Math.abs(priceData.lenovo.change)}%</span></div>
+                <div class="date">收盘日期：${priceData.lenovo.date} | 港股HK$11.54，Intel财报超预期带动科技股走强，AI PC战略持续估值修复</div>
+            </div>
+        `;
+
+        // 新闻数据
+        const newsData = {
+            industry: [
+                {
+                    tag: '集体涨价',
+                    title: '五大PC品牌集体大幅提价！整体涨幅最高20%，部分机型单次涨1000~2000元',
+                    source: '中关村在线（ZOL）',
+                    date: '2026-04-26',
+                    summary: '2026年4月26日，联想、惠普、戴尔、华硕、宏碁旗下多款轻薄本、商用本及游戏本机型陆续大幅提价，整体涨幅最高接近20%，单机涨幅达1000~2000元。联想拯救者系列、ROG枪神系列等热销型号数月内累计涨价数千元。根本原因仍是存储芯片缺货——AI算力需求爆发导致头部存储厂商将产能优先分配给AI专用内存，消费级DRAM/NAND供应趋紧，采购成本大幅上升。分析师预测短期内价格回落缺乏现实基础。对联想SSC参考：整机涨价将同步传导至MB/屏幕/存储备件成本，Q2备件预算修订已不可回避，需在本周内完成Q3采购计划更新。'
+                },
+                {
+                    tag: '超级周期',
+                    title: 'TrendForce：DRAM超级周期才刚开始，全年涨幅210%-230%，短缺持续至2027年',
+                    source: 'TrendForce / 网易科技',
+                    date: '2026-04-20',
+                    summary: 'TrendForce最新预测：2026年全年DRAM价格涨幅210%-230%，NAND Flash涨幅180%-200%，机构普遍认为缺货将持续至2027年。server DDR5合约价获利今年Q1起正式凌驾HBM，存储器市场定价结构出现历史性转折；CSP大规模签订长约锁定底价，整体DRAM报价易涨难跌。与此同时CFM渠道数据显示，近一个月零售端消费类SSD/内存条贸易价格持续走跌，合约价与渠道现货价分化扩大，终端需求萎缩信号明显。对联想SSC参考：合约价锁定比现货更重要；抓住渠道价小幅回落窗口，加快完成长期采购协议签订，规避后续进一步涨价风险。'
+                },
+                {
+                    tag: 'PC出货预警',
+                    title: 'Intel财报超预期、股价涨20%，同步预警2026年PC出货将下滑10%以上',
+                    source: '新浪财经 / 快科技',
+                    date: '2026-04-25',
+                    summary: '英特尔发布2026年Q1财报，业绩全面超市场预期，股价大涨20%以上，市值重回4000亿美元。然而Intel同步对PC市场发出罕见警告：预计2026年全年PC出货量将下滑10%以上，内存/SSD高价导致终端需求实质萎缩；美国关税不确定性进一步压制北美市场。IDC此前已预警下滑9%，Intel此次进一步验证了悲观预期。对联想SSC参考：备件真实消耗节奏将随出货量下滑而放缓，备件消耗预测模型须引入PC出货下滑系数，高端商用本备件需求做保守修正，防止基于乐观假设过度备货。'
+                }
+            ],
+            ai: [
+                {
+                    tag: '联想×自动驾驶',
+                    title: '联想×文远知行签全球战略合作，未来五年部署20万台自动驾驶车辆',
+                    source: '北京商报 / 新浪财经',
+                    date: '2026-04-24',
+                    summary: '4月24日，联想与文远知行WeRide在北京国际车展现场正式签署全球战略合作协议，预计未来五年在全球部署20万台自动驾驶车辆。联想集团执行副总裁黄建恒与文远知行CEO韩旭见证签约。这是联想AI战略从PC/服务器延伸至智能出行赛道的重要布局，联想车计算业务将为自动驾驶系统提供核心算力支撑。对联想SSC参考：车计算设备未来可能纳入联想服务体系，备件管理边界有望进一步拓展至智能汽车计算硬件领域。'
+                },
+                {
+                    tag: '资本市场',
+                    title: '摩根大通增持联想2470万股、里昂目标价升至HK$12.9，4月24日收盘HK$12.00',
+                    source: '证券之星 / 新浪财经',
+                    date: '2026-04-24',
+                    summary: '联想集团（00992.HK）4月24日收盘报HK$12.00，上涨3.09%，成交额18.81亿港元。摩根大通同日公告增持联想2470万股，里昂证券将联想目标价上调至HK$12.9，维持买入评级。分析认为联想AI战略完整性（Infinidat收购+车计算+天禧AI+X1 Carbon Aura AI发布）正获市场重新定价，4月以来累计涨幅超15%。对联想SSC参考：集团市值修复意味着资本市场对AI+服务业务盈利能力的认可，服务供应链成本管控的贡献将进一步凸显，Q2成本达成压力不可松懈。'
+                }
+            ],
+            lenovo: [
+                {
+                    tag: 'AI PC旗舰',
+                    title: 'ThinkPad X1 Carbon Aura AI 2026正式发布：984g超轻、14999元起，Panther Lake+天禧AI 3.7',
+                    source: 'IT之家 / 联想官方',
+                    date: '2026-04-22',
+                    summary: '4月22日，联想正式发布ThinkPad X1 Carbon Aura AI 2026，搭载英特尔酷睿Ultra X7 358H（Panther Lake架构），机身仅984g，配置32GB LPDDR5X板载内存+1TB PCIe NVMe固态，整合天禧AI 3.7，售价14999元起。天禧AI 3.7升级为垂域专属智能体，率先在法律、财务等专业领域深度落地。这是联想AI PC战略的年度核心发布节点。对联想SSC参考：X1 Carbon Aura AI 2026已正式量产，须立即启动关键备件SKU认证——重点：32GB LPDDR5X板载模块、Panther Lake架构主板（MB）、PCIe 5.0 NVMe SSD规格确认，并在Q2锁价窗口关闭前完成采购。'
+                },
+                {
+                    tag: 'SSC成本风险',
+                    title: '【SSC内部参考】4月27日成本风险矩阵：整机涨价、出货预警、合约价高位三重压力',
+                    source: '联想SSC成本团队',
+                    date: '2026-04-27',
+                    summary: '基于本周最新数据综合评估：①五大品牌整机已集体提价最高20%，备件BOM基准价需同步上修；②DDR5现货¥508（本周小幅回落¥4，渠道去库存），但合约价仍处高位，全年涨幅预计210%+；③企业级SSD ¥855（+¥7/周），持续上行；④Intel/IDC双重预警PC出货量2026年下滑10%+，真实消耗节奏需重新建模；⑤联想股价HK$12.00（+3.09%），摩根大通增持、里昂目标价升至HK$12.9，AI战略获资本市场认可。本周行动建议：完成Q3备件采购锁价，区分渠道现货与原厂合约采购策略，防范出货下滑带来的库存积压风险。'
+                }
+            ]
+        };
+
+        // 渲染新闻
+        function renderNews(data, containerId) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = data.map(item => `
+                <div class="news-item">
+                    <span class="tag">${item.tag}</span>
+                    <h3>${item.title}</h3>
+                    <div class="meta">来源：${item.source} | ${item.date}</div>
+                    <div class="summary">${item.summary}</div>
+                </div>
+            `).join('');
+        }
+
+        renderNews(newsData.industry, 'newsSection');
+        renderNews(newsData.ai, 'aiSection');
+        renderNews(newsData.lenovo, 'lenovoSection');
+
+        // 历史记录数据
+        const historyDates = [
+            {date: '2026-04-27', label: '2026-04-27（今日）'},
+            {date: '2026-04-20', label: '2026-04-20'},
+            {date: '2026-04-18', label: '2026-04-18'},
+            {date: '2026-04-17', label: '2026-04-17'},
+            {date: '2026-04-16', label: '2026-04-16'},
+            {date: '2026-04-15', label: '2026-04-15'},
+            {date: '2026-04-14', label: '2026-04-14'},
+            {date: '2026-04-13', label: '2026-04-13'},
+            {date: '2026-04-11', label: '2026-04-11'},
+            {date: '2026-04-10', label: '2026-04-10'},
+        ];
+
+        // 动态生成历史记录链接
+        const historyList = document.getElementById('historyList');
+        historyDates.forEach(item => {
+            const link = document.createElement('a');
+            link.href = `../news/${item.date}.html`;
+            link.className = 'history-link';
+            link.textContent = item.label;
+            historyList.appendChild(link);
+        });
+    </script>
+</body>
+</html>

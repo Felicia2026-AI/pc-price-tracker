@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Digest - 英文学习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .date {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .header .update-time {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #212529;
+            border-left: 4px solid #11998e;
+            padding-left: 15px;
+        }
+
+        .text-container {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .english-text {
+            font-size: 16px;
+            color: #212529;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .chinese-translation {
+            font-size: 15px;
+            color: #6c757d;
+            line-height: 1.8;
+            border-top: 2px solid #dee2e6;
+            padding-top: 15px;
+        }
+
+        .phrase-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .phrase-english {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .phrase-chinese {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        .phrase-example {
+            font-size: 14px;
+            font-style: italic;
+            opacity: 0.85;
+            margin-top: 8px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 8px;
+        }
+
+        .vocabulary-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .vocab-item {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 12px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .vocab-word {
+            font-size: 18px;
+            font-weight: 700;
+            color: #11998e;
+            min-width: 150px;
+        }
+
+        .vocab-meaning {
+            font-size: 15px;
+            color: #495057;
+            flex: 1;
+        }
+
+        .vocab-example {
+            font-size: 14px;
+            color: #6c757d;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .practice-section {
+            background: #fff3cd;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+        }
+
+        .practice-item {
+            margin-bottom: 15px;
+        }
+
+        .practice-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #212529;
+        }
+
+        .practice-option {
+            display: block;
+            padding: 8px 12px;
+            margin: 5px 0;
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .practice-option:hover {
+            background: #11998e;
+            color: white;
+            border-color: #11998e;
+        }
+
+        .history-section {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+
+        .history-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #212529;
+            border-left: 4px solid #11998e;
+            padding-left: 15px;
+        }
+
+        .history-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .history-link {
+            display: block;
+            padding: 12px 16px;
+            background: white;
+            color: #495057;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid #dee2e6;
+        }
+
+        .history-link:hover {
+            background: #11998e;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(17, 153, 142, 0.3);
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .vocab-item {
+                flex-direction: column;
+            }
+
+            .vocab-word {
+                min-width: auto;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 英文学习</h1>
+            <div class="date" id="currentDate"></div>
+            <div class="update-time" id="updateTime"></div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <div class="section-title">💬 Business English Phrase of the Day</div>
+                <div class="phrase-section" id="phraseSection"></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">📖 今日阅读</div>
+                <div class="text-container">
+                    <div class="english-text" id="englishText"></div>
+                    <div class="chinese-translation" id="chineseText"></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">📝 重点词汇</div>
+                <div class="vocabulary-section" id="vocabularySection"></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">✍️ 理解练习</div>
+                <div class="practice-section" id="practiceSection"></div>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <div class="history-title">📜 历史记录</div>
+            <div class="history-list" id="historyList"></div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Daily Digest - 英文学习 | 每日更新</p>
+        </div>
+    </div>
+
+    <script>
+        // 设置日期（硬编码，禁止使用new Date()）
+        document.getElementById('currentDate').textContent = '2026年4月27日星期一';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/27 10:00';
+
+        // 今日短语
+        const todayPhrase = {
+            english: "\"With major PC brands raising prices by up to 20% and Intel warning of a 10%-plus decline in PC shipments, procurement teams must resist the temptation to stockpile parts based on last year's consumption run rate. The discipline of aligning inventory build with verified demand signals — not fear of future price hikes — is what separates reactive from strategic supply chain management.\"",
+            chinese: "随着主要PC品牌将价格上调高达20%，英特尔警告PC出货量将下滑10%以上，采购团队必须抵制按去年消耗速率囤货的冲动。将库存建立与经过验证的需求信号保持一致——而非基于对未来涨价的恐惧——这正是被动型与战略型供应链管理之间的根本区别。",
+            meaning: "stockpile：囤积。consumption run rate：消耗速率。align with：与…保持一致。verified demand signals：经过验证的需求信号。reactive vs. strategic：被动型 vs. 战略型。",
+            example: "We need to align our parts inventory build with verified demand signals rather than simply reacting to price increase announcements."
+        };
+
+        // 今日学习内容 - AI驱动的供应链技术转型
+        const todayContent = {
+            english: "The past week has delivered a stark reminder of how rapidly conditions can shift in the PC hardware supply chain. On April 26th, all five major PC manufacturers — Lenovo, HP, Dell, ASUS, and Acer — simultaneously raised prices across their product lines, with some models seeing increases of up to 20%. The following day, Intel published its first-quarter earnings results that exceeded market expectations, yet simultaneously issued a sobering warning: PC shipment volumes for the full year 2026 are expected to decline by more than 10%.\n\nThese two seemingly contradictory signals — rising prices alongside falling demand — represent one of the most challenging environments for supply chain procurement professionals. Understanding the dynamics at play is essential for making sound decisions about when to buy, how much to buy, and at what price.\n\nThe price increases announced by PC manufacturers are not discretionary. They are the direct and unavoidable consequence of upstream component costs — specifically memory (DRAM) and storage (NAND Flash) — having risen by three to five times over the past 12 months. When a notebook PC's bill of materials increases by several hundred dollars, the brand manufacturer has no viable path other than raising the end-user price or accepting margin compression that is ultimately unsustainable. The price increases we are seeing in April 2026 represent the belated but inevitable pass-through of cost pressures that have been building since mid-2025.\n\nThe demand side of the equation tells a different story. Intel's warning of a 10%-plus decline in PC shipments, corroborated by IDC's earlier projection of a 9% contraction, reflects a straightforward price elasticity effect: when products become meaningfully more expensive, some buyers defer purchases. This is particularly true in the commercial PC segment, where IT budget cycles are more rigid and procurement committees are more price-sensitive than individual consumers. Enterprise customers who planned to refresh their PC fleets in 2026 may push those plans to 2027, or reduce the scope of their refresh.\n\nFor supply chain cost professionals managing spare parts inventories — such as those working in Lenovo's Service Supply Chain (SSC) — these twin pressures create a specific and difficult decision framework. The instinct during a period of rapid price inflation is to buy ahead: to build inventory now, before prices increase further. This strategy has a compelling logic when prices are rising in a linear and predictable fashion. However, it carries significant risks when the demand outlook is simultaneously deteriorating.\n\nConsider the risk asymmetry. If you over-procure spare parts now in anticipation of continued price increases, but PC shipment volumes actually decline by 10-15%, you face a situation where your parts consumption is materially lower than your inventory build. This creates holding cost exposure, potential obsolescence risk if platform transitions accelerate, and capital tied up in parts that may not be consumed for 18 to 24 months. The financial cost of that over-procurement may well exceed the savings from buying at today's prices rather than tomorrow's.\n\nConversely, if you under-procure and prices continue to rise, you face cost overruns in your spare parts budget and potentially expedite fees and supply disruptions when urgent repair demands cannot be met from inventory.\n\nThe key to navigating this environment is what procurement professionals call demand-signal discipline. Rather than making inventory decisions based primarily on price trajectory expectations — which are inherently speculative — the more defensible approach is to anchor your procurement volume to the best available forecast of actual parts consumption. For SSC operations, this means interrogating your installed base data: which platforms are installed in the field, what is the historical failure rate by component type and age, and how will the installed base evolve as new models (such as the ThinkPad X1 Carbon Aura AI 2026) enter service and older models age out.\n\nOnce you have a consumption-based anchor, you can then make a deliberate and bounded decision about how much of a buffer to hold above that anchor as insurance against supply disruption or further price increases. This buffer should be time-limited and cost-justified, not an open-ended accumulation driven by price anxiety.\n\nThis kind of structured procurement decision-making is increasingly the differentiator between supply chain professionals who deliver consistent cost performance and those who swing between over-buying and under-buying in response to market sentiment. In the current environment — where upstream prices are high but demand is softening — the discipline to anchor on demand signals rather than fear of price increases is genuinely difficult to maintain, but ultimately more value-creating.",
+            chinese: "过去一周给PC硬件供应链提供了一个鲜明的警示——市场状况可以多快速地发生变化。4月26日，联想、惠普、戴尔、华硕和宏碁五大主要PC厂商同步上调了各自产品线的价格，部分机型涨幅高达20%。次日，英特尔发布了超预期的第一季度财报，却同步发出一个令人警醒的预警：2026年全年PC出货量预计将下滑10%以上。\n\n这两个看似相互矛盾的信号——价格上涨与需求下滑同时出现——是供应链采购专业人员面临的最具挑战性的环境之一。理解其中的动态对于做出何时买入、买多少以及以何种价格买入的正确决策至关重要。\n\nPC厂商宣布的价格上涨并非自主选择。这是上游零部件成本——尤其是内存（DRAM）和存储（NAND Flash）——在过去12个月里上涨了三到五倍的直接且不可避免的后果。当笔记本的物料清单成本增加数百元时，品牌厂商除了上调终端价格或接受最终不可持续的利润压缩之外，别无可行路径。我们在2026年4月看到的价格上涨，代表着自2025年中期开始积累的成本压力迟来但不可避免的传导。\n\n需求侧则呈现另一番景象。英特尔对PC出货量下滑10%以上的预警，得到IDC此前预测下滑9%的印证，反映了一个直接的价格弹性效应：当产品变得明显更贵时，部分买家会推迟购买。在商用PC市场尤为如此——企业IT预算周期更为固定，采购委员会对价格的敏感度高于个人消费者。原本计划在2026年更新PC机群的企业客户，可能会将计划推迟至2027年，或缩减更新范围。\n\n对于管理备用零件库存的供应链成本专业人员——例如联想服务供应链（SSC）的从业者——这双重压力形成了一个特定且困难的决策框架。在价格快速上涨时期，直觉是提前买入：在价格进一步上涨之前立即建立库存。当价格呈线性且可预测地上涨时，这一策略逻辑上颇具说服力。然而，当需求前景同时恶化时，这一策略则蕴含重大风险。\n\n考虑风险的不对称性。如果你现在因预期价格继续上涨而过度采购备件，但PC出货量实际下滑了10%-15%，你将面临备件消耗量远低于库存建立量的局面。这将产生持仓成本敞口、平台切换加速导致的潜在过时风险，以及资金被锁定在可能18到24个月内无法消耗的零件中。过度采购的财务成本，很可能超过今日买入而非明日买入所节省的成本。\n\n反之，如果你采购不足而价格继续上涨，你将面临备件预算超支，以及在紧急维修需求无法从库存满足时产生的紧急采购费用和供应中断风险。\n\n在这种环境中导航的关键，在于采购专业人员所说的需求信号纪律。与其主要基于价格走势预期（这本质上是投机性的）来做库存决策，更为站得住脚的方法是将采购量锚定于零件实际消耗的最佳可用预测。对于SSC运营而言，这意味着深入审视装机基础数据：哪些平台已安装在使用中，各零部件类型和使用年限对应的历史故障率如何，随着新机型（如ThinkPad X1 Carbon Aura AI 2026）投入使用以及旧机型退役，装机基础将如何演变。\n\n一旦建立了基于消耗的锚点，你就可以做出一个有意为之且有边界的决策——在该锚点之上持有多少缓冲库存，作为应对供应中断或进一步涨价的保险。这一缓冲应有时间限制且经过成本论证，而非受价格焦虑驱动的无限积累。\n\n这种结构化的采购决策方式，正日益成为能够持续兑现成本绩效的供应链专业人员与那些随市场情绪在过度购买和购买不足之间摇摆者的真正差距。在当前环境下——上游价格高企但需求趋软——保持将重心放在需求信号而非涨价恐惧上的纪律确实极为困难，但最终更具价值创造力。",
+            vocabulary: [
+                {
+                    word: "price pass-through",
+                    meaning: "成本传导；上游原材料成本上涨被逐级转嫁给下游客户和终端消费者的过程",
+                    example: "The 20% price increase we are seeing is simply the delayed pass-through of upstream DRAM and NAND cost inflation."
+                },
+                {
+                    word: "demand-signal discipline",
+                    meaning: "需求信号纪律；将采购决策锚定于经过验证的实际需求数据，而非基于价格预期或恐慌性囤货",
+                    example: "Our procurement team maintained demand-signal discipline by refusing to over-build inventory despite the ongoing price surge."
+                },
+                {
+                    word: "obsolescence risk",
+                    meaning: "过时风险；因技术迭代或产品停产，导致库存备件无法使用或价值归零的风险",
+                    example: "Aggressive inventory build during a platform transition creates significant obsolescence risk for parts tied to legacy specs."
+                },
+                {
+                    word: "consumption run rate",
+                    meaning: "消耗速率；在特定时间段内实际消耗的零部件数量，用于预测未来库存需求",
+                    example: "With PC shipments expected to decline 10%, the consumption run rate for commercial laptop parts will likely fall below plan."
+                },
+                {
+                    word: "holding cost exposure",
+                    meaning: "持仓成本敞口；因持有过多库存而产生的仓储、资金占用和折旧等额外成本风险",
+                    example: "Over-procurement during a demand downturn creates significant holding cost exposure that can offset any savings from buying at lower prices."
+                }
+            ],
+            practice: [
+                {
+                    question: "Why is Intel's warning of a 10% PC shipment decline relevant to SSC spare parts procurement?",
+                    options: [
+                        "Intel manufactures the spare parts that SSC uses",
+                        "Lower PC shipments mean lower installed base growth and reduced parts consumption, which affects optimal inventory levels",
+                        "Intel's warning applies only to consumer PCs, not commercial spare parts",
+                        "A PC shipment decline means prices will immediately drop, making procurement easier"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "What is the main risk of aggressively building spare parts inventory in response to rising prices when demand is simultaneously declining?",
+                    options: [
+                        "Suppliers may refuse to honor long-term contracts",
+                        "Parts prices may rise further before delivery",
+                        "Consumption will be lower than the inventory build, creating holding costs and potential obsolescence risk",
+                        "Competitors will gain an advantage by procuring the same parts"
+                    ],
+                    answer: 2
+                },
+                {
+                    question: "What does 'demand-signal discipline' mean in the context of parts procurement?",
+                    options: [
+                        "Ordering parts only when the signal light in the warehouse turns red",
+                        "Anchoring procurement volumes to actual consumption forecasts rather than reacting to price anxiety",
+                        "Relying exclusively on supplier demand signals for replenishment",
+                        "Disciplining procurement staff who exceed their ordering authority"
+                    ],
+                    answer: 1
+                }
+            ]
+        };
+
+        // 渲染短语
+        document.getElementById('phraseSection').innerHTML = `
+            <div class="phrase-english">${todayPhrase.english}</div>
+            <div class="phrase-chinese">${todayPhrase.chinese}</div>
+            <div class="phrase-example">💡 含义：${todayPhrase.meaning}</div>
+        `;
+
+        // 渲染学习内容
+        document.getElementById('englishText').textContent = todayContent.english;
+        document.getElementById('chineseText').textContent = todayContent.chinese;
+
+        // 渲染词汇
+        const vocabSection = document.getElementById('vocabularySection');
+        vocabSection.innerHTML = todayContent.vocabulary.map(item => `
+            <div class="vocab-item">
+                <div class="vocab-word">${item.word}</div>
+                <div class="vocab-meaning">${item.meaning}</div>
+                <div class="vocab-example">${item.example}</div>
+            </div>
+        `).join('');
+
+        // 渲染练习
+        const practiceSection = document.getElementById('practiceSection');
+        practiceSection.innerHTML = todayContent.practice.map((item, index) => `
+            <div class="practice-item">
+                <div class="practice-question">${index + 1}. ${item.question}</div>
+                ${item.options.map((opt, optIndex) => `
+                    <div class="practice-option" onclick="checkAnswer(${index}, ${optIndex}, ${item.answer})">${opt}</div>
+                `).join('')}
+                <div id="answer-${index}" style="margin-top: 10px; font-weight: bold;"></div>
+            </div>
+        `).join('');
+
+        // 检查答案
+        function checkAnswer(questionIndex, selectedOption, correctAnswer) {
+            const resultDiv = document.getElementById(`answer-${questionIndex}`);
+            if (selectedOption === correctAnswer) {
+                resultDiv.innerHTML = '<span style="color: #28a745;">✓ Correct!</span>';
+            } else {
+                resultDiv.innerHTML = '<span style="color: #dc3545;">✗ Try again</span>';
+            }
+        }
+
+        // 历史记录数据
+        const historyDates = [
+            {date: '2026-04-27', label: '2026-04-27（今日）'},
+            {date: '2026-04-20', label: '2026-04-20'},
+            {date: '2026-04-18', label: '2026-04-18'},
+            {date: '2026-04-17', label: '2026-04-17'},
+            {date: '2026-04-16', label: '2026-04-16'},
+            {date: '2026-04-15', label: '2026-04-15'},
+            {date: '2026-04-14', label: '2026-04-14'},
+            {date: '2026-04-13', label: '2026-04-13'},
+            {date: '2026-04-11', label: '2026-04-11'},
+            {date: '2026-04-10', label: '2026-04-10'},
+        ];
+
+        // 动态生成历史记录链接
+        const historyList = document.getElementById('historyList');
+        historyDates.forEach(item => {
+            const link = document.createElement('a');
+            link.href = `../english/${item.date}.html`;
+            link.className = 'history-link';
+            link.textContent = item.label;
+            historyList.appendChild(link);
+        });
+    </script>
+</body>
+</html>
