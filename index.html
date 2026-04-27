@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PC备件价格趋势追踪 - 2026年4月20日更新</title>
+    <title>PC备件价格趋势追踪 - 2026年4月27日更新</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         * {
@@ -209,18 +209,18 @@
     <div class="container">
         <div class="header">
             <h1>📊 PC备件价格趋势追踪</h1>
-            <div class="date">更新时间：2026年4月20日</div>
+            <div class="date">更新时间：2026年4月27日</div>
         </div>
 
         <div class="trend-summary">
-            关键趋势（4月20日）：SK海力士今日正式量产192GB SOCAMM2（1c LPDDR5X），专为NVIDIA Vera Rubin AI服务器设计，AI存储高端产能加速向HBM/SOCAMM倾斜；三星联手SK海力士削减NAND产量，Q2 SSD价格将延续涨势；ThinkPad 2026发布会倒计时2天（4月22日），天禧AI生态即将揭晓；联想集团4月以来股价累涨约12%，市场看涨AI战略驱动估值修复。</div>
+            关键趋势（4月27日）：4月26日，联想、惠普、戴尔、华硕、宏碁五大PC品牌多款机型集体大幅提价，整体涨幅最高接近20%，部分机型单次涨幅达1000~2000元（ZOL/中关村在线报道）。TrendForce最新预测：2026年全年DRAM价格涨幅210%-230%，NAND Flash涨幅180%-200%，存储超级周期刚刚开始，短缺将持续至2027年。联想集团4月24日收盘HK$12.00（+3.09%），摩根大通同日增持2470万股；里昂上调联想目标价至HK$12.90。联想×文远知行于北京车展签署全球战略合作，未来五年预计部署20万台自动驾驶车辆。SSC备件采购Q2锁价窗口极为紧迫。</div>
 
         <div class="charts-container">
             <!-- DDR5价格图表 -->
             <div class="chart-section">
                 <div class="chart-title">
                     DDR5内存价格走势
-                    <span class="trend-indicator trend-up">↑ PC厂商集体提价，AI内存产能被HBM/SOCAMM蚕食</span>
+                    <span class="trend-indicator trend-up">↑ 渠道现货小幅回落，合约价仍高位，Q2继续承压</span>
                 </div>
                 <div class="chart-wrapper">
                     <canvas id="ddr5Chart"></canvas>
@@ -231,7 +231,7 @@
             <div class="chart-section">
                 <div class="chart-title">
                     SSD固态硬盘价格走势
-                    <span class="trend-indicator trend-up">↑ 三星+SK海力士联手减产NAND，Q2价格续涨</span>
+                    <span class="trend-indicator trend-up">↑ 企业级SSD价格持续走高，终端PC整机全线跟涨</span>
                 </div>
                 <div class="chart-wrapper">
                     <canvas id="ssdChart"></canvas>
@@ -243,33 +243,33 @@
             <div class="news-title">📰 热点新闻（权威来源精选）</div>
 
             <div class="news-item">
-                <a href="https://news.skhynix.com.cn/mass-production-socamm2-192gb/" target="_blank">SK海力士正式量产192GB SOCAMM2，面向NVIDIA Rubin AI服务器</a>
-                <div class="news-summary">SK海力士2026年4月20日宣布，正式量产基于第六代10纳米级（1c）LPDDR5X低功耗DRAM的192GB容量SOCAMM2产品，专为英伟达Vera Rubin AI服务器平台设计，树立"面向AI服务器存储性能新基准"。SOCAMM2热度在2026年已超越HBM4，成为AI服务器存储赛道最热竞争点。对联想SSC参考：AI基础设施存储需求爆发将进一步收紧高端内存供给，PC端DDR5备件价格压力短期难以缓解，Q2备件采购需提前锁单。</div>
-                <div class="source">来源：SK海力士官方 / EET电子工程专辑 | 2026-04-20</div>
+                <a href="https://news.qq.com/rain/a/20260426A0598000" target="_blank">等等党心碎！五大PC品牌集体涨价，下周起部分机型涨幅高达2000元</a>
+                <div class="news-summary">快科技4月26日报道：联想、惠普、戴尔、华硕、宏碁五大PC品牌多款机型近期陆续大幅提价。多家线下门店店员透露，新一轮涨价将从下周（4月28日）起正式推开，部分机型涨幅1000~2000元，整体涨幅最高接近20%。联想部分型号较去年同期零售价最高上涨超20%。涨价并非个别现象，而是全行业普遍调整。根本原因是内存、SSD两类核心存储配件现货价在过去大半年中涨了3~5倍，上游成本向终端传导不可避免。对联想SSC参考：终端整机提价将同步抬高备件BOM基准价，新机型(如ThinkPad X1 Carbon Aura AI 2026)的备件定价需结合本轮提价节奏重新核算。</div>
+                <div class="source">来源：快科技 / IT之家 | 2026-04-26</div>
             </div>
 
             <div class="news-item">
-                <a href="https://nb.zol.com.cn/1166/11660175.html" target="_blank">五大PC厂商集体提价，笔记本涨幅最高超20%</a>
-                <div class="news-summary">2026年4月16日，受上游存储芯片成本显著攀升影响，联想、惠普、戴尔、华硕、宏碁五大全球PC制造商同步启动提价。旗下多款笔记本电脑价格上调，部分机型单日之内涨幅超过20%，"一份下午发出的报价单，晚上就被通知作废"成为真实写照。网友感叹：电脑快成奢侈品了。对联想SSC启示：整机提价是备件成本压力向终端传导的信号，PC备件成本预算需同步上调，原有全年cost target需重新评估。</div>
-                <div class="source">来源：中关村在线ZOL / 腾讯科技 | 2026-04-16</div>
+                <a href="https://finance.sina.com.cn/tech/roll/2026-04-25/doc-inhvszce2471051.shtml" target="_blank">Intel Q1超预期、股价涨20%，但警告2026年PC销量将下滑10%以上</a>
+                <div class="news-summary">新浪财经4月25日报道：英特尔发布2026年Q1财报，业绩全面超出市场预期，CPU重新成为AI基础设施关键组件，推动股价大涨20%以上，市值重回4000亿美元。然而Intel同步对PC市场发出罕见警告：预计2026年全年PC出货量将下滑10%以上。下跌原因明确——内存、SSD核心配件现货价在过去大半年中涨了3~5倍，PC整机成本高企导致终端需求实质萎缩；此外美国关税不确定性进一步压制北美市场需求。这是继IDC（预警下滑9%）之后，PC供应链重量级玩家给出的最悲观预判。对联想SSC参考：真实出货需求可能显著低于当前库存规划假设，备件消耗节奏将同步放缓，需防范库存积压风险。</div>
+                <div class="source">来源：新浪财经 / 快科技 | 2026-04-25</div>
             </div>
 
             <div class="news-item">
-                <a href="https://www.21jingji.com/article/20260410/440c512b11e49e738b9416232b28ea57.html" target="_blank">全链条半导体涨价潮蔓延，部分品类涨幅超100%</a>
-                <div class="news-summary">2026年以来，半导体涨价从存储、模拟、功率器件延伸至晶圆代工、封测，再到云计算和消费电子终端，数十家国内外厂商密集调价。部分品类涨幅已超100%，超出市场预期。背后推手是AI服务器需求爆发叠加原厂产能向高利润产品倾斜。对联想SSC参考：需系统梳理备件BOM中的半导体成分占比，识别高风险涨价品类，制定差异化的采购锁价策略。</div>
-                <div class="source">来源：21世纪经济报道 | 2026-04-10</div>
+                <a href="https://www.ithome.com/0/942/378.htm" target="_blank">ThinkPad X1 Carbon Aura AI 2026正式发布：984g超轻、14999元起，天禧AI 3.7加持</a>
+                <div class="news-summary">IT之家4月22日报道：联想正式发布多款搭载第三代英特尔酷睿Ultra处理器的ThinkPad AI PC新品，旗舰ThinkPad X1 Carbon Aura AI 2026"AI全互联精英商务本"正式亮相。机身重量仅984g，A面采用再生碳纤维漆面，CD壳采用再生铝镁合金；搭载英特尔酷睿Ultra X7 358H（Panther Lake架构，16核16线程，最高睿频4.8GHz），配置32GB LPDDR5X板载内存+1TB PCIe NVMe固态，整合天禧AI 3.7与天禧Claw智能体，售价14999元起。天禧AI 3.7升级为"懂行业、懂业务"的垂域专属智能体，率先在法律等专业领域深度落地。对联想SSC参考：X1 Carbon Aura AI 2026已正式量产，需立即启动关键备件SKU认证，重点关注LPDDR5X 32GB板载模块、Panther Lake主板、PCIe 5.0 NVMe SSD规格确认，并在Q2窗口关闭前完成采购锁价。</div>
+                <div class="source">来源：IT之家 / 联想官方 | 2026-04-22</div>
             </div>
 
             <div class="news-item">
-                <a href="https://ee.ofweek.com/2026-04/ART-8420-2812-30685370.html" target="_blank">SOCAMM2竞争白热化，热度已超HBM4</a>
-                <div class="news-summary">进入2026年，SOCAMM2正以远超行业预期的速度升温，热度甚至超越处于产能爬坡期的HBM4。三星、SK海力士、美光三家原厂均已进入量产或验证阶段，英伟达Vera Rubin平台预计成为SOCAMM2最大下游需求方。对联想SSC启示：AI服务器存储竞争加剧将推高高端内存整体价格预期，PC端内存备件作为同一供应链条上的产品，短期内价格下行空间有限，建议在Q2存量窗口期锁定关键备件。</div>
-                <div class="source">来源：OFweek电子工程 | 2026-04-18</div>
+                <a href="https://nb.zol.com.cn/1170/11708081.html" target="_blank">全球笔记本涨价潮蔓延：主流品牌整体涨幅15%-30%，部分机型单月涨超1300元</a>
+                <div class="news-summary">中关村在线4月26日报道：2026年4月起，全球笔记本电脑市场迎来一轮全面价格上调。联想、惠普、戴尔、华硕、宏碁覆盖轻薄本、商用本及高性能本多个产品线，整体涨幅15%~30%。以ROG枪神9 RTX5070Ti版为例，1月官方最低13699元，4月24日已涨至14999元，单月涨1300元。分析指出，涨价根本原因是上游存储芯片价格持续飙升，渠道层层传导不可避免，短期内无看跌信号。对联想SSC参考：整机售价上涨将拉动配套保修服务价格重定价预期，同时高端机型（X1 Carbon、X9-15p等）的备件成本估算基准需同步上修。</div>
+                <div class="source">来源：中关村在线 / 快科技 | 2026-04-26</div>
             </div>
 
             <div class="news-item">
-                <a href="https://www.ithome.com/0/936/528.htm" target="_blank">ThinkPad 2026发布会倒计时2天：X1 Carbon/X9-15p/X14即将揭晓</a>
-                <div class="news-summary">联想ThinkPad 2026新品暨天禧AI生态发布活动将于4月22日举行，主题"我·即我们"。X1 Carbon Gen 13、X9-15p、X14预约权益已上架，E系列、T系列、P系列新品也可能同期推出，全系搭载天禧AI生态。距发布会仅剩2天。对SSC参考：新品发布后备件SKU将全面切换，需在发布会后72小时内启动新机型关键备件（LCD/MB/SSD）的采购认证流程，重点关注Lunar Lake平台及新散热/电池零部件规格。</div>
-                <div class="source">来源：IT之家 / 联想官方 | 2026-04-07</div>
+                <a href="https://www.ithome.com/0/909/428.htm" target="_blank">IDC警告：2026年PC出货量悲观情景下降幅或达9%，内存短缺是核心变量</a>
+                <div class="news-summary">IT之家报道：IDC在最新设备市场展望报告中发出明确警告——受存储器价格大幅上扬影响，2026年全球PC市场或遭遇显著萎缩，悲观情景下销量降幅或高达9%；即便是温和情景，也难言乐观。AI驱动的存储超级周期正在以两种相反路径同时作用于PC行业：一方面AI服务器大规模建设拉动HBM/SOCAMM2产能扩张，挤压消费级存储供给；另一方面PC终端因涨价导致需求萎缩，进一步加剧行业出货下滑。IDC建议PC采购方和企业IT部门评估延迟采购策略的可行性，同时针对关键刚需机型提前锁价。对联想SSC参考：结合Intel和IDC双重预警，备件消耗预测模型需引入PC出货下滑系数，对高端商用本备件需求做保守修正，避免基于乐观出货假设导致备件过度备货。</div>
+                <div class="source">来源：IT之家 / IDC | 2026-04-25</div>
             </div>
         </div>
 
@@ -286,7 +286,8 @@
     <script>
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-20', label: '2026-04-20（今日）'},
+            {date: '2026-04-27', label: '2026-04-27（今日）'},
+            {date: '2026-04-20', label: '2026-04-20'},
             {date: '2026-04-18', label: '2026-04-18'},
             {date: '2026-04-17', label: '2026-04-17'},
             {date: '2026-04-16', label: '2026-04-16'},
@@ -313,13 +314,13 @@
                 '2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06',
                 '2025-07', '2025-08', '2025-09', '2025-10', '2025-11', '2025-12',
                 '2026-W13', '2026-W14', '2026-W15', '2026-W16', '2026-W17', '2026-W18', '2026-W19', '2026-W20',
-                '2026-W21(4/14)', '2026-W22(4/15)', '2026-W23(4/16)', '2026-W24(4/17)', '2026-W25(4/18)', '2026-W26(4/20)'
+                '2026-W21(4/14)', '2026-W22(4/15)', '2026-W23(4/16)', '2026-W24(4/17)', '2026-W25(4/18)', '2026-W26(4/20)', '2026-W27(4/27)'
             ],
             prices: [
                 180, 195, 210, 235, 260, 300,
                 380, 450, 550, 680, 820, 1000,
                 920, 860, 780, 700, 638, 610, 600, 580,
-                560, 535, 520, 510, 505, 512
+                560, 535, 520, 510, 505, 512, 508
             ]
         };
 
@@ -329,13 +330,13 @@
                 '2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06',
                 '2025-07', '2025-08', '2025-09', '2025-10', '2025-11', '2025-12',
                 '2026-W13', '2026-W14', '2026-W15', '2026-W16', '2026-W17', '2026-W18', '2026-W19', '2026-W20',
-                '2026-W21(4/14)', '2026-W22(4/15)', '2026-W23(4/16)', '2026-W24(4/17)', '2026-W25(4/18)', '2026-W26(4/20)'
+                '2026-W21(4/14)', '2026-W22(4/15)', '2026-W23(4/16)', '2026-W24(4/17)', '2026-W25(4/18)', '2026-W26(4/20)', '2026-W27(4/27)'
             ],
             prices: [
                 280, 295, 310, 330, 350, 375,
                 410, 450, 520, 600, 680, 750,
                 760, 770, 775, 780, 782, 785, 787, 786,
-                787, 792, 804, 820, 835, 848
+                787, 792, 804, 820, 835, 848, 855
             ]
         };
 

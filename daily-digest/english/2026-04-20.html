@@ -298,15 +298,15 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月27日星期一';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/27 10:00';
+        document.getElementById('currentDate').textContent = '2026年4月20日星期一';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/20 10:00';
 
         // 今日短语
         const todayPhrase = {
-            english: "\"With major PC brands raising prices by up to 20% and Intel warning of a 10%-plus decline in PC shipments, procurement teams must resist the temptation to stockpile parts based on last year's consumption run rate. The discipline of aligning inventory build with verified demand signals — not fear of future price hikes — is what separates reactive from strategic supply chain management.\"",
-            chinese: "随着主要PC品牌将价格上调高达20%，英特尔警告PC出货量将下滑10%以上，采购团队必须抵制按去年消耗速率囤货的冲动。将库存建立与经过验证的需求信号保持一致——而非基于对未来涨价的恐惧——这正是被动型与战略型供应链管理之间的根本区别。",
-            meaning: "stockpile：囤积。consumption run rate：消耗速率。align with：与…保持一致。verified demand signals：经过验证的需求信号。reactive vs. strategic：被动型 vs. 战略型。",
-            example: "We need to align our parts inventory build with verified demand signals rather than simply reacting to price increase announcements."
+            english: "\"SK Hynix's mass production of the 192GB SOCAMM2 marks a pivotal shift in the AI server memory landscape. As high-end DRAM capacity is increasingly allocated to AI infrastructure, PC component buyers must act swiftly to secure long-term agreements before the procurement window closes.\"",
+            chinese: "SK海力士192GB SOCAMM2的量产标志着AI服务器内存格局的关键转变。随着高端DRAM产能越来越多地被分配给AI基础设施，PC零部件采购方必须迅速行动，在采购窗口关闭之前确保长期协议。",
+            meaning: "pivotal shift：关键转变。DRAM capacity：DRAM产能。increasingly allocated to：越来越多地分配给。secure long-term agreements：锁定长期协议。procurement window：采购窗口。",
+            example: "We need to secure long-term supply agreements now before the procurement window closes due to the SOCAMM2 capacity allocation shift."
         };
 
         // 今日学习内容 - AI驱动的供应链技术转型
@@ -419,7 +419,6 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-27', label: '2026-04-27（今日）'},
             {date: '2026-04-20', label: '2026-04-20'},
             {date: '2026-04-18', label: '2026-04-18'},
             {date: '2026-04-17', label: '2026-04-17'},
@@ -435,7 +434,7 @@
         const historyList = document.getElementById('historyList');
         historyDates.forEach(item => {
             const link = document.createElement('a');
-            link.href = `english/${item.date}.html`;
+            link.href = `../english/${item.date}.html`;
             link.className = 'history-link';
             link.textContent = item.label;
             historyList.appendChild(link);
