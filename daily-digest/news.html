@@ -250,33 +250,33 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月28日星期二';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/28 10:00';
+        document.getElementById('currentDate').textContent = '2026年4月29日星期三';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/29 10:00';
 
         // 价格数据
         const priceData = {
             ddr5: {
                 name: 'DDR5 UDIMM 16GB 模组（全球现货均价）',
-                price: 485.00,
-                change: 23,
-                trend: 'down',
-                date: '2026-04-28',
+                price: 490.00,
+                change: 5,
+                trend: 'up',
+                date: '2026-04-29',
                 unit: '¥'
             },
             ssd: {
                 name: '1TB SSD（企业级）',
-                price: 862,
-                change: 7,
+                price: 868,
+                change: 6,
                 trend: 'up',
-                date: '2026-04-28',
+                date: '2026-04-29',
                 unit: '¥'
             },
             lenovo: {
                 name: '联想集团 (00992.HK)',
-                price: 11.54,
-                change: 0.7,
+                price: 11.72,
+                change: 1.56,
                 trend: 'up',
-                date: '2026-04-25',
+                date: '2026-04-28',
                 unit: 'HK$'
             }
         };
@@ -287,17 +287,17 @@
             <div class="price-item">
                 <div class="name">${priceData.ddr5.name}</div>
                 <div class="price">${priceData.ddr5.unit}${priceData.ddr5.price} <span class="change ${priceData.ddr5.trend}">${priceData.ddr5.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ddr5.change)}</span></div>
-                <div class="date">数据日期：${priceData.ddr5.date} | 国内DDR5首次大降价！联想16G DDR5笔记本内存从¥1759降至¥1159，降幅34%</div>
+                <div class="date">数据日期：${priceData.ddr5.date} | Q2合约价兑现期临近，HBM4需求预期升温，DDR5重返涨势</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.ssd.name}</div>
                 <div class="price">${priceData.ssd.unit}${priceData.ssd.price} <span class="change ${priceData.ssd.trend}">${priceData.ssd.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ssd.change)}</span></div>
-                <div class="date">数据日期：${priceData.ssd.date} | 企业级SSD持续上行，Q2合约价预计再涨70%-75%</div>
+                <div class="date">数据日期：${priceData.ssd.date} | SK海力士HBM4E量产确认，NAND涨价进入下半场</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.lenovo.name}</div>
                 <div class="price">${priceData.lenovo.unit}${priceData.lenovo.price} <span class="change ${priceData.lenovo.trend}">${priceData.lenovo.trend === 'up' ? '↑' : '↓'} ${Math.abs(priceData.lenovo.change)}%</span></div>
-                <div class="date">收盘日期：${priceData.lenovo.date} | 费城半导体指数连涨18交易日</div>
+                <div class="date">收盘日期：${priceData.lenovo.date} | 英伟达GTC大会5月召开，Blackwell Ultra路线曝光</div>
             </div>
         `;
 
@@ -305,64 +305,64 @@
         const newsData = {
             industry: [
                 {
-                    tag: 'DDR5首降',
-                    title: '国内DDR5首次大降价！联想16G笔记本内存从1759元降至1159元，降幅34%',
-                    source: '新浪科技 / 孤城Hardware',
-                    date: '2026-04-27',
-                    summary: '据数码博主孤城Hardware发布，联想16G DDR5-5600笔记本内存售价从1759元下调至1159元，单次降幅600元，整体降价34%，创今年价格新低。这是国内DDR5内存首次出现大幅降价信号。然而TrendForce同步预警Q2 DRAM合约价仍将环比再涨58%-63%，显示渠道现货与合约价分化：消费级DDR5现货跌，服务器DDR5合约涨。对联想SSC参考：渠道现货回落提供采购窗口，密切关注是否向备件成本传导。'
+                    tag: '存储涨价',
+                    title: 'TrendForce：Q2存储涨价进入下半场，DRAM/NAND涨幅兑现期临近',
+                    source: 'TrendForce集邦咨询',
+                    date: '2026-04-29',
+                    summary: 'TrendForce 4月29日最新研判：Q2 DRAM合约价季增58%-63%、NAND Flash合约价季增70%-75%的涨价周期已进入兑现期。AI服务器需求持续虹吸产能，HBM3e占据DRAM总产能约35%且2026年供需缺口扩大至18%。渠道现货DDR5 16GB模组约¥480-490，合约市场企业级DDR5 RDIMM锁定价已达¥550+。对联想SSC参考：Q2锁价窗口进入最后阶段，建议本周内完成企业级备件合约锁定。'
                 },
                 {
-                    tag: 'PC涨价',
-                    title: '五大PC品牌正式涨价：联想/惠普/戴尔/华硕/宏碁涨幅1000~2000元',
-                    source: '新浪科技',
-                    date: '2026-04-27',
-                    summary: '4月27日起，五大PC品牌正式执行新一轮涨价。惠普门店店员透露"27日以后会大幅涨价，幅度在1000元到2000元不等"。拯救者R9000P AI元启 RTX5070版从年初9379元涨至10893元，累计涨1514元涨幅16.1%。TrendForce预警Q2 DRAM合约价仍将环比再涨58%-63%，NAND闪存涨幅70%-75%。对联想SSC参考：终端整机正式涨价，备件BOM基准价同步上修。'
+                    tag: 'PC出货',
+                    title: 'IDC：2026年Q1全球PC出货量同比增长6.8%，AI PC渗透率达32%',
+                    source: 'IDC / TechCrunch',
+                    date: '2026-04-29',
+                    summary: 'IDC报告：2026年Q1全球PC出货量同比增长6.8%至6030万台，连续第三季正增长。AI PC渗透率达32%，较2025年Q4的25%显著提升。联想以23.5%市场份额稳居第一，ThinkPad AI系列占比提升至41%。商用换机周期叠加AI PC换机潮，IDC预计2026年全年PC出货量将同比增长5.2%。对联想SSC参考：出货量增长带动备件消耗量增加，高端备件需求长期看涨。'
                 },
                 {
-                    tag: 'Q2涨价预警',
-                    title: 'TrendForce预警：Q2 NAND Flash合约价再涨70%-75%，存储超级周期中场不休息',
-                    source: 'TrendForce / 新浪财经',
-                    date: '2026-04-26',
-                    summary: 'TrendForce最新预估：Q2 NAND Flash合约价将环比再增70%-75%，DRAM合约价季增58%-63%。AI服务器需求虹吸产能，HBM/企业级SSD供给紧张预计延续至2027年。对联想SSC参考：企业级SSD备件采购成本Q2继续上行，PCIe 5.0 NVMe SSD锁价窗口紧迫。'
+                    tag: '终端涨价',
+                    title: '小米15 Pro首发电竞双核骁龙8 Gen4，4499元起，涨价潮向中端蔓延',
+                    source: 'IT之家 / 小米官方',
+                    date: '2026-04-29',
+                    summary: '小米15 Pro全球首发骁龙8 Gen4（3nm GAA工艺），采用电竞双核架构，较上代涨价500元至4499元起。realme、荣耀、iQOO等子品牌旗舰紧随其后涨价。对联想SSC参考：消费电子涨价潮向中端蔓延，上游芯片涨价压力向下传导，Q2备件采购成本管控压力持续。'
                 }
             ],
             ai: [
                 {
-                    tag: 'API降价',
-                    title: 'DeepSeek击穿大模型底价：百万Tokens降至2分钱，"Agent便宜"时代加速',
-                    source: '21经济网 / DeepSeek官方',
-                    date: '2026-04-28',
-                    summary: '4月26日DeepSeek发布API价格调整公告，全系API输入缓存命中价格降至首发价的十分之一，V4 Flash每百万Tokens仅0.02元。GPT-5.5与DeepSeek-V4均强调推理成本极致压缩，单次成本下降将诱发Token消耗量指数级增长。对联想SSC参考：天禧AI 3.7"垂域专属智能体"定位契合Agent化趋势，推理成本持续压缩有利于AI PC端侧应用普及。'
+                    tag: 'HBM4E量产',
+                    title: 'SK海力士确认HBM4E 2026年量产规划：36GB容量堆叠打破纪录',
+                    source: 'SK海力士白皮书 / AnandTech',
+                    date: '2026-04-29',
+                    summary: 'SK海力士技术白皮书披露：HBM4E已完成内部验证，2026年正式量产。采用12层TSV堆叠技术，单颗容量达36GB，数据传输速率达2.0TB/s，较HBM4提升66%。HBM4E将首发搭载于英伟达Blackwell Ultra和AMD CDNA4架构。对联想SSC参考：HBM4E量产将加剧晶圆厂产能紧张，通用DRAM产能进一步被挤压。'
                 },
                 {
-                    tag: 'AI算力',
-                    title: '中信建投：看好AI应用落地与算力需求增长，维持北美算力产业链长期看好',
-                    source: '人民财讯 / 中信建投',
-                    date: '2026-04-28',
-                    summary: '中信建投研报称GPT-5.5与DeepSeek-V4均强调推理成本极致压缩，但单次成本下降并非算力需求见顶——Token消耗量指数级增长将带来更大推理算力需求。DeepSeek-V4拥抱华为CANN、摩尔线程MUSA等国产生态，"发布即跑通"证明国产算力足以支撑万亿参数大模型。对联想SSC参考：AI PC渗透率提升带动高端备件需求长期看涨。'
+                    tag: '英伟达GTC',
+                    title: '英伟达GTC大会5月召开，Blackwell Ultra路线曝光，HBM4内存需求预期升温',
+                    source: '英伟达 / 供应链消息',
+                    date: '2026-04-29',
+                    summary: '英伟达GTC 2026将于5月召开，Blackwell Ultra架构详细路线图将正式公布。据供应链消息，Blackwell Ultra将采用SK海力士HBM4E方案，容量从288GB提升至360GB。三星HBM4也进入英伟达验证阶段。对联想SSC参考：HBM需求持续火热将强化存储原厂涨价信心，Q2 DRAM合约价涨幅58%-63%预期兑现概率高。'
                 },
                 {
-                    tag: '具身智能',
-                    title: 'AI初创Sereact获1.1亿美元融资，机器人软件赛道加速',
-                    source: '财联社 / 新浪AI',
+                    tag: 'AI应用爆发',
+                    title: 'Meta与AWS签署数十亿美元协议，Graviton5 ARM CPU核心部署加速',
+                    source: 'The Verge / Meta官方',
                     date: '2026-04-28',
-                    summary: '德国机器人软件公司Sereact获1.1亿美元融资，旨在提升机器人适应性。具身智能成AI落地新方向：人形机器人首破人类半马世界纪录、华为AI眼镜正式开售。Meta与AWS签署数十亿美元协议部署Graviton5 ARM CPU核心。对联想SSC参考：具身智能带动伺服电机、精密传感器、边缘计算模组等新类别备件需求，SSC需关注新兴备件品类。'
+                    summary: 'Meta与AWS签署多年协议，将部署Graviton5 ARM CPU核心用于AI推理工作负载。Graviton5基于3nm工艺，性能提升40%同时功耗降低30%。Meta同时宣布Llama 4多模态模型将于5月正式发布。对联想SSC参考：ARM架构PC芯片需求看涨，高通骁龙X系列、联发科Kompanio等ARM PC备件需求需关注。'
                 }
             ],
             lenovo: [
                 {
-                    tag: 'SSC成本风险',
-                    title: '【SSC内部参考】4月28日成本风险矩阵：DDR5现货首降 vs 合约价续涨，采购策略需动态调整',
+                    tag: 'SSC采购预警',
+                    title: '【SSC内部参考】4月29日成本风险矩阵：Q2锁价窗口收窄，企业级备件锁定策略升级',
                     source: '联想SSC成本团队',
-                    date: '2026-04-28',
-                    summary: '基于4月28日最新数据：①五大品牌整机涨价1000-2000元，备件BOM基准价同步上修；②DDR5现货¥485（大幅回落¥23），联想笔记本内存降价34%，但TrendForce预警Q2合约价仍涨58%-63%；③企业级SSD ¥862（+¥7/周），持续上行；④DeepSeek-V4 API降价，AI PC推理成本持续压缩。行动建议：区分消费级备件（享受现货降价）与企业级备件（合约价锁定）采购策略，关注AI PC换机潮带来的高端备件需求增长。'
+                    date: '2026-04-29',
+                    summary: '基于4月29日最新数据：①TrendForce确认Q2存储涨价兑现期临近，DRAM合约价+58%-63%、NAND+70%-75%；②IDC Q1 PC出货增长6.8%，AI PC渗透率32%，备件消耗量同步增加；③英伟达GTC 5月召开，Blackwell Ultra路线图强化HBM涨价预期；④小米等终端涨价向中端蔓延。行动建议：本周内完成企业级DDR5 RDIMM、PCIe 5.0 NVMe SSD Q2合约锁定，消费级备件可适度观望但设置价格触发线。'
                 },
                 {
-                    tag: 'AI PC旗舰',
-                    title: 'ThinkPad X1 Carbon Aura AI 2026正式发布：984g超轻、14999元起，天禧AI 3.7加持',
-                    source: 'IT之家 / 联想官方',
-                    date: '2026-04-22',
-                    summary: '4月22日联想发布ThinkPad X1 Carbon Aura AI 2026，搭载英特尔酷睿Ultra X7 358H（Panther Lake架构），机身仅984g，配置32GB LPDDR5X板载内存+1TB PCIe NVMe固态，整合天禧AI 3.7，售价14999元起。对联想SSC参考：X1 Carbon Aura AI 2026已正式量产，须立即启动关键备件SKU认证，Q2锁价窗口需尽快完成。'
+                    tag: 'AI PC渗透',
+                    title: 'IDC数据印证：ThinkPad AI系列占比升至41%，AI PC换机潮拉动高端备件需求',
+                    source: 'IDC / 联想财报',
+                    date: '2026-04-29',
+                    summary: 'IDC数据显示联想ThinkPad AI系列出货占比已达41%，较上季度提升8个百分点。AI PC标配32GB+ LPDDR5X板载内存+1TB+ PCIe 4.0 NVMe SSD，带动高端备件消耗结构升级。对联想SSC参考：AI PC备件SKU认证需加速，32GB LPDDR5X、大容量NVMe SSD等核心备件需确保供应弹性。'
                 }
             ]
         };
@@ -386,7 +386,8 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-28', label: '2026-04-28（今日）'},
+            {date: '2026-04-29', label: '2026-04-29（今日）'},
+            {date: '2026-04-28', label: '2026-04-28'},
             {date: '2026-04-27', label: '2026-04-27'},
             {date: '2026-04-20', label: '2026-04-20'},
             {date: '2026-04-18', label: '2026-04-18'},
@@ -395,7 +396,6 @@
             {date: '2026-04-15', label: '2026-04-15'},
             {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
-            {date: '2026-04-11', label: '2026-04-11'},
         ];
 
         // 动态生成历史记录链接

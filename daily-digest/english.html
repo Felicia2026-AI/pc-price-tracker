@@ -298,76 +298,76 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月28日星期二';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/28 10:00';
+        document.getElementById('currentDate').textContent = '2026年4月29日星期三';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/29 10:00';
 
         // 今日短语
         const todayPhrase = {
-            english: "\"When AI inference costs approach near-zero, the marginal cost of deploying intelligent agents approaches zero, which fundamentally changes the unit economics of knowledge work. The bottleneck shifts from computation to judgment — and judgment is where humans remain irreplaceable.\"",
-            chinese: "当AI推理成本趋近于零时，部署智能体的边际成本也趋近于零，这将根本性地改变知识工作的单位经济结构。瓶颈从计算转向判断力——而判断力正是人类不可替代之所在。",
-            meaning: "inference cost：推理成本。marginal cost：边际成本。unit economics：单位经济/单位成本结构。knowledge work：知识工作。bottleneck：瓶颈。judgment：判断力/决策能力。irreplaceable：不可替代的。",
-            example: "As API pricing for large language models continues to drop, the marginal cost of AI inference is approaching near-zero, which will transform the economics of knowledge work."
+            english: "\"The lead time on enterprise NVMe SSDs has extended to 26 weeks, and our suppliers are asking us to commit to Q3 volumes now if we want to lock in Q2 pricing. This creates a procurement paradox: we're being asked to commit to future volumes at today's prices, while our own demand signal from the field is showing a potential 8-10% shortfall against the original forecast. The discipline is to distinguish between supply-driven urgency — which is real but not necessarily our emergency — and genuine demand-driven urgency.\"",
+            chinese: "企业级NVMe SSD的交货期已延长至26周，供应商要求我们如果想锁定Q2价格，现在就要承诺Q3数量。这创造了一个采购悖论：我们被要求以今天的价格承诺未来的数量，而我们从现场获得的需求信号显示可能比原始预测低8-10%。纪律要求我们区分供应驱动的紧迫性——这是真实的但不一定是我们的紧急情况——与真正的需求驱动的紧迫性。",
+            meaning: "lead time：交货期/前置时间。commit to volumes：承诺数量。lock in pricing：锁定价格。procurement paradox：采购悖论。demand signal：需求信号。shortfall：缺口/不足。supply-driven urgency：供应驱动的紧迫性。demand-driven urgency：需求驱动的紧迫性。",
+            example: "When our supplier requested Q3 volume commitments to lock in Q2 pricing, we distinguished between their inventory optimization problem and our genuine parts availability requirement before agreeing."
         };
 
-        // 今日学习内容 - AI推理成本压缩：从"聊天便宜"到"Agent便宜"
+        // 今日学习内容 - 供应驱动紧迫 vs 需求驱动紧迫：采购决策中的界限管理
         const todayContent = {
-            english: "On April 26th, DeepSeek announced a dramatic price reduction across its entire API pricing structure, cutting input cache hit prices to one-tenth of their original launch prices. For the Flash model in the V4 series, the cost per million tokens dropped to just 0.02 yuan — approximately 0.3 US cents. This is not merely a price war between AI vendors. It represents a fundamental shift in the economics of AI deployment that every supply chain and procurement professional must understand.\n\nWhen we talk about AI becoming \"cheap,\" we need to distinguish between training costs and inference costs. Training is the upfront investment — the massive compute expenditure required to build a capable model. This remains enormously expensive. GPT-5.5 and DeepSeek-V4 each required hundreds of millions of dollars in training compute. This cost is sunk, amortized across billions of future inferences.\n\nInference is the ongoing cost — the compute required to actually run the model when a user asks a question or an application makes an API call. This is the cost that scales linearly with usage. And this is the cost that is plummeting.\n\nThe 0.02 yuan per million tokens figure deserves context. A typical email might consume 100 tokens. A moderately complex document analysis might require 10,000 tokens. At these prices, the cost of processing an email through a state-of-the-art language model is approximately 0.002 yuan — essentially negligible. Even a complex analytical task consuming 100,000 tokens costs just 2 yuan.\n\nThis has profound implications for the unit economics of knowledge work. When the marginal cost of processing information approaches zero, the constraint is no longer compute — it is judgment. Which problems are worth solving? Which analyses should be commissioned? What conclusions should be acted upon? These questions require human judgment that AI cannot automate away.\n\nFor supply chain professionals specifically, the implication is that AI will increasingly handle the mechanical aspects of our work — data gathering, report generation, anomaly detection, scenario modeling — while humans focus on strategic decisions that require contextual understanding, stakeholder management, and accountability.\n\nConsider the practical implications. A spare parts inventory optimization exercise that previously required a team of analysts spending weeks on data preparation, modeling, and reporting can now be accomplished in hours. The AI handles the heavy lifting of processing historical demand patterns, running optimization algorithms, and generating scenario comparisons. The human supply chain professional then applies judgment: Are the assumptions valid? What risks are not captured in the model? Which recommendation balances cost, service, and resilience appropriately?\n\nThis does not make human expertise obsolete. It makes human expertise more valuable by removing the mechanical drudgery that previously consumed most of our analytical bandwidth. The professional who can effectively collaborate with AI tools — who knows how to frame problems, validate outputs, and apply contextual judgment — will be dramatically more productive than the professional who relies on either AI alone or human effort alone.\n\nFor SSC organizations, this suggests a shift in skill development priorities. Technical skills in data analysis and modeling remain important, but increasingly the differentiator will be the ability to effectively leverage AI tools for rapid analysis while maintaining human oversight and judgment in decision-making.\n\nThe organizations that adapt fastest will be those that recognize the bottleneck has shifted. The constraint is no longer how fast we can process data — it is how wisely we can direct that processing toward the highest-value problems. This is a human question, not an AI question.\n\nFor SSC spare parts management specifically, the practical implication is that demand sensing, inventory optimization, and cost analysis that previously required dedicated analytical resources can now be performed on-demand with AI assistance. The challenge shifts to ensuring that the humans overseeing these AI-driven analyses have the domain expertise and strategic judgment to interpret results correctly and act appropriately. AI handles the number-crunching; humans provide the contextual wisdom that numbers alone cannot capture.",
-            chinese: "4月26日，DeepSeek宣布对其整个API定价结构进行大幅调整，将输入缓存命中价格降至原始发布价的十分之一。对于V4系列中的Flash模型，每百万Tokens的成本降至仅0.02元（约0.3美分）。这不是简单的AI厂商价格战——它代表了AI部署经济模式的根本性转变，每个供应链和采购专业人员都必须理解这一变化。\n\n当我们讨论AI变得"便宜"时，需要区分训练成本和推理成本。训练是前期投入——构建一个合格模型所需的大规模计算支出。这仍然极其昂贵。GPT-5.5和DeepSeek-V4各自需要数亿美元的训练计算成本。这笔成本已经沉没，分摊到未来数十亿次推理中。\n\n推理是持续成本——当用户提问或应用程序调用API时实际运行模型所需的计算。这是随使用量线性增长的成本，也正是成本正在暴跌的部分。\n\n每百万Tokens 0.02元的数字值得加以说明。一封典型邮件可能消耗约100个Tokens。一份中等复杂度的文档分析可能需要10,000个Tokens。以此价格计算，通过最先进的语言模型处理一封邮件的成本约为0.002元——几乎可以忽略不计。即使是消耗100,000个Tokens的复杂分析任务，成本也仅约2元。\n\n这对知识工作的单位经济具有深远影响。当处理信息的边际成本趋近于零时，约束条件不再是计算——而是判断力。哪些问题值得解决？哪些分析应该委托进行？哪些结论应该付诸行动？这些问题需要AI无法自动化的判断力。\n\n对于供应链专业人员而言，这意味着AI将越来越多地处理我们工作中的机械部分——数据收集、报告生成、异常检测、情景建模——而人类则专注于需要上下文理解、利益相关者管理和责任担当的战略决策。\n\n考虑实际影响。一项以前需要一组分析师花费数周进行数据准备、建模和报告的备件库存优化工作，现在可以在数小时内完成。AI负责处理大量工作：处理历史需求模式、运行优化算法、生成情景对比。然后人类供应链专业人员应用判断力：假设是否有效？模型未捕捉哪些风险？哪些建议能够适当平衡成本、服务和韧性？\n\n这并没有使人类专业知识过时。它通过消除以前消耗大部分分析带宽的机械性苦差工作，使人类专业知识更有价值。那些能够有效与AI工具协作的人——知道如何构建问题、验证输出、应用上下文判断的人——将比单纯依赖AI或单纯依赖人力的专业人员效率高得多。\n\n对于SSC组织，这表明技能发展重点的转变。数据分析与建模的技术技能仍然重要，但差异化因素将越来越多地转向有效利用AI工具进行快速分析的能力，同时在决策中保持人类监督和判断。\n\n适应最快的组织将是那些认识到瓶颈已经转移的组织。约束条件不再是我们的处理速度有多快——而是我们能够多明智地将处理引导向最高价值的问题。这是一个人类问题，而非AI问题。\n\n对于SSC备件管理具体而言，实际影响是：以前需要专门分析资源进行的需求感知、库存优化和成本分析，现在可以在AI辅助下按需执行。挑战转向确保监督这些AI驱动分析的人类具备必要的领域专业知识和战略判断力，以正确解读结果并适当行动。AI负责数据处理；人类提供上下文智慧，而这是数字本身无法捕获的。",
+            english: "The semiconductor supply chain of 2026 presents procurement professionals with a paradox that tests the boundaries of conventional supply chain management wisdom. Enterprise NVMe SSDs carry lead times of 26 weeks. Suppliers are requesting Q3 volume commitments in exchange for locking in Q2 pricing. Meanwhile, internal demand signals are showing potential 8-10% shortfalls against original forecasts. How should a rational procurement organization respond to this environment?\n\nThe key analytical discipline is to distinguish between two fundamentally different types of urgency: supply-driven urgency and demand-driven urgency. Understanding this distinction is critical because each type of urgency demands a different organizational response.\n\nSupply-driven urgency originates from the supplier side of the value chain. It emerges when suppliers face capacity constraints, material shortages, or their own inventory optimization pressures. The supplier's goal is to secure forward commitments that reduce their own risk. When a supplier asks for Q3 volume commitments to lock in Q2 pricing, they are managing their own inventory exposure — reducing the risk that they produce components that customers will not accept.\n\nThis supply-driven urgency is real. The lead times are genuinely extended. The capacity is genuinely constrained. The supplier's request is genuinely driven by their assessment of market conditions. But here is the critical insight: supply-driven urgency is the supplier's problem, not necessarily the procurement organization's emergency.\n\nDemand-driven urgency, by contrast, originates from within the procurement organization's own value chain. It emerges when genuine customer demand, product roadmaps, or service requirements create legitimate needs for specific components within specific timeframes. This urgency is backed by actual consumption plans, validated by customer commitments, or driven by observable market dynamics.\n\nThe danger in an extended lead time environment is that supply-driven urgency can contaminate demand-driven decision-making. The procurement team hears \"lead time is 26 weeks\" and \"suppliers want forward commitments\" and begins to treat these supplier-side factors as if they were demand-side imperatives. The result is that organizations commit to volumes they do not genuinely need, build inventory against forecasts that may not materialize, and allocate working capital to components that will sit in warehouses rather than generate value.\n\nThe discipline requires maintaining a clear analytical separation between these two types of urgency. When evaluating a supplier's request for forward commitments, the procurement team should ask: Is this request driven by our genuine demand requirements, or by the supplier's inventory optimization? If the answer is the latter — and it often is — then the procurement organization should resist the pressure to commit based on supplier-side urgency.\n\nThis does not mean ignoring supplier constraints. It means managing them strategically rather than reactively. If a 26-week lead time creates genuine availability risk for components that are truly needed, the appropriate response is to build buffer stocks sized according to the actual demand uncertainty — not to over-commit to volumes that serve the supplier's risk reduction more than the procurement organization's supply assurance.\n\nThe practical framework involves several analytical steps. First, validate the demand signal independently. Is the 8-10% shortfall real? Is it concentrated in specific product families or spread across the portfolio? Is it a timing issue or a structural change? Second, assess the supply risk independently. What is the probability that the 26-week lead time will slip further? Are there alternative sources? Third, size any buffer inventory according to the validated demand uncertainty — not according to the supplier's desire for forward commitments.\n\nThe organizations that navigate extended lead time environments most effectively are those that maintain this analytical discipline. They resist the gravitational pull of supply-driven urgency. They size inventory based on their own demand forecasts, not supplier's risk preferences. And they treat supplier requests for forward commitments as information about the supply environment, not as imperatives for their own procurement action.\n\nIn the semiconductor supercycle of 2026, this discipline is more important than ever. The pressure from suppliers to commit will be intense. The fear of missing parts will be real. But the organizations that maintain clear thinking about the distinction between supply-driven and demand-driven urgency will emerge with the best balance of supply assurance and working capital efficiency. The winners will be those who managed the paradox, not those who surrendered to it.",
+            chinese: "2026年的半导体供应链给采购专业人员带来了一个考验传统供应链管理智慧边界的悖论。企业级NVMe SSD的交货期长达26周。供应商要求以锁定Q2价格为条件承诺Q3数量。与此同时，内部需求信号显示可能比原始预测低8-10%。一个理性的采购组织应该如何应对这种环境？\n\n关键分析纪律是区分两种根本不同的紧迫性：供应驱动的紧迫性和需求驱动的紧迫性。理解这种区别至关重要，因为每种类型的紧迫性都需要不同的组织响应。\n\n供应驱动的紧迫性源于价值链的供应方。当供应商面临产能限制、材料短缺或其自身的库存优化压力时，就会产生这种紧迫性。供应商的目标是确保远期承诺，以降低自身的风险。当供应商要求以锁定Q2价格为条件承诺Q3数量时，他们正在管理自己的库存敞口——降低生产客户不会接受的组件的风险。\n\n这种供应驱动的紧迫性是真实的。交货期确实延长了。产能确实受到限制。供应商的要求确实是由他们对市场状况的评估驱动的。但关键洞察是：供应驱动的紧迫性是供应商的问题，不一定是采购组织的紧急情况。\n\n相比之下，需求驱动的紧迫性源于采购组织自身价值链的内部。当真正的客户需求、产品路线图或服务要求在特定时间范围内产生对特定组件的合理需求时，就会出现这种紧迫性。这种紧迫性得到实际消耗计划的支持，经客户承诺验证，或由可观察到的市场动态驱动。\n\n在交货期延长的环境中，危险在于供应驱动的紧迫性可能污染需求驱动的决策。采购团队听到\"交货期26周\"和\"供应商要求远期承诺\"后，开始将这些供应方因素视为需求方的要务。其结果是组织承诺了并非真正需要的数量，根据可能不会实现的预测建立库存，并将营运资本分配给将在仓库中堆积而非产生价值的组件。\n\n这种纪律要求保持对这两种紧迫性的清晰分析分离。在评估供应商的远期承诺请求时，采购团队应该问：这个请求是由我们真正的需求驱动的，还是由供应商的库存优化驱动的？如果答案是后者——而且通常如此——那么采购组织应该顶住基于供应方紧迫性而承诺的压力。\n\n这并不意味着忽视供应商限制。它意味着战略性而非被动地管理它们。如果26周的交货期对真正需要的组件造成真正的可用性风险，适当的回应是根据实际需求不确定性建立安全库存——而不是过度承诺数量，因为这些数量更多是为了供应商的风险降低，而不是为了采购组织的供应保障。\n\n实用框架涉及几个分析步骤。首先，独立验证需求信号。8-10%的缺口是真实的吗？它集中在特定产品系列还是分散在整个产品组合中？这是时间问题还是结构性问题？其次，独立评估供应风险。26周的交货期进一步延误的概率是多少？是否有替代来源？第三，根据经验证的需求不确定性确定任何安全库存的规模——而不是根据供应商对远期承诺的渴望。\n\n最能驾驭交货期延长环境的组织是那些保持这种分析纪律的组织。它们顶住了供应驱动紧迫性的引力。它们根据自身需求预测而非供应商风险偏好来确定库存规模。它们将供应商的远期承诺请求视为有关供应环境的信息，而非其自身采购行动的指令。\n\n在2026年半导体超级周期中，这种纪律比以往任何时候都更重要。来自供应商承诺的压力将是巨大的。错失零件的恐惧是真实的。但那些对对供应驱动和需求驱动紧迫性之间的区别保持清醒思考的组织，将以最佳平衡的供应保障和营运资本效率脱颖而出。赢家将是那些管理悖论的人，而不是屈服于悖论的人。",
             vocabulary: [
                 {
-                    word: "inference cost",
-                    meaning: "推理成本；AI模型在实际运行（处理请求）时消耗的计算资源成本，与训练成本相对",
-                    example: "As API pricing drops, the inference cost per query approaches near-zero for most business applications."
+                    word: "supply-driven urgency",
+                    meaning: "供应驱动的紧迫性；源于供应商产能/库存压力的紧迫感，通常不是采购组织的真实紧急情况",
+                    example: "A supplier requesting forward commitments is expressing supply-driven urgency, which may not align with our actual demand requirements."
                 },
                 {
-                    word: "marginal cost",
-                    meaning: "边际成本；每增加一个单位产出所增加的成本，趋近于零时意味着规模效应极强",
-                    example: "When the marginal cost of AI inference approaches zero, the unit economics of knowledge work transform fundamentally."
+                    word: "demand-driven urgency",
+                    meaning: "需求驱动的紧迫性；源于内部客户需求、产品路线图或服务要求的真实紧迫需求",
+                    example: "A customer order with a hard delivery date creates genuine demand-driven urgency that justifies inventory commitments."
                 },
                 {
-                    word: "unit economics",
-                    meaning: "单位经济/单位成本结构；计算单个产品或服务的成本与收入关系，评估商业模式可持续性",
-                    example: "Understanding the unit economics of spare parts storage helps determine optimal inventory levels."
+                    word: "forward commitment",
+                    meaning: "远期承诺；提前承诺在未来某个时间点购买特定数量的承诺，通常用于锁定供应或价格",
+                    example: "Suppliers often request forward commitments to reduce their inventory exposure during tight supply conditions."
                 },
                 {
-                    word: "bottleneck",
-                    meaning: "瓶颈；限制整体系统性能的关键约束点",
-                    example: "In the AI era, the bottleneck shifts from computation to human judgment about which problems to solve."
+                    word: "lead time",
+                    meaning: "交货期/前置时间；从下单到交货所需的时间，是评估供应风险的关键参数",
+                    example: "With enterprise NVMe SSD lead times extending to 26 weeks, we need to adjust our reorder points accordingly."
                 },
                 {
-                    word: "judgment",
-                    meaning: "判断力；基于经验、专业知识和上下文理解做出明智决策的能力，AI难以自动化",
-                    example: "AI can process data at scale, but strategic decisions require human judgment that accounts for organizational context."
+                    word: "buffer stock sizing",
+                    meaning: "安全库存规模；根据需求不确定性和供应风险确定的缓冲库存量，应基于自身分析而非供应商建议",
+                    example: "Buffer stock sizing should reflect our own demand uncertainty, not the supplier's desire for forward commitments."
                 }
             ],
             practice: [
                 {
-                    question: "According to the article, why does the drop in AI inference costs represent a fundamental shift rather than just a price war?",
+                    question: "What is the key distinction between supply-driven urgency and demand-driven urgency?",
                     options: [
-                        "Because it enables AI companies to undercut competitors",
-                        "Because it transforms the unit economics of knowledge work by making the marginal cost of information processing approach zero",
-                        "Because it reduces the cost of training large language models",
-                        "Because it makes AI companies more profitable"
+                        "Supply-driven urgency is more important because suppliers have better market information",
+                        "Supply-driven urgency originates from the supplier side while demand-driven urgency originates from genuine internal requirements",
+                        "They are essentially the same thing expressed differently",
+                        "Demand-driven urgency is always more urgent than supply-driven urgency"
                     ],
                     answer: 1
                 },
                 {
-                    question: "What does the article suggest will be the new bottleneck in knowledge work as AI inference costs approach zero?",
+                    question: "Why should procurement organizations resist committing to volumes based solely on supplier requests for forward commitments?",
                     options: [
-                        "Computing power availability",
-                        "Data storage capacity",
-                        "Human judgment about which problems to solve and which conclusions to act upon",
-                        "Network bandwidth for transmitting data"
+                        "Because suppliers always ask for more than they actually need",
+                        "Because supplier requests may be driven by their inventory optimization rather than our genuine needs, and over-committing wastes working capital",
+                        "Because it is disrespectful to refuse supplier requests",
+                        "Because forward commitments are never in the procurement organization's interest"
                     ],
-                    answer: 2
+                    answer: 1
                 },
                 {
-                    question: "What skill shift does the article suggest is needed for SSC supply chain professionals?",
+                    question: "According to the article, how should buffer inventory be sized in an extended lead time environment?",
                     options: [
-                        "Learning to code in Python",
-                        "Memorizing more supply chain formulas",
-                        "Developing ability to effectively leverage AI tools while maintaining human oversight and judgment",
-                        "Reducing dependence on data-driven decision making"
+                        "Based on the supplier's request for forward commitments",
+                        "Based on the 26-week lead time regardless of actual demand",
+                        "Based on validated demand uncertainty and actual supply risk, not supplier pressure",
+                        "As large as possible to avoid any availability risk"
                     ],
                     answer: 2
                 }
@@ -419,7 +419,8 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-28', label: '2026-04-28（今日）'},
+            {date: '2026-04-29', label: '2026-04-29（今日）'},
+            {date: '2026-04-28', label: '2026-04-28'},
             {date: '2026-04-27', label: '2026-04-27'},
             {date: '2026-04-20', label: '2026-04-20'},
             {date: '2026-04-18', label: '2026-04-18'},
@@ -428,7 +429,6 @@
             {date: '2026-04-15', label: '2026-04-15'},
             {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
-            {date: '2026-04-11', label: '2026-04-11'},
         ];
 
         // 动态生成历史记录链接
