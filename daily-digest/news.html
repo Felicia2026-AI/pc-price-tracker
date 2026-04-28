@@ -250,34 +250,34 @@
 
     <script>
         // 设置日期（硬编码，禁止使用new Date()）
-        document.getElementById('currentDate').textContent = '2026年4月27日星期一';
-        document.getElementById('updateTime').textContent = '更新时间：2026/4/27 10:00';
+        document.getElementById('currentDate').textContent = '2026年4月28日星期二';
+        document.getElementById('updateTime').textContent = '更新时间：2026/4/28 10:00';
 
         // 价格数据
         const priceData = {
             ddr5: {
                 name: 'DDR5 UDIMM 16GB 模组（全球现货均价）',
-                price: 508.00,
-                change: 4,
+                price: 485.00,
+                change: 23,
                 trend: 'down',
-                date: '2026-04-27',
+                date: '2026-04-28',
                 unit: '¥'
             },
             ssd: {
                 name: '1TB SSD（企业级）',
-                price: 855,
+                price: 862,
                 change: 7,
                 trend: 'up',
-                date: '2026-04-27',
+                date: '2026-04-28',
                 unit: '¥'
             },
-            lenovo: {
-                name: '联想集团 (00992.HK)',
-                price: 11.54,
-                change: 0.7,
+            nvidia: {
+                name: '英伟达 (NVDA)',
+                price: 216.61,
+                change: 4.0,
                 trend: 'up',
-                date: '2026-04-25',
-                unit: 'HK$'
+                date: '2026-04-27',
+                unit: 'US$'
             }
         };
 
@@ -287,17 +287,17 @@
             <div class="price-item">
                 <div class="name">${priceData.ddr5.name}</div>
                 <div class="price">${priceData.ddr5.unit}${priceData.ddr5.price} <span class="change ${priceData.ddr5.trend}">${priceData.ddr5.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ddr5.change)}</span></div>
-                <div class="date">数据日期：${priceData.ddr5.date} | 渠道现货小幅回落，合约价仍高位，终端整机已集体涨价20%</div>
+                <div class="date">数据日期：${priceData.ddr5.date} | 渠道现货小幅回落，但高盛预测2026年DRAM最高涨幅达280%</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.ssd.name}</div>
                 <div class="price">${priceData.ssd.unit}${priceData.ssd.price} <span class="change ${priceData.ssd.trend}">${priceData.ssd.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ssd.change)}</span></div>
-                <div class="date">数据日期：${priceData.ssd.date} | 企业级SSD持续走高，PC整机全线提价15%-30%</div>
+                <div class="date">数据日期：${priceData.ssd.date} | Q2 NAND合约价预计再涨70%-75%，存储超级周期持续</div>
             </div>
             <div class="price-item">
-                <div class="name">${priceData.lenovo.name}</div>
-                <div class="price">${priceData.lenovo.unit}${priceData.lenovo.price} <span class="change ${priceData.lenovo.trend}">${priceData.lenovo.trend === 'up' ? '↑' : '↓'} ${Math.abs(priceData.lenovo.change)}%</span></div>
-                <div class="date">收盘日期：${priceData.lenovo.date} | 港股HK$11.54，Intel财报超预期带动科技股走强，AI PC战略持续估值修复</div>
+                <div name">${priceData.nvidia.name}</div>
+                <div class="price">${priceData.nvidia.unit}${priceData.nvidia.price} <span class="change ${priceData.nvidia.trend}">${priceData.nvidia.trend === 'up' ? '↑' : '↓'} ${Math.abs(priceData.nvidia.change)}%</span></div>
+                <div class="date">收盘日期：${priceData.nvidia.date} | 市值突破5.26万亿美元，AI算力需求持续爆发</div>
             </div>
         `;
 
@@ -305,57 +305,57 @@
         const newsData = {
             industry: [
                 {
-                    tag: '集体涨价',
-                    title: '五大PC品牌集体大幅提价！整体涨幅最高20%，部分机型单次涨1000~2000元',
-                    source: '中关村在线（ZOL）',
-                    date: '2026-04-26',
-                    summary: '2026年4月26日，联想、惠普、戴尔、华硕、宏碁旗下多款轻薄本、商用本及游戏本机型陆续大幅提价，整体涨幅最高接近20%，单机涨幅达1000~2000元。联想拯救者系列、ROG枪神系列等热销型号数月内累计涨价数千元。根本原因仍是存储芯片缺货——AI算力需求爆发导致头部存储厂商将产能优先分配给AI专用内存，消费级DRAM/NAND供应趋紧，采购成本大幅上升。分析师预测短期内价格回落缺乏现实基础。对联想SSC参考：整机涨价将同步传导至MB/屏幕/存储备件成本，Q2备件预算修订已不可回避，需在本周内完成Q3采购计划更新。'
+                    tag: '存储涨价',
+                    title: '高盛大幅上调存储芯片价格预测：2026年DRAM最高涨幅达280%，NAND最高涨250%',
+                    source: '金融界 / TrendForce',
+                    date: '2026-04-24',
+                    summary: '高盛近日大幅上调DRAM与NAND Flash两类存储芯片的价格预测，预计2026年DRAM价格最高飙升280%，NAND价格最高上涨250%。TrendForce同步预估Q2 NAND Flash合约价环比增长70%-75%，DRAM合约价季增58%-63%。全球存储行业正进入一轮罕见的涨价超级周期，AI服务器存储需求预计增长300%。对联想SSC参考：高盛预测进一步确认存储成本持续攀升压力，Q2锁价窗口紧迫，企业级备件采购成本将继续承压。'
                 },
                 {
-                    tag: '超级周期',
-                    title: 'TrendForce：DRAM超级周期才刚开始，全年涨幅210%-230%，短缺持续至2027年',
-                    source: 'TrendForce / 网易科技',
-                    date: '2026-04-20',
-                    summary: 'TrendForce最新预测：2026年全年DRAM价格涨幅210%-230%，NAND Flash涨幅180%-200%，机构普遍认为缺货将持续至2027年。server DDR5合约价获利今年Q1起正式凌驾HBM，存储器市场定价结构出现历史性转折；CSP大规模签订长约锁定底价，整体DRAM报价易涨难跌。与此同时CFM渠道数据显示，近一个月零售端消费类SSD/内存条贸易价格持续走跌，合约价与渠道现货价分化扩大，终端需求萎缩信号明显。对联想SSC参考：合约价锁定比现货更重要；抓住渠道价小幅回落窗口，加快完成长期采购协议签订，规避后续进一步涨价风险。'
+                    tag: 'NAND涨价',
+                    title: '4月内第二波集中涨价：Q2 NAND闪存合约价预计环比增长70%-75%',
+                    source: '199it / TrendForce',
+                    date: '2026-04-27',
+                    summary: '这是4月内存储大厂发起的第二波集中涨价，推动零售端价格达到历史高位。TrendForce集邦咨询预估，Q2 NAND Flash合约价将环比再增70%至75%。对联想SSC参考：企业级SSD备件采购成本Q2继续大幅上行，PCIe 5.0 NVMe SSD锁价窗口紧迫。'
                 },
                 {
-                    tag: 'PC出货预警',
-                    title: 'Intel财报超预期、股价涨20%，同步预警2026年PC出货将下滑10%以上',
-                    source: '新浪财经 / 快科技',
-                    date: '2026-04-25',
-                    summary: '英特尔发布2026年Q1财报，业绩全面超市场预期，股价大涨20%以上，市值重回4000亿美元。然而Intel同步对PC市场发出罕见警告：预计2026年全年PC出货量将下滑10%以上，内存/SSD高价导致终端需求实质萎缩；美国关税不确定性进一步压制北美市场。IDC此前已预警下滑9%，Intel此次进一步验证了悲观预期。对联想SSC参考：备件真实消耗节奏将随出货量下滑而放缓，备件消耗预测模型须引入PC出货下滑系数，高端商用本备件需求做保守修正，防止基于乐观假设过度备货。'
+                    tag: 'AMD份额',
+                    title: 'AMD x86处理器市场份额达30%创历史新高，市值4541亿美元',
+                    source: '新浪财经',
+                    date: '2026-04-19',
+                    summary: '当地时间4月16日，AMD股价冲上278美元，市值达4541.2亿美元，创下AMD 1969年成立半个多世纪以来最高纪录。AMD x86处理器已占据30%的历史新高市场份额。对联想SSC参考：AMD份额提升意味着PC处理器供应链多元化，ThinkPad AMD版本备件需求可能相应增加。'
                 }
             ],
             ai: [
                 {
-                    tag: '联想×自动驾驶',
-                    title: '联想×文远知行签全球战略合作，未来五年部署20万台自动驾驶车辆',
-                    source: '北京商报 / 新浪财经',
-                    date: '2026-04-24',
-                    summary: '4月24日，联想与文远知行WeRide在北京国际车展现场正式签署全球战略合作协议，预计未来五年在全球部署20万台自动驾驶车辆。联想集团执行副总裁黄建恒与文远知行CEO韩旭见证签约。这是联想AI战略从PC/服务器延伸至智能出行赛道的重要布局，联想车计算业务将为自动驾驶系统提供核心算力支撑。对联想SSC参考：车计算设备未来可能纳入联想服务体系，备件管理边界有望进一步拓展至智能汽车计算硬件领域。'
+                    tag: '英伟达新高',
+                    title: '英伟达市值突破5.26万亿美元，AI算力驱动股价再创历史新高',
+                    source: '腾讯科技 / CNMO',
+                    date: '2026-04-28',
+                    summary: '当地时间4月27日，英伟达股价收涨4%，报216.61美元，盘中触及216.83美元，双双刷新历史纪录，公司总市值突破5.26万亿美元。这是英伟达自2025年10月后，时隔约6个月再度站上5万亿美元市值台阶，稳居全球上市公司市值榜首。对联想SSC参考：英伟达市值强劲表明AI算力需求持续爆发，GPU供应链景气延续。'
                 },
                 {
-                    tag: '资本市场',
-                    title: '摩根大通增持联想2470万股、里昂目标价升至HK$12.9，4月24日收盘HK$12.00',
-                    source: '证券之星 / 新浪财经',
-                    date: '2026-04-24',
-                    summary: '联想集团（00992.HK）4月24日收盘报HK$12.00，上涨3.09%，成交额18.81亿港元。摩根大通同日公告增持联想2470万股，里昂证券将联想目标价上调至HK$12.9，维持买入评级。分析认为联想AI战略完整性（Infinidat收购+车计算+天禧AI+X1 Carbon Aura AI发布）正获市场重新定价，4月以来累计涨幅超15%。对联想SSC参考：集团市值修复意味着资本市场对AI+服务业务盈利能力的认可，服务供应链成本管控的贡献将进一步凸显，Q2成本达成压力不可松懈。'
+                    tag: '费城半导体',
+                    title: '费城半导体指数连续18个交易日上涨，A股半导体板块全线爆发',
+                    source: '华尔街见闻 / 同花顺',
+                    date: '2026-04-27',
+                    summary: '费城半导体指数收涨4.32%，创纪录连涨18日。4月27日A股半导体板块全线爆发，帝奥微涨超19%，富瀚微涨超13%，派瑞股份、东芯股份涨超11%。对联想SSC参考：半导体行业景气持续，PC核心零部件供应链稳定。'
                 }
             ],
             lenovo: [
                 {
-                    tag: 'AI PC旗舰',
-                    title: 'ThinkPad X1 Carbon Aura AI 2026正式发布：984g超轻、14999元起，Panther Lake+天禧AI 3.7',
-                    source: 'IT之家 / 联想官方',
-                    date: '2026-04-22',
-                    summary: '4月22日，联想正式发布ThinkPad X1 Carbon Aura AI 2026，搭载英特尔酷睿Ultra X7 358H（Panther Lake架构），机身仅984g，配置32GB LPDDR5X板载内存+1TB PCIe NVMe固态，整合天禧AI 3.7，售价14999元起。天禧AI 3.7升级为垂域专属智能体，率先在法律、财务等专业领域深度落地。这是联想AI PC战略的年度核心发布节点。对联想SSC参考：X1 Carbon Aura AI 2026已正式量产，须立即启动关键备件SKU认证——重点：32GB LPDDR5X板载模块、Panther Lake架构主板（MB）、PCIe 5.0 NVMe SSD规格确认，并在Q2锁价窗口关闭前完成采购。'
+                    tag: '联想新品',
+                    title: '联想来酷AI MINI高性能迷你主机正式开售，4499元起',
+                    source: '快科技 / 联想官方',
+                    date: '2026-04-28',
+                    summary: '联想来酷AI MINI高性能迷你主机4月28日正式开售，主打小巧体积和AI性能，4499元起，支持一键部署OpenClaw。该产品搭载AMD/Intel平台，主打AI办公场景。对联想SSC参考：来酷新品上线意味着备件SKU矩阵扩大，需关注新品备件认证和库存备货节奏。'
                 },
                 {
-                    tag: 'SSC成本风险',
-                    title: '【SSC内部参考】4月27日成本风险矩阵：整机涨价、出货预警、合约价高位三重压力',
-                    source: '联想SSC成本团队',
+                    tag: 'Intel变动',
+                    title: '英特尔迎来新掌门陈立武，政府入股+新战略转型',
+                    source: '新浪财经 / 半导体分析',
                     date: '2026-04-27',
-                    summary: '基于本周最新数据综合评估：①五大品牌整机已集体提价最高20%，备件BOM基准价需同步上修；②DDR5现货¥508（本周小幅回落¥4，渠道去库存），但合约价仍处高位，全年涨幅预计210%+；③企业级SSD ¥855（+¥7/周），持续上行；④Intel/IDC双重预警PC出货量2026年下滑10%+，真实消耗节奏需重新建模；⑤联想股价HK$12.00（+3.09%），摩根大通增持、里昂目标价升至HK$12.9，AI战略获资本市场认可。本周行动建议：完成Q3备件采购锁价，区分渠道现货与原厂合约采购策略，防范出货下滑带来的库存积压风险。'
+                    summary: '英特尔迎来新掌门陈立武(Lip-Bu Tan)，并获得美国政府入股支持。新管理层面临重建信任与业绩的双重挑战。帕特·基辛格时期启动的扭转计划未能有效执行，英特尔近期股价飙升，市场预期新战略方向将在Q2明朗化。对联想SSC参考：Intel管理层变动可能影响处理器供货节奏和定价策略，关注Q2新品规划变动。'
                 }
             ]
         };
@@ -379,7 +379,8 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-27', label: '2026-04-27（今日）'},
+            {date: '2026-04-28', label: '2026-04-28（今日）'},
+            {date: '2026-04-27', label: '2026-04-27'},
             {date: '2026-04-20', label: '2026-04-20'},
             {date: '2026-04-18', label: '2026-04-18'},
             {date: '2026-04-17', label: '2026-04-17'},
@@ -388,7 +389,6 @@
             {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-11', label: '2026-04-11'},
-            {date: '2026-04-10', label: '2026-04-10'},
         ];
 
         // 动态生成历史记录链接
