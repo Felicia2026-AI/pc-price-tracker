@@ -271,13 +271,13 @@
                 date: '2026-04-28',
                 unit: '¥'
             },
-            nvidia: {
-                name: '英伟达 (NVDA)',
-                price: 216.61,
-                change: 4.0,
+            lenovo: {
+                name: '联想集团 (00992.HK)',
+                price: 11.54,
+                change: 0.7,
                 trend: 'up',
-                date: '2026-04-27',
-                unit: 'US$'
+                date: '2026-04-25',
+                unit: 'HK$'
             }
         };
 
@@ -287,17 +287,17 @@
             <div class="price-item">
                 <div class="name">${priceData.ddr5.name}</div>
                 <div class="price">${priceData.ddr5.unit}${priceData.ddr5.price} <span class="change ${priceData.ddr5.trend}">${priceData.ddr5.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ddr5.change)}</span></div>
-                <div class="date">数据日期：${priceData.ddr5.date} | 渠道现货小幅回落，但高盛预测2026年DRAM最高涨幅达280%</div>
+                <div class="date">数据日期：${priceData.ddr5.date} | 国内DDR5首次大降价！联想16G DDR5笔记本内存从¥1759降至¥1159，降幅34%</div>
             </div>
             <div class="price-item">
                 <div class="name">${priceData.ssd.name}</div>
                 <div class="price">${priceData.ssd.unit}${priceData.ssd.price} <span class="change ${priceData.ssd.trend}">${priceData.ssd.trend === 'up' ? '↑' : '↓'} ¥${Math.abs(priceData.ssd.change)}</span></div>
-                <div class="date">数据日期：${priceData.ssd.date} | Q2 NAND合约价预计再涨70%-75%，存储超级周期持续</div>
+                <div class="date">数据日期：${priceData.ssd.date} | 企业级SSD持续上行，Q2合约价预计再涨70%-75%</div>
             </div>
             <div class="price-item">
-                <div name">${priceData.nvidia.name}</div>
-                <div class="price">${priceData.nvidia.unit}${priceData.nvidia.price} <span class="change ${priceData.nvidia.trend}">${priceData.nvidia.trend === 'up' ? '↑' : '↓'} ${Math.abs(priceData.nvidia.change)}%</span></div>
-                <div class="date">收盘日期：${priceData.nvidia.date} | 市值突破5.26万亿美元，AI算力需求持续爆发</div>
+                <div class="name">${priceData.lenovo.name}</div>
+                <div class="price">${priceData.lenovo.unit}${priceData.lenovo.price} <span class="change ${priceData.lenovo.trend}">${priceData.lenovo.trend === 'up' ? '↑' : '↓'} ${Math.abs(priceData.lenovo.change)}%</span></div>
+                <div class="date">收盘日期：${priceData.lenovo.date} | 费城半导体指数连涨18交易日</div>
             </div>
         `;
 
@@ -305,57 +305,64 @@
         const newsData = {
             industry: [
                 {
-                    tag: '存储涨价',
-                    title: '高盛大幅上调存储芯片价格预测：2026年DRAM最高涨幅达280%，NAND最高涨250%',
-                    source: '金融界 / TrendForce',
-                    date: '2026-04-24',
-                    summary: '高盛近日大幅上调DRAM与NAND Flash两类存储芯片的价格预测，预计2026年DRAM价格最高飙升280%，NAND价格最高上涨250%。TrendForce同步预估Q2 NAND Flash合约价环比增长70%-75%，DRAM合约价季增58%-63%。全球存储行业正进入一轮罕见的涨价超级周期，AI服务器存储需求预计增长300%。对联想SSC参考：高盛预测进一步确认存储成本持续攀升压力，Q2锁价窗口紧迫，企业级备件采购成本将继续承压。'
-                },
-                {
-                    tag: 'NAND涨价',
-                    title: '4月内第二波集中涨价：Q2 NAND闪存合约价预计环比增长70%-75%',
-                    source: '199it / TrendForce',
+                    tag: 'DDR5首降',
+                    title: '国内DDR5首次大降价！联想16G笔记本内存从1759元降至1159元，降幅34%',
+                    source: '新浪科技 / 孤城Hardware',
                     date: '2026-04-27',
-                    summary: '这是4月内存储大厂发起的第二波集中涨价，推动零售端价格达到历史高位。TrendForce集邦咨询预估，Q2 NAND Flash合约价将环比再增70%至75%。对联想SSC参考：企业级SSD备件采购成本Q2继续大幅上行，PCIe 5.0 NVMe SSD锁价窗口紧迫。'
+                    summary: '据数码博主孤城Hardware发布，联想16G DDR5-5600笔记本内存售价从1759元下调至1159元，单次降幅600元，整体降价34%，创今年价格新低。这是国内DDR5内存首次出现大幅降价信号。然而TrendForce同步预警Q2 DRAM合约价仍将环比再涨58%-63%，显示渠道现货与合约价分化：消费级DDR5现货跌，服务器DDR5合约涨。对联想SSC参考：渠道现货回落提供采购窗口，密切关注是否向备件成本传导。'
                 },
                 {
-                    tag: 'AMD份额',
-                    title: 'AMD x86处理器市场份额达30%创历史新高，市值4541亿美元',
-                    source: '新浪财经',
-                    date: '2026-04-19',
-                    summary: '当地时间4月16日，AMD股价冲上278美元，市值达4541.2亿美元，创下AMD 1969年成立半个多世纪以来最高纪录。AMD x86处理器已占据30%的历史新高市场份额。对联想SSC参考：AMD份额提升意味着PC处理器供应链多元化，ThinkPad AMD版本备件需求可能相应增加。'
+                    tag: 'PC涨价',
+                    title: '五大PC品牌正式涨价：联想/惠普/戴尔/华硕/宏碁涨幅1000~2000元',
+                    source: '新浪科技',
+                    date: '2026-04-27',
+                    summary: '4月27日起，五大PC品牌正式执行新一轮涨价。惠普门店店员透露"27日以后会大幅涨价，幅度在1000元到2000元不等"。拯救者R9000P AI元启 RTX5070版从年初9379元涨至10893元，累计涨1514元涨幅16.1%。TrendForce预警Q2 DRAM合约价仍将环比再涨58%-63%，NAND闪存涨幅70%-75%。对联想SSC参考：终端整机正式涨价，备件BOM基准价同步上修。'
+                },
+                {
+                    tag: 'Q2涨价预警',
+                    title: 'TrendForce预警：Q2 NAND Flash合约价再涨70%-75%，存储超级周期中场不休息',
+                    source: 'TrendForce / 新浪财经',
+                    date: '2026-04-26',
+                    summary: 'TrendForce最新预估：Q2 NAND Flash合约价将环比再增70%-75%，DRAM合约价季增58%-63%。AI服务器需求虹吸产能，HBM/企业级SSD供给紧张预计延续至2027年。对联想SSC参考：企业级SSD备件采购成本Q2继续上行，PCIe 5.0 NVMe SSD锁价窗口紧迫。'
                 }
             ],
             ai: [
                 {
-                    tag: '英伟达新高',
-                    title: '英伟达市值突破5.26万亿美元，AI算力驱动股价再创历史新高',
-                    source: '腾讯科技 / CNMO',
+                    tag: 'API降价',
+                    title: 'DeepSeek击穿大模型底价：百万Tokens降至2分钱，"Agent便宜"时代加速',
+                    source: '21经济网 / DeepSeek官方',
                     date: '2026-04-28',
-                    summary: '当地时间4月27日，英伟达股价收涨4%，报216.61美元，盘中触及216.83美元，双双刷新历史纪录，公司总市值突破5.26万亿美元。这是英伟达自2025年10月后，时隔约6个月再度站上5万亿美元市值台阶，稳居全球上市公司市值榜首。对联想SSC参考：英伟达市值强劲表明AI算力需求持续爆发，GPU供应链景气延续。'
+                    summary: '4月26日DeepSeek发布API价格调整公告，全系API输入缓存命中价格降至首发价的十分之一，V4 Flash每百万Tokens仅0.02元。GPT-5.5与DeepSeek-V4均强调推理成本极致压缩，单次成本下降将诱发Token消耗量指数级增长。对联想SSC参考：天禧AI 3.7"垂域专属智能体"定位契合Agent化趋势，推理成本持续压缩有利于AI PC端侧应用普及。'
                 },
                 {
-                    tag: '费城半导体',
-                    title: '费城半导体指数连续18个交易日上涨，A股半导体板块全线爆发',
-                    source: '华尔街见闻 / 同花顺',
-                    date: '2026-04-27',
-                    summary: '费城半导体指数收涨4.32%，创纪录连涨18日。4月27日A股半导体板块全线爆发，帝奥微涨超19%，富瀚微涨超13%，派瑞股份、东芯股份涨超11%。对联想SSC参考：半导体行业景气持续，PC核心零部件供应链稳定。'
+                    tag: 'AI算力',
+                    title: '中信建投：看好AI应用落地与算力需求增长，维持北美算力产业链长期看好',
+                    source: '人民财讯 / 中信建投',
+                    date: '2026-04-28',
+                    summary: '中信建投研报称GPT-5.5与DeepSeek-V4均强调推理成本极致压缩，但单次成本下降并非算力需求见顶——Token消耗量指数级增长将带来更大推理算力需求。DeepSeek-V4拥抱华为CANN、摩尔线程MUSA等国产生态，"发布即跑通"证明国产算力足以支撑万亿参数大模型。对联想SSC参考：AI PC渗透率提升带动高端备件需求长期看涨。'
+                },
+                {
+                    tag: '具身智能',
+                    title: 'AI初创Sereact获1.1亿美元融资，机器人软件赛道加速',
+                    source: '财联社 / 新浪AI',
+                    date: '2026-04-28',
+                    summary: '德国机器人软件公司Sereact获1.1亿美元融资，旨在提升机器人适应性。具身智能成AI落地新方向：人形机器人首破人类半马世界纪录、华为AI眼镜正式开售。Meta与AWS签署数十亿美元协议部署Graviton5 ARM CPU核心。对联想SSC参考：具身智能带动伺服电机、精密传感器、边缘计算模组等新类别备件需求，SSC需关注新兴备件品类。'
                 }
             ],
             lenovo: [
                 {
-                    tag: '联想新品',
-                    title: '联想来酷AI MINI高性能迷你主机正式开售，4499元起',
-                    source: '快科技 / 联想官方',
+                    tag: 'SSC成本风险',
+                    title: '【SSC内部参考】4月28日成本风险矩阵：DDR5现货首降 vs 合约价续涨，采购策略需动态调整',
+                    source: '联想SSC成本团队',
                     date: '2026-04-28',
-                    summary: '联想来酷AI MINI高性能迷你主机4月28日正式开售，主打小巧体积和AI性能，4499元起，支持一键部署OpenClaw。该产品搭载AMD/Intel平台，主打AI办公场景。对联想SSC参考：来酷新品上线意味着备件SKU矩阵扩大，需关注新品备件认证和库存备货节奏。'
+                    summary: '基于4月28日最新数据：①五大品牌整机涨价1000-2000元，备件BOM基准价同步上修；②DDR5现货¥485（大幅回落¥23），联想笔记本内存降价34%，但TrendForce预警Q2合约价仍涨58%-63%；③企业级SSD ¥862（+¥7/周），持续上行；④DeepSeek-V4 API降价，AI PC推理成本持续压缩。行动建议：区分消费级备件（享受现货降价）与企业级备件（合约价锁定）采购策略，关注AI PC换机潮带来的高端备件需求增长。'
                 },
                 {
-                    tag: 'Intel变动',
-                    title: '英特尔迎来新掌门陈立武，政府入股+新战略转型',
-                    source: '新浪财经 / 半导体分析',
-                    date: '2026-04-27',
-                    summary: '英特尔迎来新掌门陈立武(Lip-Bu Tan)，并获得美国政府入股支持。新管理层面临重建信任与业绩的双重挑战。帕特·基辛格时期启动的扭转计划未能有效执行，英特尔近期股价飙升，市场预期新战略方向将在Q2明朗化。对联想SSC参考：Intel管理层变动可能影响处理器供货节奏和定价策略，关注Q2新品规划变动。'
+                    tag: 'AI PC旗舰',
+                    title: 'ThinkPad X1 Carbon Aura AI 2026正式发布：984g超轻、14999元起，天禧AI 3.7加持',
+                    source: 'IT之家 / 联想官方',
+                    date: '2026-04-22',
+                    summary: '4月22日联想发布ThinkPad X1 Carbon Aura AI 2026，搭载英特尔酷睿Ultra X7 358H（Panther Lake架构），机身仅984g，配置32GB LPDDR5X板载内存+1TB PCIe NVMe固态，整合天禧AI 3.7，售价14999元起。对联想SSC参考：X1 Carbon Aura AI 2026已正式量产，须立即启动关键备件SKU认证，Q2锁价窗口需尽快完成。'
                 }
             ]
         };

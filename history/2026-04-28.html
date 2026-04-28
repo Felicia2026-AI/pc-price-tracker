@@ -213,14 +213,14 @@
         </div>
 
         <div class="trend-summary">
-            关键趋势（4月28日）：4月27日起五大PC品牌正式执行新一轮涨价，涨幅1000~2000元不等（新浪科技4月27日报道）。重要转折：国内DDR5首次大降价——联想16G DDR5-5600笔记本内存从¥1759下调至¥1159，降幅34%创今年新低。TrendForce预警Q2 DRAM合约价仍将环比再涨58%-63%，NAND闪存涨幅70%-75%。费城半导体指数连续18个交易日上涨，英特尔单日涨24%创1987年来最佳表现，英伟达市值再破5万亿美元。DeepSeek-V4与GPT-5.5同期发布，AI应用从"聊天便宜"迈向"Agent便宜"时代。</div>
+            关键趋势（4月28日）：DeepSeek-V4 API价格击穿底价，百万Tokens降至2分钱，"Agent便宜"时代加速到来（21经济网4月28日报道）。中信建投看好AI应用侧爆发，维持对北美算力产业链和国产AI算力突围者的长期看好。费城半导体指数连续18个交易日上涨，英特尔单日涨24%创1987年来最佳表现。备件关注：渠道DDR5现货¥485元/吨大幅回落34%，但TrendForce预警Q2 DRAM合约价仍涨58%-63%，消费级与企业级采购策略需分化。</div>
 
         <div class="charts-container">
             <!-- DDR5价格图表 -->
             <div class="chart-section">
                 <div class="chart-title">
                     DDR5内存价格走势
-                    <span class="trend-indicator trend-up">↑ 渠道现货小幅回落，合约价仍高位，Q2继续承压</span>
+                    <span class="trend-indicator trend-down">↓ 渠道现货大幅回落，联想16G模组降价34%，合约价仍高位</span>
                 </div>
                 <div class="chart-wrapper">
                     <canvas id="ddr5Chart"></canvas>
@@ -231,7 +231,7 @@
             <div class="chart-section">
                 <div class="chart-title">
                     SSD固态硬盘价格走势
-                    <span class="trend-indicator trend-up">↑ 企业级SSD价格持续走高，终端PC整机全线跟涨</span>
+                    <span class="trend-indicator trend-up">↑ 企业级SSD价格持续走高，Q2合约价预计再涨70%-75%</span>
                 </div>
                 <div class="chart-wrapper">
                     <canvas id="ssdChart"></canvas>
@@ -243,33 +243,33 @@
             <div class="news-title">📰 热点新闻（权威来源精选）</div>
 
             <div class="news-item">
-                <a href="https://new.qq.com/rain/a/20260427A01EUQ00" target="_blank">今日起大幅涨价！联想/惠普/戴尔/华硕/宏碁执行新一轮调价，幅度1000~2000元</a>
-                <div class="news-summary">新浪科技4月27日报道：今日起，五大PC品牌正式执行新一轮涨价。惠普门店店员透露"27日以后会大幅涨价，幅度在1000元到2000元不等"。拯救者R9000P AI元启 RTX5070版从年初9379元上涨至10893元，累计涨1514元，涨幅约16.1%；机械革命极光X RTX5060同期从6150元涨至7021元，涨幅14.2%。TrendForce预警Q2 DRAM合约价仍将环比再涨58%-63%，NAND闪存涨幅70%-75%。对联想SSC参考：今日起终端整机正式涨价，备件BOM基准价同步上修，Q2锁价窗口进入最后阶段。</div>
-                <div class="source">来源：新浪科技 / 新浪财经 | 2026-04-27</div>
+                <a href="https://www.21jingji.com/article/20260428/7587bba573cba50a7eede34369f7bbdf.html" target="_blank">DeepSeek击穿大模型底价：百万Tokens降至2分钱，"Agent便宜"时代加速到来</a>
+                <div class="news-summary">21经济网4月28日报道：4月26日，DeepSeek发布API价格调整公告，全系API输入缓存命中价格降至首发价的十分之一，其中Pro模型在2026年5月5日前还可叠加2.5折限时优惠。调价后，DeepSeek V4 Flash每百万Tokens输入缓存命中价格仅为0.02元（约2分钱人民币），V4 Pro为0.1元。GPT-5.5与DeepSeek-V4不约而同地强调推理成本极致压缩，单次成本下降可能诱发Token消耗量指数级增长。对联想SSC参考：天禧AI 3.7"垂域专属智能体"定位契合Agent化趋势，推理成本持续压缩有利于AI PC端侧应用普及，备件需求侧或受益于AI PC换机潮。</div>
+                <div class="source">来源：21经济网 / DeepSeek官方 | 2026-04-28</div>
+            </div>
+
+            <div class="news-item">
+                <a href="https://www.toutiao.com/article/7633588616345747987/" target="_blank">中信建投：看好AI应用落地与算力需求增长，维持北美算力产业链长期看好</a>
+                <div class="news-summary">人民财讯4月28日电，中信建投研报称：OpenAI推出GPT-5.5，DeepSeek发布DeepSeek-V4预览版，二者均强调推理成本极致压缩。这并非意味着算力需求见顶——单次成本下降可能诱发Token消耗量指数级增长，AI应用侧爆发将带来更大的推理算力需求。看好后续AI应用侧爆发，维持对北美算力产业链和国产AI算力突围者的长期看好。DeepSeek-V4拥抱华为CANN、摩尔线程MUSA等国产生态，"发布即跑通"有力证明国产算力足以支撑万亿参数大模型运行。对联想SSC参考：AI PC渗透率提升将带动换机需求，高端备件（32GB+ LPDDR5X、大容量NVMe SSD）需求长期看涨。</div>
+                <div class="source">来源：人民财讯 / 中信建投 | 2026-04-28</div>
+            </div>
+
+            <div class="news-item">
+                <a href="https://k.sina.com.cn/article_7857201856_1d45362c001904siq8.html" target="_blank">AI初创Sereact获1.1亿美元融资，机器人软件赛道加速</a>
+                <div class="news-summary">财联社4月28日电：德国机器人软件公司Sereact已筹集1.1亿美元融资，旨在提升机器人适应性。具身智能成AI落地新方向：人形机器人首破人类半马世界纪录、华为AI眼镜正式开售。上海、北京加速AI政策落地，Meta与AWS签署数十亿美元协议部署Graviton5 ARM CPU核心。对联想SSC参考：具身智能带动伺服电机、精密传感器、边缘计算模组等新类别备件需求，SSC需关注新兴备件品类。</div>
+                <div class="source">来源：财联社 / 新浪AI | 2026-04-28</div>
             </div>
 
             <div class="news-item">
                 <a href="https://finance.sina.com.cn/tech/roll/2026-04-27/doc-inhvxath9059569.shtml" target="_blank">国内DDR5首次大降价！联想16G笔记本内存从1759元降至1159元，降幅34%</a>
-                <div class="news-summary">新浪科技4月27日报道：据数码博主孤城Hardware发布，联想16G DDR5-5600笔记本内存售价从1759元下调至1159元，单次降幅达600元，整体降价34%，创今年价格新低。这是国内DDR5内存首次出现大幅降价信号。然而TrendForce同步预警Q2 DRAM合约价仍将环比再涨58%-63%，显示渠道现货价与合约价分化扩大：消费级DDR5现货跌，服务器DDR5合约涨。对联想SSC参考：渠道现货短期回落为采购提供窗口，但合约价锁定策略不变；密切关注消费级模组降价是否向备件采购成本传导。</div>
+                <div class="news-summary">新浪科技4月27日报道：据数码博主孤城Hardware发布，联想16G DDR5-5600笔记本内存售价从1759元下调至1159元，单次降幅达600元，整体降价34%，创今年价格新低。这是国内DDR5内存首次出现大幅降价信号。然而TrendForce同步预警Q2 DRAM合约价仍将环比再涨58%-63%，显示渠道现货价与合约价分化扩大：消费级DDR5现货跌，服务器DDR5合约涨。对联想SSC参考：渠道现货短期回落为消费级备件采购提供窗口，但合约价锁定策略不变。</div>
                 <div class="source">来源：新浪科技 / 孤城Hardware | 2026-04-27</div>
             </div>
 
             <div class="news-item">
-                <a href="https://finance.sina.com.cn/tech/roll/2026-04-26/doc-inhvvuye8406399.shtml" target="_blank">TrendForce预警：Q2 NAND Flash合约价再涨70%-75%，存储超级周期中场不休息</a>
-                <div class="news-summary">TrendForce集邦咨询最新预估：2026年Q2 NAND Flash合约价将环比再增70%至75%，DRAM合约价也将季增58%至63%。AI服务器需求持续旺盛，头部原厂将大量先进产能转向HBM及企业级SSD，消费级产品供应持续收缩。业内分析：本轮涨价核心驱动力是AI算力军备竞赛，HBM/企业级SSD需求爆发虹吸产能，成熟制程消费级产品供需严重失衡，预计供给紧张将延续至2027年。对联想SSC参考：企业级SSD备件采购成本Q2继续上行，PCIe 5.0 NVMe SSD锁价窗口紧迫。</div>
-                <div class="source">来源：TrendForce / 新浪财经 | 2026-04-26</div>
-            </div>
-
-            <div class="news-item">
-                <a href="https://www.ithome.com/0/942/378.htm" target="_blank">ThinkPad X1 Carbon Aura AI 2026正式发布：984g超轻、14999元起，天禧AI 3.7加持</a>
-                <div class="news-summary">IT之家4月22日报道：联想正式发布多款搭载第三代英特尔酷睿Ultra处理器的ThinkPad AI PC新品，旗舰ThinkPad X1 Carbon Aura AI 2026"AI全互联精英商务本"正式亮相。机身重量仅984g，搭载英特尔酷睿Ultra X7 358H（Panther Lake架构），配置32GB LPDDR5X板载内存+1TB PCIe NVMe固态，整合天禧AI 3.7与天禧Claw智能体，售价14999元起。对联想SSC参考：X1 Carbon Aura AI 2026已正式量产，关键备件SKU认证和Q2锁价需尽快完成。</div>
-                <div class="source">来源：IT之家 / 联想官方 | 2026-04-22</div>
-            </div>
-
-            <div class="news-item">
-                <a href="https://www.sohu.com/a/1014990299_130887" target="_blank">费城半导体指数连涨18交易日，英特尔单日涨24%创1987年来最佳</a>
-                <div class="news-summary">4月27日美股收盘：费城半导体指数收涨4.32%，连续上涨18个交易日。英特尔收涨24%创1987年以来最佳单日表现，英伟达涨4.3%创收盘历史新高，市值再破5万亿美元，AMD涨13.2%，Arm涨14.3%，半导体ETF收涨5.11%。市场解读：AI推理需求爆发+数据中心扩张持续超预期，半导体行业景气周期延长。对联想SSC参考：核心供应商（Intel/NVIDIA/AMD）市值强劲表明供应链上游景气持续，备件采购供应风险可控。</div>
-                <div class="source">来源：新浪财经 / 华尔街见闻 | 2026-04-27</div>
+                <a href="https://new.qq.com/rain/a/20260427A01EUQ00" target="_blank">五大PC品牌正式执行新一轮涨价：联想/惠普/戴尔/华硕/宏碁涨幅1000~2000元</a>
+                <div class="news-summary">新浪科技4月27日报道：今日起，五大PC品牌正式执行新一轮涨价。惠普门店店员透露"27日以后会大幅涨价，幅度在1000元到2000元不等"。拯救者R9000P AI元启 RTX5070版从年初9379元上涨至10893元，累计涨1514元涨幅约16.1%；机械革命极光X RTX5060同期从6150元涨至7021元涨幅14.2%。TrendForce预警Q2 DRAM合约价仍将环比再涨58%-63%，NAND闪存涨幅70%-75%。对联想SSC参考：终端整机正式涨价，备件BOM基准价同步上修，Q2锁价窗口进入最后阶段。</div>
+                <div class="source">来源：新浪科技 / 新浪财经 | 2026-04-27</div>
             </div>
         </div>
 

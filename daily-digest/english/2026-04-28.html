@@ -303,73 +303,73 @@
 
         // 今日短语
         const todayPhrase = {
-            english: "\"When downstream spot prices diverge from upstream contract prices, the prudent procurement strategy is to decouple your inventory replenishment logic from the spot market's volatility while securing contract volume commitments that protect against supply disruption. The goal is not to time the market — it is to ensure business continuity regardless of price direction.\"",
-            chinese: "当下游现货价格与上游合约价格出现分化时，明智的采购策略是将库存补货逻辑与现货市场的波动脱钩，同时确保合约量承诺以防范供应中断。目标不是抄底市场——而是无论价格走向如何，都要确保业务连续性。",
-            meaning: "spot price：现货价格。contract price：合约价格。diverge：分化。decouple：脱钩。secure contract volume commitments：确保合约量承诺。timing the market：抄底/择时。business continuity：业务连续性。",
-            example: "We should decouple our parts inventory strategy from spot market volatility and focus on securing contract volume commitments with our key suppliers."
+            english: "\"When analysts are calling for 280% DRAM price increases and 250% NAND increases, the rational procurement response is not to panic-buy — it is to stress-test your demand forecasts against downside scenarios where parts consumption runs below plan, and ensure that any inventory build is bounded by validated consumption data rather than price anxiety. In a supercycle, the winners are not those who bought the most — they are those who bought most accurately.\"",
+            chinese: "当分析师喊出DRAM涨价280%、NAND涨价250%时，明智的采购应对不是恐慌性买入——而是针对消耗低于预期的悲观情景，对需求预测进行压力测试，确保任何库存建立都受控于经过验证的消耗数据，而非价格焦虑。在超级周期中，赢家不是买得最多的——而是买得最准的。",
+            meaning: "panic-buy：恐慌性买入/囤货。stress-test：压力测试。downside scenario：悲观情景/下行情景。consumption runs below plan：消耗低于计划。bounded by：受控于/以...为界限。supercycle：超级周期。winners are not those who bought the most：赢家不是买得最多的。",
+            example: "When the analyst predicted 280% DRAM price increases, our procurement team decided to stress-test our demand forecasts rather than panic-buy, ensuring our inventory build was bounded by validated consumption data."
         };
 
-        // 今日学习内容 - 现货与合约价格分化：采购策略的复杂性
+        // 今日学习内容 - 存储超级周期：如何不被涨价潮裹挟
         const todayContent = {
-            english: "The past 48 hours have delivered a fascinating paradox in the PC hardware supply chain: consumer-grade DDR5 memory spot prices have dropped sharply for the first time in 2026, while enterprise-grade memory contract prices continue their inexorable climb. This divergence is not a sign of market weakness — it is a structural feature of the current memory supercycle that every supply chain professional must understand.\n\nOn April 27th, Lenovo's own branded 16GB DDR5-5600 laptop memory module dropped from 1,759 RMB to 1,159 RMB — a 34% single-day price reduction that set a new low for the year. This is significant, and it represents a genuine buying opportunity for consumer-grade memory procurement. Yet at the very same moment, TrendForce published its Q2 forecast showing DRAM contract prices rising another 58%-63% quarter-on-quarter, with NAND Flash contract prices climbing 70%-75%.\n\nHow can both of these things be true simultaneously? The answer lies in understanding the bifurcated structure of the memory market. When we talk about \"memory prices,\" we are actually talking about at least three distinct market segments with different dynamics.\n\nFirst, there is the consumer retail channel — the modules that end up in pre-built desktop PCs and laptops sold through consumer electronics retailers. This market is driven by consumer demand, channel inventory levels, and the spot market where traders buy and sell modules based on near-term supply and demand conditions. When channel inventory builds up — as it did during the late 2025 price surge when buyers front-loaded purchases in anticipation of further increases — the spot market corrects. This is what we are seeing now with the DDR5 module price drop.\n\nSecond, there is the enterprise contract channel — the DRAM and NAND purchased by major PC OEMs (Original Equipment Manufacturers) under quarterly pricing agreements with Samsung, SK Hynix, and Micron. These contract prices are set quarterly based on negotiations between OEMs and memory vendors, and they reflect the underlying supply-demand balance for production-grade components. Even if the consumer spot market is softening, enterprise contract prices can continue rising if AI server demand is drawing capacity away from commodity DRAM and NAND production.\n\nThird, there is the specialized AI memory channel — HBM (High Bandwidth Memory) and other compute-optimized memory used in AI training and inference servers. This segment has its own pricing dynamics, driven entirely by AI infrastructure buildout and largely insulated from conditions in the consumer or enterprise PC markets.\n\nFor SSC procurement professionals, this bifurcation creates a nuanced decision environment. The consumer spot market price reduction is genuinely good news for procurement of consumer-grade spare parts — if you are buying standard DDR5 modules for standard ThinkPad models, this is a real cost reduction opportunity. However, it does not automatically translate to better pricing for enterprise-grade parts purchased under contract.\n\nThe practical implication is that SSC procurement must maintain a bifurcated sourcing strategy of its own: one set of procurement approaches for consumer-grade parts where spot market timing matters, and a completely different set of approaches for enterprise-grade parts where contract price locks and supplier relationships matter more.\n\nThis is not about choosing between spot and contract — it is about recognizing that different parts of your inventory require different procurement disciplines. For standard consumer memory modules, you can legitimately take advantage of spot market dips when they occur. For enterprise SSD components where you have committed to quarterly volumes under long-term agreements, the focus should be on honoring those commitments and ensuring supply continuity, not on trying to time the market based on spot price movements.\n\nThe danger arises when organizations apply the wrong discipline to the wrong part category — chasing spot market prices for parts that should be locked under contract, or waiting for better contract terms on parts that should be sourced opportunistically from the spot market. The market is not inefficient; it is simply serving different customers through different channels with different pricing mechanisms. The sophisticated procurement organization is the one that understands this structure and responds accordingly.",
-            chinese: "过去一周给PC硬件供应链提供了一个鲜明的警示——市场状况可以多快速地发生变化。4月26日，联想、惠普、戴尔、华硕和宏碁五大主要PC厂商同步上调了各自产品线的价格，部分机型涨幅高达20%。次日，英特尔发布了超预期的第一季度财报，却同步发出一个令人警醒的预警：2026年全年PC出货量预计将下滑10%以上。\n\n这两个看似相互矛盾的信号——价格上涨与需求下滑同时出现——是供应链采购专业人员面临的最具挑战性的环境之一。理解其中的动态对于做出何时买入、买多少以及以何种价格买入的正确决策至关重要。\n\nPC厂商宣布的价格上涨并非自主选择。这是上游零部件成本——尤其是内存（DRAM）和存储（NAND Flash）——在过去12个月里上涨了三到五倍的直接且不可避免的后果。当笔记本的物料清单成本增加数百元时，品牌厂商除了上调终端价格或接受最终不可持续的利润压缩之外，别无可行路径。我们在2026年4月看到的价格上涨，代表着自2025年中期开始积累的成本压力迟来但不可避免的传导。\n\n需求侧则呈现另一番景象。英特尔对PC出货量下滑10%以上的预警，得到IDC此前预测下滑9%的印证，反映了一个直接的价格弹性效应：当产品变得明显更贵时，部分买家会推迟购买。在商用PC市场尤为如此——企业IT预算周期更为固定，采购委员会对价格的敏感度高于个人消费者。原本计划在2026年更新PC机群的企业客户，可能会将计划推迟至2027年，或缩减更新范围。\n\n对于管理备用零件库存的供应链成本专业人员——例如联想服务供应链（SSC）的从业者——这双重压力形成了一个特定且困难的决策框架。在价格快速上涨时期，直觉是提前买入：在价格进一步上涨之前立即建立库存。当价格呈线性且可预测地上涨时，这一策略逻辑上颇具说服力。然而，当需求前景同时恶化时，这一策略则蕴含重大风险。\n\n考虑风险的不对称性。如果你现在因预期价格继续上涨而过度采购备件，但PC出货量实际下滑了10%-15%，你将面临备件消耗量远低于库存建立量的局面。这将产生持仓成本敞口、平台切换加速导致的潜在过时风险，以及资金被锁定在可能18到24个月内无法消耗的零件中。过度采购的财务成本，很可能超过今日买入而非明日买入所节省的成本。\n\n反之，如果你采购不足而价格继续上涨，你将面临备件预算超支，以及在紧急维修需求无法从库存满足时产生的紧急采购费用和供应中断风险。\n\n在这种环境中导航的关键，在于采购专业人员所说的需求信号纪律。与其主要基于价格走势预期（这本质上是投机性的）来做库存决策，更为站得住脚的方法是将采购量锚定于零件实际消耗的最佳可用预测。对于SSC运营而言，这意味着深入审视装机基础数据：哪些平台已安装在使用中，各零部件类型和使用年限对应的历史故障率如何，随着新机型（如ThinkPad X1 Carbon Aura AI 2026）投入使用以及旧机型退役，装机基础将如何演变。\n\n一旦建立了基于消耗的锚点，你就可以做出一个有意为之且有边界的决策——在该锚点之上持有多少缓冲库存，作为应对供应中断或进一步涨价的保险。这一缓冲应有时间限制且经过成本论证，而非受价格焦虑驱动的无限积累。\n\n这种结构化的采购决策方式，正日益成为能够持续兑现成本绩效的供应链专业人员与那些随市场情绪在过度购买和购买不足之间摇摆者的真正差距。在当前环境下——上游价格高企但需求趋软——保持将重心放在需求信号而非涨价恐惧上的纪律确实极为困难，但最终更具价值创造力。",
+            english: "The storage semiconductor supercycle of 2026 has created an unprecedented environment for PC supply chain procurement professionals. Goldman Sachs has dramatically revised its forecasts upward, predicting that DRAM prices could surge as much as 280% in 2026, with NAND Flash prices climbing 250%. TrendForce has simultaneously issued its Q2 forecast showing NAND contract prices rising another 70%-75% quarter-on-quarter, with DRAM contract prices climbing 58%-63%. These are extraordinary numbers by any historical standard.\n\nYet the most sophisticated procurement professionals understand that extreme price forecasts require equally extreme analytical rigor before they translate into procurement action. The fundamental question is not whether prices will rise — the data clearly suggests they will. The question is whether the rise will be uniform across all product categories, whether it will be sustained or temporary, and critically, whether your organization's parts consumption will actually track with the market averages that underpin these forecasts.\n\nThis is where demand-signal discipline becomes non-negotiable. When analysts predict 280% price increases, the intuitive response is to front-load inventory purchases — to buy as much as possible, as quickly as possible, before prices climb further. This intuition is not irrational. It is a well-documented behavioral bias that economists call the \"availability heuristic\" — we over-weight recent dramatic events and under-weight historical base rates. When we see dramatic price increases in the news, we naturally assume that buying more now will save money later.\n\nBut this intuition contains a critical hidden assumption: that your parts consumption will remain stable or grow. If you are buying extra inventory in anticipation of continued price increases, you are implicitly assuming that you will actually use that inventory at some point in the future. If your installed base is declining — if fewer ThinkPads are in the field than projected, if product transitions are happening faster than expected, if enterprise customers are extending refresh cycles — then the extra inventory you bought at \"lower\" prices may simply sit on shelves, incurring holding costs while slowly approaching obsolescence.\n\nThe storage supercycle provides a perfect case study in this dynamic. Yes, DRAM and NAND prices are rising substantially. Yes, the supply-demand dynamics that drive these increases — AI server demand, HBM allocation, capacity constraints — are real and likely to persist. But the question for SSC procurement is not whether storage prices will rise. It is whether the storage parts you are buying will be consumed at the rate you need them to be consumed to justify the inventory you are holding.\n\nThis is why the concept of \"buying most accurately\" matters more than \"buying the most.\" Accurate procurement means that your purchase quantities are tightly calibrated to your validated consumption forecasts, with buffer stocks sized according to supply risk tolerance rather than price speculation. It means accepting that you will not perfectly time the market — that you will buy some parts at higher prices than you might have, and that you will forgo some potential savings from buying ahead. But it also means avoiding the much larger costs of over-procurement: holding costs, obsolescence write-offs, and capital that is locked in inventory instead of generating returns elsewhere.\n\nThe practical discipline involves several concrete steps. First, update your installed base projections to reflect the most current data — not the projections you made six months ago, but today's reality. If enterprise PC refresh cycles have extended, if product transitions are accelerating, if your customer base is shifting toward services rather than hardware purchases, your consumption forecasts must reflect these changes. Second, segment your parts inventory by criticality and supply risk. High-criticality parts with long lead times and single-source suppliers deserve higher buffer stocks than commodity parts with multiple sources and short lead times. Third, establish clear escalation protocols for when actual consumption diverges significantly from forecast. If you are consuming parts 15% below plan for two consecutive quarters, that is a signal to reduce purchase quantities — not to hope that the third quarter will be different.\n\nThe storage supercycle will run its course. Prices will eventually peak, plateau, and likely decline as new capacity comes online and AI infrastructure buildout normalizes. The procurement organizations that will emerge strongest are not those that bought the most during the peak — they are those that maintained analytical discipline throughout, kept their demand forecasts honest, and avoided the behavioral trap of buying based on headlines rather than data. In a supercycle, as in most things in supply chain management, accuracy beats volume.",
+            chinese: "2026年的存储半导体超级周期，为PC供应链采购专业人员创造了一个前所未有的环境。高盛大幅上调预测，预计2026年DRAM价格可能飙升280%，NAND Flash价格上涨250%。TrendForce同步发布Q2预测，显示NAND合约价环比再涨70%-75%，DRAM合约价上涨58%-63%。以任何历史标准衡量，这些都是非凡的数字。\n\n然而，最老练的采购专业人员明白，极端价格预测在转化为采购行动之前，需要同样极端的分析严谨性。根本问题不是价格是否会上涨——数据清楚地表明会。问题在于涨幅是否会在所有产品类别中均匀分布，是会持续还是暂时的，关键是，组织的零件消耗是否会实际上与支撑这些预测的市场平均水平一致。\n\n这就是需求信号纪律变得不可或缺的原因。当分析师预测涨价280%时，直觉反应是提前买入库存——尽可能多、尽可能快地买，趁价格进一步上涨之前。这种直觉并非不合理。这是经济学家所称的一种有据可查的行为偏见——\"可得性启发法\"——我们过度加权最近的戏剧性事件，而低估历史基准率。当我们在新闻中看到戏剧性的价格上涨时，自然会假设现在买更多将来会省钱。\n\n但这种直觉包含一个关键的隐藏假设：你的零件消耗将保持稳定或增长。如果你在预期价格持续上涨的情况下购买额外库存，你隐含的假设是你将在某个未来时点实际使用那些库存。如果你的装机基础正在萎缩——如果现场使用的ThinkPad比预期少，如果产品切换速度快于预期，如果企业客户正在延长更新周期——那么你以\"更低\"价格购买的额外库存可能只是堆积在货架上，产生持有成本，同时慢慢走向过时。\n\n存储超级周期提供了一个完美的案例研究。是的，DRAM和NAND价格正在大幅上涨。是的，推动这些上涨的供需动态——AI服务器需求、HBM分配、产能限制——是真实的，可能持续。但SSC采购的问题不是存储价格是否会上涨。而是你购买的存储零件是否会以你需要的速度被消耗，以证明你持有的库存是合理的。\n\n这就是\"买得最准\"比\"买得最多\"更重要的原因。准确的采购意味着你的采购数量与经过验证的消耗预测紧密校准，安全库存根据供应风险承受能力而非价格投机来确定。这意味着接受你不会完美地把握市场时机——你会以比你本可以得到的更高价格购买一些零件，你会放弃一些提前购买带来的潜在节省。但这也意味着避免过度采购的更大成本：持有成本、过时注销，以及被锁定在库存中而非在其他地方产生回报的资本。\n\n实际纪律包括几个具体步骤。首先，更新你的装机基础预测以反映最新数据——不是你六个月前做的预测，而是今天的现实。如果企业PC更新周期延长，如果产品切换加速，如果你的客户群正在转向服务而非硬件购买，你的消耗预测必须反映这些变化。其次，按关键性和供应风险对零件库存进行分类。与交货期长且单一来源供应商的关键零件相比，具有多个来源和短交货期的商品零件应该持有更少的安全库存。第三，当实际消耗与预测显著偏离时，建立明确的升级协议。如果你连续两个季度的零件消耗比计划低15%，这就是减少采购数量的信号——不是希望第三季度会有所不同。\n\n存储超级周期将走完其进程。随着新产能上线和AI基础设施建设的正常化，价格最终将达到峰值、平稳，并可能下降。最先走出来的采购组织，不是那些在高峰期购买最多的——而是那些在整个过程中保持分析纪律、保持需求预测诚实、避免基于标题而非数据购买的行为陷阱的。在超级周期中，就像供应链管理中的大多数事情一样，准确性胜过数量。",
             vocabulary: [
                 {
-                    word: "price pass-through",
-                    meaning: "成本传导；上游原材料成本上涨被逐级转嫁给下游客户和终端消费者的过程",
-                    example: "The 20% price increase we are seeing is simply the delayed pass-through of upstream DRAM and NAND cost inflation."
+                    word: "availability heuristic",
+                    meaning: "可得性启发法；一种行为经济学概念，指人们根据信息的易获取程度来判断事件可能性，高估近期事件的重要性",
+                    example: "The availability heuristic causes procurement teams to over-weight recent price spikes and under-weight historical price stability when making inventory decisions."
                 },
                 {
-                    word: "demand-signal discipline",
-                    meaning: "需求信号纪律；将采购决策锚定于经过验证的实际需求数据，而非基于价格预期或恐慌性囤货",
-                    example: "Our procurement team maintained demand-signal discipline by refusing to over-build inventory despite the ongoing price surge."
+                    word: "front-load inventory",
+                    meaning: "提前建库/前置库存；在价格上涨前主动增加采购量以锁定较低成本的库存策略",
+                    example: "The temptation to front-load inventory before predicted price increases requires careful evaluation of actual consumption needs."
                 },
                 {
-                    word: "obsolescence risk",
-                    meaning: "过时风险；因技术迭代或产品停产，导致库存备件无法使用或价值归零的风险",
-                    example: "Aggressive inventory build during a platform transition creates significant obsolescence risk for parts tied to legacy specs."
+                    word: "installed base",
+                    meaning: "装机基础；已售出并正在使用的设备总量，是预测备件消耗量的基础数据",
+                    example: "If the installed base is declining, even dramatically rising component prices may not justify aggressive inventory build."
                 },
                 {
-                    word: "consumption run rate",
-                    meaning: "消耗速率；在特定时间段内实际消耗的零部件数量，用于预测未来库存需求",
-                    example: "With PC shipments expected to decline 10%, the consumption run rate for commercial laptop parts will likely fall below plan."
+                    word: "buffer stock sizing",
+                    meaning: "安全库存规模；基于供应风险和需求不确定性确定的缓冲库存量",
+                    example: "Buffer stock sizing should be calibrated by supply risk tolerance rather than price speculation during a supercycle."
                 },
                 {
-                    word: "holding cost exposure",
-                    meaning: "持仓成本敞口；因持有过多库存而产生的仓储、资金占用和折旧等额外成本风险",
-                    example: "Over-procurement during a demand downturn creates significant holding cost exposure that can offset any savings from buying at lower prices."
+                    word: "consumption forecast",
+                    meaning: "消耗预测；基于历史数据和趋势对未来零件消耗量的预估",
+                    example: "The procurement team validated their consumption forecast against actual shipment data before committing to additional inventory purchases."
                 }
             ],
             practice: [
                 {
-                    question: "Why is Intel's warning of a 10% PC shipment decline relevant to SSC spare parts procurement?",
+                    question: "What does the 'availability heuristic' describe in the context of procurement decision-making?",
                     options: [
-                        "Intel manufactures the spare parts that SSC uses",
-                        "Lower PC shipments mean lower installed base growth and reduced parts consumption, which affects optimal inventory levels",
-                        "Intel's warning applies only to consumer PCs, not commercial spare parts",
-                        "A PC shipment decline means prices will immediately drop, making procurement easier"
+                        "A method for calculating available inventory levels in a warehouse",
+                        "The behavioral tendency to over-weight recent dramatic events and under-weight historical data when making decisions",
+                        "A type of heuristic used by logistics companies to optimize delivery routes",
+                        "The availability of multiple suppliers for critical components"
                     ],
                     answer: 1
                 },
                 {
-                    question: "What is the main risk of aggressively building spare parts inventory in response to rising prices when demand is simultaneously declining?",
+                    question: "Why might front-loading inventory purchases based on price forecasts backfire even if those forecasts are accurate?",
                     options: [
-                        "Suppliers may refuse to honor long-term contracts",
-                        "Parts prices may rise further before delivery",
-                        "Consumption will be lower than the inventory build, creating holding costs and potential obsolescence risk",
-                        "Competitors will gain an advantage by procuring the same parts"
+                        "Suppliers always charge higher prices for large orders",
+                        "If the installed base is declining, extra inventory may not be consumed and will incur holding costs and obsolescence risk",
+                        "Price forecasts are never accurate enough to justify advance purchasing",
+                        "Front-loading only works for consumer goods, not enterprise components"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "According to the article, what is the key difference between 'buying the most' versus 'buying most accurately'?",
+                    options: [
+                        "Buying the most means purchasing from multiple suppliers, while buying most accurately means single-source procurement",
+                        "Buying the most focuses on volume regardless of price, while buying most accurately focuses on price timing",
+                        "Buying the most prioritizes volume over data, while buying most accurately prioritizes consumption-validated quantities over speculative buying",
+                        "There is no practical difference; both approaches lead to the same outcomes"
                     ],
                     answer: 2
-                },
-                {
-                    question: "What does 'demand-signal discipline' mean in the context of parts procurement?",
-                    options: [
-                        "Ordering parts only when the signal light in the warehouse turns red",
-                        "Anchoring procurement volumes to actual consumption forecasts rather than reacting to price anxiety",
-                        "Relying exclusively on supplier demand signals for replenishment",
-                        "Disciplining procurement staff who exceed their ordering authority"
-                    ],
-                    answer: 1
                 }
             ]
         };
@@ -419,7 +419,8 @@
 
         // 历史记录数据
         const historyDates = [
-            {date: '2026-04-27', label: '2026-04-27（今日）'},
+            {date: '2026-04-28', label: '2026-04-28（今日）'},
+            {date: '2026-04-27', label: '2026-04-27'},
             {date: '2026-04-20', label: '2026-04-20'},
             {date: '2026-04-18', label: '2026-04-18'},
             {date: '2026-04-17', label: '2026-04-17'},
@@ -428,7 +429,6 @@
             {date: '2026-04-14', label: '2026-04-14'},
             {date: '2026-04-13', label: '2026-04-13'},
             {date: '2026-04-11', label: '2026-04-11'},
-            {date: '2026-04-10', label: '2026-04-10'},
         ];
 
         // 动态生成历史记录链接
